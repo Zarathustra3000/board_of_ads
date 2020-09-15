@@ -10,6 +10,13 @@ body {
     background-color: #f7f7f7;
 }
 
+.header-container {
+    margin: 0 auto;
+    min-width: 800px;
+    max-width: 1230px;
+    display: flex;
+}
+
 .header-menu-left ul {
     margin: 0; /* Обнуляем значение отступов */
     padding: 10px; /* Значение полей */
@@ -21,20 +28,14 @@ body {
     color: #a1a1a1;
 }
 
-.header-menu-right {
-}
-
 .header-menu-right ul {
-    /*display: inline;*/
     margin: 0; /* Обнуляем значение отступов */
     padding: 10px; /* Значение полей */
 }
 
 .header-menu-right ul li {
-
     display: inline; /* Отображать как строчный элемент */
     margin-right: 5px; /* Отступ слева */
-    /*padding: 3px; !* Поля вокруг текста *!*/
     color: #a1a1a1;
 }
 
@@ -44,6 +45,11 @@ body {
     line-height: 20px;
     text-decoration: none;
 }
+
+.header-link-item:hover {
+    color: red;
+}
+
 .header-favorite-button {
     margin-left: auto;
     margin-top: 7px;
@@ -57,32 +63,18 @@ body {
     fill: #858585;
 }
 
-.header-link-item:hover {
-    color: red;
-}
-
-.header {
-    margin: 0 auto;
-    min-width: 800px;
-    max-width: 1230px;
-    display: flex;
-    /*justify-content: center;*/
-    /*max-width: 1000px;*/
-}
-
-.button-sign {
+.header-button-sign {
     color:#009cf0;
 }
 
 .header-button-new-ads {
-    color: #fff; /* цвет текста */
-    text-decoration: none; /* убирать подчёркивание у ссылок */
-    user-select: none; /* убирать выделение текста */
+    color: #fff;
+    text-decoration: none;
     background: #0af; /* фон кнопки */
     padding: .5em 1.0em; /* отступ от текста */
     border-radius: 4px;
 }
 
 .header-button-new-ads:hover {
-    background: #009cf0;  /* при наведении курсора мышки */
+    background: #009cf0;
 }
