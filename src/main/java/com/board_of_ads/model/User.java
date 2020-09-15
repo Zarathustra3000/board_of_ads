@@ -5,17 +5,36 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.*;
+import java.time.LocalDateTime;
+
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
+@Entity
+@Table
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String email;
+    @Column
     private String password;
+    @Column
     private String firsName;
+    @Column
     private String lastName;
-    private int phone;
-    private int dataRegistration;
+    @Column
+    private String phone;
+    @Column
+    private LocalDateTime dataRegistration;
+    @Column
     private boolean enable;
+
 }
