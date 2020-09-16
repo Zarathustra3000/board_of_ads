@@ -1,0 +1,13 @@
+#ids {
+    font: inherit;
+    color: #009cf0;
+    font-size: 14px;
+    position: relative;
+    padding-left: 12px;
+    line-height: inherit;
+}
+
+.logo-not-avito {
+    position: relative;
+    bottom: 10px;
+}
