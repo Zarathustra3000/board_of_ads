@@ -2,11 +2,17 @@
 <html lang="ru" xmlns:th="https://www.thymeleaf.org">
 
 <head>
-    <title>Board of ads</title>>
+    <title>Board of ads</title>
     <link rel="stylesheet" type="text/css" href="../static/css/main_page.css" th:href="@{/css/main_page.css}"/>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/search-fragment-style.css" th:href="@{/css/search-fragment-style.css}"/>
 </head>
 <body>
+<!--header-->
+
+<header th:insert="fragment/search-header::search-header"></header>
 
 <script src="../static/js/main_page.js" th:src="@{/js/main_page.js}"></script>
+
 </body>
 </html>

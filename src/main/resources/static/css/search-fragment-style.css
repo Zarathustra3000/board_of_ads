@@ -1,0 +1,79 @@
+/* menu global */
+
+#menu-search {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    font: 13px/1.0 Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+#menu-search li {
+    display: table-cell;
+    background: #f7f7f7;
+    padding: .5em;
+    border-top: 3px solid silver;
+    border-bottom: 3px solid silver;
+}
+
+/* 5 elements horizontal menu  */
+
+#category {
+    width: 15.5%;
+    text-align: left;
+    border-left: 3px solid silver;
+    border-right: 1px solid silver;
+}
+#category-select {
+    width: 100%;
+    border: 0px;
+    background: #f7f7f7;
+}
+
+#search-main {
+    width: 48%;
+    text-align: left;
+    opacity: 0.4;
+    border-right: 3px solid silver;
+    border-left: 1px solid silver;
+}
+#region {
+    width: 14%;
+    text-align: left;
+    border-right: 3px solid silver;
+}
+#radius {
+    width: 17%;
+    text-align: left;
+    border-right: 3px solid silver;
+}
+#search-left {
+    width: 5.5%;
+    text-align: center;
+    border-right: 3px solid silver;
+}
+
+/* no focus global settings */
+
+a:active, a:focus {
+    outline: none;
+}
+input, textarea {
+    outline:none;
+}
+input:active, textarea:active {
+    outline:none;
+}
+:focus {
+    outline:none;
+}
+textarea {
+    resize:none;
+}
+textarea {
+    resize:vertical;
+}
+textarea {
+    resize:horizontal;
+}
+
+
+
