@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 
 @Entity
-@Table
+@Table(name = "users")
 public class User {
 
     @Id
@@ -24,16 +24,22 @@ public class User {
 
     @Column
     private String email;
+
     @Column
     private String password;
+
     @Column
     private String firsName;
+
     @Column
     private String lastName;
+
     @Column
     private String phone;
+
     @Column
     private LocalDateTime dataRegistration;
+
     @Column
     private boolean enable;
 
