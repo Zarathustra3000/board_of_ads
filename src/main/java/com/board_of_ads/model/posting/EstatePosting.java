@@ -18,6 +18,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -70,6 +71,12 @@ public class EstatePosting {
     @Column
     private String description;
 
+    @Column
+    private Double price;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Image> photos;
+
+    @Column
+    private LocalDateTime datePosting;
 }

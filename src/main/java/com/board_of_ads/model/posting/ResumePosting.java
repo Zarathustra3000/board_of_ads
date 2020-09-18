@@ -18,6 +18,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -76,4 +77,6 @@ public class ResumePosting {
     @Column
     private String contact;
 
+    @Column
+    private LocalDateTime datePosting;
 }
