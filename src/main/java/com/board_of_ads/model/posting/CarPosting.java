@@ -20,6 +20,10 @@ import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Класс только для категории "Транспорт - Автомобили".
+ * Для транспорта всех остальных категорий используется класс PostingTrade
+ */
 @Getter
 @Setter
 @NoArgsConstructor
