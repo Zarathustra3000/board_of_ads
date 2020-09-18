@@ -19,3 +19,18 @@ spring:
         format_sql: false
         jdbc:
           timezone: UTC
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kunaev993@gmail.com
+    password: nikola9393
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
+jhipster:
+  mail: # specific JHipster mail property, for standard properties see MailProperties
+  from: kunaev993@gmail.com
+  base-url: http://127.0.0.1:5556
