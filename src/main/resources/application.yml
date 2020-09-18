@@ -5,7 +5,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/board_of_ads
-    username: postgres
+    username: postgres      #todo return "root"
     password: root
     initialization-mode: always
   jpa:

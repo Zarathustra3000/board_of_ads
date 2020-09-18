@@ -1,5 +1,6 @@
 package com.board_of_ads.model.posting;
 
+import com.board_of_ads.model.Image;
 import com.board_of_ads.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +17,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 

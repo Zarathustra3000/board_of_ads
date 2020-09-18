@@ -1,7 +1,7 @@
 package com.board_of_ads.model.posting;
 
+import com.board_of_ads.model.Image;
 import com.board_of_ads.model.User;
-import com.board_of_ads.model.posting.category.Category;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
