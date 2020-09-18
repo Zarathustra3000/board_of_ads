@@ -26,8 +26,8 @@ import java.util.List;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "posting_resume")
-public class ResumePosting {
+@Table(name = "posting_estate")
+public class EstatePosting {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,42 +38,38 @@ public class ResumePosting {
     private User user;
 
     @Column
-    private String position;
+    private String address;
 
     @Column
-    private String schedule;
-
-    @Column
-    private String workExperience;
-
-    @Column
-    private String education;
-
-    @Column
-    private String sex;
-
-    @Column
-    private Byte age;
-
-    @Column
-    private Boolean readyToBusinessTrip;
-
-    @Column
-    private Boolean readyToDislocation;
-
-    @Column
-    private String nationality;
-
-    @Column
-    private String description;
-
-    @Column
-    private Double salary;
-
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Image> photos;
+    private Boolean isOwner;
 
     @Column
     private String contact;
 
+    @Column
+    private String houseType;
+
+    @Column
+    private Byte floor;
+
+    @Column
+    private Byte floorsOnHouse;
+
+    @Column
+    private Byte amountRooms;
+
+    @Column
+    private Integer totalArea;
+
+    @Column
+    private Integer kitchenArea;
+
+    @Column
+    private Integer livingArea;
+
+    @Column
+    private String description;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Image> photos;
 }

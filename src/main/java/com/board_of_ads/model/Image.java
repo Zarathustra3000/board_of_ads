@@ -1,4 +1,4 @@
-package com.board_of_ads.model.posting;
+package com.board_of_ads.model;
 
 import com.board_of_ads.model.User;
 
