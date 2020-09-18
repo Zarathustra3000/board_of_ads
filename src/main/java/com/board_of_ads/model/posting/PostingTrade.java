@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +28,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "posting_trade")
-public class Posting {
+public class PostingTrade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
