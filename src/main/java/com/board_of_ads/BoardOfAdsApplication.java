@@ -1,6 +1,5 @@
 package com.board_of_ads;
 
-import com.board_of_ads.service.SendEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
