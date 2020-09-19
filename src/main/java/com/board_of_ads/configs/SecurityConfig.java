@@ -50,6 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout().permitAll();
     }
 
+    //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userService::getUserByEmail)
