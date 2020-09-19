@@ -26,6 +26,7 @@ public class User implements UserDetails {
     @Column
     private String email;
 
+
     @Column
     private String password;
 
@@ -51,6 +52,10 @@ public class User implements UserDetails {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Set<Role> roles;
 
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
