@@ -21,6 +21,12 @@ import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Класс объявлений-резюме.
+ * Поле для желаемой зарплаты называется price
+ *
+ * Все основные поля наследуются от суперкласса Posting
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,15 +34,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "posting_resume")
-public class ResumePosting {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id")
-    private User user;
+public class ResumePosting extends Posting {
 
     @Column
     private String position;
@@ -65,18 +63,6 @@ public class ResumePosting {
     @Column
     private String nationality;
 
-    @Column
-    private String description;
-
-    @Column
-    private Double salary;
-
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Image> photos;
-
-    @Column
-    private String contact;
-
-    @Column
-    private LocalDateTime datePosting;
 }

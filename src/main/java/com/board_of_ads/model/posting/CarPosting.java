@@ -1,7 +1,6 @@
 package com.board_of_ads.model.posting;
 
 import com.board_of_ads.model.Image;
-import com.board_of_ads.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,19 +9,15 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
  * Класс только для категории "Транспорт - Автомобили".
  * Для транспорта всех остальных категорий используется класс PostingTrade
+ *
+ * Все основные поля наследуются от суперкласса Posting
  */
 @Getter
 @Setter
@@ -31,15 +26,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "posting_cars")
-public class CarPosting {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id")
-    private User user;
+public class CarPosting extends Posting{
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Image> images;
@@ -72,17 +59,5 @@ public class CarPosting {
     private Integer amountOwner;
 
     @Column
-    private String description;
-
-    @Column
     private String address;
-
-    @Column
-    private Double price;
-
-    @Column
-    private String contacts;
-
-    @Column
-    private LocalDateTime datePosting;
 }

@@ -21,6 +21,11 @@ import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Класс объявлений о недвижимости.
+ *
+ * Все основные поля наследуются от суперкласса Posting
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,24 +33,13 @@ import java.util.List;
 
 @Entity
 @Table(name = "posting_estate")
-public class EstatePosting {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id")
-    private User user;
+public class EstatePosting extends Posting {
 
     @Column
     private String address;
 
     @Column
     private Boolean isOwner;
-
-    @Column
-    private String contact;
 
     @Column
     private String houseType;
@@ -68,15 +62,6 @@ public class EstatePosting {
     @Column
     private Integer livingArea;
 
-    @Column
-    private String description;
-
-    @Column
-    private Double price;
-
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Image> photos;
-
-    @Column
-    private LocalDateTime datePosting;
 }

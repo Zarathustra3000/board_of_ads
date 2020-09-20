@@ -21,6 +21,11 @@ import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Класс для простых объявлений, не попдающих под категории "Транспорт - Автомобили", "Недвижимость", "Работа".
+ *
+ * Все основные поля наследуются от суперкласса Posting
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,27 +33,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "posting_trade")
-public class PostingTrade {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id")
-    private User user;
+public class PostingTrade extends Posting {
 
     @Column
     private Boolean used;
-
-    @Column
-    private String title;
-
-    @Column
-    private String description;
-
-    @Column
-    private Double price;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Image> images;
@@ -58,13 +46,4 @@ public class PostingTrade {
 
     @Column
     private String address;
-
-    @Column
-    private String contacts;
-
-    @Column
-    private Boolean isActive;
-
-    @Column
-    private LocalDateTime datePosting;
 }
