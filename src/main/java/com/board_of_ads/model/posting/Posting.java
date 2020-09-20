@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -35,6 +36,9 @@ public class Posting {
     @JoinColumn(name = "user_id")
     private User user;
 
+//    @Column
+//    private Category category;    //todo create class Category and uncomment
+
     @Column
     private String title;
 
@@ -42,7 +46,7 @@ public class Posting {
     private String description;
 
     @Column
-    private Integer price;
+    private Long price;
 
     @Column
     private String contact;
