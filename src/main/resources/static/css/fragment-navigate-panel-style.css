@@ -1,0 +1,19 @@
+#ids{
+    display: inline;
+    border: 0;
+    text-decoration: none;
+    line-height: inherit;
+    font-size: 14px;
+    padding: 5px 12px 4px;
+    font: 13px/1.5 Arial,'Helvetica Neue',Helvetica,sans-serif;
+    position: relative;
+    color: #009cf0;
+}
+.logo-not-avito{
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    z-index: 1;
+    cursor: pointer;
+    top: 4px;
+}
