@@ -1,4 +1,4 @@
-package com.board_of_ads.service;
+package com.board_of_ads.service.interfaces;
 
 import com.board_of_ads.model.Role;
 
