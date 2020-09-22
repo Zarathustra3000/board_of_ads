@@ -28,7 +28,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Table
+@Table(name = "posting")
 public class Posting {
 
     @Id
