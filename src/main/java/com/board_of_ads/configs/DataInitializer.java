@@ -11,6 +11,11 @@ public class DataInitializer {
 
     @PostConstruct
     private void init() {
+        initUsers();
+    }
+
+    private void initUsers() {
 
     }
+
 }
