@@ -1,7 +1,12 @@
 package com.board_of_ads.configs;
 
 
+import com.board_of_ads.model.User;
+import com.board_of_ads.repository.UserRepository;
+import com.board_of_ads.service.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.PrincipalExtractor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -16,6 +21,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
+@EnableOAuth2Sso
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
@@ -46,6 +52,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .formLogin()
                 .and()
                     .logout().permitAll();
+//                .and()
+//                    .oauth2Login();
     }
 
     //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
@@ -56,8 +64,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    protected PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder(12);
+    public PrincipalExtractor principalExtractor(UserRepository userRepository) {
+        return map -> {
+            return new User();
+        };
     }
+
+//    @Bean
+//    protected PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder(12);
+//    }
 
 }
