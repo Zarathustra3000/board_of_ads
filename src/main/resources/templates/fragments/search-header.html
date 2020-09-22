@@ -1,15 +1,15 @@
-<header th:fragment="search-header">
+<header th:fragment="search-header" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <ul id="menu-search">
 
     <li id="category">
         <select id="category-select">
-            <option>Любая категория</option>
-            <option>Транспорт</option>
-            <option>Недвижимость</option>
-            <option>Работа</option>
-            <option>Услуги</option>
-            <option>Личные вещи</option>
+            <option th:text="#{category}">Любая категория</option>
+            <option th:text="#{transport}">Транспорт</option>
+            <option th:text="#{realty}">Недвижимость</option>
+            <option th:text="#{job}">Работа</option>
+            <option th:text="#{services}">Услуги</option>
+            <option th:text="#{personalitems}">Личные вещи</option>
         </select>
     </li>
 
@@ -18,31 +18,31 @@
             <input id="category-select"
                    type="text"
                    name="search-form"
-                   placeholder="Поиск по объявлениям">
+                   th:placeholder="#{search}">
         </form>
     </li>
 
     <li id="region">
         <select id="category-select">
-            <option>Таганрог</option>
-            <option>Москва</option>
-            <option>Санкт-Петербург</option>
-            <option>Казань</option>
-            <option>Нижний Новгород</option>
-            <option>Екатеринбург</option>
+            <option th:text="#{taganrog}">Таганрог</option>
+            <option th:text="#{moscow}">Москва</option>
+            <option th:text="#{saintpeterburg}">Санкт-Петербург</option>
+            <option th:text="#{kazan}">Казань</option>
+            <option th:text="#{nizhnynovgorod}">Нижний Новгород</option>
+            <option th:text="#{yekaterinburg}">Екатеринбург</option>
         </select>
     </li>
 
     <li id="radius">
         <select id="category-select">
-            <option>Радиус / Район</option>
-            <option>Радиус</option>
-            <option>Район</option>
+            <option th:text="#{radiousarea}">Радиус / Район</option>
+            <option th:text="#{radious}">Радиус</option>
+            <option th:text="#{area}">Район</option>
         </select>
     </li>
 
     <li id="search-left"> <!--todo: link to action -->
-        <button id="category-select"
+        <button th:text="#{justsearch}" id="category-select"
                 name="search-button">
 
             Найти
