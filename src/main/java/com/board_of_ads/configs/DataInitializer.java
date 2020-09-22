@@ -1,5 +1,6 @@
 package com.board_of_ads.configs;
 
+import com.board_of_ads.model.Role;
 import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
@@ -20,6 +21,16 @@ public class DataInitializer {
     }
 
     private void initUsers() {
+
+        if (roleService.getRoleByName("ADMIN") == null) {
+            roleService.saveRole(new Role("ADMIN"));
+        }
+        if (roleService.getRoleByName("USER") == null) {
+            roleService.saveRole(new Role("USER"));
+        }
+
+        System.out.println(roleService.getRoleByName("USER"));
+        System.out.println(roleService.getRoleByName("ADMIN"));
 
     }
 
