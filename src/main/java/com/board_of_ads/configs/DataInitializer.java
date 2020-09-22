@@ -8,7 +8,6 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -25,17 +24,11 @@ public class DataInitializer {
 
     KLADRServiceImpl kladrService;
 
-    @Autowired
-    public DataInitializer(KLADRServiceImpl kladrService) {
-        this.kladrService = kladrService;
+    @PostConstruct
+    private void init() throws IOException {
+        streamKLADR();
     }
 
-    @PostConstruct
-    private void init() {
-
-    }
-
-    @PostConstruct
     private void streamKLADR() throws IOException {
         Set<FileInputStream> streamKLADR = new HashSet<>();
         FileInputStream fileInputStream_1 = new FileInputStream("src/main/resources/kladr/KLADR_1.xls");

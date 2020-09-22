@@ -1,19 +1,18 @@
 package com.board_of_ads.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 import javax.persistence.*;
 
-@Getter
-@Setter
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "city")
 public class City {
-
-    public City() {
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

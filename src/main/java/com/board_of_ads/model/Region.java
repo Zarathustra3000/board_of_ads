@@ -1,13 +1,18 @@
 package com.board_of_ads.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
 
-@Getter
-@Setter
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name = "region")
@@ -28,9 +33,6 @@ public class Region {
 
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, orphanRemoval = true)
     Set<City> cityOfRegion;
-
-    public Region() {
-    }
 
     public Region(String name, String regionNumber, String formSubject) {
         this.name = name;

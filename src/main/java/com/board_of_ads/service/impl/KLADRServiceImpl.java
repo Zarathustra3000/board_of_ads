@@ -4,23 +4,19 @@ import com.board_of_ads.model.City;
 import com.board_of_ads.model.Region;
 import com.board_of_ads.repository.CityRepository;
 import com.board_of_ads.repository.RegionRepository;
-import com.board_of_ads.service.KLADRService;
+import com.board_of_ads.service.interfaces.KLADRService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@AllArgsConstructor
 public class KLADRServiceImpl implements KLADRService {
 
     CityRepository cityRepository;
     RegionRepository regionRepository;
-
-    @Autowired
-    public KLADRServiceImpl(CityRepository cityRepository, RegionRepository regionRepository) {
-        this.cityRepository = cityRepository;
-        this.regionRepository = regionRepository;
-    }
 
     @Override
     public Region getRegionByRegionNumber(String regionNumber) {
