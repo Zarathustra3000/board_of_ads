@@ -2,7 +2,7 @@ package com.board_of_ads.configs;
 
 import com.board_of_ads.model.City;
 import com.board_of_ads.model.Region;
-import com.board_of_ads.service.impl.KLADRServiceImpl;
+import com.board_of_ads.service.interfaces.KLADRService;
 import lombok.AllArgsConstructor;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
@@ -22,7 +22,7 @@ import java.util.Set;
 @AllArgsConstructor
 public class DataInitializer {
 
-    KLADRServiceImpl kladrService;
+   private KLADRService kladrService;
 
     @PostConstruct
     private void init() throws IOException {
@@ -56,7 +56,6 @@ public class DataInitializer {
                         || row.getCell(0).getStringCellValue().equals("Санкт-Петербург")
                         || row.getCell(0).getStringCellValue().equals("Байконур")
                         || row.getCell(0).getStringCellValue().equals("Севастополь")))) {
-
                     String regionFormSubject = null;
                     switch (row.getCell(1).getStringCellValue()) {
                         case "обл":
@@ -78,14 +77,10 @@ public class DataInitializer {
                             regionFormSubject = "Город";
                             break;
                     }
-
                     if (!kladrService.existsRegionByName(row.getCell(0).getStringCellValue())) {
                         kladrService.saveRegion(new Region(row.getCell(0).getStringCellValue(), row.getCell(2).getStringCellValue().substring(0, 2), regionFormSubject));
                     }
-
-
                 }
-
                 if (row.getCell(1).getStringCellValue().equals("г")
                         & !(row.getCell(0).getStringCellValue().equals("Москва")
                         || row.getCell(0).getStringCellValue().equals("Санкт-Петербург")
@@ -100,5 +95,4 @@ public class DataInitializer {
             fileInputStream.close();
         }
     }
-
 }

@@ -13,7 +13,8 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Getter
+@Setter
 @Entity
 @Table(name = "region")
 public class Region {

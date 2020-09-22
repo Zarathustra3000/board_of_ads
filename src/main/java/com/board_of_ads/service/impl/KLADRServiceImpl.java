@@ -6,7 +6,6 @@ import com.board_of_ads.repository.CityRepository;
 import com.board_of_ads.repository.RegionRepository;
 import com.board_of_ads.service.interfaces.KLADRService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
