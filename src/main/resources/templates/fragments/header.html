@@ -3,10 +3,10 @@
         <div class="header-container">
             <div class="header-menu-left">
                 <ul>
-                    <li><a class="header-link-item" href="#">Объявления</a></li> <!--todo: add links-->
-                    <li><a class="header-link-item" href="#">Магазины</a></li>
-                    <li><a class="header-link-item" href="#">Бизнес</a></li>
-                    <li><a class="header-link-item" href="#">Помощь</a></li>
+                    <li><a th:text="#{ads}" class="header-link-item" href="#">Объявления</a></li> <!--todo: add links-->
+                    <li><a th:text="#{shops}" class="header-link-item" href="#">Магазины</a></li>
+                    <li><a th:text="#{business}" class="header-link-item" href="#">Бизнес</a></li>
+                    <li><a th:text="#{help}" class="header-link-item" href="#">Помощь</a></li>
                 </ul>
             </div>
             <div class="header-favorite-button">
@@ -19,8 +19,12 @@
             </div>
             <div class="header-menu-right">
                 <ul>
-                    <li><a class="header-link-item header-button-sign" href="#">Вход и регистрация</a></li>
-                    <li><a class="header-button-new-ads" href="#">Подать объявление</a></li>
+                    <li><a th:text="#{reg}" class="header-link-item header-button-sign" href="#">Вход и регистрация</a></li>
+                    <li><a th:text="#{add}" class="header-button-new-ads" href="#">Подать объявление</a></li>
+                    <li>
+                        <a class="header-link-item header-button-sign" th:href="@{'?locale=ru'}">Ru</a>
+                        <a class="header-link-item header-button-sign" th:href="@{'?locale=en'}">En</a>
+                    </li>
                 </ul>
             </div>
         </div>
