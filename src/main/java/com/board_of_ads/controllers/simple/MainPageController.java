@@ -6,6 +6,7 @@ import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ import java.util.Map;
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private final UserService userService;
-
+    private final UserDetailsService userDetailsService;
     @GetMapping("/")
     public String getMainPage() {
         return "main-page";
@@ -32,13 +33,20 @@ public class MainPageController {
         Map<String, String> userInfo = authVK.getUserInfo(userData);
         User user = userService.getUserByEmail(userData.get("email"));
         if (user != null) {
-            //todo add
+            userDetailsService.loadUserByUsername(user.getUsername());
+            System.out.println("USER: " + user.getUsername());
+            System.out.println("USER: " + user.getAuthorities());
+            return "redirect:/";
         }
             model.addAttribute("first_name", userInfo.get("first_name"));
             model.addAttribute("last_name", userInfo.get("last_name"));
             model.addAttribute("avatar_link", userInfo.get("avatar_link"));
             model.addAttribute("email", userData.get("email"));
-            return null;
+            return "redirect:/";
     }
 
+    @GetMapping("/aa")
+    public String aa() {
+        return "redirect:http://vk.com";
+    }
 }

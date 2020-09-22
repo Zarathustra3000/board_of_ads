@@ -16,7 +16,7 @@ public class AuthVK {
     private final String clientSecret = "acpHC7p5T746jYx17yz1";
     private final String responseType = "code";
 
-    private final String redirectURL = "http://localhost:8080/vk_auth";
+    private final String redirectURL = "http://localhost:5556/vk_auth";
     private final String authUrl = "http://oauth.vk.com/authorize";
     private final String tokenURL = "https://oauth.vk.com/access_token";
     private final String usersGetURL = "https://api.vk.com/method/users.get";
@@ -59,7 +59,7 @@ public class AuthVK {
 
         Map<String, String> userData = new HashMap<>();
         userData.put("access_token", (String) jsonObject.get("access_token"));
-        userData.put("user_id", (String) jsonObject.get("user_id"));
+        userData.put("user_id", jsonObject.get("user_id").toString());
         userData.put("email", (String) jsonObject.get("email"));
 
         System.out.println("TOKEN: " + jsonObject.get("access_token"));
