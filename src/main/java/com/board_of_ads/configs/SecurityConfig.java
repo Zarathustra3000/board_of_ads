@@ -39,14 +39,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
+                .antMatchers("/").permitAll()
+                .anyRequest().authenticated()
                 .and()
-                .formLogin()
+                    .formLogin()
                 .and()
-                .logout().permitAll();
+                    .logout().permitAll();
     }
 
     //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
