@@ -1,6 +1,5 @@
-﻿package com.board_of_ads.service.impl;
+package com.board_of_ads.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -8,8 +7,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class SendEmailService {
 
-    @Autowired
-    private JavaMailSender javaMailSender;
+    private final JavaMailSender javaMailSender;
+
+    public SendEmailService(JavaMailSender javaMailSender) {
+        this.javaMailSender = javaMailSender;
+    }
 
     public void sendEmail(String to, String body, String topic) {
         System.out.println("sending email");
