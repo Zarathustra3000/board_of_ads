@@ -20,8 +20,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "languages")
-public class Language {
+@Table(name = "levels")
+public class Level {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +33,7 @@ public class Language {
     @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "levels_languages",
-            joinColumns = { @JoinColumn(name = "language_id") },
+            joinColumns = { @JoinColumn(name = "level_id") },
             inverseJoinColumns = { @JoinColumn(name = "id") }
     )
     private List<LevelLanguage> levelLanguages;

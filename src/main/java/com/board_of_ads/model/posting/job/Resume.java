@@ -8,9 +8,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -39,8 +42,12 @@ public class Resume extends JobPosting {
     private String aboutYourself;
 
     @OneToMany(cascade = {CascadeType.ALL})
-    private List<Experience> experiences;
+    private Set<Experience> experiences;
 
-    @OneToMany(cascade = {CascadeType.ALL})
-    private List<Language> languages;
+    @OneToMany
+    @JoinTable(
+            name = "resumes_languages",
+            joinColumns = @JoinColumn(name = "resume_id"),
+            inverseJoinColumns = @JoinColumn(name = "id"))
+    private List<LevelLanguage> levelLanguages;
 }
