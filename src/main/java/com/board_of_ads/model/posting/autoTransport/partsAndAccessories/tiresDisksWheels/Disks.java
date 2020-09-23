@@ -13,6 +13,6 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "disks")
+@Table(name = "posting_disks")
 public class Disks extends DisksAbstract {
 }

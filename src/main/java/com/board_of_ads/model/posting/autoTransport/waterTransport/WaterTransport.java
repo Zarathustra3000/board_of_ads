@@ -10,6 +10,6 @@ import javax.persistence.Table;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "water_transport")
+@Table(name = "posting_water_transport")
 public class WaterTransport extends AutoTransport {
 }

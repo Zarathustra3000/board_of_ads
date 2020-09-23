@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "part_and_accessories")
+@Table(name = "posting_part_and_accessories")
 public class PartAndAccessorie extends AutoTransport {
 
     @Column

@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "wheels")
+@Table(name = "posting_wheels")
 public class Wheels extends DisksAbstract {
 
     @Column

@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tires")
+@Table(name = "posting_tires")
 public class Tires extends PartAndAccessorie {
 
     @Column

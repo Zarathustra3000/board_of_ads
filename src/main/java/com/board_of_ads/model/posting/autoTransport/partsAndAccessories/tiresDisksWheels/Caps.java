@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "caps")
+@Table(name = "posting_caps")
 public class Caps extends PartAndAccessorie {
 
     @Column
