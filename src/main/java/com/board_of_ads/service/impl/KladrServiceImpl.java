@@ -68,9 +68,7 @@ public class KladrServiceImpl implements KladrService {
         streamKLADR.add(fileInputStream_3);
         FileInputStream fileInputStream_4 = new FileInputStream("src/main/resources/kladr/KLADR_4.xls");
         streamKLADR.add(fileInputStream_4);
-        Iterator<FileInputStream> iterator = streamKLADR.iterator();
-        while (iterator.hasNext()) {
-            FileInputStream fileInputStream = iterator.next();
+        for (FileInputStream fileInputStream : streamKLADR) {
             BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
             Workbook workbook = new HSSFWorkbook(bufferedInputStream);
             Sheet sheet = workbook.getSheetAt(0);
