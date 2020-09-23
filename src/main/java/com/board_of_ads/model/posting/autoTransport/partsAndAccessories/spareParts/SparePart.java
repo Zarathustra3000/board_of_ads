@@ -1,6 +1,6 @@
 package com.board_of_ads.model.posting.autoTransport.partsAndAccessories.spareParts;
 
-import com.board_of_ads.model.posting.autoTransport.PartAndAccessorie;
+import com.board_of_ads.model.posting.autoTransport.partsAndAccessories.PartAndAccessorie;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

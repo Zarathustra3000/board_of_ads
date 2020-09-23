@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -14,11 +15,14 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Entity
 @Table(name = "wheels")
-public class Wheels extends Disks {
+public class Wheels extends DisksAbstract {
 
+    @Column
     private String season;
 
+    @Column
     private Short profileWidth;
 
+    @Column
     private Short profileHeight;
 }

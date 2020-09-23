@@ -1,5 +1,6 @@
-package com.board_of_ads.model.posting.autoTransport;
+package com.board_of_ads.model.posting.autoTransport.truckTransport;
 
+import com.board_of_ads.model.posting.autoTransport.AutoTransport;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
