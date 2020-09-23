@@ -1,6 +1,5 @@
 package com.board_of_ads.service.impl;
 
-import com.board_of_ads.model.User;
 import com.board_of_ads.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

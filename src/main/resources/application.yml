@@ -5,7 +5,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/board_of_ads
-    username: postgres
+    username: root
     password: root
     initialization-mode: always
   jpa:
@@ -30,7 +30,7 @@ spring:
       auth: true
       starttls.enable: true
       ssl.trust: smtp.gmail.com
-jhipster:
-  mail: # specific JHipster mail property, for standard properties see MailProperties
-  from: kunaev993@gmail.com
-  base-url: http://127.0.0.1:5556
+  jhipster:
+    mail: # specific JHipster mail property, for standard properties see MailProperties
+    from: kunaev993@gmail.com
+    base-url: http://127.0.0.1:5556

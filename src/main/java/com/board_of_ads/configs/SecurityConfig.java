@@ -1,10 +1,7 @@
 package com.board_of_ads.configs;
 
 
-import com.board_of_ads.model.User;
-import com.board_of_ads.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.security.oauth2.resource.PrincipalExtractor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -26,7 +23,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
-
     }
 
     @Override

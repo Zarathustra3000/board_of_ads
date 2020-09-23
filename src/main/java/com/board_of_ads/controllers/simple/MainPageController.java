@@ -1,24 +1,19 @@
 package com.board_of_ads.controllers.simple;
 
+import com.board_of_ads.configs.auth.Auth;
 import com.board_of_ads.configs.auth.AuthVK;
 import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.HashSet;
 import java.util.Map;
 
 @Controller
@@ -27,6 +22,8 @@ public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private final UserService userService;
     private final UserDetailsService userDetailsService;
+    private final Auth auth;
+    private final AuthVK authVK;
 
     @GetMapping("/")
     public String getMainPage() {
@@ -36,37 +33,31 @@ public class MainPageController {
 
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
-        AuthVK authVK = new AuthVK();  //todo spring injections
         String response = authVK.getAuthResponseURL(code);
         Map<String, String> userData = authVK.getUserData(response);
         Map<String, String> userInfo = authVK.getUserInfo(userData);
         User user = userService.getUserByEmail(userData.get("email"));
         if (user != null) {
-            UserDetails userDetails = userDetailsService.loadUserByUsername(user.getUsername());
-
-            System.out.println("USERNAME: " + userDetails.getUsername());
-            System.out.println("PASSWORD: " + userDetails.getPassword());
-            System.out.println("AUTHORITY: " + userDetails.getAuthorities());
-//            System.out.println("USER: " + user.getAuthorities());
-
-            Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-
+            auth.login(user);
             return "redirect:/";
         }
-        user = new User(5L, null, "q", "q", "gurenko", "123123", null, true, new HashSet<>());
+        user = new User();
+        user.setEnable(true);
+        user.setDataRegistration(LocalDateTime.now());
         user.setEmail(userData.get("email"));
         user.setFirsName(userInfo.get("first_name"));
-        System.out.println(user);
+        user.setLastName(userInfo.get("last_name"));
+        user.setPassword(userData.get("email")); //todo create set password page (and phone)
         userService.saveUser(user);
-        model.addAttribute("first_name", userInfo.get("first_name"));
-        model.addAttribute("last_name", userInfo.get("last_name"));
-        model.addAttribute("avatar_link", userInfo.get("avatar_link"));
-        model.addAttribute("email", userData.get("email"));
+        auth.login(user);
         return "redirect:/";
     }
 
-    @GetMapping("/aa")
+    /** todo delete
+     * Тестовый контроллер для проверки авторизации.
+     * Если при переходе на /test вас перенаправило на главную страницу ВК, то вы авторизованы
+     */
+    @GetMapping("/test")
     public String aa() {
         return "redirect:http://vk.com";
     }
