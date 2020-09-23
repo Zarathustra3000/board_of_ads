@@ -7,26 +7,30 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "moto_tires")
-public class MotoTires extends PartAndAccessorie {
+@MappedSuperclass
+public abstract class DisksAbstract extends PartAndAccessorie {
 
     @Column
     private Byte diameter;
 
     @Column
-    private Short profileWidth;
+    private String typeOfDisk;
 
     @Column
-    private Short profileHeight;
+    private Byte diskWidth;
 
     @Column
-    private String axis;
+    private Byte numberOfHoles;
+
+    @Column
+    private Short diameterOfHolesPlacement;
+
+    @Column
+    private Short offset;
 }
