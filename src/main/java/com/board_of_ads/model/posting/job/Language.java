@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "language")
+@Table(name = "languages")
 public class Language {
 
     @Id

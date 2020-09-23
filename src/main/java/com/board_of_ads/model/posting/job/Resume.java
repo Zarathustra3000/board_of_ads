@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "resume")
+@Table(name = "resumes")
 public class Resume extends JobPosting {
 
     @Column
