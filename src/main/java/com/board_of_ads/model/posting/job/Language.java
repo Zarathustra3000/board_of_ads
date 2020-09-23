@@ -20,7 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "languages")
+@Table(name = "posting_job_languages")
 public class Language {
 
     @Id

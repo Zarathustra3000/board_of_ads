@@ -20,7 +20,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "resumes")
+@Table(name = "posting_job_resumes")
 public class Resume extends JobPosting {
 
     @Column
@@ -46,7 +46,7 @@ public class Resume extends JobPosting {
 
     @OneToMany
     @JoinTable(
-            name = "resumes_languages",
+            name = "posting_job_resumes_languages",
             joinColumns = @JoinColumn(name = "resume_id"),
             inverseJoinColumns = @JoinColumn(name = "id"))
     private List<LevelLanguage> levelLanguages;

@@ -9,6 +9,6 @@ import javax.persistence.Table;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "vacancies")
+@Table(name = "posting_job_vacancies")
 public class Vacancy extends JobPosting {
 }

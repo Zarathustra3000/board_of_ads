@@ -20,7 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "levels")
+@Table(name = "posting_job_lang_levels")
 public class Level {
 
     @Id
@@ -32,7 +32,7 @@ public class Level {
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
-            name = "levels_languages",
+            name = "posting_job_levels_languages",
             joinColumns = { @JoinColumn(name = "level_id") },
             inverseJoinColumns = { @JoinColumn(name = "id") }
     )

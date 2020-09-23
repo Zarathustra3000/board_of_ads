@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "job_postings")
+@Table(name = "posting_job")
 public class JobPosting extends Posting {
 
     @Column
