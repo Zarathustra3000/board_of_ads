@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/fragment-navigate-panel-style.css" th:href="@{/css/fragment-navigate-panel-style.css}"/>
     <link rel="stylesheet" type="text/css" href="../static/css/header-fragment-style.css" th:href="@{/css/header-fragment-style.css}"/>
     <link rel="stylesheet" type="text/css" href="../static/css/search-fragment-style.css" th:href="@{/css/search-fragment-style.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/auth-style.css" th:href="@{/css/auth-style.css}">
 
 </head>
 <body>
@@ -14,6 +15,7 @@
 <header th:insert="fragments/header::main-header"></header>
 <div th:insert="fragments/navigate-panel::navigate-header"></div>
 <header th:insert="fragments/search-header::search-header"></header>
+<div th:insert="authorization-button::authorization-button"></div>
 
 <script src="../static/js/main_page.js" th:src="@{/js/main_page.js}"></script>
 
