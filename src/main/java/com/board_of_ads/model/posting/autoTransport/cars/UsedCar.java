@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "used_cars")
+@Table(name = "posting_used_cars")
 public class UsedCar extends Car {
 
     @Column

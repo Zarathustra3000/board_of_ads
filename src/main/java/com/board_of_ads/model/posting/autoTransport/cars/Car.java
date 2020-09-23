@@ -21,7 +21,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "cars")
+@Table(name = "posting_cars")
 public class Car extends AutoTransport {
 
     @Column

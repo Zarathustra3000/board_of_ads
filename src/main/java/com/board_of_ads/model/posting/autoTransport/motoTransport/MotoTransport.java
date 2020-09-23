@@ -10,6 +10,6 @@ import javax.persistence.Table;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "moto_transport")
+@Table(name = "posting_moto_transport")
 public class MotoTransport extends AutoTransport {
 }
