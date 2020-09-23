@@ -6,18 +6,19 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@MappedSuperclass
+@Inheritance(strategy = InheritanceType.JOINED)
 @Entity
-public class PartsPosting extends PartsAndAccessoriesPosting {
+@Table(name = "part_and_accessories")
+public class PartAndAccessorie extends AutoTransport {
 
-    private String manufacturer;
-
-    private String PartNumber;
+    private String typeOfPosting;
 
 }

@@ -1,9 +1,10 @@
-package com.board_of_ads.model.posting.autoTransport;
+package com.board_of_ads.model.posting.autoTransport.cars;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,9 +24,9 @@ public class Option {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
     private String name;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private NewCarPosting newCarPosting;
-
+    private Car car;
 }
