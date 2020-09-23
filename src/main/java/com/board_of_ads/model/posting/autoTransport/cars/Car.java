@@ -12,7 +12,9 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.util.Set;
 
@@ -26,46 +28,11 @@ import java.util.Set;
 public class Car extends AutoTransport {
 
     @Column
-    private String color;
-
-    @Column
     private String VIN;
 
-    @Column
-    private String brand;
-
-    @Column
-    private String model;
-
-    @Column
-    private Short year;
-
-    @Column
-    private String carBody;
-
-    @Column
-    private Byte numberOfDoors;
-
-    @Column
-    private String generation;
-
-    @Column
-    private String typeOfEngine;
-
-    @Column
-    private String wheelDrive;
-
-    @Column
-    private String transmission;
-
-    @Column
-    private String modification;
-
-    @Column
-    private String configuration;
-
-    @Column
-    private String wheelSide;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="technicalInfo_id")
+    private TechnicalInfo technicalInfo;
 
     @Column
     private boolean hasServiceBook;
@@ -76,8 +43,7 @@ public class Car extends AutoTransport {
     @Column
     private boolean UnderWarranty;
 
-    @OneToMany(mappedBy = "car",
-            fetch = FetchType.EAGER,
+    @OneToMany(fetch = FetchType.EAGER,
             cascade = CascadeType.MERGE)
     private Set<Option> additionalOptions;
 }
