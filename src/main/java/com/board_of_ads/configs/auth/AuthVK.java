@@ -98,11 +98,9 @@ public class AuthVK {
         }
         JSONArray jsonArray = (JSONArray) jo.get("response");
         JSONObject dataArray = (JSONObject) jsonArray.get(0);
-
-        Map<String, String> userInfo = new HashMap<>();
-        userInfo.put("first_name", (String) dataArray.get("first_name"));
-        userInfo.put("last_name", (String) dataArray.get("last_name"));
-        userInfo.put("avatar_link", (String) dataArray.get("photo_100"));
-        return userInfo;
+        userData.put("first_name", (String) dataArray.get("first_name"));
+        userData.put("last_name", (String) dataArray.get("last_name"));
+        userData.put("avatar_link", (String) dataArray.get("photo_100"));
+        return userData;
     }
 }

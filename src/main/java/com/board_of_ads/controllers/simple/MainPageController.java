@@ -35,7 +35,7 @@ public class MainPageController {
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
         String response = authVK.getAuthResponseURL(code);
         Map<String, String> userData = authVK.getUserData(response);
-        Map<String, String> userInfo = authVK.getUserInfo(userData);
+        userData = authVK.getUserInfo(userData);
         User user = userService.getUserByEmail(userData.get("email"));
         if (user != null) {
             auth.login(user);
@@ -45,8 +45,8 @@ public class MainPageController {
         user.setEnable(true);
         user.setDataRegistration(LocalDateTime.now());
         user.setEmail(userData.get("email"));
-        user.setFirsName(userInfo.get("first_name"));
-        user.setLastName(userInfo.get("last_name"));
+        user.setFirsName(userData.get("first_name"));
+        user.setLastName(userData.get("last_name"));
         user.setPassword(userData.get("email")); //todo create set password page (and phone)
         userService.saveUser(user);
         auth.login(user);
