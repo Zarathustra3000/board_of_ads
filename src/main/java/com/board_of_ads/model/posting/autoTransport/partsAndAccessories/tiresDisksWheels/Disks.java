@@ -10,8 +10,6 @@ import javax.persistence.Table;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "posting_disks")
 public class Disks extends DisksAbstract {

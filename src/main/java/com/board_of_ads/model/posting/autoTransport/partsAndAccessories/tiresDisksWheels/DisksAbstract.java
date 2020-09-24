@@ -32,5 +32,5 @@ public abstract class DisksAbstract extends PartAndAccessorie {
     private Short diameterOfHolesPlacement;
 
     @Column
-    private Short offset;
+    private Short vinos;
 }

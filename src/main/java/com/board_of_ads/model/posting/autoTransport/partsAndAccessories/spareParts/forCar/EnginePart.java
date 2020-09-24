@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "engine_parts")
+@Table(name = "posting_engine_parts")
 public class EnginePart extends SparePart {
 
     private String typeOfPart;
