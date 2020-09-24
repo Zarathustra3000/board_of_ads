@@ -1,15 +1,12 @@
 package com.board_of_ads.configs.auth;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -27,6 +24,11 @@ public class AuthYandex {
     private final String tokenUrl = "https://oauth.yandex.ru/token";
     private final String userInfoUrl = "https://login.yandex.ru/info";
 
+    /**
+     * Метод для кнопки авторизации
+     * @return ссылку для авторизации при переходе по которой, получим ссылку с
+     *          аргументом code необходимым для метода getAuthResponse(String code).
+     */
     public String getAuthURL() {
         return authUrl + "?"
                 + "client_id=" + clientId
@@ -35,6 +37,10 @@ public class AuthYandex {
                 + "&response_type=" + responseType;
     }
 
+    /**
+     * @param code получаем из ссылки возвращаемой методом getAuthURL()
+     * @return тело запроса, для получения access_token
+     */
     public String getRequestBody(String code) {
         return "grant_type=authorization_code"
                 + "&client_id=" + clientId
@@ -42,6 +48,10 @@ public class AuthYandex {
                 + "&code=" + code;
     }
 
+    /**
+     * @param body получаем из метода getRequestBody(String code)
+     * @return токен авторизации пользователя Yandex Passport
+     */
     public String getToken(String body) {
         HttpEntity<String> httpEntity = new HttpEntity<>(body);
         RestTemplate restTemplate = new RestTemplate();
@@ -57,6 +67,10 @@ public class AuthYandex {
         return token;
     }
 
+    /**
+     * @param token получаем из метода getToken(String body)
+     * @return Map с именем, фамилией, почтой и ссылкой на аватар пользователя (100x100px).
+     */
     public Map<String, String> getUserData(String token) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);

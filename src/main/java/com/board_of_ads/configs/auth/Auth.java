@@ -12,18 +12,27 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 /**
- * Класс для получения сессии пользователя
+ * Служебный класс для авторизации пользователя
  */
 @Controller
 @AllArgsConstructor
 public class Auth {
     private final UserService userService;
 
+    /**
+     * Метод для получения сессии пользователя
+     */
     public void login(User user) {
         Authentication authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authentication);
     }
 
+    /**
+     * Метод инициализации пользователя.
+     * Если такой пользователь есть в базе данных, то он вернет его.
+     * Если пользователя не существует, то он его создаст, добавит в БД и вернет.
+     * @param userData возвращается методом getUserData(...) в классах авторизаций.
+     */
     public User init(Map<String, String> userData) {
         User user = userService.getUserByEmail(userData.get("email"));
         if (user != null) {

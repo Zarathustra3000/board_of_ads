@@ -14,7 +14,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.time.LocalDateTime;
 import java.util.Map;
 
 @Controller
@@ -25,6 +24,7 @@ public class MainPageController {
     private final UserDetailsService userDetailsService;
     private final Auth auth;
     private final AuthVK authVK;
+    private final AuthYandex authYandex;
 
     @GetMapping("/")
     public String getMainPage() {
@@ -36,7 +36,7 @@ public class MainPageController {
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
         String response = authVK.getAuthResponseURL(code);
         Map<String, String> userData = authVK.getUserData(response);
-        userData = authVK.getUserInfo(userData);
+        userData = authVK.getUserData(userData);
         User user = auth.init(userData);
         auth.login(user);
         return "redirect:/";
@@ -44,7 +44,6 @@ public class MainPageController {
 
     @GetMapping("/yandex_auth")
     public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
-        AuthYandex authYandex = new AuthYandex();
         String requestBody = authYandex.getRequestBody(code);
         String token = authYandex.getToken(requestBody);
         Map<String, String> userData = authYandex.getUserData(token);
