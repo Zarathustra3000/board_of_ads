@@ -37,19 +37,7 @@ public class MainPageController {
         String response = authVK.getAuthResponseURL(code);
         Map<String, String> userData = authVK.getUserData(response);
         userData = authVK.getUserInfo(userData);
-        User user = userService.getUserByEmail(userData.get("email"));
-        if (user != null) {
-            auth.login(user);
-            return "redirect:/";
-        }
-        user = new User();
-        user.setEnable(true);
-        user.setDataRegistration(LocalDateTime.now());
-        user.setEmail(userData.get("email"));
-        user.setFirsName(userData.get("first_name"));
-        user.setLastName(userData.get("last_name"));
-        user.setPassword(userData.get("email")); //todo create set password page (and phone)
-        userService.saveUser(user);
+        User user = auth.init(userData);
         auth.login(user);
         return "redirect:/";
     }
@@ -60,19 +48,7 @@ public class MainPageController {
         String requestBody = authYandex.getRequestBody(code);
         String token = authYandex.getToken(requestBody);
         Map<String, String> userData = authYandex.getUserData(token);
-        User user = userService.getUserByEmail(userData.get("email"));
-        if (user != null) {
-            auth.login(user);
-            return "redirect:/";
-        }
-        user = new User();
-        user.setEnable(true);
-        user.setDataRegistration(LocalDateTime.now());
-        user.setEmail(userData.get("email"));
-        user.setFirsName(userData.get("first_name"));
-        user.setLastName(userData.get("last_name"));
-        user.setPassword(userData.get("email")); //todo create set password page (and phone)
-        userService.saveUser(user);
+        User user = auth.init(userData);
         auth.login(user);
         return "redirect:/";
     }
