@@ -1,5 +1,6 @@
 package com.board_of_ads.model.posting;
 
+import com.board_of_ads.model.Category;
 import com.board_of_ads.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +15,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
@@ -39,8 +39,9 @@ public class Posting {
     @JoinColumn(name = "user_id")
     private User user;
 
-//    @Column
-//    private Category category;    //todo create class Category and uncomment
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    private Category category;
 
     @Column
     private String title;
