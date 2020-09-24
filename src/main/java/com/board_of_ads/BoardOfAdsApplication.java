@@ -12,8 +12,6 @@ public class BoardOfAdsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BoardOfAdsApplication.class, args);
-        AuthYandex authYandex = new AuthYandex();
-        System.out.println(authYandex.getAuthURL());
     }
 
 //    @EventListener(ApplicationReadyEvent.class)

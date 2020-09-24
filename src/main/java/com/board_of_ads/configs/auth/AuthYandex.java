@@ -8,11 +8,13 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Controller
 public class AuthYandex {
     private final String clientId = "2561bd17ecc1441d9c2461d780690cae";
     private final String clientSecret = "cc96fba5ab674d159b7d191215e1697b";
