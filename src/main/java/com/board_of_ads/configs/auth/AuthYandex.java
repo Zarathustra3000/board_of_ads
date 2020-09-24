@@ -36,9 +36,10 @@ public class AuthYandex {
     }
 
     public String getRequestBody(String code) {
-        return "grant_type=authorization_code" +
-                "&client_id=2561bd17ecc1441d9c2461d780690cae&" + //fixme
-                "client_secret=cc96fba5ab674d159b7d191215e1697b&code=" + code;
+        return "grant_type=authorization_code"
+                + "&client_id=" + clientId
+                + "&client_secret=" + clientSecret
+                + "&code=" + code;
     }
 
     public String getToken(String body) {
@@ -56,17 +57,13 @@ public class AuthYandex {
         return token;
     }
 
-    public Map<String, String> getUserInfo(String token) {
+    public Map<String, String> getUserData(String token) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-
         headers.add("Authorization", "OAuth " + token);
         HttpEntity<String> httpEntity = new HttpEntity<>(headers);
-
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> responseEntity = restTemplate.exchange(userInfoUrl, HttpMethod.GET, httpEntity, String.class);
-        System.out.println(responseEntity.getBody());
-
         Object obj = null;
         try {
             obj = new JSONParser().parse(responseEntity.getBody());
@@ -74,13 +71,13 @@ public class AuthYandex {
             e.printStackTrace();
         }
         JSONObject jsonObject = (JSONObject) obj;
-        Map<String, String> userInfo = new HashMap<>();
-        userInfo.put("first_name", (String) jsonObject.get("first_name"));
-        userInfo.put("last_name", (String) jsonObject.get("last_name"));
-        userInfo.put("email", (String) jsonObject.get("default_email"));
-        userInfo.put("avatar_link", "https://avatars.yandex.net/get-yapic/"
+        Map<String, String> userData = new HashMap<>();
+        userData.put("first_name", (String) jsonObject.get("first_name"));
+        userData.put("last_name", (String) jsonObject.get("last_name"));
+        userData.put("email", (String) jsonObject.get("default_email"));
+        userData.put("avatar_link", "https://avatars.yandex.net/get-yapic/"
                             + jsonObject.get("default_avatar_id") + "/islands-retina-50");
-        return userInfo;
+        return userData;
     }
 
 

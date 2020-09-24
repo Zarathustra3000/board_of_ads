@@ -57,11 +57,23 @@ public class MainPageController {
     @GetMapping("/yandex_auth")
     public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
         AuthYandex authYandex = new AuthYandex();
-        String response = authYandex.getRequestBody(code);
-        System.out.println(response);
-        String token = authYandex.getToken(response);
-        System.out.println(token);
-        authYandex.getUserInfo(token);
+        String requestBody = authYandex.getRequestBody(code);
+        String token = authYandex.getToken(requestBody);
+        Map<String, String> userData = authYandex.getUserData(token);
+        User user = userService.getUserByEmail(userData.get("email"));
+        if (user != null) {
+            auth.login(user);
+            return "redirect:/";
+        }
+        user = new User();
+        user.setEnable(true);
+        user.setDataRegistration(LocalDateTime.now());
+        user.setEmail(userData.get("email"));
+        user.setFirsName(userData.get("first_name"));
+        user.setLastName(userData.get("last_name"));
+        user.setPassword(userData.get("email")); //todo create set password page (and phone)
+        userService.saveUser(user);
+        auth.login(user);
         return "redirect:/";
     }
 
