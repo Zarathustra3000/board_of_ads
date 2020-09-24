@@ -59,7 +59,9 @@ public class MainPageController {
         AuthYandex authYandex = new AuthYandex();
         String response = authYandex.getRequestBody(code);
         System.out.println(response);
-        authYandex.getToken(response);
+        String token = authYandex.getToken(response);
+        System.out.println(token);
+        authYandex.getUserInfo(token);
         return "redirect:/";
     }
 
