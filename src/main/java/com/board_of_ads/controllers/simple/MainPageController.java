@@ -2,6 +2,7 @@ package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.configs.auth.Auth;
 import com.board_of_ads.configs.auth.AuthVK;
+import com.board_of_ads.configs.auth.AuthYandex;
 import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
@@ -55,8 +56,10 @@ public class MainPageController {
 
     @GetMapping("/yandex_auth")
     public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
-//        String response =
-        System.out.println(code);
+        AuthYandex authYandex = new AuthYandex();
+        String response = authYandex.getRequestBody(code);
+        System.out.println(response);
+        authYandex.getToken(response);
         return "redirect:/";
     }
 
