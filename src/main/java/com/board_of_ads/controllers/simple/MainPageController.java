@@ -20,8 +20,6 @@ import java.util.Map;
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-    private final UserService userService;
-    private final UserDetailsService userDetailsService;
     private final Auth auth;
     private final AuthVK authVK;
     private final AuthYandex authYandex;
