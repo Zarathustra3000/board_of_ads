@@ -53,6 +53,13 @@ public class MainPageController {
         return "redirect:/";
     }
 
+    @GetMapping("/yandex_auth")
+    public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
+//        String response =
+        System.out.println(code);
+        return "redirect:/";
+    }
+
     /** todo delete
      * Тестовый контроллер для проверки авторизации.
      * Если при переходе на /test вас перенаправило на главную страницу ВК, то вы авторизованы
