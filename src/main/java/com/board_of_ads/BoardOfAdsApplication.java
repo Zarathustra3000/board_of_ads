@@ -17,8 +17,8 @@ public class BoardOfAdsApplication {
         SpringApplication.run(BoardOfAdsApplication.class, args);
     }
 
-//    @EventListener(ApplicationReadyEvent.class)
-//    public void triggerWhenStarts(){
-//        sendEmailService.sendEmail("ggg@gmail.com", "Hi there", "Test");
-//    }
+    @EventListener(ApplicationReadyEvent.class)
+    public void triggerWhenStarts(){
+        sendEmailService.sendEmail("ggg@gmail.com", "Hi there", "Test");
+    }
 }
