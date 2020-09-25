@@ -11,7 +11,7 @@ spring:
   jpa:
     show-sql: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQL95Dialect
@@ -34,3 +34,15 @@ jhipster:
   mail: # specific JHipster mail property, for standard properties see MailProperties
   from: kunaev993@gmail.com
   base-url: http://127.0.0.1:5556
+security:
+  oauth2:
+    client:
+      clientId: 670394210267367
+      clientSecret: 031df2213df96eb1bc72d87fad3cdbd3
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me
