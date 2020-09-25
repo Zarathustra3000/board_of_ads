@@ -29,9 +29,7 @@ public class MainPageController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         System.out.println(authentication.getName());
         User user = userService.getUserByEmail(authentication.getName());
-        if (user != null) {
-            model.addAttribute(user);
-        }
+        model.addAttribute(user != null ? user : new User());
         return "main-page";
     }
 
