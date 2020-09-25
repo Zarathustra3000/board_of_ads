@@ -30,7 +30,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) {
         web.ignoring().antMatchers(
                 "/css/*.css",
-                "/js/*.js"
+                "/js/*.js",
+                "/images/*.jpg"
         );
     }
 

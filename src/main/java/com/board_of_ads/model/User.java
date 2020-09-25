@@ -52,7 +52,7 @@ public class User implements UserDetails {
     private String phone;
 
     @Column
-    private LocalDateTime dataRegistration;
+    private LocalDateTime dataRegistration = LocalDateTime.now();
 
     @Column
     private boolean enable;
