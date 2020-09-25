@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -16,14 +17,13 @@ public class CategoryServiceImpl implements CategoryService {
     private CategoryRepository categoryRepository;
 
     @Override
-    public Category getCategoryByName(String name) {
-        return categoryRepository.findCategoryByName(name);
+    public Optional<Category> getCategoryByName(String name) {
+        return Optional.ofNullable(categoryRepository.findCategoryByName(name));
     }
 
     @Override
     public List<Category> getListCategories() {
         List<Category> categories = new ArrayList<>();
-        categories.add(new Category()); //empty
         categories.add(new Category(0L, "Транспорт", null, null));
         categories.add(new Category(0L, "Недвижимость", null, null));
         categories.add(new Category(0L, "Работа", null, null));
@@ -36,6 +36,8 @@ public class CategoryServiceImpl implements CategoryService {
         categories.add(new Category(0L, "Для бизнеса", null, null));
         return categories;
     }
+
+//    private boolean
 
     @Override
     public List<Category> getListSubCategories() {

@@ -73,11 +73,15 @@ public class DataInitializer {
     private void initCategories() {
         List<Category> categoryList = categoryService.getListCategories();
         for (Category category : categoryList) {
-            categoryService.saveCategory(category);
+            if (categoryService.getCategoryByName(category.getName()).isEmpty()) {
+                categoryService.saveCategory(category);
+            }
         }
         List<Category> subCategoryList = categoryService.getListSubCategories();
         for (Category category : subCategoryList) {
-            categoryService.saveCategory(category);
+            if (categoryService.getCategoryByName(category.getName()).isEmpty()) {
+                categoryService.saveCategory(category);
+            }
         }
     }
 
