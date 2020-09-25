@@ -20,6 +20,7 @@ public class MainPageController {
         return "main-page";
     }
 
+
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
         return authService.vkAuth(code);
