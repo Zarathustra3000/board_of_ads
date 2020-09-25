@@ -27,10 +27,17 @@ public class MainPageController {
     @GetMapping("/")
     public String getMainPage(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println(authentication.getName());
         User user = userService.getUserByEmail(authentication.getName());
         model.addAttribute(user != null ? user : new User());
         return "main-page";
+    }
+
+    @GetMapping("/admin_page")
+    public String adminPage(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.getUserByEmail(authentication.getName());
+        model.addAttribute(user);
+        return "admin_page";
     }
 
 
