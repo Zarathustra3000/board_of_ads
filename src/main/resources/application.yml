@@ -1,5 +1,15 @@
 server:
   port: 5556
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keystore.p12
+    key-store-password: password
+    key-alias: tomcat
+    protocol: TLS
+    enabled: true
+
+security:
+  require-ssl: true
 
 spring:
   datasource:
@@ -34,3 +44,13 @@ spring:
     mail: # specific JHipster mail property, for standard properties see MailProperties
     from: kunaev993@gmail.com
     base-url: http://127.0.0.1:5556
+
+oath:
+  insta:
+    app_id: 345663279968234
+    app_secret: 1a961168c92e1aac9231fde4dc31ae92
+    redirect_url: https://localhost:5556/auth/instagram/getcode
+    authorize_url: https://api.instagram.com/oauth/authorize
+    access_token_url: https://api.instagram.com/oauth/access_token
+    graph_api_url: https://graph.instagram.com/
+    scope: user_profile,user_media

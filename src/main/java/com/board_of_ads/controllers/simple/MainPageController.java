@@ -3,6 +3,7 @@ package com.board_of_ads.controllers.simple;
 import com.board_of_ads.configs.auth.Auth;
 import com.board_of_ads.configs.auth.AuthVK;
 import com.board_of_ads.model.User;
+import com.board_of_ads.service.impl.AuthInstagramService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -24,6 +25,7 @@ public class MainPageController {
     private final UserDetailsService userDetailsService;
     private final Auth auth;
     private final AuthVK authVK;
+    private final AuthInstagramService instaService;
 
     @GetMapping("/")
     public String getMainPage() {
@@ -60,5 +62,15 @@ public class MainPageController {
     @GetMapping("/test")
     public String aa() {
         return "redirect:http://vk.com";
+    }
+
+    @GetMapping("/auth/instagram")
+    private String redirectToAuthorize() {
+        return instaService.redirectToAuth();
+    }
+
+    @GetMapping("/auth/instagram/getcode")
+    private String getToken(@RequestParam(value = "code") String code) {
+        return instaService.authorization(code);
     }
 }
