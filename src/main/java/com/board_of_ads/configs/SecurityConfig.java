@@ -41,6 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/vk_auth").permitAll()
+                .antMatchers("/yandex_auth").permitAll()
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
