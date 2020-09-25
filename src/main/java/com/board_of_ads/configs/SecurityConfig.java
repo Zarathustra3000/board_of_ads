@@ -23,14 +23,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
-
     }
 
     @Override
     public void configure(WebSecurity web) {
         web.ignoring().antMatchers(
                 "/css/*.css",
-                "/js/*.js"
+                "/js/*.js",
+                "/images/*.jpg"
         );
     }
 
@@ -39,14 +39,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
+                .antMatchers("/").permitAll()
+                .antMatchers("/vk_auth").permitAll()
+                .anyRequest().authenticated()
                 .and()
-                .formLogin()
+                    .formLogin()
                 .and()
-                .logout().permitAll();
+                    .logout().permitAll();
     }
 
     //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
