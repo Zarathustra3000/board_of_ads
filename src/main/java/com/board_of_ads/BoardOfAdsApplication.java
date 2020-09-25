@@ -1,6 +1,5 @@
 package com.board_of_ads;
 
-import com.board_of_ads.configs.auth.AuthYandex;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,4 +9,5 @@ public class BoardOfAdsApplication {
     public static void main(String[] args) {
         SpringApplication.run(BoardOfAdsApplication.class, args);
     }
+  
 }

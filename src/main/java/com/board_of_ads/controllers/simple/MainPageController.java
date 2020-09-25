@@ -2,7 +2,6 @@ package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.configs.auth.Auth;
 import com.board_of_ads.configs.auth.AuthVK;
-import com.board_of_ads.configs.auth.AuthYandex;
 import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
@@ -14,15 +13,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 
 @Controller
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final UserService userService;
+    private final UserDetailsService userDetailsService;
     private final Auth auth;
     private final AuthVK authVK;
-    private final AuthYandex authYandex;
 
     @GetMapping("/")
     public String getMainPage() {
@@ -32,12 +33,7 @@ public class MainPageController {
 
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
-        String response = authVK.getAuthResponseURL(code);
-        Map<String, String> userData = authVK.getUserData(response);
-        userData = authVK.getUserData(userData);
-        User user = auth.init(userData);
-        auth.login(user);
-        return "redirect:/";
+        return vkAuthService.vkAuth(code);
     }
 
     @GetMapping("/yandex_auth")
