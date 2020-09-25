@@ -1,6 +1,7 @@
 package com.board_of_ads.configs;
 
 import com.board_of_ads.model.City;
+import com.board_of_ads.model.Image;
 import com.board_of_ads.model.Region;
 import com.board_of_ads.model.Role;
 import com.board_of_ads.model.User;
@@ -48,6 +49,7 @@ public class DataInitializer {
             User admin = new User();
             admin.setEmail("admin@mail.ru");
             admin.setPassword("admin");
+            admin.setAvatar(new Image(null, "https://example.com/admin.jpg"));
             Set<Role> roleAdmin = new HashSet<>();
             roleAdmin.add(roleService.getRoleByName("ADMIN"));
             admin.setRoles(roleAdmin);
@@ -57,6 +59,7 @@ public class DataInitializer {
             User user = new User();
             user.setEmail("user@mail.ru");
             user.setPassword("user");
+            user.setAvatar(new Image(null, "https://example.com/user.jpg"));
             Set<Role> roleAdmin = new HashSet<>();
             roleAdmin.add(roleService.getRoleByName("USER"));
             user.setRoles(roleAdmin);
