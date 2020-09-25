@@ -19,7 +19,8 @@ body {
 
 .header-menu-left ul {
     margin: 0; /* Обнуляем значение отступов */
-    padding: 10px; /* Значение полей */
+    padding-top: 10px; /* Значение полей */
+    padding-left: 0;
 }
 
 .header-menu-left ul li {
@@ -30,7 +31,7 @@ body {
 
 .header-menu-right ul {
     margin: 0; /* Обнуляем значение отступов */
-    padding: 10px; /* Значение полей */
+    padding-top: 10px; /* Значение полей */
 }
 
 .header-menu-right ul li {
