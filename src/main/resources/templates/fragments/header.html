@@ -7,6 +7,11 @@
                     <li><a th:text="#{shops}" class="header-link-item" href="#">Магазины</a></li>
                     <li><a th:text="#{business}" class="header-link-item" href="#">Бизнес</a></li>
                     <li><a th:text="#{help}" class="header-link-item" href="#">Помощь</a></li>
+                    <li class="admin-button"
+                        th:each="role : ${user.getAuthorities()}"
+                        th:if='${role.getAuthority().equals("ADMIN")}'>
+                            <a class="header-link-item"
+                               th:text="#{admin_panel}" href="#">Админка</a></li>
                 </ul>
             </div>
             <div class="header-favorite-button">

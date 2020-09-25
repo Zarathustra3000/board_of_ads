@@ -2,11 +2,14 @@ package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.configs.auth.Auth;
 import com.board_of_ads.configs.auth.AuthVK;
+import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.service.interfaces.VkAuthService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +25,13 @@ public class MainPageController {
     private final VkAuthService vkAuthService;
 
     @GetMapping("/")
-    public String getMainPage() {
+    public String getMainPage(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        System.out.println(authentication.getName());
+        User user = userService.getUserByEmail(authentication.getName());
+        if (user != null) {
+            model.addAttribute(user);
+        }
         return "main-page";
     }
 
