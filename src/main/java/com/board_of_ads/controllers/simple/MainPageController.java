@@ -2,7 +2,6 @@ package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.configs.auth.Auth;
 import com.board_of_ads.configs.auth.AuthVK;
-import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.service.interfaces.VkAuthService;
 import lombok.AllArgsConstructor;
@@ -12,9 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.time.LocalDateTime;
-import java.util.Map;
 
 @Controller
 @AllArgsConstructor
