@@ -72,8 +72,11 @@ textarea {
     resize:vertical;
 }
 textarea {
-    resize:horizontal;
+    resize: horizontal;
 }
 
+.category-parent {
+    background-color: lightgrey;
+}
 
 
