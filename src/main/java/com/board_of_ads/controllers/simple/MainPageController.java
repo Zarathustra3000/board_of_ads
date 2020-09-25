@@ -4,6 +4,7 @@ import com.board_of_ads.configs.auth.Auth;
 import com.board_of_ads.configs.auth.AuthVK;
 import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.UserService;
+import com.board_of_ads.service.interfaces.VkAuthService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ public class MainPageController {
     private final UserDetailsService userDetailsService;
     private final Auth auth;
     private final AuthVK authVK;
+    private final VkAuthService vkAuthService;
 
     @GetMapping("/")
     public String getMainPage() {
@@ -33,24 +35,7 @@ public class MainPageController {
 
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
-        String response = authVK.getAuthResponseURL(code);
-        Map<String, String> userData = authVK.getUserData(response);
-        userData = authVK.getUserInfo(userData);
-        User user = userService.getUserByEmail(userData.get("email"));
-        if (user != null) {
-            auth.login(user);
-            return "redirect:/";
-        }
-        user = new User();
-        user.setEnable(true);
-        user.setDataRegistration(LocalDateTime.now());
-        user.setEmail(userData.get("email"));
-        user.setFirsName(userData.get("first_name"));
-        user.setLastName(userData.get("last_name"));
-        user.setPassword(userData.get("email")); //todo create set password page (and phone)
-        userService.saveUser(user);
-        auth.login(user);
-        return "redirect:/";
+        return vkAuthService.vkAuth(code);
     }
 
     /** todo delete
