@@ -5,7 +5,6 @@ import com.board_of_ads.repository.CategoryRepository;
 import com.board_of_ads.service.interfaces.CategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -36,8 +35,6 @@ public class CategoryServiceImpl implements CategoryService {
         categories.add(new Category(0L, "Для бизнеса", null, null));
         return categories;
     }
-
-//    private boolean
 
     @Override
     public List<Category> getListSubCategories() {
