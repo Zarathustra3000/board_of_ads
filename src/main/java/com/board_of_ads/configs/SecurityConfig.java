@@ -23,14 +23,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
-
     }
 
     @Override
     public void configure(WebSecurity web) {
         web.ignoring().antMatchers(
                 "/css/*.css",
-                "/js/*.js"
+                "/js/*.js",
+                "/images/*.jpg"
         );
     }
 
@@ -40,6 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
+                .antMatchers("/vk_auth").permitAll()
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
