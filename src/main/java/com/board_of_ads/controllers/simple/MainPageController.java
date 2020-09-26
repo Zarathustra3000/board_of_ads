@@ -2,11 +2,7 @@ package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.configs.auth.Auth;
 import com.board_of_ads.configs.auth.AuthVK;
-<<<<<<< HEAD
-import com.board_of_ads.model.User;
 import com.board_of_ads.service.impl.AuthInstagramService;
-=======
->>>>>>> dev
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.service.interfaces.VkAuthService;
 import lombok.AllArgsConstructor;
