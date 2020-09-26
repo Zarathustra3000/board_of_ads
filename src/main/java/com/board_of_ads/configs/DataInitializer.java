@@ -1,10 +1,14 @@
 package com.board_of_ads.configs;
 
+import com.board_of_ads.model.Category;
 import com.board_of_ads.model.City;
+import com.board_of_ads.model.Image;
 import com.board_of_ads.model.Region;
 import com.board_of_ads.model.Role;
 import com.board_of_ads.model.User;
+import com.board_of_ads.model.posting.Estate;
 import com.board_of_ads.service.interfaces.KladrService;
+import com.board_of_ads.service.interfaces.PostingService;
 import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
@@ -18,8 +22,10 @@ import javax.annotation.PostConstruct;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 @Component
@@ -29,11 +35,28 @@ public class DataInitializer {
     private final UserService userService;
     private final RoleService roleService;
     private final KladrService kladrService;
+    private final PostingService postingService;
 
     @PostConstruct
     private void init() throws IOException {
         initUsers();
         initKladr();
+        initPosting();
+    }
+
+    private void initPosting() {
+        Estate estate = new Estate("ялта", 3, true);
+        estate.setUser(new User());
+        estate.setCategory(new Category());
+        estate.setTitle("WRTF");
+        estate.setDescription("desc");
+        estate.setPrice(123123L);
+        estate.setContact("12312312");
+        estate.setIsActive(true);
+        List<Image> list = new ArrayList<>();
+        list.add(new Image(null, "http://123123.cm"));
+        estate.setImages(list);
+        postingService.savePosting(estate);
     }
 
     private void initUsers() {

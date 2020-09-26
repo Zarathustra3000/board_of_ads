@@ -2,9 +2,11 @@ package com.board_of_ads.model.posting;
 
 
 import com.board_of_ads.model.Image;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.CascadeType;
@@ -22,8 +24,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "property_posting")
-public class Property extends Posting {
+@Table(name = "posting_estate")
+public class Estate extends Posting {
 
     //Адресс
     @Column
@@ -35,6 +37,6 @@ public class Property extends Posting {
     @Column
     private boolean isProprietor;
     //У одного обьявления может быть много фоток
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Image> photos;
+//    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    private List<Image> photos;
 }
