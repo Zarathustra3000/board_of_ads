@@ -1,28 +1,23 @@
 package com.board_of_ads.configs;
 
 import com.board_of_ads.model.Category;
-import com.board_of_ads.model.City;
-import com.board_of_ads.model.Region;
 import com.board_of_ads.model.Role;
 import com.board_of_ads.model.User;
+import com.board_of_ads.model.posting.Posting;
+import com.board_of_ads.repository.CategoryRepository;
 import com.board_of_ads.service.interfaces.CategoryService;
 import com.board_of_ads.service.interfaces.KladrService;
+import com.board_of_ads.service.interfaces.PostingService;
 import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -34,12 +29,15 @@ public class DataInitializer {
     private final RoleService roleService;
     private final KladrService kladrService;
     private final CategoryService categoryService;
+    private final PostingService postingService;
+    private final CategoryRepository categoryRepository;
 
     @PostConstruct
     private void init() throws IOException {
         initUsers();
         initKladr();
         initCategories();
+        initPosting();
     }
 
     private void initUsers() {
@@ -87,6 +85,15 @@ public class DataInitializer {
 
     private void initKladr() throws IOException {
         kladrService.streamKladr();
+    }
+
+    private void initPosting() {
+        List<Posting> postingList = postingService.getTestPostingList();
+        for (Posting posting : postingList) {
+            if (postingService.getPostingByTitle(posting.getTitle()).isEmpty()) {
+                postingService.save(posting);
+            }
+        }
     }
 
 }
