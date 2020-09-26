@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     private final UserService userService;
     private final Auth auth;
     private final AuthVK authVK;
