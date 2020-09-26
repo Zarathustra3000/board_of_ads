@@ -23,9 +23,6 @@ import java.util.List;
 @Table(name = "posting_auto_transport")
 public class AutoTransport extends Posting {
 
-//    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL, orphanRemoval = true)
-//    private List<Image> images;
-
     @Column
     private String condition;
 

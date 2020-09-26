@@ -30,7 +30,4 @@ public class JobPosting extends Posting {
 
     @Column
     private String placeOfWork;
-
-//    @OneToMany(cascade = CascadeType.ALL)
-//    private List<Image> images;
 }

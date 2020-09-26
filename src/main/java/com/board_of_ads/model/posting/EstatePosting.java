@@ -25,7 +25,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "posting_estate")
-public class Estate extends Posting {
+public class EstatePosting extends Posting {
 
     //Адресс
     @Column
