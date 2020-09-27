@@ -31,7 +31,7 @@ public class Category {
     @Column
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "parent_category", referencedColumnName = "id")
     private Category category;
 

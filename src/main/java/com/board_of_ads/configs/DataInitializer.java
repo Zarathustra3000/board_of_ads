@@ -71,13 +71,84 @@ public class DataInitializer {
     }
 
     private void initCategories() {
-        List<Category> categoryList = categoryService.getListCategories();
+        List<Category> categoryList = new ArrayList<>();
+        categoryList.add(new Category(null, "Транспорт", null, null));
+        categoryList.add(new Category(null, "Недвижимость", null, null));
+        categoryList.add(new Category(null, "Работа", null, null));
+        categoryList.add(new Category(null, "Услуги", null, null));
+        categoryList.add(new Category(null, "Личные вещи", null, null));
+        categoryList.add(new Category(null, "Для дома и дачи", null, null));
+        categoryList.add(new Category(null, "Бытовая электроника", null, null));
+        categoryList.add(new Category(null, "Хобби и отдых", null, null));
+        categoryList.add(new Category(null, "Животные", null, null));
+        categoryList.add(new Category(null, "Для бизнеса", null, null));
+
         for (Category category : categoryList) {
             if (categoryService.getCategoryByName(category.getName()).isEmpty()) {
                 categoryService.saveCategory(category);
             }
         }
-        List<Category> subCategoryList = categoryService.getListSubCategories();
+
+
+        List<Category> subCategoryList = new ArrayList<>();
+        subCategoryList.add(new Category(null, "Автомобили", categoryService.getCategoryByName("Транспорт").get(), null));
+        subCategoryList.add(new Category(null, "Мотоциклы и мототехника", categoryService.getCategoryByName("Транспорт").get(), null));
+        subCategoryList.add(new Category(null, "Грузовики и спецтранспорт", categoryService.getCategoryByName("Транспорт").get(), null));
+        subCategoryList.add(new Category(null, "Водный транспорт", categoryService.getCategoryByName("Транспорт").get(), null));
+        subCategoryList.add(new Category(null, "Запчасти и автоаксессуары", categoryService.getCategoryByName("Транспорт").get(), null));
+
+        subCategoryList.add(new Category(null, "Квартиры", categoryService.getCategoryByName("Недвижимость").get(), null));
+        subCategoryList.add(new Category(null, "Комнаты", categoryService.getCategoryByName("Недвижимость").get(), null));
+        subCategoryList.add(new Category(null, "Дома, дачи, коттеджи", categoryService.getCategoryByName("Недвижимость").get(), null));
+        subCategoryList.add(new Category(null, "Гаражи и машиноместа", categoryService.getCategoryByName("Недвижимость").get(), null));
+        subCategoryList.add(new Category(null, "Земельные участки", categoryService.getCategoryByName("Недвижимость").get(), null));
+        subCategoryList.add(new Category(null, "Коммерческая недвижимость", categoryService.getCategoryByName("Недвижимость").get(), null));
+        subCategoryList.add(new Category(null, "Недвижимость за рубежом", categoryService.getCategoryByName("Недвижимость").get(), null));
+
+        subCategoryList.add(new Category(null, "Вакансии", categoryService.getCategoryByName("Работа").get(), null));
+        subCategoryList.add(new Category(null, "Резюме", categoryService.getCategoryByName("Работа").get(), null));
+
+        subCategoryList.add(new Category(null, "Одежда, обувь, аксессуары", categoryService.getCategoryByName("Личные вещи").get(), null));
+        subCategoryList.add(new Category(null, "Детская одежда и обувь", categoryService.getCategoryByName("Личные вещи").get(), null));
+        subCategoryList.add(new Category(null, "Товары для детей и игрушки", categoryService.getCategoryByName("Личные вещи").get(), null));
+        subCategoryList.add(new Category(null, "Часы и украшения", categoryService.getCategoryByName("Личные вещи").get(), null));
+        subCategoryList.add(new Category(null, "Красота и здоровье", categoryService.getCategoryByName("Личные вещи").get(), null));
+
+        subCategoryList.add(new Category(null, "Бытовая техника", categoryService.getCategoryByName("Для дома и дачи").get(), null));
+        subCategoryList.add(new Category(null, "Мебель и интерьер", categoryService.getCategoryByName("Для дома и дачи").get(), null));
+        subCategoryList.add(new Category(null, "Посуда и товары для кухни", categoryService.getCategoryByName("Для дома и дачи").get(), null));
+        subCategoryList.add(new Category(null, "Продукты питания", categoryService.getCategoryByName("Для дома и дачи").get(), null));
+        subCategoryList.add(new Category(null, "Ремонт и строительство", categoryService.getCategoryByName("Для дома и дачи").get(), null));
+        subCategoryList.add(new Category(null, "Растения", categoryService.getCategoryByName("Для дома и дачи").get(), null));
+
+        subCategoryList.add(new Category(null, "Аудио и видео", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+        subCategoryList.add(new Category(null, "Игры, приставки и программы", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+        subCategoryList.add(new Category(null, "Настольные компьютеры", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+        subCategoryList.add(new Category(null, "Ноутбуки", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+        subCategoryList.add(new Category(null, "Оргтехника и расходники", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+        subCategoryList.add(new Category(null, "Планшеты и электронные книги", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+        subCategoryList.add(new Category(null, "Телефоны", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+        subCategoryList.add(new Category(null, "Товары для компьютера", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+        subCategoryList.add(new Category(null, "Фототехника", categoryService.getCategoryByName("Бытовая электроника").get(), null));
+
+        subCategoryList.add(new Category(null, "Билеты и путешествия", categoryService.getCategoryByName("Хобби и отдых").get(), null));
+        subCategoryList.add(new Category(null, "Велосипеды", categoryService.getCategoryByName("Хобби и отдых").get(), null));
+        subCategoryList.add(new Category(null, "Книги и журналы", categoryService.getCategoryByName("Хобби и отдых").get(), null));
+        subCategoryList.add(new Category(null, "Коллекционирование", categoryService.getCategoryByName("Хобби и отдых").get(), null));
+        subCategoryList.add(new Category(null, "Музыкальные инструменты", categoryService.getCategoryByName("Хобби и отдых").get(), null));
+        subCategoryList.add(new Category(null, "Охота и рыбалка", categoryService.getCategoryByName("Хобби и отдых").get(), null));
+        subCategoryList.add(new Category(null, "Спорт и отдых", categoryService.getCategoryByName("Хобби и отдых").get(), null));
+
+        subCategoryList.add(new Category(null, "Собаки", categoryService.getCategoryByName("Животные").get(), null));
+        subCategoryList.add(new Category(null, "Кошки", categoryService.getCategoryByName("Животные").get(), null));
+        subCategoryList.add(new Category(null, "Птицы", categoryService.getCategoryByName("Животные").get(), null));
+        subCategoryList.add(new Category(null, "Аквариум", categoryService.getCategoryByName("Животные").get(), null));
+        subCategoryList.add(new Category(null, "Другие животные", categoryService.getCategoryByName("Животные").get(), null));
+        subCategoryList.add(new Category(null, "Товары для животных", categoryService.getCategoryByName("Животные").get(), null));
+
+        subCategoryList.add(new Category(null, "Готовый бизнес", categoryService.getCategoryByName("Для бизнеса").get(), null));
+        subCategoryList.add(new Category(null, "Оборудование для бизнеса", categoryService.getCategoryByName("Для бизнеса").get(), null));
+
         for (Category category : subCategoryList) {
             if (categoryService.getCategoryByName(category.getName()).isEmpty()) {
                 categoryService.saveCategory(category);
