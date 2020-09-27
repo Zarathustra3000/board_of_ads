@@ -1,25 +1,16 @@
 package com.board_of_ads.configs;
 
-import com.board_of_ads.model.City;
-import com.board_of_ads.model.Region;
 import com.board_of_ads.model.Role;
 import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.KladrService;
 import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 @Component
