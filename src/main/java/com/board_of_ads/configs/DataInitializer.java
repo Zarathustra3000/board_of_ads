@@ -1,8 +1,6 @@
 package com.board_of_ads.configs;
 
-import com.board_of_ads.model.City;
 import com.board_of_ads.model.Image;
-import com.board_of_ads.model.Region;
 import com.board_of_ads.model.Role;
 import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.KladrService;
