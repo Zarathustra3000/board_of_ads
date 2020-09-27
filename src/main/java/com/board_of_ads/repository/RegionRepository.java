@@ -1,11 +1,11 @@
 package com.board_of_ads.repository;
 
 import com.board_of_ads.model.Region;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RegionRepository extends CrudRepository<Region, Long> {
+public interface RegionRepository extends JpaRepository<Region, Long> {
 
     Region findRegionByRegionNumber(String regionNumber);
 
