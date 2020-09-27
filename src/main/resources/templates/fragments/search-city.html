@@ -1,0 +1,26 @@
+<div th:fragment="search-city" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="modal"
+         id="searchModal"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="authorizationModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered"
+                role="document">
+            <div class="modal-content"
+                 style="height: 400px; position: relative">
+                <div class="modal-body" id="searchCityDiv">
+                    <h5 class="modal-title font-weight-bold text-left" id="authModalLongTitle">Город или регион</h5>
+                    <div class="form-group citiesOptions">
+                        <input class="typeahead form-control"
+                               id="cityInput"
+                               name="cityInput"
+                               type="text"
+                               placeholder="Город, регион или Россия"
+                               style="z-index: 9999; position: relative;"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
