@@ -24,7 +24,8 @@
             </div>
             <div class="header-menu-right">
                 <ul>
-                    <li><a th:text="#{reg}" class="header-link-item header-button-sign" data-toggle="modal" data-target="#registrationModalCenter" href="#">Вход и регистрация</a></li>
+                    <li><a th:text="#{reg}" class="header-link-item header-button-sign unauthenticated" data-toggle="modal" data-target="#registrationModalCenter" href="#">Вход и регистрация</a></li>
+                    <li><a class="header-link-item header-button-sign authenticated" id="user" href=""></a></li>
                     <li><a th:text="#{add}" class="header-button-new-ads" href="#">Подать объявление</a></li>
                     <li>
                         <a class="header-link-item header-button-sign" th:href="@{'?locale=ru'}">Ru</a>
