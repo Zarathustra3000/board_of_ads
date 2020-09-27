@@ -18,8 +18,6 @@ import java.util.Optional;
 public class PostingServiceImpl implements PostingService {
 
     private final PostingRepository postingRepository;
-    private final UserService userService;
-    private final CategoryService categoryService;
 
     @Transactional
     @Override
