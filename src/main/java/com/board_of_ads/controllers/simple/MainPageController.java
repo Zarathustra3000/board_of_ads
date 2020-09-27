@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,17 +26,13 @@ public class MainPageController {
     private final VkAuthService vkAuthService;
 
     @GetMapping("/")
-    public String getMainPage(Model model) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.getUserByEmail(authentication.getName());
+    public String getMainPage(@AuthenticationPrincipal User user, Model model) {
         model.addAttribute(user != null ? user : new User());
         return "main-page";
     }
 
     @GetMapping("/admin_page")
-    public String adminPage(Model model) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.getUserByEmail(authentication.getName());
+    public String adminPage(@AuthenticationPrincipal User user, Model model) {
         model.addAttribute(user);
         return "admin_page";
     }
