@@ -8,5 +8,4 @@ import java.util.Optional;
 public interface PostingService {
     void save(Posting posting);
     Optional<Posting> getPostingByTitle(String title);
-    List<Posting> getTestPostingList();
 }
