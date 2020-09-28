@@ -1,7 +1,7 @@
 package com.board_of_ads.service.interfaces;
 
-public interface VkAuthService {
-
+public interface AuthService {
     String vkAuth(String code);
+    String yandexAuth(String code);
 
 }

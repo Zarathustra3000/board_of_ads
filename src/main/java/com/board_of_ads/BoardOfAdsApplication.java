@@ -1,5 +1,6 @@
 package com.board_of_ads;
 
+import com.board_of_ads.service.impl.CategoryServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
