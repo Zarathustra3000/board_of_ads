@@ -22,6 +22,7 @@ function onOptionHover() {
 function onClickOpt(id) {
     document.getElementById('cityInput').value = "";
     $('#category-select-city').empty();
+    $('#citiesSelect').empty();
     $('#searchModal').modal('hide');
     let row = `<option>` + id + `</option>`;
     $('#category-select-city').append(row);
@@ -42,20 +43,6 @@ async function viewCities() {
                                 class="form-control">
                         </select>`;
     $('.citiesOptions').append(select);
-    let cityOptions = $('#citiesSelect');
-    cities.then(users => {
-        users.forEach(user => {
-            let userRow = `<option onmouseover="onOptionHover()"
-                                   onclick="onClickOpt(this.id)"
-                                   id="${user.city}"
-                                   class="opt"
-                                   text="${user.city}">
-                                       <div>${user.city}</div>
-                                       <div>${', ' + user.region + ' ' + user.formSubject}</div>
-                                </option>`;
-            cityOptions.append(userRow);
-        });
-    });
     let button = `<div class="force-to-bottom" style="position: absolute; bottom: 15px; right: 10px">
                     <button 
                         type="button" 
@@ -66,23 +53,23 @@ async function viewCities() {
     buttonAdd.append(button);
 }
 
-$('.typeahead').on('change', function() {
+$('.typeahead').on('keyup', function() {
     addOptions();
 });
 
 function addOptions() {
     $('#citiesSelect').empty();
     let addForm = $(".typeahead").val().toLowerCase();
-    cities.then(users => {
-        users.forEach(user => {
-            if (user.city.toLowerCase().includes(addForm)) {
+    cities.then(cities => {
+        cities.forEach(city => {
+            if (city.name.toLowerCase().includes(addForm)) {
                 let userRow = `<option onmouseover="onOptionHover()" 
                                        onclick="onClickOpt(this.id)"
-                                       id="${user.city}"
+                                       id="${city.name}"
                                        class="opt"                                
-                                       text="${user.city}">
-                                           <div>${user.city}</div>
-                                           <div>${', ' + user.region + ' ' + user.formSubject}</div>
+                                       text="${city.name}">
+                                           <div>${city.name}</div>
+                                           <div>${' ' + city.regionFormSubject}</div>
                                 </option>`;
                 $('#citiesSelect').append(userRow);
             }
