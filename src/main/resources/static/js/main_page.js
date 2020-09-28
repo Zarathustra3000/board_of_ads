@@ -1,6 +1,6 @@
 let buttonAdd = $('#searchCityDiv');
 
-$("#region, #category-select").focus(function() {
+$("#region, #category-select-city").click(function() {
     $("#searchModel").modal("show");
 });
 
@@ -19,12 +19,19 @@ function onOptionHover() {
         });
 }
 
-function onClickOpt(city) {
-    console.log(city);
+function onClickOpt(id) {
+    $('#category-select-city').empty();
     $('#searchModal').modal('hide');
-    let row = `<option> city.toString() </option>`
-    $('#category-select').append(row);
+    let row = `<option>` + id + `</option>`;
+    $('#category-select-city').append(row);
+    document.getElementById('category-select-city').disabled = false;
 }
+
+$('[data-city]').on('click', function(event) {
+    console.log(event)
+    var animalId = event.target.id;
+    console.log(animalId);
+});
 
 $(document).ready(function() {
     viewCities();
@@ -33,7 +40,7 @@ $(document).ready(function() {
 let cities;
 
 async function viewCities() {
-    $('#category-select').empty();
+    $('#category-select-city').empty();
     const usersResponse = await userService.findAllCity();
     cities = usersResponse.json();
     let select=`<select id="citiesSelect" size="7"
@@ -43,7 +50,14 @@ async function viewCities() {
     let cityOptions = $('#citiesSelect');
     cities.then(users => {
         users.forEach(user => {
-            let userRow = `<option class="opt" text="${user.city}"><span class="text-dark">${user.city}</span><span class="text-muted">${', ' + user.region + ' ' + user.formSubject}</span></option>`;
+            let userRow = `<option onmouseover="onOptionHover()"
+                                   onclick="onClickOpt(this.id)"
+                                   id="${user.city}"
+                                   class="opt"
+                                   text="${user.city}">
+                                       <div>${user.city}</div>
+                                       <div>${', ' + user.region + ' ' + user.formSubject}</div>
+                                </option>`;
             cityOptions.append(userRow);
         });
     });
@@ -64,15 +78,16 @@ $('.typeahead').on('change', function() {
 function addOptions() {
     $('#citiesSelect').empty();
     let addForm = $(".typeahead").val().toLowerCase();
-    let optionRows = '';
     cities.then(users => {
         users.forEach(user => {
             if (user.city.toLowerCase().includes(addForm)) {
-                let userRow = `<option onmouseover="onOptionHover()"
-                                class="opt" 
-                                text="${user.city}">
-                                <div class="text-dark">${user.city}</div>
-                                <div class="text-muted">${', ' + user.region + ' ' + user.formSubject}</div>
+                let userRow = `<option onmouseover="onOptionHover()" 
+                                       onclick="onClickOpt(this.id)"
+                                       id="${user.city}"
+                                       class="opt"                                
+                                       text="${user.city}">
+                                           <div>${user.city}</div>
+                                           <div>${', ' + user.region + ' ' + user.formSubject}</div>
                                 </option>`;
                 $('#citiesSelect').append(userRow);
             }
