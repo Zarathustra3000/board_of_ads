@@ -33,7 +33,8 @@ public class AuthVK {
 
     /**
      * Метод для кнопки авторизации
-     * @return ссылку для авторизации и поле code необходимое для метода getAuthResponse(String code).
+     * @return ссылку для авторизации при переходе по которой, получим ссылку с
+     *          аргументом code необходимым для метода getAuthResponse(String code).
      */
     public String getAuthURL() {
         return authUrl + "?"
@@ -45,8 +46,8 @@ public class AuthVK {
     }
 
     /**
-     * @param code возвращается с методом getAuthURL()
-     * @return ссылку, по которой находится access_token, и данные пользователя vk
+     * @param code получаем из ссылки возвращаемой методом getAuthURL()
+     * @return ссылку, для получения access_token, и данные пользователя VK
      */
     public String getAuthResponseURL(String code) {
         return tokenURL + "?"
@@ -61,6 +62,7 @@ public class AuthVK {
      * @return Map с access_token, user_id, и email пользователя.
      */
     public Map<String, String> getUserData(String authResponseUrl) {
+        Map<String, String> userData = new HashMap<>();
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(authResponseUrl, String.class);
         Object obj = null;
@@ -70,7 +72,6 @@ public class AuthVK {
             e.printStackTrace();
         }
         JSONObject jsonObject = (JSONObject) obj;
-        Map<String, String> userData = new HashMap<>();
         userData.put("access_token", (String) jsonObject.get("access_token"));
         userData.put("user_id", jsonObject.get("user_id").toString());
         userData.put("email", (String) jsonObject.get("email"));
@@ -79,9 +80,9 @@ public class AuthVK {
 
     /**
      * @param userData возвращается методом getUserData(String authResponseUrl)
-     * @return Map с именем, фамилией и ссылкой на аватар пользователя
+     * @return Map с именем, фамилией и ссылкой на аватар пользователя(100x100px)
      */
-    public Map<String, String> getUserInfo(Map<String, String> userData) {
+    public Map<String, String> getUserData(Map<String, String> userData) {
         String request = usersGetURL + "?"
                 + "users_ids=" + userData.get("user_id")
                 + "&fields=" + fields

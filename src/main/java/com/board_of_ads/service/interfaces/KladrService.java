@@ -3,7 +3,6 @@ package com.board_of_ads.service.interfaces;
 import com.board_of_ads.model.City;
 import com.board_of_ads.model.Region;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Set;
 
