@@ -27,12 +27,6 @@ function onClickOpt(id) {
     document.getElementById('category-select-city').disabled = false;
 }
 
-$('[data-city]').on('click', function(event) {
-    console.log(event)
-    var animalId = event.target.id;
-    console.log(animalId);
-});
-
 $(document).ready(function() {
     viewCities();
 });
