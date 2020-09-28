@@ -5,6 +5,7 @@ import com.board_of_ads.configs.auth.AuthVK;
 import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.service.interfaces.VkAuthService;
+import com.board_of_ads.service.interfaces.AuthService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-    private final UserService userService;
-    private final Auth auth;
-    private final AuthVK authVK;
-    private final VkAuthService vkAuthService;
+    private final AuthService authService;
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal User user, Model model) {
@@ -42,7 +40,12 @@ public class MainPageController {
 
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
-        return vkAuthService.vkAuth(code);
+        return authService.vkAuth(code);
+    }
+
+    @GetMapping("/yandex_auth")
+    public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
+        return authService.yandexAuth(code);
     }
 
     /** todo delete
