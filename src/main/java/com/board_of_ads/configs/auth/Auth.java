@@ -1,5 +1,6 @@
 package com.board_of_ads.configs.auth;
 
+import com.board_of_ads.model.Image;
 import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
@@ -44,7 +45,7 @@ public class Auth {
         user.setEmail(userData.get("email"));
         user.setFirsName(userData.get("first_name"));
         user.setLastName(userData.get("last_name"));
-//        user.setPhotoLink(userData.get("avatar_link")); //todo create method and variable
+        user.setAvatar(new Image(null, userData.get("avatar_link")));
         user.setPassword(userData.get("email")); //todo create set password page (and phone)
         userService.saveUser(user);
         return user;
