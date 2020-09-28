@@ -1,18 +1,11 @@
 package com.board_of_ads.controllers.simple;
 
-import com.board_of_ads.configs.auth.Auth;
-import com.board_of_ads.configs.auth.AuthVK;
 import com.board_of_ads.model.User;
-import com.board_of_ads.service.interfaces.UserService;
-import com.board_of_ads.service.interfaces.VkAuthService;
 import com.board_of_ads.service.interfaces.AuthService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
