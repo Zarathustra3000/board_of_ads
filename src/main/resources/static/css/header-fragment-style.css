@@ -31,11 +31,10 @@ body {
 
 .header-menu-right ul {
     margin: 0; /* Обнуляем значение отступов */
-    padding-top: 10px; /* Значение полей */
+    /*padding-top: 10px; !* Значение полей *!*/
 }
 
 .header-menu-right ul li {
-    display: inline; /* Отображать как строчный элемент */
     margin-right: 5px; /* Отступ слева */
     color: #a1a1a1;
 }
