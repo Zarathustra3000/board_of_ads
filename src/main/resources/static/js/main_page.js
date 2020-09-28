@@ -20,6 +20,7 @@ function onOptionHover() {
 }
 
 function onClickOpt(id) {
+    document.getElementById('cityInput').value = "";
     $('#category-select-city').empty();
     $('#searchModal').modal('hide');
     let row = `<option>` + id + `</option>`;
