@@ -113,3 +113,9 @@ const userService = {
         return await http.fetch('/api/city');
     }
 }
+
+$.get("/user", function(data) {
+    $("#user").html(data.userAuthentication.details.name);
+    $(".unauthenticated").hide()
+    $(".authenticated").show()
+});

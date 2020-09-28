@@ -17,3 +17,11 @@
     cursor: pointer;
     top: 4px;
 }
+.navigate-bar{
+    height: 40px;
+}
+.img-fluid{
+    height: 30px;
+    width: 100px;
+    margin-top: -35px;
+}
