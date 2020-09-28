@@ -37,15 +37,25 @@ import java.util.List;
 @Table(name = "posting")
 public class Posting {
 
+    public Posting(User user, Category category, String title, String description, Long price, String contact) {
+        this.user = user;
+        this.category = category;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.contact = contact;
+        this.isActive = true;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
