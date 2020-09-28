@@ -8,6 +8,7 @@ import com.board_of_ads.service.interfaces.VkAuthService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -33,6 +34,7 @@ public class MainPageController {
 
     @GetMapping("/admin_page")
     public String adminPage(@AuthenticationPrincipal User user, Model model) {
+        System.out.println(user.getAuthorities());
         model.addAttribute(user);
         return "admin_page";
     }

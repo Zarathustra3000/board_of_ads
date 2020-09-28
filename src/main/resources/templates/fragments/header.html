@@ -1,4 +1,4 @@
-<header th:fragment="main-header" xmlns:th="http://www.w3.org/1999/xhtml">
+<header th:fragment="main-header" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.springframework.org/security/tags">
     <div class="header-line">
         <div class="header-container">
             <div class="header-menu-left">
@@ -7,13 +7,12 @@
                     <li><a th:text="#{shops}" class="header-link-item" href="#">Магазины</a></li>
                     <li><a th:text="#{business}" class="header-link-item" href="#">Бизнес</a></li>
                     <li><a th:text="#{help}" class="header-link-item" href="#">Помощь</a></li>
-                    <li class="admin-button"
-                        th:each="role : ${user.getAuthorities()}"
-                        th:if='${role.getAuthority().equals("ADMIN")}'>
+                    <li sec:authorize="hasAuthority('ADMIN')" class="admin-button">
                             <a class="header-link-item"
                                th:text="#{admin_panel}" href="/admin_page">Админка</a></li>
                 </ul>
             </div>
+
             <div class="header-favorite-button">
                 <a href="#">
                     <svg width="25" height="21" xmlns="http://www.w3.org/2000/svg">

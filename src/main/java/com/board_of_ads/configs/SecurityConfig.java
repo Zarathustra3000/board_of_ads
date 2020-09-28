@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-@EnableOAuth2Sso
+//@EnableOAuth2Sso
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -41,6 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
+                .antMatchers("/admin_page").hasRole("ADMIN")
                 .antMatchers("/", "/vk_auth", "/login**", "/webjars/**", "/error**").permitAll()
                 .anyRequest().authenticated()
                 .and()
