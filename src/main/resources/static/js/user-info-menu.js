@@ -29,6 +29,9 @@ let backgroundColor = stringToColor(name);
 let elementAvatar = document.getElementById('avatar');
 let elementName = document.getElementById('name');
 
+
 elementName.innerHTML = name;
-elementAvatar.innerHTML = letter;
-elementAvatar.style.backgroundColor = backgroundColor;
+if(elementAvatar.innerHTML.length === 0) {
+    elementAvatar.innerHTML = letter;
+    elementAvatar.style.backgroundColor = backgroundColor;
+}
