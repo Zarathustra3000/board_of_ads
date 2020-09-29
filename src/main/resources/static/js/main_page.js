@@ -1,7 +1,7 @@
 let buttonAdd = $('#searchCityDiv');
 
 $("#region, #category-select-city").click(function() {
-    $("#searchModel").modal("show");
+    $('#searchModel').modal('show');
 });
 
 $('select#cities').on('change', function() {
@@ -23,7 +23,7 @@ function onClickOpt(id) {
     document.getElementById('cityInput').value = "";
     $('#category-select-city').empty();
     $('#citiesSelect').empty();
-    $('#searchModal').modal('hide');
+    $('#searchModel').modal('hide');
     let row = `<option>` + id + `</option>`;
     $('#category-select-city').append(row);
     document.getElementById('category-select-city').disabled = false;
