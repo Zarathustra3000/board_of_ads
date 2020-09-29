@@ -1,9 +1,8 @@
 package com.board_of_ads.service.impl;
 
-import com.board_of_ads.model.User;
+import com.board_of_ads.models.User;
 import com.board_of_ads.repository.ImageRepository;
 import com.board_of_ads.repository.UserRepository;
-import com.board_of_ads.service.interfaces.ImageService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

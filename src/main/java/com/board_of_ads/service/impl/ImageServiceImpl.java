@@ -1,6 +1,6 @@
 package com.board_of_ads.service.impl;
 
-import com.board_of_ads.model.Image;
+import com.board_of_ads.models.Image;
 import com.board_of_ads.repository.ImageRepository;
 import com.board_of_ads.service.interfaces.ImageService;
 import lombok.AllArgsConstructor;

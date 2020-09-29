@@ -78,3 +78,7 @@ body {
 .header-button-new-ads:hover {
     background: #009cf0;
 }
+
+.admin-button {
+    display: none;
+}
