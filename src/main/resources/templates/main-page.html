@@ -27,6 +27,9 @@
     <div th:insert="authorization-button::authorization-button"></div>
     <div th:insert="fragments/search-city::search-city"></div>
 </div>
+<div class="container unauthenticated">
+    With Twitter: <a href="/login/twitter" >click here</a>
+</div>
 
 <script src="../static/js/main_page.js" th:src="@{/js/main_page.js}"></script>
 <script type="text/javascript" src="../static/js/user-info-menu.js" th:src="@{/js/user-info-menu.js}"></script>
