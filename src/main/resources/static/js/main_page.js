@@ -39,11 +39,7 @@ async function viewCities() {
     $('#category-select-city').empty();
     const usersResponse = await userService.findAllCity();
     cities = usersResponse.json();
-    let select=`<select id="citiesSelect" size="7"
-                                class="form-control">
-                        </select>`;
-    $('.citiesOptions').append(select);
-    let button = `<div class="force-to-bottom" style="position: absolute; bottom: 15px; right: 10px">
+    let button = `<div style="position: absolute; top: 350px; left: 700px">
                     <button 
                         type="button" 
                         class="btn btn-primary "                           
@@ -58,7 +54,12 @@ $('.typeahead').on('keyup', function() {
 });
 
 function addOptions() {
+    $('#citiesSelect').remove();
     $('#citiesSelect').empty();
+    let select=`<select id="citiesSelect" size="7"
+                                class="form-control">
+                        </select>`;
+    $('.citiesOptions').append(select);
     let addForm = $(".typeahead").val().toLowerCase();
     cities.then(cities => {
         cities.forEach(city => {
