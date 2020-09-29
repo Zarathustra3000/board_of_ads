@@ -1,6 +1,6 @@
 package com.board_of_ads.service.interfaces;
 
-import com.board_of_ads.model.User;
+import com.board_of_ads.models.User;
 
 public interface UserService {
     User getUserById(Long id);

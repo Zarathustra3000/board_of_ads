@@ -1,7 +1,7 @@
 package com.board_of_ads.service.impl;
 
 
-import com.board_of_ads.model.Role;
+import com.board_of_ads.models.Role;
 import com.board_of_ads.repository.RoleRepository;
 import com.board_of_ads.service.interfaces.RoleService;
 import lombok.AllArgsConstructor;
