@@ -1,7 +1,7 @@
 package com.board_of_ads.service.impl;
 
-import com.board_of_ads.model.City;
-import com.board_of_ads.model.Region;
+import com.board_of_ads.models.City;
+import com.board_of_ads.models.Region;
 import com.board_of_ads.repository.CityRepository;
 import com.board_of_ads.repository.RegionRepository;
 import com.board_of_ads.service.interfaces.KladrService;

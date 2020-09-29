@@ -1,10 +1,10 @@
 package com.board_of_ads.configs;
 
-import com.board_of_ads.model.Category;
-import com.board_of_ads.model.Image;
-import com.board_of_ads.model.Role;
-import com.board_of_ads.model.User;
-import com.board_of_ads.model.posting.Posting;
+import com.board_of_ads.models.Category;
+import com.board_of_ads.models.Image;
+import com.board_of_ads.models.Role;
+import com.board_of_ads.models.User;
+import com.board_of_ads.models.posting.Posting;
 import com.board_of_ads.service.interfaces.CategoryService;
 import com.board_of_ads.service.interfaces.KladrService;
 import com.board_of_ads.service.interfaces.PostingService;
