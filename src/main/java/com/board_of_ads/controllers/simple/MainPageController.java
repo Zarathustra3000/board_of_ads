@@ -1,9 +1,11 @@
 package com.board_of_ads.controllers.simple;
 
+import com.board_of_ads.model.User;
 import com.board_of_ads.service.interfaces.AuthService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +18,16 @@ public class MainPageController {
     private final AuthService authService;
 
     @GetMapping("/")
-    public String getMainPage() {
+    public String getMainPage(@AuthenticationPrincipal User user, Model model) {
+        model.addAttribute(user != null ? user : new User());
         return "main-page";
+    }
+
+    @GetMapping("/admin_page")
+    public String adminPage(@AuthenticationPrincipal User user, Model model) {
+        System.out.println(user.getAuthorities());
+        model.addAttribute(user);
+        return "admin_page";
     }
 
 

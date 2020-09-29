@@ -1,22 +1,22 @@
-package com.board_of_ads.controllers.simple;
+package com.board_of_ads.service.impl;
 
 import com.board_of_ads.model.dto.CityDto;
 import com.board_of_ads.repository.CityRepository;
+import com.board_of_ads.service.interfaces.CityService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@org.springframework.web.bind.annotation.RestController
-@RequestMapping("/api")
+@Service
 @AllArgsConstructor
-public class RestController {
-    private final CityRepository cityRepository;
+public class CityServiceImpl implements CityService {
 
-    @GetMapping("/city")
-    public List<CityDto> findAll() {
+    private CityRepository cityRepository;
+
+    @Override
+    public List<CityDto> getCitiesList() {
         List<CityDto> cities = new ArrayList<>();
         cityRepository.findAll()
                 .forEach(city -> {

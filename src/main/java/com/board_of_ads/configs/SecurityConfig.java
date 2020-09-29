@@ -21,7 +21,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
 
-
     public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
@@ -41,7 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/vk_auth", "/yandex_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
+                .antMatchers("/", "/vk_auth", "/login**", "/webjars/**", "/error**").permitAll()
+                .antMatchers("/admin_page").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
