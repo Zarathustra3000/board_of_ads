@@ -2,12 +2,14 @@ server:
   port: 5556
 
 spring:
+
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/board_of_ads
-    username: root
+    username: postgres
     password: root
     initialization-mode: always
+
   jpa:
     show-sql: false
     hibernate:
@@ -19,6 +21,7 @@ spring:
         format_sql: false
         jdbc:
           timezone: UTC
+
   mail: # gmail блокирует приложени. Для проверки можете написать данные яндекса.
     host: smtp.gmail.com
     port: 587
@@ -30,10 +33,12 @@ spring:
       auth: true
       starttls.enable: true
       ssl.trust: smtp.gmail.com
+
 jhipster:
   mail: # specific JHipster mail property, for standard properties see MailProperties
   from: kunaev993@gmail.com
   base-url: http://127.0.0.1:5556
+
 security:
   oauth2:
     client:
@@ -46,3 +51,15 @@ security:
       clientAuthenticationScheme: form
     resource:
       userInfoUri: https://graph.facebook.com/me
+logging:
+  file:
+    name: src//main//resources//logFiles//board_of_ads.log
+    max-size: 1024KB
+    max-history: 5
+  level:
+    root: WARN
+    org.springgramework.web: WARN
+    org.hibernate: WARN
+    com.board_of_ads: INFO
+
+
