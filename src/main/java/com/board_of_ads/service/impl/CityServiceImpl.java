@@ -3,20 +3,23 @@ package com.board_of_ads.service.impl;
 import com.board_of_ads.model.City;
 import com.board_of_ads.model.Region;
 import com.board_of_ads.repository.CityRepository;
-import com.board_of_ads.repository.RegionRepository;
 import com.board_of_ads.service.interfaces.CityService;
+import com.board_of_ads.service.interfaces.RegionService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
 @AllArgsConstructor
+@Transactional
 public class CityServiceImpl implements CityService {
 
     private final CityRepository cityRepository;
-    private final RegionRepository regionRepository;
+    private final RegionService regionService;
 
     @Override
     public Set<City> getCitiesList() {
@@ -31,7 +34,7 @@ public class CityServiceImpl implements CityService {
                     }
                     cities.add(new City(city.getName(), new Region(), regionName + " " + formSubject));
                 });
-        regionRepository.findAll()
+        regionService.findAll()
                 .forEach(region -> {
                     String regionName = region.getName();
                     String formSubject = region.getFormSubject();
@@ -42,5 +45,10 @@ public class CityServiceImpl implements CityService {
                     }
                 });
         return cities;
+    }
+
+    @Override
+    public Optional<City> findCityByName(String name) {
+        return cityRepository.findCitiesByName(name);
     }
 }

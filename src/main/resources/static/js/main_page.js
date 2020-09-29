@@ -19,14 +19,40 @@ function onOptionHover() {
         });
 }
 
-function onClickOpt(id) {
-    document.getElementById('cityInput').value = "";
-    $('#category-select-city').empty();
-    $('#citiesSelect').empty();
-    $('#searchModel').modal('hide');
-    let row = `<option>` + id + `</option>`;
-    $('#category-select-city').append(row);
-    document.getElementById('category-select-city').disabled = false;
+async function onClickOpt(id) {
+    console.log(id);
+    let usersResponse;
+    if (id.includes('Область')
+        || id.includes('Край')
+        || id.includes('Республика')
+        || id.includes('Автономный округ')
+        || id.includes('Город')
+    ) {
+        usersResponse = await userService.findPostingByRegionName(id);
+    } else {
+        usersResponse = await userService.findPostingByCityName(id);
+    }
+    posts = usersResponse.json();
+    console.log(posts);
+    $('#countPostButton').empty();
+    let sizeArray = 0;
+    posts.then(posts => {
+        posts.forEach(() => {
+            sizeArray++;
+        })
+    }).then(() => {
+            let button = `<div >
+                    <button 
+                        type="button" 
+                        class="btn btn-primary"   
+                        id="countPostButton"
+                        style="position: absolute; top: 350px; left: 700px"                       
+                        >Показать ` + sizeArray + ` объявлений
+                       </button>
+                </div>`;
+            buttonAdd.append(button);
+        }
+    );
 }
 
 $(document).ready(function() {
@@ -34,19 +60,34 @@ $(document).ready(function() {
 });
 
 let cities;
+let posts;
+
 
 async function viewCities() {
     $('#category-select-city').empty();
     const usersResponse = await userService.findAllCity();
     cities = usersResponse.json();
-    let button = `<div >
+    const postsResponse = await userService.findAllPostings();
+    posts = postsResponse.json();
+    let sizeArray = 0;
+    console.log(posts);
+    posts.then(posts => {
+        posts.forEach(() => {
+            sizeArray++;
+        })
+    }).then(() => {
+            let button = `<div >
                     <button 
                         type="button" 
-                        class="btn btn-primary "                           
-                        disabled>Показать 0 объявлений
+                        class="btn btn-primary"   
+                        id="countPostButton"
+                        style="position: absolute; top: 350px; left: 700px"                       
+                        >Показать ` + sizeArray + ` объявлений
                        </button>
                 </div>`;
-    buttonAdd.append(button);
+            buttonAdd.append(button);
+        }
+    );
 }
 
 $('.typeahead').on('keyup', function() {
@@ -94,6 +135,15 @@ const http = {
 const userService = {
     findAllCity: async () => {
         return await http.fetch('/api/city');
+    },
+    findPostingByCityName: async (name) => {
+        return await http.fetch('api/posting/city/' + name);
+    },
+    findPostingByRegionName: async (name) => {
+        return await http.fetch('api/posting/region/' + name);
+    },
+    findAllPostings: async () => {
+        return await http.fetch('api/posting/');
     }
 }
 
