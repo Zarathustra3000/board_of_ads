@@ -35,7 +35,7 @@
 }
 
 .link-regestration {
-    text-align: center;
+    /*text-align: center;*/
     margin-right: 20px;
     outline-color: #009cf0;
 
@@ -43,7 +43,6 @@
 
 .auth-app-login-form-2_SQa {
     padding: 10px 35px 20px;
-    width: 500px;
     font-size: 14px;
     box-sizing: border-box;
 }
