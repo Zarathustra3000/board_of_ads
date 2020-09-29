@@ -39,7 +39,7 @@ async function viewCities() {
     $('#category-select-city').empty();
     const usersResponse = await userService.findAllCity();
     cities = usersResponse.json();
-    let button = `<div style="position: absolute; top: 350px; left: 700px">
+    let button = `<div >
                     <button 
                         type="button" 
                         class="btn btn-primary "                           
