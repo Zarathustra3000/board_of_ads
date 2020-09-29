@@ -1,9 +1,11 @@
 package com.board_of_ads.service.interfaces;
 
-import com.board_of_ads.model.City;
+import com.board_of_ads.model.dto.CityDto;
 
-import java.util.Set;
+import java.util.List;
 
 public interface CityService {
-    Set<City> getAllCitiesAndRegions();
+
+    List<CityDto> getCitiesList();
+
 }

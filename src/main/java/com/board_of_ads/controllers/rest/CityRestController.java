@@ -1,22 +1,21 @@
 package com.board_of_ads.controllers.rest;
 
-import com.board_of_ads.model.City;
-import com.board_of_ads.service.impl.CityServiceImpl;
+import com.board_of_ads.model.dto.CityDto;
+import com.board_of_ads.service.interfaces.CityService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.Set;
+import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
 @AllArgsConstructor
 public class CityRestController {
-
-    private final CityServiceImpl cityService;
+    private final CityService cityService;
 
     @GetMapping("/city")
-    public Set<City> findAll() {
-        return cityService.getAllCitiesAndRegions();
+    public List<CityDto> findAll() {
+        return cityService.getCitiesList();
     }
 }
