@@ -1,4 +1,4 @@
-package com.board_of_ads.restControllers;
+package com.board_of_ads.controllers.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,7 +7,7 @@ import java.security.Principal;
 
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class UserRestController {
 
     @GetMapping
     public Principal getUser(Principal user) {
