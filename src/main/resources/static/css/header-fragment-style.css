@@ -31,7 +31,7 @@ body {
 
 .header-menu-right ul {
     margin: 0; /* Обнуляем значение отступов */
-    /*padding-top: 10px; !* Значение полей *!*/
+    padding-top: 5px; /* Значение полей */
 }
 
 .header-menu-right ul li {
