@@ -31,7 +31,7 @@ let elementName = document.getElementById('name');
 
 
 elementName.innerHTML = name;
-if(elementAvatar.innerHTML.length === 0) {
+if (elementAvatar.innerHTML.length === 0) {
     elementAvatar.innerHTML = letter;
     elementAvatar.style.backgroundColor = backgroundColor;
 }
