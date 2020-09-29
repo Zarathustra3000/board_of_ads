@@ -49,4 +49,8 @@ public class MainPageController {
     public String aa() {
         return "redirect:http://vk.com";
     }
+    @GetMapping("/login/twitter")
+    public String getTwitter() {
+        return "redirect:/";
+    }
 }
