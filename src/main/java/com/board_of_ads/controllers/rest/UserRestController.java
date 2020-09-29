@@ -1,4 +1,4 @@
-package com.board_of_ads.restControllers;
+package com.board_of_ads.controllers.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

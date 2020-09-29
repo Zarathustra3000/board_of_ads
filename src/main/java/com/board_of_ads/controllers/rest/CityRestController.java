@@ -1,4 +1,4 @@
-package com.board_of_ads.restControllers;
+package com.board_of_ads.controllers.rest;
 
 import com.board_of_ads.model.dto.CityDto;
 import com.board_of_ads.service.interfaces.CityService;
