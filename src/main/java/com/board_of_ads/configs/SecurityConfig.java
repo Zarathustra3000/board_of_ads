@@ -41,13 +41,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/vk_auth", "/yandex_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
+                .antMatchers("/","/auth", "/vk_auth", "/yandex_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin()
+                    .formLogin()
                 .and()
-                .logout().permitAll();
+                    .logout().permitAll();
     }
+
+    //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {

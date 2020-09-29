@@ -30,6 +30,24 @@ function onClickOpt(id) {
 
 $(document).ready(function() {
     viewCities();
+
+    $('#buttonAuth').on('click', function () {
+        let user = {
+            email : $("#emailAuth").val(),
+            password : $("#passwordAuth").val()
+        };
+        fetch('http://localhost:5556/auth', {
+            method: "POST",
+            credentials: 'same-origin',
+            body: JSON.stringify(user),
+            headers: {
+                'content-type': 'application/json'
+            }
+        });
+        $('#registrationModalCenter').modal('hide');
+        $('#emailAuth').val("");
+        $('#passwordAuth').val("");
+    });
 });
 
 let cities;
