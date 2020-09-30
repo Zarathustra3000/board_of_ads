@@ -31,7 +31,6 @@ public class MainPageController {
         return "admin/admin_page";
     }
 
-
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
         vkService.auth(code);
