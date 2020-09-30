@@ -59,7 +59,7 @@ logging:
     max-history: 5
   level:
     root: WARN
-    org.springgramework.web: WARN
+    org.springframework.web: WARN
     org.hibernate: WARN
     com.board_of_ads: INFO
 
