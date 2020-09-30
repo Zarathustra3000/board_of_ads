@@ -1,20 +1,20 @@
 let buttonAdd = $('#searchCityDiv');
 
-$("#region, #category-select-city").click(function() {
+$("#region, #category-select-city").click(function () {
     $("#searchModel").modal("show");
 });
 
-$('select#cities').on('change', function() {
+$('select#cities').on('change', function () {
     $('input[name="cityInput"]').val(this.value);
 });
 
 function onOptionHover() {
     $(".opt").mouseover(
-        function() {
+        function () {
             $(this).css('background', '#99ccff')
         });
     $(".opt").mouseleave(
-        function() {
+        function () {
             $(this).css('background', '#fff')
         });
 }
@@ -28,13 +28,13 @@ function onClickOpt(id) {
     document.getElementById('category-select-city').disabled = false;
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     viewCities();
 
     $('#buttonAuth').on('click', function () {
         let user = {
-            email : $("#emailAuth").val(),
-            password : $("#passwordAuth").val()
+            email: $("#emailAuth").val(),
+            password: $("#passwordAuth").val()
         };
         fetch('http://localhost:5556/auth', {
             method: "POST",
@@ -43,11 +43,30 @@ $(document).ready(function() {
             headers: {
                 'content-type': 'application/json'
             }
-        });
+        })
+            .then(
+                function (response) {
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+                    location.reload();
+                    console.log('Status Code: ' +
+                        response.status);
+                    // Examine the text in the response
+                    // response.json().then(function (data) {
+                    //     console.log(data);
+                    // });
+                }
+            )
+            .catch(function (err) {
+                console.log('Fetch Error :-S', err);
+            });
         $('#registrationModalCenter').modal('hide');
         $('#emailAuth').val("");
         $('#passwordAuth').val("");
-        location.reload();
+
     });
 });
 
@@ -57,7 +76,7 @@ async function viewCities() {
     $('#category-select-city').empty();
     const usersResponse = await userService.findAllCity();
     cities = usersResponse.json();
-    let select=`<select id="citiesSelect" size="7"
+    let select = `<select id="citiesSelect" size="7"
                                 class="form-control">
                         </select>`;
     $('.citiesOptions').append(select);
@@ -85,7 +104,7 @@ async function viewCities() {
     buttonAdd.append(button);
 }
 
-$('.typeahead').on('change', function() {
+$('.typeahead').on('change', function () {
     addOptions();
 });
 
@@ -110,7 +129,7 @@ function addOptions() {
 }
 
 const http = {
-    fetch: async function(url, options = {}) {
+    fetch: async function (url, options = {}) {
         const response = await fetch(url, {
             headers: {
                 'Accept': 'application/json',
@@ -128,7 +147,7 @@ const userService = {
     }
 }
 
-$.get("/user", function(data) {
+$.get("/user", function (data) {
     $("#user").html(data.userAuthentication.details.name);
     $(".unauthenticated").hide()
     $(".authenticated").show()

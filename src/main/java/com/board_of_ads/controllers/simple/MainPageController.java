@@ -36,19 +36,14 @@ public class MainPageController {
 
     @PostMapping("/auth")
     public ResponseEntity<User> create(@RequestBody User userAuth) {
-
-            User user = userService.getUserByEmail(userAuth.getEmail());
-            if (user == null) {
-                System.out.println("User not found!");
-//                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-                throw new BadCredentialsException(userAuth.getEmail());
-            }if (passwordEncoder.matches(userAuth.getPassword(), user.getPassword())) {
-                System.out.println("Good password!");
+        User user = userService.getUserByEmail(userAuth.getEmail());
+        if (user != null) {
+            if (passwordEncoder.matches(userAuth.getPassword(), user.getPassword())) {
                 auth.login(user);
-            } else {
-                System.out.println("Wrong password!");
-            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
             }
+        } else {
+            throw new BadCredentialsException(userAuth.getEmail());
+        }
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
