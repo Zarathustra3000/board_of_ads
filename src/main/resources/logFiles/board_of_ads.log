@@ -8,3 +8,25 @@
 2020-09-30 09:53:44.968  WARN 17260 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-09-30 09:53:53.169  INFO 17260 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.961 seconds (JVM running for 10.503)
 2020-09-30 09:53:53.171  INFO 17260 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-09-30 19:08:54.009  INFO 6172 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 6172 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-09-30 19:08:54.013  INFO 6172 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-09-30 19:08:58.080  WARN 6172 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-30 19:09:00.812  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-09-30 19:09:00.816  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-09-30 19:09:00.817  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-09-30 19:09:00.818  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-09-30 19:09:00.826  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-09-30 19:09:00.826  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkqccpdjdmr2296tlmsbv1epyr6" в таблице "posting" не существует, пропускается
+2020-09-30 19:09:00.892  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-09-30 19:09:00.893  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-09-30 19:09:01.058  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-09-30 19:09:01.059  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-09-30 19:09:01.268  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-09-30 19:09:01.268  WARN 6172 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-09-30 19:09:21.102  INFO 6172 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 28.384 seconds (JVM running for 31.36)
+2020-09-30 19:09:21.107  INFO 6172 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-09-30 19:34:07.986  INFO 9364 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 9364 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-09-30 19:34:07.990  INFO 9364 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-09-30 19:34:10.919  WARN 9364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-30 19:34:30.639  INFO 9364 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 23.462 seconds (JVM running for 25.183)
+2020-09-30 19:34:30.643  INFO 9364 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
