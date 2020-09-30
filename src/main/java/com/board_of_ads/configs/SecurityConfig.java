@@ -76,7 +76,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public ClientRegistrationRepository clientRegistrationRepository() {
-        return new InMemoryClientRegistrationRepository(this.googleClientRegistration());
+        return new InMemoryClientRegistrationRepository(this.facebook());
+    }
+
+    private ClientRegistration facebook() {
+        return ClientRegistration.withRegistrationId("facebook")
+                .clientId("381790239495391")
+//                .clientSecret("031df2213df96eb1bc72d87fad3cdbd3")
+                .clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
+                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
+                .redirectUriTemplate("{baseUrl}")
+                .scope("openid", "profile", "email", "address", "phone")
+                .authorizationUri("https://www.facebook.com/dialog/oauth")
+                .tokenUri("https://graph.facebook.com/oauth/access_token")
+                .userInfoUri("https://graph.facebook.com/me")
+                .userNameAttributeName(IdTokenClaimNames.SUB)
+//                .jwkSetUri("https://www.googleapis.com/oauth2/v3/certs")
+                .clientName("Facebook")
+                .build();
     }
 
     private ClientRegistration googleClientRegistration() {

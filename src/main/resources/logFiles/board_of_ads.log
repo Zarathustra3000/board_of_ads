@@ -3100,3 +3100,858 @@ java.io.FileNotFoundException: ClassLoader resource "templates/user.html" could 
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
 	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
+2020-10-01 02:14:28.057  INFO 8808 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 8808 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-01 02:14:28.065  INFO 8808 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 02:14:32.126  WARN 8808 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 02:14:48.522  INFO 8808 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 21.073 seconds (JVM running for 22.483)
+2020-10-01 02:14:48.525  INFO 8808 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 02:15:00.903 ERROR 8808 --- [http-nio-5556-exec-7] OAuth2AuthorizationRequestRedirectFilter : Authorization Request failed: java.lang.IllegalArgumentException: Invalid Client Registration with Id: google
+
+java.lang.IllegalArgumentException: Invalid Client Registration with Id: google
+	at org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizationRequestResolver.resolve(DefaultOAuth2AuthorizationRequestResolver.java:130) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizationRequestResolver.resolve(DefaultOAuth2AuthorizationRequestResolver.java:91) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:149) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2020-10-01 02:16:32.298  INFO 9316 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 9316 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-01 02:16:32.304  INFO 9316 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 02:16:35.222  WARN 9316 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataInitializer' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\configs\DataInitializer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientWebMvcSecurityConfiguration': Unsatisfied dependency expressed through method 'setClientRegistrationRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'clientRegistrationRepository' defined in class path resource [com/board_of_ads/configs/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.client.registration.ClientRegistrationRepository]: Circular reference involving containing bean 'securityConfig' - consider declaring the factory method as static for independence from its containing instance. Factory method 'clientRegistrationRepository' threw exception; nested exception is java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+2020-10-01 02:16:37.761 ERROR 9316 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataInitializer' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\configs\DataInitializer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientWebMvcSecurityConfiguration': Unsatisfied dependency expressed through method 'setClientRegistrationRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'clientRegistrationRepository' defined in class path resource [com/board_of_ads/configs/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.client.registration.ClientRegistrationRepository]: Circular reference involving containing bean 'securityConfig' - consider declaring the factory method as static for independence from its containing instance. Factory method 'clientRegistrationRepository' threw exception; nested exception is java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at com.board_of_ads.BoardOfAdsApplication.main(BoardOfAdsApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientWebMvcSecurityConfiguration': Unsatisfied dependency expressed through method 'setClientRegistrationRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'clientRegistrationRepository' defined in class path resource [com/board_of_ads/configs/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.client.registration.ClientRegistrationRepository]: Circular reference involving containing bean 'securityConfig' - consider declaring the factory method as static for independence from its containing instance. Factory method 'clientRegistrationRepository' threw exception; nested exception is java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientWebMvcSecurityConfiguration': Unsatisfied dependency expressed through method 'setClientRegistrationRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'clientRegistrationRepository' defined in class path resource [com/board_of_ads/configs/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.client.registration.ClientRegistrationRepository]: Circular reference involving containing bean 'securityConfig' - consider declaring the factory method as static for independence from its containing instance. Factory method 'clientRegistrationRepository' threw exception; nested exception is java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:723) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientWebMvcSecurityConfiguration': Unsatisfied dependency expressed through method 'setClientRegistrationRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'clientRegistrationRepository' defined in class path resource [com/board_of_ads/configs/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.client.registration.ClientRegistrationRepository]: Circular reference involving containing bean 'securityConfig' - consider declaring the factory method as static for independence from its containing instance. Factory method 'clientRegistrationRepository' threw exception; nested exception is java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:723) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 62 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientWebMvcSecurityConfiguration': Unsatisfied dependency expressed through method 'setClientRegistrationRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'clientRegistrationRepository' defined in class path resource [com/board_of_ads/configs/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.client.registration.ClientRegistrationRepository]: Circular reference involving containing bean 'securityConfig' - consider declaring the factory method as static for independence from its containing instance. Factory method 'clientRegistrationRepository' threw exception; nested exception is java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:723) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 84 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'clientRegistrationRepository' defined in class path resource [com/board_of_ads/configs/SecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.client.registration.ClientRegistrationRepository]: Circular reference involving containing bean 'securityConfig' - consider declaring the factory method as static for independence from its containing instance. Factory method 'clientRegistrationRepository' threw exception; nested exception is java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 100 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.client.registration.ClientRegistrationRepository]: Circular reference involving containing bean 'securityConfig' - consider declaring the factory method as static for independence from its containing instance. Factory method 'clientRegistrationRepository' threw exception; nested exception is java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 116 common frames omitted
+Caused by: java.lang.IllegalArgumentException: redirectUriTemplate cannot be empty
+	at org.springframework.util.Assert.hasText(Assert.java:287) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.oauth2.client.registration.ClientRegistration$Builder.validateAuthorizationCodeGrantType(ClientRegistration.java:571) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.registration.ClientRegistration$Builder.build(ClientRegistration.java:528) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at com.board_of_ads.configs.SecurityConfig.facebook(SecurityConfig.java:96) ~[classes/:na]
+	at com.board_of_ads.configs.SecurityConfig.clientRegistrationRepository(SecurityConfig.java:79) ~[classes/:na]
+	at com.board_of_ads.configs.SecurityConfig$$EnhancerBySpringCGLIB$$6f4ca457.CGLIB$clientRegistrationRepository$4(<generated>) ~[classes/:na]
+	at com.board_of_ads.configs.SecurityConfig$$EnhancerBySpringCGLIB$$6f4ca457$$FastClassBySpringCGLIB$$c9b2064e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.board_of_ads.configs.SecurityConfig$$EnhancerBySpringCGLIB$$6f4ca457.clientRegistrationRepository(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 117 common frames omitted
+
+2020-10-01 02:17:25.808  INFO 3632 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 3632 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-01 02:17:25.848  INFO 3632 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 02:17:28.496  WARN 3632 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 02:17:30.311  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.314  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-01 02:17:30.315  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.316  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-01 02:17:30.316  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.317  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-01 02:17:30.317  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.318  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-01 02:17:30.319  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.319  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 02:17:30.320  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.320  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 02:17:30.321  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.321  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-01 02:17:30.322  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.322  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-01 02:17:30.323  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.324  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:17:30.324  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.325  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:17:30.325  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.326  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:17:30.326  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.327  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-01 02:17:30.327  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.328  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-01 02:17:30.329  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.329  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-01 02:17:30.330  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.330  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-01 02:17:30.331  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.331  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:17:30.332  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.332  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:17:30.333  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.333  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-01 02:17:30.334  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.334  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-01 02:17:30.335  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.335  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-01 02:17:30.336  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.336  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_images" не существует, пропускается
+2020-10-01 02:17:30.337  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.337  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_images" не существует, пропускается
+2020-10-01 02:17:30.338  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.338  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-01 02:17:30.339  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.339  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:17:30.340  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.340  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:17:30.341  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.341  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:17:30.341  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.342  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:17:30.342  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.343  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-01 02:17:30.343  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.344  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:17:30.344  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.345  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:17:30.345  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.346  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:17:30.347  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.347  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:17:30.348  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.348  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-01 02:17:30.349  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.349  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-01 02:17:30.350  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.350  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-01 02:17:30.351  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.351  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-01 02:17:30.352  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.352  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-01 02:17:30.353  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.353  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-01 02:17:30.353  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.353  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-01 02:17:30.354  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.354  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-01 02:17:30.355  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.355  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-01 02:17:30.356  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.356  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-01 02:17:30.357  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.357  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-01 02:17:30.357  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.357  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-01 02:17:30.358  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.358  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 02:17:30.359  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.359  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 02:17:30.361  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.361  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-01 02:17:30.362  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.362  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-01 02:17:30.363  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.363  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-01 02:17:30.364  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.364  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-01 02:17:30.365  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.365  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-01 02:17:30.366  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.366  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-01 02:17:30.367  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.367  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-01 02:17:30.368  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.368  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-01 02:17:30.369  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.369  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting" не существует, пропускается
+2020-10-01 02:17:30.369  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.380  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-01 02:17:30.381  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.381  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-01 02:17:30.381  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.382  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-01 02:17:30.382  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.382  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:17:30.383  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.383  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-01 02:17:30.384  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.384  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-01 02:17:30.385  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.385  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-01 02:17:30.386  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.386  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_images" не существует, пропускается
+2020-10-01 02:17:30.387  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.387  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-01 02:17:30.388  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.388  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-01 02:17:30.389  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.389  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-01 02:17:30.389  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.389  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-01 02:17:30.390  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.390  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:17:30.390  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.391  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-01 02:17:30.391  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.391  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:17:30.392  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.392  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:17:30.392  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.393  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-01 02:17:30.393  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.393  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-01 02:17:30.394  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.394  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-01 02:17:30.395  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.395  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-01 02:17:30.395  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.395  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-01 02:17:30.396  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.396  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-01 02:17:30.397  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.397  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-01 02:17:30.398  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.398  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-01 02:17:30.398  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.399  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-01 02:17:30.399  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.399  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-01 02:17:30.400  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.400  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-01 02:17:30.401  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.401  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-01 02:17:30.402  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.402  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-01 02:17:30.403  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.403  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-01 02:17:30.403  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.403  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-01 02:17:30.404  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.404  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-01 02:17:30.406  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:17:30.406  WARN 3632 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-01 02:17:45.033  INFO 3632 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 19.959 seconds (JVM running for 21.396)
+2020-10-01 02:17:45.036  INFO 3632 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 02:19:55.513  INFO 8304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 8304 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-01 02:19:55.521  INFO 8304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 02:19:58.263  WARN 8304 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 02:20:13.610  WARN 8304 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
+2020-10-01 02:20:14.005 ERROR 8304 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Method springSecurityFilterChain in org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration required a bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' that could not be found.
+
+The following candidates were found but could not be injected:
+	- Bean method 'clientRegistrationRepository' in 'OAuth2ClientRegistrationRepositoryConfiguration' not loaded because OAuth2 Clients Configured Condition registered clients is not available
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' in your configuration.
+
+2020-10-01 02:20:47.213  INFO 2452 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 2452 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-01 02:20:47.221  INFO 2452 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 02:20:50.547  WARN 2452 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 02:20:52.462  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.466  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-01 02:20:52.467  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.467  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-01 02:20:52.468  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.469  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-01 02:20:52.470  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.470  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-01 02:20:52.471  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.471  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 02:20:52.472  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.472  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 02:20:52.473  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.474  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-01 02:20:52.474  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.475  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-01 02:20:52.476  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.476  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:20:52.478  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.479  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:20:52.480  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.481  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:20:52.483  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.483  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-01 02:20:52.485  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.485  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-01 02:20:52.486  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.487  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-01 02:20:52.487  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.488  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-01 02:20:52.489  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.489  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:20:52.490  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.490  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:20:52.490  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.491  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-01 02:20:52.491  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.492  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-01 02:20:52.493  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.493  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-01 02:20:52.495  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.495  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_images" не существует, пропускается
+2020-10-01 02:20:52.496  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.496  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_images" не существует, пропускается
+2020-10-01 02:20:52.497  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.497  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-01 02:20:52.498  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.498  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:20:52.499  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.499  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:20:52.500  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.500  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:20:52.501  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.501  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:20:52.502  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.502  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-01 02:20:52.502  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.502  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:20:52.504  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.504  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:20:52.504  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.505  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:20:52.505  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.506  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:20:52.506  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.507  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-01 02:20:52.508  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.508  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-01 02:20:52.509  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.509  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-01 02:20:52.510  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.511  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-01 02:20:52.512  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.513  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-01 02:20:52.514  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.515  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-01 02:20:52.516  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.516  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-01 02:20:52.517  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.518  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-01 02:20:52.519  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.519  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-01 02:20:52.520  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.520  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-01 02:20:52.520  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.521  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-01 02:20:52.521  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.521  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-01 02:20:52.522  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.522  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 02:20:52.523  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.523  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 02:20:52.524  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.525  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-01 02:20:52.526  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.526  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-01 02:20:52.527  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.528  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-01 02:20:52.529  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.530  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-01 02:20:52.530  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.530  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-01 02:20:52.531  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.532  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-01 02:20:52.533  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.533  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-01 02:20:52.535  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.535  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-01 02:20:52.536  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.536  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting" не существует, пропускается
+2020-10-01 02:20:52.537  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.537  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-01 02:20:52.538  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.538  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-01 02:20:52.540  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.540  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-01 02:20:52.541  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.545  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:20:52.546  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.546  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-01 02:20:52.547  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.547  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-01 02:20:52.548  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.548  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-01 02:20:52.549  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.550  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_images" не существует, пропускается
+2020-10-01 02:20:52.551  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.551  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-01 02:20:52.552  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.552  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-01 02:20:52.553  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.554  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-01 02:20:52.556  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.556  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-01 02:20:52.557  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.557  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:20:52.557  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.558  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-01 02:20:52.558  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.558  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:20:52.559  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.559  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:20:52.560  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.560  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-01 02:20:52.561  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.561  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-01 02:20:52.562  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.562  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-01 02:20:52.563  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.563  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-01 02:20:52.564  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.565  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-01 02:20:52.565  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.565  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-01 02:20:52.566  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.566  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-01 02:20:52.566  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.566  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-01 02:20:52.567  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.567  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-01 02:20:52.567  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.568  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-01 02:20:52.568  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.568  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-01 02:20:52.569  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.569  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-01 02:20:52.569  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.569  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-01 02:20:52.570  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.570  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-01 02:20:52.571  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.571  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-01 02:20:52.572  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.572  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-01 02:20:52.573  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:20:52.573  WARN 2452 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-01 02:21:07.996  WARN 2452 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
+2020-10-01 02:21:08.484 ERROR 2452 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Method springSecurityFilterChain in org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration required a bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' that could not be found.
+
+The following candidates were found but could not be injected:
+	- Bean method 'clientRegistrationRepository' in 'OAuth2ClientRegistrationRepositoryConfiguration' not loaded because OAuth2 Clients Configured Condition registered clients is not available
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' in your configuration.
+
+2020-10-01 02:37:18.918  INFO 3024 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 3024 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-01 02:37:18.922  INFO 3024 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 02:37:22.217  WARN 3024 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 02:37:24.218  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.221  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-01 02:37:24.222  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.223  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-01 02:37:24.224  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.225  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-01 02:37:24.226  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.226  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-01 02:37:24.227  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.227  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 02:37:24.228  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.228  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 02:37:24.229  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.229  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-01 02:37:24.230  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.230  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-01 02:37:24.231  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.232  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:37:24.232  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.233  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:37:24.233  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.234  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 02:37:24.235  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.235  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-01 02:37:24.236  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.236  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-01 02:37:24.237  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.237  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-01 02:37:24.239  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.239  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-01 02:37:24.240  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.241  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:37:24.242  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.243  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:37:24.245  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.245  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-01 02:37:24.246  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.246  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-01 02:37:24.247  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.249  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-01 02:37:24.250  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.250  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_images" не существует, пропускается
+2020-10-01 02:37:24.250  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.250  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_images" не существует, пропускается
+2020-10-01 02:37:24.251  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.251  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-01 02:37:24.252  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.252  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:37:24.253  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.253  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:37:24.254  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.254  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:37:24.256  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.257  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:37:24.259  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.259  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-01 02:37:24.260  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.260  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:37:24.261  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.261  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:37:24.262  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.263  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:37:24.264  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.264  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:37:24.265  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.265  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-01 02:37:24.266  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.266  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-01 02:37:24.267  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.267  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-01 02:37:24.268  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.268  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-01 02:37:24.269  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.269  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-01 02:37:24.270  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.270  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-01 02:37:24.270  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.271  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-01 02:37:24.272  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.273  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-01 02:37:24.274  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.274  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-01 02:37:24.275  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.275  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-01 02:37:24.276  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.276  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-01 02:37:24.277  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.277  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-01 02:37:24.277  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.278  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 02:37:24.278  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.278  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 02:37:24.280  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.280  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-01 02:37:24.281  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.281  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-01 02:37:24.282  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.282  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-01 02:37:24.283  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.283  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-01 02:37:24.283  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.283  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-01 02:37:24.284  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.284  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-01 02:37:24.285  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.285  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-01 02:37:24.286  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.286  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-01 02:37:24.287  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.287  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting" не существует, пропускается
+2020-10-01 02:37:24.288  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.288  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-01 02:37:24.289  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.289  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-01 02:37:24.290  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.290  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-01 02:37:24.291  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.291  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-01 02:37:24.292  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.292  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-01 02:37:24.293  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.293  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-01 02:37:24.293  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.293  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-01 02:37:24.294  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.294  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_images" не существует, пропускается
+2020-10-01 02:37:24.295  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.295  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-01 02:37:24.296  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.296  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-01 02:37:24.297  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.297  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-01 02:37:24.298  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.298  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-01 02:37:24.298  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.298  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-01 02:37:24.299  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.299  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-01 02:37:24.299  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.299  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 02:37:24.299  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.299  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 02:37:24.300  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.300  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-01 02:37:24.300  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.300  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-01 02:37:24.301  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.301  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-01 02:37:24.301  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.302  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-01 02:37:24.302  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.302  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-01 02:37:24.303  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.303  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-01 02:37:24.303  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.303  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-01 02:37:24.304  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.305  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-01 02:37:24.306  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.306  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-01 02:37:24.307  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.307  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-01 02:37:24.308  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.308  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-01 02:37:24.308  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.309  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-01 02:37:24.309  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.309  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-01 02:37:24.310  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.310  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-01 02:37:24.311  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.311  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-01 02:37:24.312  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.312  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-01 02:37:24.313  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 02:37:24.314  WARN 3024 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-01 02:37:42.561  INFO 3024 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 24.811 seconds (JVM running for 27.286)
+2020-10-01 02:37:42.564  INFO 3024 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 02:37:51.968 ERROR 3024 --- [http-nio-5556-exec-2] OAuth2AuthorizationRequestRedirectFilter : Authorization Request failed: java.lang.IllegalArgumentException: Invalid Client Registration with Id: google
+
+java.lang.IllegalArgumentException: Invalid Client Registration with Id: google
+	at org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizationRequestResolver.resolve(DefaultOAuth2AuthorizationRequestResolver.java:130) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizationRequestResolver.resolve(DefaultOAuth2AuthorizationRequestResolver.java:91) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:149) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
