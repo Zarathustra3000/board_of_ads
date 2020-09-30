@@ -30,7 +30,6 @@ public class PostingRestController {
 
     @GetMapping("/posting/city/{name}")
     public List<PostingDto> findPostingsByCityName(@PathVariable String name) {
-        System.out.println(name);
         var city = cityService.findCityByName(name).get();
         return postingService
                 .getPostingByCity(city)

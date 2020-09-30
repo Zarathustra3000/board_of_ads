@@ -4,6 +4,15 @@ $("#region, #category-select-city").click(function() {
     $('#searchModel').modal('show');
 });
 
+let changedCityName;
+function clickCountButton() {
+    $('#category-select-city').empty();
+    $('#cityInput').empty();
+    $('#searchModel').modal('hide');
+    let row = `<option>` + changedCityName + `</option>`;
+    $('#category-select-city').append(row);
+}
+
 $('select#cities').on('change', function() {
     $('input[name="cityInput"]').val(this.value);
 });
@@ -20,7 +29,9 @@ function onOptionHover() {
 }
 
 async function onClickOpt(id) {
-    console.log(id);
+    changedCityName = id;
+    $('.typeahead').val(id);
+    $('#citiesSelect').remove();
     let usersResponse;
     if (id.includes('Область')
         || id.includes('Край')
@@ -44,11 +55,10 @@ async function onClickOpt(id) {
             let button = `<div >
                     <button 
                         type="button" 
-                        class="btn btn-primary"   
-                        id="countPostButton"
-                        style="position: absolute; top: 350px; left: 700px"                       
-                        >Показать ` + sizeArray + ` объявлений
-                       </button>
+                        class="btn btn-primary button-count-post"   
+                        onclick="clickCountButton()"
+                        id="countPostButton">Показать ` + sizeArray + ` объявлений
+                    </button>
                 </div>`;
             buttonAdd.append(button);
         }
@@ -79,11 +89,9 @@ async function viewCities() {
             let button = `<div >
                     <button 
                         type="button" 
-                        class="btn btn-primary"   
-                        id="countPostButton"
-                        style="position: absolute; top: 350px; left: 700px"                       
-                        >Показать ` + sizeArray + ` объявлений
-                       </button>
+                        class="btn btn-primary button-count-post"   
+                        id="countPostButton">Показать ` + sizeArray + ` объявлений
+                    </button>
                 </div>`;
             buttonAdd.append(button);
         }
@@ -92,14 +100,13 @@ async function viewCities() {
 
 $('.typeahead').on('keyup', function() {
     addOptions();
+    $('#countPostButton').attr("disabled", true);
 });
 
 function addOptions() {
     $('#citiesSelect').remove();
     $('#citiesSelect').empty();
-    let select=`<select id="citiesSelect" size="7"
-                                class="form-control">
-                        </select>`;
+    let select=`<select id="citiesSelect" size="7" class="form-control"></select>`;
     $('.citiesOptions').append(select);
     let addForm = $(".typeahead").val().toLowerCase();
     cities.then(cities => {
