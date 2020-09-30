@@ -47,6 +47,7 @@ $(document).ready(function() {
         $('#registrationModalCenter').modal('hide');
         $('#emailAuth').val("");
         $('#passwordAuth').val("");
+        location.reload();
     });
 });
 
