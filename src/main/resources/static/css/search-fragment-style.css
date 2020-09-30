@@ -79,4 +79,29 @@ textarea {
     background-color: lightgrey;
 }
 
+.modal-position {
+    height: 400px;
+    margin-top: 200px
+}
 
+.modal-search-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 10px
+}
+
+.citiesOptions {
+    margin-top: 10px;
+}
+
+.modal-search-close {
+    position: relative;
+    left: 35px;
+    bottom: 13px;
+}
+
+.button-count-post {
+    position: absolute;
+    top: 350px;
+    left: 700px
+}
