@@ -1,49 +1,37 @@
 package com.board_of_ads.controllers.rest;
 
-import com.board_of_ads.model.dto.PostingDto;
+import com.board_of_ads.models.dto.PostingDto;
 import com.board_of_ads.service.interfaces.CityService;
 import com.board_of_ads.service.interfaces.PostingService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @org.springframework.web.bind.annotation.RestController
-@RequestMapping("/api")
+@RequestMapping("/api/posting")
 @AllArgsConstructor
 public class PostingRestController {
 
     private final CityService cityService;
     private final PostingService postingService;
 
-    @GetMapping("/posting")
-    public List<PostingDto> findAllPosts() {
-        return postingService
-                .getAllPostings()
-                .stream()
-                .map(post -> new PostingDto(post.getId(), post.getTitle(), post.getDescription(), post.getPrice(), post.getContact()))
-                .collect(Collectors.toList());
+    @GetMapping
+    public ResponseEntity<List<PostingDto>> findAllPosts() {
+        return new ResponseEntity<>(postingService.getAllPostings(), HttpStatus.OK);
     }
 
-    @GetMapping("/posting/city/{name}")
-    public List<PostingDto> findPostingsByCityName(@PathVariable String name) {
-        var city = cityService.findCityByName(name).get();
-        return postingService
-                .getPostingByCity(city)
-                .stream()
-                .map(post -> new PostingDto(post.getId(), post.getTitle(), post.getDescription(), post.getPrice(), post.getContact()))
-                .collect(Collectors.toList());
+    @GetMapping("/city/{name}")
+    public ResponseEntity<List<PostingDto>> findPostingsByCityName(@PathVariable String name) {
+        return new ResponseEntity<>(postingService.getPostingByCity(cityService.findCityByName(name).get()), HttpStatus.OK);
     }
 
-    @GetMapping("/posting/region/{name}")
-    public List<PostingDto> findPostingsByRegionName(@PathVariable String name) {
-        System.out.println(name);
-        var postings = postingService.getPostingByFullRegionName(name);
-        return postings.stream()
-                .map(post -> new PostingDto(post.getId(), post.getTitle(), post.getDescription(), post.getPrice(), post.getContact()))
-                .collect(Collectors.toList());
+    @GetMapping("/region/{name}")
+    public ResponseEntity<List<PostingDto>> findPostingsByRegionName(@PathVariable String name) {
+        return new ResponseEntity<>(postingService.getPostingByFullRegionName(name), HttpStatus.OK);
     }
 }

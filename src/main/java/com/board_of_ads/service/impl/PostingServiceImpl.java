@@ -2,6 +2,7 @@ package com.board_of_ads.service.impl;
 
 
 import com.board_of_ads.models.City;
+import com.board_of_ads.models.dto.PostingDto;
 import com.board_of_ads.models.posting.Posting;
 import com.board_of_ads.repository.CityRepository;
 import com.board_of_ads.repository.PostingRepository;
@@ -39,15 +40,14 @@ public class PostingServiceImpl implements PostingService {
         return Optional.ofNullable(postingRepository.findPostingByTitle(title));
     }
 
-
     @Override
-    public List<Posting> getPostingByCity(City city) {
+    public List<PostingDto> getPostingByCity(City city) {
         return postingRepository.findPostingByCity(city);
     }
 
     @Override
-    public List<Posting> getPostingByFullRegionName(String name) {
-        List<Posting> result = new ArrayList<>();
+    public List<PostingDto> getPostingByFullRegionName(String name) {
+        List<PostingDto> result = new ArrayList<>();
         var cities = cityRepository.findCitiesByRegion(
                 regionService.findRegionByNameAndFormSubject(name).get());
         cities.forEach(city -> result.addAll(postingRepository.findPostingByCity(city)));
@@ -55,7 +55,7 @@ public class PostingServiceImpl implements PostingService {
     }
 
     @Override
-    public List<Posting> getAllPostings() {
-        return postingRepository.findAll();
+    public List<PostingDto> getAllPostings() {
+        return postingRepository.findAllPostings();
     }
 }
