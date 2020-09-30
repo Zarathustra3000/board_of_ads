@@ -1,8 +1,12 @@
 package com.board_of_ads.service.interfaces;
 
+import com.board_of_ads.models.User;
+
 import java.util.Map;
 
 public interface AuthYandexService {
+
+    void auth(String code);
 
     String getAuthURL();
 
@@ -11,4 +15,8 @@ public interface AuthYandexService {
     String getToken(String body);
 
     Map<String, String> getUserData(String token);
+
+    void login(User user);
+
+    User init(Map<String, String> userData);
 }

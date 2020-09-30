@@ -1,6 +1,11 @@
 package com.board_of_ads.service.impl;
 
+import com.board_of_ads.models.Image;
+import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.AuthYandexService;
+import com.board_of_ads.service.interfaces.UserService;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -11,16 +16,24 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@Getter
 @Setter
+@RequiredArgsConstructor
 @ConfigurationProperties(value = "security.auth-yandex")
 public class AuthYandexServiceImpl implements AuthYandexService {
+
+    private final UserService userService;
 
     private String clientId;
     private String clientSecret;
@@ -31,6 +44,13 @@ public class AuthYandexServiceImpl implements AuthYandexService {
     private String tokenURL;
     private String userInfoURL;
 
+    public void auth(String code) {
+        String requestBody = getRequestBody(code);
+        String token = getToken(requestBody);
+        Map<String, String> userData = getUserData(token);
+        User user = init(userData);
+        login(user);
+    }
     /**
      * Метод для кнопки авторизации
      * @return ссылку для авторизации при переходе по которой, получим ссылку с
@@ -103,5 +123,39 @@ public class AuthYandexServiceImpl implements AuthYandexService {
         userData.put("avatar_link", "https://avatars.yandex.net/get-yapic/"
                 + jsonObject.get("default_avatar_id") + "/islands-retina-50");
         return userData;
+    }
+
+    /**
+     * Метод для получения сессии пользователя
+     */
+    @Override
+    public void login(User user) {
+        Authentication authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+    }
+
+    /**
+     * Метод инициализации пользователя.
+     * Если такой пользователь есть в базе данных, то он вернет его.
+     * Если пользователя не существует, то он его создаст, добавит в БД и вернет.
+     *
+     * @param userData возвращается методом getUserData
+     */
+    @Override
+    public User init(Map<String, String> userData) {
+        User user = userService.getUserByEmail(userData.get("email"));
+        if (user != null) {
+            return user;
+        }
+        user = new User();
+        user.setEnable(true);
+        user.setDataRegistration(LocalDateTime.now());
+        user.setEmail(userData.get("email"));
+        user.setFirsName(userData.get("first_name"));
+        user.setLastName(userData.get("last_name"));
+        user.setAvatar(new Image(null, userData.get("avatar_link")));
+        user.setPassword(userData.get("email")); //todo create set password page (and phone)
+        userService.saveUser(user);
+        return user;
     }
 }
