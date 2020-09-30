@@ -52,14 +52,13 @@ async function onClickOpt(id) {
             sizeArray++;
         })
     }).then(() => {
-            let button = `<div >
-                    <button 
-                        type="button" 
-                        class="btn btn-primary button-count-post"   
-                        onclick="clickCountButton()"
-                        id="countPostButton">Показать ` + sizeArray + ` объявлений
-                    </button>
-                </div>`;
+        $('#countPostButton').remove();
+            let button = `<button
+                                type="button"
+                                class="btn btn-primary button-count-post"
+                                onclick="clickCountButton()"
+                                id="countPostButton">Показать ` + sizeArray + ` объявлений
+                          </button>`;
             buttonAdd.append(button);
         }
     );
@@ -86,13 +85,11 @@ async function viewCities() {
             sizeArray++;
         })
     }).then(() => {
-            let button = `<div >
-                    <button 
-                        type="button" 
-                        class="btn btn-primary button-count-post"   
-                        id="countPostButton">Показать ` + sizeArray + ` объявлений
-                    </button>
-                </div>`;
+            let button = `<button 
+                                type="button" 
+                                class="btn btn-primary button-count-post"   
+                                id="countPostButton">Показать ` + sizeArray + ` объявлений
+                          </button>`;
             buttonAdd.append(button);
         }
     );
