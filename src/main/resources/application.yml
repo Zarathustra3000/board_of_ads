@@ -6,7 +6,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/board_of_ads
-    username: root
+    username: postgres
     password: root
     initialization-mode: always
 
@@ -42,15 +42,10 @@ jhipster:
 security:
   oauth2:
     client:
-      clientId: 670394210267367
-      clientSecret: 031df2213df96eb1bc72d87fad3cdbd3
-      accessTokenUri: https://graph.facebook.com/oauth/access_token
-      userAuthorizationUri: https://www.facebook.com/dialog/oauth
-      tokenName: oauth_token
-      authenticationScheme: query
-      clientAuthenticationScheme: form
-    resource:
-      userInfoUri: https://graph.facebook.com/me
+      registration:
+        google:
+          client-id: 214656904193-mpsfq89h2c8101ubel635dsjpvtah5gp.apps.googleusercontent.com
+          client-secret: o7AD6q5zqftfLiVBbU2bI3d9
 
 logging:
   file:
