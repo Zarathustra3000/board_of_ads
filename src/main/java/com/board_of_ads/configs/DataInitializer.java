@@ -1,12 +1,10 @@
 package com.board_of_ads.configs;
 
-import com.board_of_ads.model.Category;
-import com.board_of_ads.model.City;
-import com.board_of_ads.model.Image;
-import com.board_of_ads.model.Role;
-import com.board_of_ads.model.User;
-import com.board_of_ads.model.posting.Posting;
-import com.board_of_ads.repository.CityRepository;
+import com.board_of_ads.models.Category;
+import com.board_of_ads.models.Image;
+import com.board_of_ads.models.Role;
+import com.board_of_ads.models.User;
+import com.board_of_ads.models.posting.Posting;
 import com.board_of_ads.service.interfaces.CategoryService;
 import com.board_of_ads.service.interfaces.CityService;
 import com.board_of_ads.service.interfaces.KladrService;
@@ -229,19 +227,6 @@ public class DataInitializer {
                 postingService.save(posting);
             }
         }
-
-//        City rostov = cityService.findCityByName("Ростов").get();
-//        City ekb = cityService.findCityByName("Екатеринбург").get();
-//        City pishma = cityService.findCityByName("Верхняя Пышма").get();
-//        postingService.getPostingById(1L).setCity(rostov);
-//        postingService.getPostingById(2L).setCity(rostov);
-//        postingService.getPostingById(3L).setCity(rostov);
-//        postingService.getPostingById(4L).setCity(rostov);
-//        postingService.getPostingById(5L).setCity(ekb);
-//        postingService.getPostingById(6L).setCity(ekb);
-//        postingService.getPostingById(7L).setCity(ekb);
-//        postingService.getPostingById(8L).setCity(pishma);
-//        postingService.getPostingById(9L).setCity(pishma);
     }
 
 }

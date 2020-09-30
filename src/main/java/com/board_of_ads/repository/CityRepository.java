@@ -1,7 +1,7 @@
 package com.board_of_ads.repository;
 
-import com.board_of_ads.model.City;
-import com.board_of_ads.model.Region;
+import com.board_of_ads.models.City;
+import com.board_of_ads.models.Region;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.board_of_ads.controllers.simple;
 
-import com.board_of_ads.model.User;
+import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.AuthService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -48,5 +48,9 @@ public class MainPageController {
     @GetMapping("/test")
     public String aa() {
         return "redirect:http://vk.com";
+    }
+    @GetMapping("/login/twitter")
+    public String getTwitter() {
+        return "redirect:/";
     }
 }

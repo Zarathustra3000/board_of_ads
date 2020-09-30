@@ -14,8 +14,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-//@EnableOAuth2Sso
 @Configuration
+@EnableOAuth2Sso
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 

@@ -1,7 +1,8 @@
 package com.board_of_ads.service.impl;
 
-import com.board_of_ads.model.City;
-import com.board_of_ads.model.posting.Posting;
+
+import com.board_of_ads.models.City;
+import com.board_of_ads.models.posting.Posting;
 import com.board_of_ads.repository.CityRepository;
 import com.board_of_ads.repository.PostingRepository;
 import com.board_of_ads.service.interfaces.PostingService;
