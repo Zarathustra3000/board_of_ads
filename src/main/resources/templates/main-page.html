@@ -19,18 +19,14 @@
 <!--header-->
 <header th:insert="fragments/header::main-header"></header>
 <div class="second-header">
-    <div
-            th:insert="fragments/navigate-panel::navigate-header"></div>
-
-
+    <div th:insert="fragments/navigate-panel::navigate-header"></div>
     <div th:insert="fragments/search-header::search-header"></div>
     <div th:insert="authorization-button::authorization-button"></div>
     <div th:insert="fragments/search-city::search-city"></div>
 </div>
-<div class="container unauthenticated">
-    With Twitter: <a href="/login/twitter" >click here</a>
-</div>
 
+<div th:insert="fragments/main_page_body::main_body"></div>
+<script src="../static/js/main_page_body.js" th:src="@{/js/main_page_body.js}"></script>
 <script src="../static/js/main_page.js" th:src="@{/js/main_page.js}"></script>
 <script type="text/javascript" src="../static/js/user-info-menu.js" th:src="@{/js/user-info-menu.js}"></script>
 </body>
