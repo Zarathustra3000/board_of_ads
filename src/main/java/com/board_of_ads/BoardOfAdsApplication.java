@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 
-import javax.annotation.PreDestroy;
-
 @SpringBootApplication
 public class BoardOfAdsApplication {
 
@@ -19,7 +17,7 @@ public class BoardOfAdsApplication {
     }
 
     @EventListener(ApplicationReadyEvent.class)
-    private void onStart() {
+    public void onStart() {
         logger.info("Successful application launch");
     }
 

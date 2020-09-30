@@ -51,6 +51,7 @@ security:
       clientAuthenticationScheme: form
     resource:
       userInfoUri: https://graph.facebook.com/me
+
 logging:
   file:
     name: src//main//resources//logFiles//board_of_ads.log
