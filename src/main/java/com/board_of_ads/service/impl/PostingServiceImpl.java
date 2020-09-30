@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,4 +26,11 @@ public class PostingServiceImpl implements PostingService {
     public Optional<Posting> getPostingByTitle(String title) {
         return Optional.ofNullable(postingRepository.findPostingByTitle(title));
     }
+
+    @Transactional
+    @Override
+    public Optional<List<Posting>> findAll() {
+       return Optional.of(postingRepository.findAll());
+    }
+
 }
