@@ -32,12 +32,12 @@ public class MainPageController {
 
 
     @GetMapping("/vk_auth")
-    public String vkAuth(@RequestParam(value = "code") String code, Model model) {
+    public String vkAuth(@RequestParam(value = "code") String code) {
         return authService.vkAuth(code);
     }
 
     @GetMapping("/yandex_auth")
-    public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
+    public String yandexAuth(@RequestParam(value = "code") String code) {
         return authService.yandexAuth(code);
     }
 
