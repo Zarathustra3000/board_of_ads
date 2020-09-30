@@ -1,18 +1,14 @@
-<header th:fragment="main-header" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.springframework.org/security/tags">
+<header th:fragment="main-header" xmlns:th="https://www.thymeleaf.org">
     <div class="header-line">
         <div class="header-container">
             <div class="header-menu-left">
                 <ul>
-                    <li><a th:text="#{ads}" class="header-link-item" href="/">Объявления</a></li> <!--todo: add links-->
+                    <li><a th:text="#{ads}" class="header-link-item" href="#">Объявления</a></li> <!--todo: add links-->
                     <li><a th:text="#{shops}" class="header-link-item" href="#">Магазины</a></li>
                     <li><a th:text="#{business}" class="header-link-item" href="#">Бизнес</a></li>
                     <li><a th:text="#{help}" class="header-link-item" href="#">Помощь</a></li>
-                    <li sec:authorize="hasAuthority('ADMIN')" class="admin-button">
-                            <a class="header-link-item"
-                               th:text="#{admin_panel}" href="/admin_page">Админка</a></li>
                 </ul>
             </div>
-
             <div class="header-favorite-button">
                 <a href="#">
                     <svg width="25" height="21" xmlns="http://www.w3.org/2000/svg">
@@ -22,9 +18,52 @@
                 </a>
             </div>
             <div class="header-menu-right">
-                <ul>
-                    <li><a th:text="#{reg}" class="header-link-item header-button-sign unauthenticated" data-toggle="modal" data-target="#registrationModalCenter" href="#">Вход и регистрация</a></li>
-                    <li><a class="header-link-item header-button-sign authenticated" id="user" href=""></a></li>
+                <ul class="list-inline">
+                    <li>
+                        <a th:text="#{reg}" class="header-link-item header-button-sign unauthenticated"
+                           data-toggle="modal" data-target="#registrationModalCenter"
+                           href="#">Вход и регистрация</a>
+                    </li>
+                    <li class="dropdown authenticated">
+                        <a class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"
+                           data-target="#dropdownUserInfo" id="dropdownButton" style="padding: 1px" href="#">
+                            <div class="user-info-avatar" id="avatar"></div>
+                            <div class="user-info-name" id="name">Леонид</div>
+                        </a>
+                        <ul class="dropdown-menu " id="dropdownUserInfo" aria-labelledby="dropdownButton">
+                            <li class="dropdown-item">
+                                <a href="#">
+                                    <span style="color: black"><strong>0,0</strong></span>
+                                    <div class="rating-mini">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span>Нет отзывов</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-item"><a href="#">Мои объявления</a></li>
+                            <li class="dropdown-item "><a href="#">Мои отзывы</a></li>
+                            <li class="dropdown-item "><a href="#">Избранное</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-item "><a href="#">Сообщения</a></li>
+                            <li class="dropdown-item "><a class="text-primary" href="#">Уведомления</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-item d-flex justify-content-between">
+                                <a style="padding-right: 110px" href="#">Кошелёк</a>
+                                <span class="text-secondary" style="color: gray;">0 ₽</span>
+                            </li>
+                            <li class="dropdown-item "><a href="#">Платные услуги</a></li>
+                            <li class="dropdown-item "><a href="#">Авито Pro</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-item "><a href="#">Настройки</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-item"><a style="color: gray;" href="/logout">Выйти</a></li>
+                        </ul>
+                    </li>
                     <li><a th:text="#{add}" class="header-button-new-ads" href="#">Подать объявление</a></li>
                     <li>
                         <a class="header-link-item header-button-sign" th:href="@{'?locale=ru'}">Ru</a>
