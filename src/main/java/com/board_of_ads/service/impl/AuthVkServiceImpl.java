@@ -1,11 +1,14 @@
 package com.board_of_ads.service.impl;
 
 import com.board_of_ads.service.interfaces.AuthVkService;
+import lombok.Setter;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -14,21 +17,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@Setter
+@ConfigurationProperties(prefix="security.auth-vk")
 public class AuthVkServiceImpl implements AuthVkService {
 
-    private String clientId = "7604924";
-    private final String clientSecret = "acpHC7p5T746jYx17yz1";
-    private final String responseType = "code";
-
-    private final String redirectURL = "http://localhost:5556/vk_auth";
-    private final String authUrl = "http://oauth.vk.com/authorize";
-    private final String tokenURL = "https://oauth.vk.com/access_token";
-    private final String usersGetURL = "https://api.vk.com/method/users.get";
-
-    private String scope = "email";
-    private String display = "popup";
-    private String fields = "photo_100";
-    private String version = "5.124";
+    private String clientId;
+    private String clientSecret;
+    private String responseType;
+    private String redirectURL;
+    private String authURL;
+    private String tokenURL;
+    private String usersGetURL;
+    private String scope;
+    private String display;
+    private String fields;
+    private String version;
 
     /**
      * Метод для кнопки авторизации
@@ -37,7 +40,7 @@ public class AuthVkServiceImpl implements AuthVkService {
      */
     @Override
     public String getAuthURL() {
-        return authUrl + "?"
+        return authURL + "?"
                 + "client_id=" + clientId
                 + "&redirect_uri=" + redirectURL
                 + "&scope=" + scope
@@ -51,6 +54,8 @@ public class AuthVkServiceImpl implements AuthVkService {
      */
     @Override
     public String getAuthResponseURL(String code) {
+        System.out.println(clientId);
+        System.out.println(clientSecret);
         return tokenURL + "?"
                 + "client_id=" + clientId
                 + "&client_secret=" + clientSecret

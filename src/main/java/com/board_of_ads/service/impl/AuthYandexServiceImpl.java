@@ -1,9 +1,11 @@
 package com.board_of_ads.service.impl;
 
 import com.board_of_ads.service.interfaces.AuthYandexService;
+import lombok.Setter;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -16,16 +18,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@Setter
+@ConfigurationProperties(value = "security.auth-yandex")
 public class AuthYandexServiceImpl implements AuthYandexService {
-    private final String clientId = "2561bd17ecc1441d9c2461d780690cae";
-    private final String clientSecret = "cc96fba5ab674d159b7d191215e1697b";
-    private final String responseType = "code";
-    private final String display = "popup";
 
-    private final String redirectURL = "http://localhost:5556/yandex_auth";
-    private final String authUrl = "https://oauth.yandex.ru/authorize";
-    private final String tokenUrl = "https://oauth.yandex.ru/token";
-    private final String userInfoUrl = "https://login.yandex.ru/info";
+    private String clientId;
+    private String clientSecret;
+    private String responseType;
+    private String display;
+    private String redirectURL;
+    private String authURL;
+    private String tokenURL;
+    private String userInfoURL;
 
     /**
      * Метод для кнопки авторизации
@@ -34,7 +38,7 @@ public class AuthYandexServiceImpl implements AuthYandexService {
      */
     @Override
     public String getAuthURL() {
-        return authUrl + "?"
+        return authURL + "?"
                 + "client_id=" + clientId
                 + "&redirect_uri=" + redirectURL
                 + "&display=" + display
@@ -61,7 +65,7 @@ public class AuthYandexServiceImpl implements AuthYandexService {
     public String getToken(String body) {
         HttpEntity<String> httpEntity = new HttpEntity<>(body);
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> entity = restTemplate.exchange(tokenUrl, HttpMethod.POST, httpEntity, String.class);
+        ResponseEntity<String> entity = restTemplate.exchange(tokenURL, HttpMethod.POST, httpEntity, String.class);
         Object obj = null;
         try {
             obj = new JSONParser().parse(entity.getBody());
@@ -84,7 +88,7 @@ public class AuthYandexServiceImpl implements AuthYandexService {
         headers.add("Authorization", "OAuth " + token);
         HttpEntity<String> httpEntity = new HttpEntity<>(headers);
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> responseEntity = restTemplate.exchange(userInfoUrl, HttpMethod.GET, httpEntity, String.class);
+        ResponseEntity<String> responseEntity = restTemplate.exchange(userInfoURL, HttpMethod.GET, httpEntity, String.class);
         Object obj = null;
         try {
             obj = new JSONParser().parse(responseEntity.getBody());
