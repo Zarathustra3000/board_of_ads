@@ -17,7 +17,7 @@ import java.util.Map;
 @Controller
 @AllArgsConstructor
 public class Auth {
-    private final UserService userService;
+    private UserService userService;
 
     /**
      * Метод для получения сессии пользователя

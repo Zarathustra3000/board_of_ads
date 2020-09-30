@@ -30,6 +30,10 @@ public class MainPageController {
     public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
         return authService.yandexAuth(code);
     }
+    @GetMapping("/mail_auth")
+    public String mailAuth(@RequestParam(value = "code") String code, Model model) {
+        return authService.yandexAuth(code);
+    }
 
     /** todo delete
      * Тестовый контроллер для проверки авторизации.
