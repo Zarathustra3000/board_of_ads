@@ -1,0 +1,19 @@
+<header th:fragment="main-adm" xmlns:th="https://www.thymeleaf.org"  xmlns:sec="http://www.springframework.org/security/tags">
+    <div class="header-line">
+        <div class="header-container">
+            <div class="header-menu-left">
+                <ul>
+                    <li><a th:text="#{analytic}" class="header-link-item" href="#">Аналитика</a></li>
+                    <li><a th:text="#{adminCategory}" class="header-link-item" href="#">Категории</a></li>
+                    <li><a th:text="#{newUser}" class="header-link-item" href="#">Создать нового пользователя</a></li>
+                    <li><a th:text="#{userList}" class="header-link-item" href="#">Список пользователей</a></li>
+                </ul>
+            </div>
+
+            <div class="header-favorite-button">
+                        <a class="header-link-item header-button-sign" th:href="@{'?locale=ru'}">Ru</a>
+                        <a class="header-link-item header-button-sign" th:href="@{'?locale=en'}">En</a>
+            </div>
+        </div>
+    </div>
+</header>
