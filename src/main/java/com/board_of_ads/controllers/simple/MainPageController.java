@@ -1,6 +1,7 @@
 package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.models.User;
+import com.board_of_ads.service.interfaces.MailService;
 import com.board_of_ads.service.interfaces.VkService;
 import com.board_of_ads.service.interfaces.YandexService;
 import lombok.AllArgsConstructor;
@@ -18,6 +19,7 @@ public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private final YandexService yandexService;
     private final VkService vkService;
+    private final MailService mailService;
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal User user, Model model) {
@@ -40,6 +42,11 @@ public class MainPageController {
     @GetMapping("/yandex_auth")
     public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
         yandexService.auth(code);
+        return "redirect:/";
+    }
+    @GetMapping("/mail_auth")
+    public String mailAuth(@RequestParam(value = "code") String code, Model model) {
+        mailService.auth(code);
         return "redirect:/";
     }
 

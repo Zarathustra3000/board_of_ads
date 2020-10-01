@@ -7,4 +7,6 @@ public interface AuthService {
 
     String yandexAuth(String code);
 
+    String mailAuth(String code);
+
 }
