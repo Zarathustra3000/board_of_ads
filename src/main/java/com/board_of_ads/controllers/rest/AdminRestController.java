@@ -2,6 +2,8 @@ package com.board_of_ads.controllers.rest;
 
 import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.UserService;
+import com.board_of_ads.util.Response;
+import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,15 +19,24 @@ public class AdminRestController {
     private final UserService userService;
 
     @PostMapping("/addNewUser")
-    public ResponseEntity<User> createNewUser(@RequestBody User user) {
-            userService.saveUser(user);
-            return new ResponseEntity<>(user, HttpStatus.OK);
+    public Response<User> createNewUser(@RequestBody User user) {
+            return new SuccessResponse<>(userService.saveUser(user));
     }
 
     @GetMapping("/getAllUsers")
-    public ResponseEntity<List<User>> getAllUsersList() {
-            List<User> userList = userService.getAllUsers();
-            return new ResponseEntity<>(userList, HttpStatus.OK);
+    public Response<List<User>> getAllUsersList() {
+            return new SuccessResponse<>(userService.getAllUsers());
+    }
+
+    @GetMapping("/getUserById/{id}")
+    public Response<User> getUserById(@PathVariable(name = "id") Long id) {
+        return new SuccessResponse<>(userService.getUserById(id));
+    }
+
+    @DeleteMapping("/deleteUser/{id}")
+    public Response<Void> deleteUserById(@PathVariable(name = "id") Long id) {
+        userService.deleteUser(id);
+        return new Response<>();
     }
 
 }
