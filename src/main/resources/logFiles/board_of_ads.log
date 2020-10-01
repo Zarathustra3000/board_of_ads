@@ -239,3 +239,8 @@
 2020-10-01 11:11:27.175  WARN 10820 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
 2020-10-01 11:11:41.186  INFO 10820 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 19.726 seconds (JVM running for 21.807)
 2020-10-01 11:11:41.190  INFO 10820 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 11:21:24.551  INFO 4228 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 4228 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-01 11:21:24.556  INFO 4228 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 11:21:27.581  WARN 4228 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 11:21:43.023  INFO 4228 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 19.339 seconds (JVM running for 21.138)
+2020-10-01 11:21:43.026  INFO 4228 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
