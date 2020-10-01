@@ -58,7 +58,7 @@ public class User implements UserDetails {
     @JoinColumn(name = "avatar_id")
     private Image avatar;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "city_id")
     private City city;
 
