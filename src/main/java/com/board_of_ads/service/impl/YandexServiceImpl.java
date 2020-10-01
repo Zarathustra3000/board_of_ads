@@ -30,7 +30,7 @@ import java.util.Map;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@ConfigurationProperties(value = "security.auth-yandex")
+@ConfigurationProperties(value = "spring.security.auth-yandex")
 public class YandexServiceImpl implements YandexService {
 
     private final UserService userService;

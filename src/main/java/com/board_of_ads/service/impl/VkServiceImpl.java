@@ -28,7 +28,7 @@ import java.util.Map;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@ConfigurationProperties(prefix="security.auth-vk")
+@ConfigurationProperties(prefix="spring.security.auth-vk")
 public class VkServiceImpl implements VkService {
 
     private final UserService userService;
