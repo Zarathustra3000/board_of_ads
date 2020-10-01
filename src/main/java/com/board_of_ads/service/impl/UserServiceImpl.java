@@ -5,6 +5,7 @@ import com.board_of_ads.repository.ImageRepository;
 import com.board_of_ads.repository.UserRepository;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
+import org.bouncycastle.asn1.crmf.EncryptedValue;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAllUsers() {
+    public List<User> getAllUsers(){
         return userRepository.findAll();
     }
 

@@ -76,17 +76,78 @@
                         <td>
                             <label for="roleSelect" th:text="#{adminPanelUserRoles}">Роли</label><br>
                             <select multiple="multiple" size="2" id="roleSelect" name="roleSet">
-                                <option value="ROLE_ADMIN">Role Admin</option>
-                                <option value="ROLE_USER">Role User</option>
+                                <option value="ADMIN">Role Admin</option>
+                                <option value="USER">Role User</option>
                             </select><br><br>
                         </td>
-                        <a class="btn btn-success mb-2" role="button" id="createUser">Add User</a>
+                        <a class="btn btn-success mb-2" role="button" id="createUser" th:text="#{adminPanelUserAddButton}">Создать пользователя</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <!--вкладка на создание нового пользователя-->
+
+    <!--Модальное окно на редактирование-->
+    <div id="updateModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content  col-md-8">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update User</h4>
+                    <button id="closeUpdateModal2" type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="center-block  text-center">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="updUserID" th:text="#{adminPanelUserID}">ИД</label>
+                            <input type="text" class="form-control" id="updUserID"
+                                   name="id">
+                        </div>
+                        <div class="form-group">
+                            <label for="updUserName" th:text="#{adminPanelUserFirstName}">Имя</label>
+                            <input type="text" class="form-control" id="updUserName"
+                                   name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="updUserEmail" th:text="#{adminPanelUserMail}">Почта</label>
+                            <input type="text" class="form-control" id="updUserEmail"
+                                   name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="updUserDataReg" th:text="#{adminPanelUserDataReg}">Дата регистрации</label>
+                            <input type="text" class="form-control"
+                                   id="updUserDataReg" name="datareg"
+                                   readonly/>
+                        </div>
+                        <div class="form-group">
+                            <label for="updUserRoles" th:text="#{adminPanelUserRoles}">Роли</label>
+                            <input type="text" class="form-control" id="updUserRoles"
+                                   name="roles" readonly/>
+                        </div>
+                        <div class="form-group">
+                            <label for="userUpdRoles">Role</label>
+                            <select multiple size="2" id="userUpdRoles" name="roles"
+                                    class="form-control">
+                                <option value="ADMIN">Role Admin</option>
+                                <option value="USER">Role User</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="updateButtonInModal">
+                        <div>
+                        </div>
+                        <button id="closeUpdateModal" type="button" class="btn btn-secondary"
+                                data-dismiss="modal">Close
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Модальное окно на редактирование-->
 
     <!--Модальное окно на удаление-->
     <div id="deleteModal" class="modal fade" role="dialog">
@@ -133,7 +194,7 @@
                     <div>
                     </div>
                     <button id="closeDeleteModal" type="button" class="btn btn-secondary"
-                            data-dismiss="modal">Close
+                            data-dismiss="modal" th:text="#{adminPanelCloseButton}">Закрыть
                     </button>
                 </div>
             </div>

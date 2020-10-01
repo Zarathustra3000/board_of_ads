@@ -23,6 +23,11 @@ public class AdminRestController {
             return new SuccessResponse<>(userService.saveUser(user));
     }
 
+    @PutMapping("/updateUser")
+    public Response<User> updateUser(@RequestBody User user) {
+        return new SuccessResponse<>(userService.saveUser(user));
+    }
+
     @GetMapping("/getAllUsers")
     public Response<List<User>> getAllUsersList() {
             return new SuccessResponse<>(userService.getAllUsers());

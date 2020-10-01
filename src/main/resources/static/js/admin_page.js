@@ -1,12 +1,19 @@
 let viewAllUsersUrl = 'http://localhost:5556/api/admin/getAllUsers';
 let getUserById = 'http://localhost:5556/api/admin/getUserById';
 let deleteUserById = 'http://localhost:5556/api/admin/deleteUser';
+let createNewUser = 'http://localhost:5556/api/admin/addNewUser';
+let updateUser = 'http://localhost:5556/api/admin/updateUser';
 
 let adminUsersTable = $('#userTableJs tbody');
 let deleteButtonInModalForm = $('#deleteButtonInModal div');
+let saveButtonInModalForm = $('#updateButtonInModal div');
+
 let elementCloseDeleteModal1 = document.getElementById('closeDeleteModal');
 let elementCloseDeleteModal2 = document.getElementById('closeDeleteModal2');
 let elementCreateUserRoles = document.getElementById('roleSelect');
+let elementCreateUser = document.getElementById('createUser');
+let elementCloseUpdateModal1 = document.getElementById('closeUpdateModal');
+let elementCloseUpdateModal2 = document.getElementById('closeUpdateModal2');
 
 let elementUserTable = document.getElementById('userTableAtAdminPanel');
 let elementNewUser = document.getElementById('createNewUserAtAdminPanel');
@@ -21,6 +28,7 @@ $(document).ready(function () {
 function showAllUsersTable() {
 
     let userIdForDelete = 0;
+    let userIdForUpdate = 0;
 
     fetch(viewAllUsersUrl)
         .then((response) => {
@@ -47,9 +55,14 @@ function showAllUsersTable() {
                     for (let o in user) {
                         let td = document.createElement('td');
                         if (counter === 0) {
-                               userIdForDelete = "fillingModalFormDelete" + "(" + user[o] + ")";
+                            userIdForDelete = "fillingModalFormDelete" + "(" + user[o] + ")";
+                            userIdForUpdate = "fillingModalFormUpdate" + "(" + user[o] + ")";
                         }
-                        if (counter !== 6 && counter !== 9) {
+                        if (counter === 2) {
+                            td.appendChild(document.createTextNode(user[o].substring(1,27)));
+                            tr.appendChild(td);
+                        }
+                        if (counter !== 6 && counter !== 9 && counter !== 2) {
                             td.appendChild(document.createTextNode(user[o]));
                             tr.appendChild(td);
                         }
@@ -66,7 +79,7 @@ function showAllUsersTable() {
                     buttonEdit.setAttribute('role', "button");
                     buttonEdit.setAttribute('data-toggle', "modal");
                     buttonEdit.setAttribute('data-target', "#updateModal");
-                    //               buttonEdit.setAttribute('onclick', `${userIdForUpdate}`);
+                    buttonEdit.setAttribute('onclick', `${userIdForUpdate}`);
                     buttonEdit.appendChild(document.createTextNode("Update"));
 
                     buttonDelete.setAttribute('id', "deleteButton");
@@ -98,15 +111,16 @@ async function newUser() {
 
     let data = {
 
-        userName: $('#userName').val(),
-        userPassword: $('#password').val(),
-        userEmail: $('#email').val(),
+        email: $('#AdminPanelUserEmail').val(),
+        password: $('#AdminPanelUserPassword').val(),
+        firsName: $('#AdminPanelUserFirstName').val(),
+        lastName: $('#AdminPanelUserLastName').val(),
 
         roles: roleArray
 
     };
 
-    const response = await fetch(newUserUrl, {
+    const response = await fetch(createNewUser, {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
@@ -122,7 +136,43 @@ async function newUser() {
             console.log(error);
         });
 
-    return response.json();
+}
+
+async function updateUsers(value) {
+
+    let elementUpdateUserRoles = document.getElementById('userUpdRoles');
+
+    let roleSelectedValues = Array.from(elementUpdateUserRoles.selectedOptions).map(el => el.value);
+    let roleArray = convertToRoleSet(roleSelectedValues);
+
+    let data = {
+
+        email: $('#updUserEmail').val(),
+        password: $('#AdminPanelUserPassword').val(),
+        firsName: $('#updUserEmail').val(),
+        lastName: $('#AdminPanelUserLastName').val(),
+
+        roles: roleArray
+
+    };
+
+    const response = await fetch(updateUser, {
+        method: 'PUT',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data)
+    });
+
+    document.getElementById('updButtInModal').remove();
+    clearTable();
+    showAllUsersTable();
+
 }
 
 /*заполнение модальной формы на удаление*/
@@ -143,13 +193,12 @@ function fillingModalFormDelete(id) {
     fetch(getUserById + "/" + id).then(function (response) {
         response.json().then(function (data) {
 
-
             const userRoles = data.data.roles.map(role => {
                 return role.name;
             }).join(", ");
 
             $('#delUserID').val(id);
-            $('#delUserName').val(data.data.firstName);
+            $('#delUserName').val(data.data.firsName);
             $('#delUserDataReg').val(data.data.dataRegistration);
             $('#delUserEmail').val(data.data.email);
             $('#delUserRoles').val(userRoles);
@@ -179,11 +228,43 @@ async function deleteData(value) {
     showAllUsersTable()
 }
 
+/*заполнение модальной формы на редактирование*/
+function fillingModalFormUpdate(id) {
+
+    let updateButtonInModal = document.createElement('button');
+    let userIdForUpdateButton = "updateUsers" + "(" + id + ")";
+
+    updateButtonInModal.setAttribute('type', "button");
+    updateButtonInModal.setAttribute('id', "updButtInModal");
+    updateButtonInModal.setAttribute('class', "btn btn-success");
+    updateButtonInModal.setAttribute('data-dismiss', "modal");
+    updateButtonInModal.setAttribute('onclick', `${userIdForUpdateButton}`);
+    updateButtonInModal.appendChild(document.createTextNode("Save"));
+
+    saveButtonInModalForm.append(updateButtonInModal);
+
+    fetch(getUserById + "/" + id).then(function (response) {
+        response.json().then(function (data) {
+
+            $('#updUserID').val(id);
+            $('#updUserName').val(data.data.firsName);
+            $('#updUserEmail').val(data.data.email);
+            $('#updUserDataReg').val(data.data.dataRegistration);
+
+        });
+    });
+}
 
 // ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ НА ON.CLICK
 
+elementCreateUser.onclick = function(){
+    newUser();
+};
+
 //Сокрытие информации о создании нового пользователя
 elementUserTable.onclick = function () {
+    clearTable();
+    showAllUsersTable();
     document.getElementById('hideTheCreateUserForm').hidden = true;
     document.getElementById('hideTheUsersTable').hidden = false;
 };
@@ -222,4 +303,12 @@ elementCloseDeleteModal1.onclick = function () {
 
 elementCloseDeleteModal2.onclick = function () {
     document.getElementById('delButtInModal').remove();
+};
+
+elementCloseUpdateModal1.onclick = function () {
+    document.getElementById('updButtInModal').remove();
+};
+
+elementCloseUpdateModal2.onclick = function () {
+    document.getElementById('updButtInModal').remove();
 };
