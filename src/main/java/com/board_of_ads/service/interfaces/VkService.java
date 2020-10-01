@@ -4,7 +4,7 @@ import com.board_of_ads.models.User;
 
 import java.util.Map;
 
-public interface AuthVkService {
+public interface VkService {
 
     void auth(String code);
 

@@ -2,7 +2,7 @@ package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.interfaces.AuthYandexService;
+import com.board_of_ads.service.interfaces.YandexService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +31,7 @@ import java.util.Map;
 @Setter
 @RequiredArgsConstructor
 @ConfigurationProperties(value = "security.auth-yandex")
-public class AuthYandexServiceImpl implements AuthYandexService {
+public class YandexServiceImpl implements YandexService {
 
     private final UserService userService;
 

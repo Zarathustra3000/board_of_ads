@@ -2,11 +2,9 @@ package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.interfaces.AuthVkService;
+import com.board_of_ads.service.interfaces.VkService;
 import com.board_of_ads.service.interfaces.UserService;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.json.simple.JSONArray;
@@ -14,8 +12,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -33,7 +29,7 @@ import java.util.Map;
 @Setter
 @RequiredArgsConstructor
 @ConfigurationProperties(prefix="security.auth-vk")
-public class AuthVkServiceImpl implements AuthVkService {
+public class VkServiceImpl implements VkService {
 
     private final UserService userService;
 

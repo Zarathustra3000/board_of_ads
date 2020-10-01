@@ -1,8 +1,8 @@
 package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.interfaces.AuthVkService;
-import com.board_of_ads.service.interfaces.AuthYandexService;
+import com.board_of_ads.service.interfaces.VkService;
+import com.board_of_ads.service.interfaces.YandexService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-    private final AuthYandexService authYandexService;
-    private final AuthVkService authVkService;
+    private final YandexService yandexService;
+    private final VkService vkService;
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal User user, Model model) {
@@ -34,13 +34,13 @@ public class MainPageController {
 
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code, Model model) {
-        authVkService.auth(code);
+        vkService.auth(code);
         return "redirect:/";
     }
 
     @GetMapping("/yandex_auth")
     public String yandexAuth(@RequestParam(value = "code") String code, Model model) {
-        authYandexService.auth(code);
+        yandexService.auth(code);
         return "redirect:/";
     }
 

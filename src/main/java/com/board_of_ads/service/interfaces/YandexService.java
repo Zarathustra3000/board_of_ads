@@ -4,7 +4,7 @@ import com.board_of_ads.models.User;
 
 import java.util.Map;
 
-public interface AuthYandexService {
+public interface YandexService {
 
     void auth(String code);
 
