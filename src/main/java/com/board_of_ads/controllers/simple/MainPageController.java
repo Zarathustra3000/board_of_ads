@@ -56,12 +56,17 @@ public class MainPageController {
         return "admin_page";
     }
 
-    @GetMapping("/oauth")
-    public String oAuth() {
-        User user = oAuth2Service.facebookAuth();
+    @GetMapping("/facebook_auth")
+    public String facebookAuth() {
+        oAuth2Service.facebookAuth();
         return "redirect:/";
     }
 
+    @GetMapping("/google_auth")
+    public String googleAuth() {
+        oAuth2Service.googleAuth();
+        return "redirect:/";
+    }
 
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code) {

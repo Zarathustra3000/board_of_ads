@@ -2070,3 +2070,184 @@ java.lang.NullPointerException: null
 2020-10-01 07:07:58.434  WARN 1844 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
 2020-10-01 07:08:14.842  INFO 1844 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 23.919 seconds (JVM running for 26.466)
 2020-10-01 07:08:14.847  INFO 1844 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 07:14:02.896  INFO 5704 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 5704 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-01 07:14:02.900  INFO 5704 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 07:14:05.769  WARN 5704 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 07:14:07.977  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.979  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-01 07:14:07.980  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.981  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-01 07:14:07.982  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.983  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-01 07:14:07.984  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.984  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-01 07:14:07.985  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.985  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 07:14:07.986  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.986  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 07:14:07.987  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.988  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-01 07:14:07.988  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.989  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-01 07:14:07.989  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.990  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 07:14:07.991  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.991  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 07:14:07.992  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.992  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting" не существует, пропускается
+2020-10-01 07:14:07.993  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.993  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-01 07:14:07.994  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.994  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-01 07:14:07.995  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.996  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-01 07:14:07.997  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.997  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-01 07:14:07.998  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.998  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-01 07:14:07.999  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:07.999  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-01 07:14:08.000  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.000  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-01 07:14:08.001  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.001  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-01 07:14:08.002  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.003  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-01 07:14:08.004  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.004  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_images" не существует, пропускается
+2020-10-01 07:14:08.005  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.005  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_images" не существует, пропускается
+2020-10-01 07:14:08.006  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.006  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-01 07:14:08.006  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.007  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 07:14:08.008  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.008  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 07:14:08.009  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.009  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 07:14:08.010  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.010  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-01 07:14:08.011  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.011  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-01 07:14:08.012  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.012  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 07:14:08.013  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.013  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 07:14:08.014  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.014  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 07:14:08.016  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.017  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 07:14:08.018  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.019  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-01 07:14:08.019  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.020  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-01 07:14:08.021  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.021  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-01 07:14:08.022  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.022  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-01 07:14:08.023  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.023  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-01 07:14:08.024  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.024  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-01 07:14:08.025  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.025  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-01 07:14:08.026  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.026  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-01 07:14:08.026  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.027  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-01 07:14:08.028  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.028  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-01 07:14:08.029  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.029  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-01 07:14:08.030  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.030  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-01 07:14:08.031  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.031  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 07:14:08.032  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.032  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 07:14:08.033  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.033  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-01 07:14:08.033  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.034  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-01 07:14:08.034  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.034  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-01 07:14:08.035  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.035  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-01 07:14:08.036  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.036  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-01 07:14:08.037  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.037  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-01 07:14:08.038  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.038  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-01 07:14:08.039  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.039  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-01 07:14:08.040  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.040  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting" не существует, пропускается
+2020-10-01 07:14:08.041  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.041  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-01 07:14:08.042  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.042  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-01 07:14:08.042  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.043  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-01 07:14:08.043  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.043  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-01 07:14:08.044  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.044  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-01 07:14:08.045  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.045  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-01 07:14:08.046  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.046  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-01 07:14:08.047  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.047  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_images" не существует, пропускается
+2020-10-01 07:14:08.048  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.048  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-01 07:14:08.049  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.049  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-01 07:14:08.050  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.050  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-01 07:14:08.051  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.051  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-01 07:14:08.051  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.052  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-01 07:14:08.052  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.052  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-01 07:14:08.053  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.053  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 07:14:08.054  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.054  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 07:14:08.055  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.055  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-01 07:14:08.055  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.056  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-01 07:14:08.056  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.056  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-01 07:14:08.057  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.057  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-01 07:14:08.058  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.058  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-01 07:14:08.059  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.059  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-01 07:14:08.059  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.060  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-01 07:14:08.060  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.060  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-01 07:14:08.061  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.061  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-01 07:14:08.061  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.061  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-01 07:14:08.062  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.062  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-01 07:14:08.063  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.063  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-01 07:14:08.064  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.064  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-01 07:14:08.064  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.064  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-01 07:14:08.065  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.065  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-01 07:14:08.066  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.066  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-01 07:14:08.068  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 07:14:08.068  WARN 5704 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-01 07:14:22.438  INFO 5704 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 20.435 seconds (JVM running for 22.013)
+2020-10-01 07:14:22.441  INFO 5704 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
