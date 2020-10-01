@@ -34,28 +34,23 @@ spring:
       starttls.enable: true
       ssl.trust: smtp.gmail.com
 
-jhipster:
-  mail: # specific JHipster mail property, for standard properties see MailProperties
-  from: kunaev993@gmail.com
-  base-url: http://127.0.0.1:5556
-
-security:
-  oauth2:
-    client:
-      registration:
-        google:
-          client-id: 214656904193-mpsfq89h2c8101ubel635dsjpvtah5gp.apps.googleusercontent.com
-          client-secret: o7AD6q5zqftfLiVBbU2bI3d9
-        facebook:
-          clientId: 670394210267367
-          clientSecret: 031df2213df96eb1bc72d87fad3cdbd3
-          accessTokenUri: https://graph.facebook.com/oauth/access_token
-          userAuthorizationUri: https://www.facebook.com/dialog/oauth
-          tokenName: oauth_token
-          authenticationScheme: query
-          clientAuthenticationScheme: form
-        resource:
-          userInfoUri: https://graph.facebook.com/me
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 214656904193-mpsfq89h2c8101ubel635dsjpvtah5gp.apps.googleusercontent.com
+            client-secret: o7AD6q5zqftfLiVBbU2bI3d9
+          facebook:
+            clientId: 3623063611061740
+            clientSecret: e9bd600c53c31c81447ab85e7de650e5
+            accessTokenUri: https://graph.facebook.com/oauth/access_token
+            userAuthorizationUri: https://www.facebook.com/dialog/oauth
+            tokenName: oauth_token
+            authenticationScheme: query
+            clientAuthenticationScheme: form
+          resource:
+            userInfoUri: https://graph.facebook.com/me
 
 logging:
   file:
