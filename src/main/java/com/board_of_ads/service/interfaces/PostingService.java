@@ -8,10 +8,16 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PostingService {
+
     void save(Posting posting);
+
     Posting getPostingById(Long id);
+
     Optional<Posting> getPostingByTitle(String title);
+
     List<PostingDto> getPostingByCity(City city);
+
     List<PostingDto> getPostingByFullRegionName(String name);
+
     List<PostingDto> getAllPostings();
 }
