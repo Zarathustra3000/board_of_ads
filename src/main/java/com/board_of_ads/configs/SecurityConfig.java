@@ -40,14 +40,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/vk_auth", "/login**", "/webjars/**", "/error**").permitAll()
+                .antMatchers("/", "/vk_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
                 .antMatchers("/admin_page").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
                 .and()
                     .logout().permitAll();
-
     }
 
     //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/

@@ -1,8 +1,17 @@
 let buttonAdd = $('#searchCityDiv');
 
 $("#region, #category-select-city").click(function() {
-    $("#searchModel").modal("show");
+    $('#searchModel').modal('show');
 });
+
+let changedCityName;
+function clickCountButton() {
+    $('#category-select-city').empty();
+    $('#cityInput').empty();
+    $('#searchModel').modal('hide');
+    let row = `<option>` + changedCityName + `</option>`;
+    $('#category-select-city').append(row);
+}
 
 $('select#cities').on('change', function() {
     $('input[name="cityInput"]').val(this.value);
@@ -19,13 +28,41 @@ function onOptionHover() {
         });
 }
 
-function onClickOpt(id) {
-    document.getElementById('cityInput').value = "";
-    $('#category-select-city').empty();
-    $('#searchModal').modal('hide');
-    let row = `<option>` + id + `</option>`;
-    $('#category-select-city').append(row);
-    document.getElementById('category-select-city').disabled = false;
+async function onClickOpt(id) {
+    changedCityName = id;
+    $('.typeahead').val(id);
+    $('#citiesSelect').remove();
+    let usersResponse;
+    if (id.includes('Область')
+        || id.includes('Край')
+        || id.includes('Республика')
+        || id.includes('Автономный округ')
+        || id.includes('Город')
+    ) {
+        usersResponse = await userService.findPostingByRegionName(id);
+    } else {
+        usersResponse = await userService.findPostingByCityName(id);
+    }
+    posts = usersResponse.json();
+    console.log(posts);
+    $('#countPostButton').empty();
+    let sizeArray = 0;
+    posts.then(posts => {
+        posts.forEach(() => {
+            sizeArray++;
+        })
+    }).then(() => {
+            let button = `<div >
+                    <button 
+                        type="button" 
+                        class="btn btn-primary button-count-post"   
+                        onclick="clickCountButton()"
+                        id="countPostButton">Показать ` + sizeArray + ` объявлений
+                    </button>
+                </div>`;
+            buttonAdd.append(button);
+        }
+    );
 }
 
 $(document).ready(function() {
@@ -33,56 +70,55 @@ $(document).ready(function() {
 });
 
 let cities;
+let posts;
+
 
 async function viewCities() {
     $('#category-select-city').empty();
     const usersResponse = await userService.findAllCity();
     cities = usersResponse.json();
-    let select=`<select id="citiesSelect" size="7"
-                                class="form-control">
-                        </select>`;
-    $('.citiesOptions').append(select);
-    let cityOptions = $('#citiesSelect');
-    cities.then(users => {
-        users.forEach(user => {
-            let userRow = `<option onmouseover="onOptionHover()"
-                                   onclick="onClickOpt(this.id)"
-                                   id="${user.city}"
-                                   class="opt"
-                                   text="${user.city}">
-                                       <div>${user.city}</div>
-                                       <div>${', ' + user.region + ' ' + user.formSubject}</div>
-                                </option>`;
-            cityOptions.append(userRow);
-        });
-    });
-    let button = `<div class="force-to-bottom" style="position: absolute; bottom: 15px; right: 10px">
+    const postsResponse = await userService.findAllPostings();
+    posts = postsResponse.json();
+    let sizeArray = 0;
+    console.log(posts);
+    posts.then(posts => {
+        posts.forEach(() => {
+            sizeArray++;
+        })
+    }).then(() => {
+            let button = `<div >
                     <button 
                         type="button" 
-                        class="btn btn-primary "                           
-                        disabled>Показать 0 объявлений
-                       </button>
+                        class="btn btn-primary button-count-post"   
+                        id="countPostButton">Показать ` + sizeArray + ` объявлений
+                    </button>
                 </div>`;
-    buttonAdd.append(button);
+            buttonAdd.append(button);
+        }
+    );
 }
 
-$('.typeahead').on('change', function() {
+$('.typeahead').on('keyup', function() {
     addOptions();
+    $('#countPostButton').attr("disabled", true);
 });
 
 function addOptions() {
+    $('#citiesSelect').remove();
     $('#citiesSelect').empty();
+    let select=`<select id="citiesSelect" size="7" class="form-control"></select>`;
+    $('.citiesOptions').append(select);
     let addForm = $(".typeahead").val().toLowerCase();
-    cities.then(users => {
-        users.forEach(user => {
-            if (user.city.toLowerCase().includes(addForm)) {
+    cities.then(cities => {
+        cities.forEach(city => {
+            if (city.name.toLowerCase().includes(addForm)) {
                 let userRow = `<option onmouseover="onOptionHover()" 
                                        onclick="onClickOpt(this.id)"
-                                       id="${user.city}"
+                                       id="${city.name}"
                                        class="opt"                                
-                                       text="${user.city}">
-                                           <div>${user.city}</div>
-                                           <div>${', ' + user.region + ' ' + user.formSubject}</div>
+                                       text="${city.name}">
+                                           <div>${city.name}</div>
+                                           <div>${' ' + city.regionFormSubject}</div>
                                 </option>`;
                 $('#citiesSelect').append(userRow);
             }
@@ -106,6 +142,15 @@ const http = {
 const userService = {
     findAllCity: async () => {
         return await http.fetch('/api/city');
+    },
+    findPostingByCityName: async (name) => {
+        return await http.fetch('api/posting/city/' + name);
+    },
+    findPostingByRegionName: async (name) => {
+        return await http.fetch('api/posting/region/' + name);
+    },
+    findAllPostings: async () => {
+        return await http.fetch('api/posting/');
     }
 }
 
