@@ -1,33 +1,22 @@
 package com.board_of_ads.controllers.simple;
 
-import com.board_of_ads.configs.auth.Auth;
-import com.board_of_ads.controllers.rest.UserRestController;
 import com.board_of_ads.models.User;
+import com.board_of_ads.service.impl.AuthServiceImpl;
 import com.board_of_ads.service.impl.OAuth2Service;
-import com.board_of_ads.service.interfaces.AuthService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
-import org.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal;
-import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.security.Principal;
-import java.util.Collections;
-import java.util.Map;
-
 @Controller
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-    private final AuthService authService;
+    private final AuthServiceImpl authService; //todo
     private final OAuth2Service oAuth2Service;
 
 //    @GetMapping("/user")
@@ -37,7 +26,8 @@ public class MainPageController {
 //    }
 
     @GetMapping("/")
-    public String getMainPage(@AuthenticationPrincipal User user, Model model) {
+    public String getMainPage(@AuthenticationPrincipal() User user, Model model) {
+        authService.auth();
         model.addAttribute(user != null ? user : new User());
         return "main-page";
     }
@@ -58,27 +48,30 @@ public class MainPageController {
 
     @GetMapping("/facebook_auth")
     public String facebookAuth() {
-        oAuth2Service.facebookAuth();
-        return "redirect:/";
+//        oAuth2Service.facebookAuth();
+        return "redirect:/oauth2/authorization/facebook";
     }
 
     @GetMapping("/google_auth")
     public String googleAuth() {
-        oAuth2Service.googleAuth();
-        return "redirect:/";
+//        return oAuth2Service.googleAuth();
+        return "redirect:/oauth2/authorization/google";
     }
 
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code) {
-        return authService.vkAuth(code);
+//        return authService.vkAuth(code);
+        return null;
     }
 
     @GetMapping("/yandex_auth")
     public String yandexAuth(@RequestParam(value = "code") String code) {
-        return authService.yandexAuth(code);
+//        return authService.yandexAuth(code);
+        return null;
     }
 
-    /** todo delete
+    /**
+     * todo delete
      * Тестовый контроллер для проверки авторизации.
      * Если при переходе на /test вас перенаправило на главную страницу ВК, то вы авторизованы
      */
