@@ -10,17 +10,22 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.oauth2.client.registration.ClientRegistration;
-import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
-import org.springframework.security.oauth2.client.registration.InMemoryClientRegistrationRepository;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
-import org.springframework.security.oauth2.core.AuthorizationGrantType;
-import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
-import org.springframework.security.oauth2.core.oidc.IdTokenClaimNames;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.security.oauth2.core.user.OAuth2User;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Map;
 
 @Configuration
 @EnableWebSecurity
@@ -48,7 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/vk_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
+                .antMatchers("/", "/q", "/vk_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
                 .antMatchers("/admin_page").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
@@ -58,8 +63,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .exceptionHandling(e -> e
                         .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
-                )
-                .oauth2Login();
+                ).oauth2Login();
+//                .oauth2Login(oauth2 -> oauth2.userInfoEndpoint(userInfo -> userInfo.oidcUserService(this.oidcUserService())));
     }
 
     //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
@@ -74,43 +79,37 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder(12);
     }
 
-//    @Bean
-//    public ClientRegistrationRepository clientRegistrationRepository() {
-//        return );
+//    public Map<String, Object>  getPrincipal() {
+//        Authentication authentication = new Authentication() {
+//        }
+//        OAuth2AuthenticationToken token = (OAuth2AuthenticationToken) authentication;
+//        OAuth2User user = token.getPrincipal();
+//        Map<String, Object> attributes = user.getAttributes();
 //    }
+
+
+
+//    private OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService() {
+//        final OidcUserService delegate = new OidcUserService();
 //
-//    private ClientRegistration facebook() {
-//        return ClientRegistration.withRegistrationId("facebook")
-//                .clientId("3623063611061740")
-//                .clientSecret("e9bd600c53c31c81447ab85e7de650e5")
-//                .clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
-//                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-//                .redirectUriTemplate("{baseUrl}")
-////                .scope("openid", "profile", "email", "address", "phone")
-//                .authorizationUri("https://www.facebook.com/dialog/oauth")
-//                .tokenUri("https://graph.facebook.com/oauth/access_token")
-//                .userInfoUri("https://graph.facebook.com/me")
-//                .userNameAttributeName(IdTokenClaimNames.SUB)
-////                .jwkSetUri("https://www.googleapis.com/oauth2/v3/certs")
-//                .clientName("Facebook")
-//                .build();
+//        return (userRequest) -> {
+//            // Delegate to the default implementation for loading a user
+//            OidcUser oidcUser = delegate.loadUser(userRequest);
+//
+//            OAuth2AccessToken accessToken = userRequest.getAccessToken();
+//            Set<GrantedAuthority> mappedAuthorities = new HashSet<>();
+//            mappedAuthorities.add(new Role("ADMIN"));
+//
+//            // TODO
+//            // 1) Fetch the authority information from the protected resource using accessToken
+//            // 2) Map the authority information to one or more GrantedAuthority's and add it to mappedAuthorities
+//
+//            // 3) Create a copy of oidcUser but use the mappedAuthorities instead
+//            oidcUser = new DefaultOidcUser(mappedAuthorities, oidcUser.getIdToken(), oidcUser.getUserInfo());
+//            System.out.println(oidcUser.getUserInfo());
+//            System.out.println(oidcUser);
+//            System.out.println((String) oidcUser.getClaim("sub"));
+//            return oidcUser;
+//        };
 //    }
-
-    private ClientRegistration googleClientRegistration() {
-        return ClientRegistration.withRegistrationId("google")
-                .clientId("214656904193-mpsfq89h2c8101ubel635dsjpvtah5gp.apps.googleusercontent.com")
-                .clientSecret("o7AD6q5zqftfLiVBbU2bI3d9")
-                .clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
-                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-                .redirectUriTemplate("{baseUrl}/login/oauth2/code/{registrationId}")
-                .scope("openid", "profile", "email", "address", "phone")
-                .authorizationUri("https://accounts.google.com/o/oauth2/v2/auth")
-                .tokenUri("https://www.googleapis.com/oauth2/v4/token")
-                .userInfoUri("https://www.googleapis.com/oauth2/v3/userinfo")
-                .userNameAttributeName(IdTokenClaimNames.SUB)
-                .jwkSetUri("https://www.googleapis.com/oauth2/v3/certs")
-                .clientName("Google")
-                .build();
-    }
-
 }

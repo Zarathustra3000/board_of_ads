@@ -11,6 +11,7 @@ public class UserRestController {
 
     @GetMapping
     public Principal getUser(Principal user) {
+        System.out.println(user);
         return user;
     }
 }
