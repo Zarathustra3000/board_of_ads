@@ -2,8 +2,8 @@ package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.interfaces.YandexService;
 import com.board_of_ads.service.interfaces.UserService;
+import com.board_of_ads.service.interfaces.YandexService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

@@ -1,6 +1,7 @@
 package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.models.User;
+import com.board_of_ads.service.interfaces.AuthService;
 import com.board_of_ads.service.interfaces.VkService;
 import com.board_of_ads.service.interfaces.YandexService;
 import lombok.AllArgsConstructor;
@@ -18,6 +19,7 @@ public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private final YandexService yandexService;
     private final VkService vkService;
+    private final AuthService authService;
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal() User user, Model model) {
