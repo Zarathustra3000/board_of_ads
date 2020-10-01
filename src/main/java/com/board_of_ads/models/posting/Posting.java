@@ -35,7 +35,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "posting")
+@Table(name = "postings")
 public class Posting {
 
     public Posting(User user, Category category, String title, String description, Long price, String contact) {

@@ -101,7 +101,7 @@ textarea {
 }
 
 .button-count-post {
-    position: absolute;
-    top: 350px;
-    left: 700px
+    position:fixed;
+    bottom: 30px;
+    right: 15px;
 }
