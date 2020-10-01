@@ -13,6 +13,7 @@ import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
+
 import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.ArrayList;
