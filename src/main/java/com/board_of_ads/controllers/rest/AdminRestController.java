@@ -10,30 +10,22 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/admin/**")
+@RequestMapping("/api/admin/")
 @AllArgsConstructor
 public class AdminRestController {
 
     private final UserService userService;
 
-    @PostMapping("addNewUser")
+    @PostMapping("/addNewUser")
     public ResponseEntity<User> createNewUser(@RequestBody User user) {
-        try {
             userService.saveUser(user);
             return new ResponseEntity<>(user, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        }
     }
 
-    @GetMapping("getAllUsers")
+    @GetMapping("/getAllUsers")
     public ResponseEntity<List<User>> getAllUsersList() {
-        try {
             List<User> userList = userService.getAllUsers();
             return new ResponseEntity<>(userList, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        }
     }
 
 }

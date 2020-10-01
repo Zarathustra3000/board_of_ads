@@ -9,3 +9,215 @@
 2020-09-30 22:24:04.546  WARN 10800 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-09-30 22:24:14.624  INFO 10800 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 12.203 seconds (JVM running for 12.891)
 2020-09-30 22:24:14.624  INFO 10800 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 08:52:39.980  INFO 22400 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 22400 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 08:52:39.982  INFO 22400 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 08:52:41.396  WARN 22400 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 08:52:49.744  INFO 22400 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.085 seconds (JVM running for 10.637)
+2020-10-01 08:52:49.746  INFO 22400 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:25:49.567  INFO 12576 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 12576 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:25:49.569  INFO 12576 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:25:51.002  WARN 12576 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:25:59.697  INFO 12576 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.421 seconds (JVM running for 11.011)
+2020-10-01 09:25:59.699  INFO 12576 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:32:51.033  INFO 16540 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 16540 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:32:51.035  INFO 16540 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:32:52.607  WARN 16540 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:33:01.107  INFO 16540 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.391 seconds (JVM running for 10.92)
+2020-10-01 09:33:01.110  INFO 16540 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:35:28.860  INFO 17892 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 17892 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:35:28.862  INFO 17892 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:35:30.260  WARN 17892 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:35:38.817  INFO 17892 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.248 seconds (JVM running for 10.783)
+2020-10-01 09:35:38.818  INFO 17892 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:39:45.313  INFO 16520 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 16520 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:39:45.315  INFO 16520 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:39:46.708  WARN 16520 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:39:55.092  INFO 16520 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.087 seconds (JVM running for 10.612)
+2020-10-01 09:39:55.094  INFO 16520 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:42:55.787  INFO 5688 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 5688 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:42:55.789  INFO 5688 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:42:57.172  WARN 5688 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:43:05.695  INFO 5688 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.183 seconds (JVM running for 10.71)
+2020-10-01 09:43:05.697  INFO 5688 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:44:14.321  INFO 14664 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 14664 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:44:14.323  INFO 14664 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:44:15.708  WARN 14664 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:44:24.161  INFO 14664 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.147 seconds (JVM running for 10.671)
+2020-10-01 09:44:24.163  INFO 14664 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:47:26.162  INFO 14304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 14304 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:47:26.165  INFO 14304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:47:27.656  WARN 14304 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:47:36.884  INFO 14304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 11.019 seconds (JVM running for 11.575)
+2020-10-01 09:47:36.886  INFO 14304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:48:20.751  INFO 9984 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 9984 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:48:20.754  INFO 9984 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:48:22.217  WARN 9984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:48:31.576  INFO 9984 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 11.15 seconds (JVM running for 11.702)
+2020-10-01 09:48:31.578  INFO 9984 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:49:44.797  INFO 17932 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 17932 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:49:44.799  INFO 17932 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:49:46.206  WARN 17932 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:49:55.442  INFO 17932 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.945 seconds (JVM running for 11.485)
+2020-10-01 09:49:55.443  INFO 17932 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 09:52:55.297  INFO 14548 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 14548 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 09:52:55.299  INFO 14548 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 09:52:56.718  WARN 14548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 09:53:05.153  INFO 14548 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.174 seconds (JVM running for 10.725)
+2020-10-01 09:53:05.155  INFO 14548 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:00:51.157  INFO 19200 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 19200 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:00:51.159  INFO 19200 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:00:52.615  WARN 19200 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:01:00.984  INFO 19200 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.117 seconds (JVM running for 10.635)
+2020-10-01 10:01:00.986  INFO 19200 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:01:41.001  INFO 8060 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 8060 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:01:41.003  INFO 8060 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:01:42.407  WARN 8060 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:01:50.821  INFO 8060 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.12 seconds (JVM running for 10.644)
+2020-10-01 10:01:50.823  INFO 8060 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:03:16.249  INFO 8768 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 8768 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:03:16.251  INFO 8768 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:03:17.671  WARN 8768 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:03:26.087  INFO 8768 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.152 seconds (JVM running for 10.682)
+2020-10-01 10:03:26.089  INFO 8768 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:04:24.196  INFO 12384 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 12384 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:04:24.199  INFO 12384 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:04:25.591  WARN 12384 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:04:33.872  INFO 12384 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.974 seconds (JVM running for 10.506)
+2020-10-01 10:04:33.874  INFO 12384 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:05:13.178  INFO 13212 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 13212 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:05:13.180  INFO 13212 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:05:14.597  WARN 13212 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:05:22.989  INFO 13212 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.116 seconds (JVM running for 10.635)
+2020-10-01 10:05:22.991  INFO 13212 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:07:30.418  INFO 17380 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 17380 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:07:30.420  INFO 17380 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:07:31.817  WARN 17380 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:07:40.191  INFO 17380 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.072 seconds (JVM running for 10.63)
+2020-10-01 10:07:40.193  INFO 17380 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:09:09.035  INFO 7412 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 7412 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:09:09.038  INFO 7412 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:09:10.434  WARN 7412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:09:18.857  INFO 7412 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.112 seconds (JVM running for 10.649)
+2020-10-01 10:09:18.860  INFO 7412 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:09:46.311  INFO 3600 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 3600 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:09:46.314  INFO 3600 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:09:47.730  WARN 3600 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:09:56.067  INFO 3600 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.045 seconds (JVM running for 10.582)
+2020-10-01 10:09:56.069  INFO 3600 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:10:29.503  INFO 21812 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 21812 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:10:29.505  INFO 21812 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:10:30.908  WARN 21812 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:10:39.394  INFO 21812 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.183 seconds (JVM running for 10.699)
+2020-10-01 10:10:39.396  INFO 21812 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:20:11.119  INFO 6420 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 6420 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:20:11.121  INFO 6420 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:20:12.527  WARN 6420 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:20:23.443  INFO 12896 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 12896 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:20:23.445  INFO 12896 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:20:24.847  WARN 12896 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:20:33.142  INFO 12896 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.01 seconds (JVM running for 10.515)
+2020-10-01 10:20:33.145  INFO 12896 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:24:03.376  INFO 14132 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 14132 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:24:03.378  INFO 14132 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:24:04.767  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:24:13.187  INFO 14132 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.109 seconds (JVM running for 10.646)
+2020-10-01 10:24:13.190  INFO 14132 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:25:34.844  INFO 5224 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 5224 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:25:34.846  INFO 5224 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:25:36.277  WARN 5224 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:25:44.703  INFO 5224 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.173 seconds (JVM running for 10.709)
+2020-10-01 10:25:44.705  INFO 5224 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:29:12.005  INFO 15892 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 15892 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:29:12.009  INFO 15892 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:29:13.395  WARN 15892 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:29:21.741  INFO 15892 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.038 seconds (JVM running for 10.582)
+2020-10-01 10:29:21.743  INFO 15892 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:30:12.121  INFO 20224 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 20224 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:30:12.123  INFO 20224 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:30:13.571  WARN 20224 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:30:22.061  INFO 20224 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.381 seconds (JVM running for 11.003)
+2020-10-01 10:30:22.063  INFO 20224 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:32:04.836  INFO 6684 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 6684 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:32:04.838  INFO 6684 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:32:06.222  WARN 6684 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:32:14.397  INFO 6684 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.888 seconds (JVM running for 10.412)
+2020-10-01 10:32:14.399  INFO 6684 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:32:45.575  INFO 15760 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 15760 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:32:45.577  INFO 15760 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:32:47.003  WARN 15760 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:32:55.350  INFO 15760 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.065 seconds (JVM running for 10.607)
+2020-10-01 10:32:55.352  INFO 15760 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:33:37.962  INFO 20752 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 20752 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:33:37.964  INFO 20752 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:33:39.366  WARN 20752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:33:47.807  INFO 20752 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.174 seconds (JVM running for 10.736)
+2020-10-01 10:33:47.809  INFO 20752 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:51:21.272  INFO 11220 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 11220 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:51:21.275  INFO 11220 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:51:22.903  WARN 11220 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:51:23.989  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:23.991  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk18ecp4htcl8jgym5ab5r4og32" в таблице "category_posts" не существует, пропускается
+2020-10-01 10:51:23.993  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:23.993  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 10:51:23.993  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:23.993  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-01 10:51:23.994  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:23.994  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkldmsj0vl7flstpag64tas36q6" в таблице "posting_auto_transport" не существует, пропускается
+2020-10-01 10:51:23.998  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:23.998  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkop19vx6olcxv0kmmotn2huudw" в таблице "posting_estate" не существует, пропускается
+2020-10-01 10:51:23.998  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:23.998  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkptj7t8wgm1ylop3hrruya7c9" в таблице "posting_job" не существует, пропускается
+2020-10-01 10:51:24.007  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.008  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-01 10:51:24.008  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.008  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-01 10:51:24.009  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.009  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-01 10:51:24.009  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.010  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-01 10:51:24.010  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.010  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-01 10:51:24.025  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.025  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : удаление распространяется на объект ограничение fke3kj11ixp14wd9fb8ex22pt5o в отношении таблица posting
+2020-10-01 10:51:24.031  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.031  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-01 10:51:24.037  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.038  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : удаление распространяется на объект ограничение fkdy0dkx2rnvv80sg2g7v2oxi6c в отношении таблица posting_images
+2020-10-01 10:51:24.087  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.087  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings" не существует, пропускается
+2020-10-01 10:51:24.088  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.088  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings_images" не существует, пропускается
+2020-10-01 10:51:24.121  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 10:51:24.121  WARN 11220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : удаление распространяется на объект ограничение fk82agecxff2p9fhnfx9aeweqie в отношении таблица posting
+2020-10-01 10:51:31.875  INFO 11220 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.925 seconds (JVM running for 11.524)
+2020-10-01 10:51:31.877  INFO 11220 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 10:58:52.791  INFO 17152 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 17152 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 10:58:52.795  INFO 17152 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 10:58:54.260  WARN 17152 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 10:59:03.078  INFO 17152 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.619 seconds (JVM running for 11.148)
+2020-10-01 10:59:03.079  INFO 17152 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 11:06:56.497  INFO 7840 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 7840 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 11:06:56.498  INFO 7840 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 11:06:57.925  WARN 7840 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 11:07:06.245  INFO 7840 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.046 seconds (JVM running for 10.573)
+2020-10-01 11:07:06.247  INFO 7840 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 11:23:20.764  INFO 19540 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 19540 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 11:23:20.766  INFO 19540 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 11:23:22.186  WARN 19540 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 11:23:31.101  INFO 19540 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.639 seconds (JVM running for 11.181)
+2020-10-01 11:23:31.103  INFO 19540 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 11:25:23.826  INFO 3484 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 3484 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 11:25:23.829  INFO 3484 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 11:25:25.213  WARN 3484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 11:25:33.782  INFO 3484 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.282 seconds (JVM running for 10.841)
+2020-10-01 11:25:33.783  INFO 3484 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 11:35:06.329  INFO 21480 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 21480 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 11:35:06.332  INFO 21480 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 11:35:07.885  WARN 21480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 11:35:16.378  INFO 21480 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.377 seconds (JVM running for 10.909)
+2020-10-01 11:35:16.380  INFO 21480 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 11:40:44.800  INFO 11376 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 11376 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-01 11:40:44.802  INFO 11376 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 11:40:46.244  WARN 11376 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 11:40:54.805  INFO 11376 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.291 seconds (JVM running for 10.818)
+2020-10-01 11:40:54.807  INFO 11376 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
