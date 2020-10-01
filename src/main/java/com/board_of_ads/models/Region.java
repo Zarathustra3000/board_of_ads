@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.Objects;
 import java.util.Set;
 
 @Data
@@ -45,5 +46,30 @@ public class Region {
         this.name = name;
         this.regionNumber = regionNumber;
         this.formSubject = formSubject;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Region region = (Region) o;
+        return Objects.equals(id, region.id) &&
+                Objects.equals(name, region.name) &&
+                Objects.equals(formSubject, region.formSubject);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, formSubject);
+    }
+
+    @Override
+    public String toString() {
+        return "Region{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", regionNumber='" + regionNumber + '\'' +
+                ", formSubject='" + formSubject + '\'' +
+                '}';
     }
 }
