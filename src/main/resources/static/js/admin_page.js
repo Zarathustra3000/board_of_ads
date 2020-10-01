@@ -6,6 +6,7 @@ let adminUsersTable = $('#userTableJs tbody');
 let deleteButtonInModalForm = $('#deleteButtonInModal div');
 let elementCloseDeleteModal1 = document.getElementById('closeDeleteModal');
 let elementCloseDeleteModal2 = document.getElementById('closeDeleteModal2');
+let elementCreateUserRoles = document.getElementById('roleSelect');
 
 let elementUserTable = document.getElementById('userTableAtAdminPanel');
 let elementNewUser = document.getElementById('createNewUserAtAdminPanel');
@@ -89,6 +90,41 @@ function showAllUsersTable() {
         })
 }
 
+/*создание нового пользователя*/
+async function newUser() {
+
+    let roleSelectedValues = Array.from(elementCreateUserRoles.selectedOptions).map(el => el.value);
+    let roleArray = convertToRoleSet(roleSelectedValues);
+
+    let data = {
+
+        userName: $('#userName').val(),
+        userPassword: $('#password').val(),
+        userEmail: $('#email').val(),
+
+        roles: roleArray
+
+    };
+
+    const response = await fetch(newUserUrl, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data)
+    })
+        .catch(error => {
+            console.log(error);
+        });
+
+    return response.json();
+}
+
 /*заполнение модальной формы на удаление*/
 function fillingModalFormDelete(id) {
 
@@ -157,6 +193,20 @@ elementNewUser.onclick = function () {
     document.getElementById('hideTheUsersTable').hidden = true;
     document.getElementById('hideTheCreateUserForm').hidden = false;
 };
+
+/*создаем массив из значений полученных с селектора при создании нового пользователя*/
+function convertToRoleSet(Array) {
+    let roleArray = [];
+
+    if (Array.indexOf("USER") !== -1) {
+        roleArray.unshift({id: 2, name: "USER"});
+    }
+    if (Array.indexOf("ADMIN") !== -1) {
+        roleArray.unshift({id: 1, name: "ADMIN"});
+    }
+    return roleArray;
+}
+
 
 //Очистка таблиц при закрытии модального окна
 function clearTable() {

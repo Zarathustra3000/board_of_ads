@@ -53,24 +53,28 @@
             <!--вкладка на создание нового пользователя-->
             <div class="tab-pane fade" id="nav-newuser" role="tabpanel" aria-labelledby="nav-newuser-tab">
                 <div id="hideTheCreateUserForm">
-                    <p class="lead" th:align="center">
-                        <strong>New User</strong>
+                    <p class="lead" th:align="center" th:text="#{newUser}">
+                        <strong>Create new user</strong>
                     </p>
                     <form method="post" align="center" id="newUserCR">
                         <td>
-                            <label for="userName">Name</label><br>
-                            <input type="text" id="userName" name="userName"><br><br>
+                            <label for="AdminPanelUserEmail" th:text="#{adminPanelUserMail}">User E-Mail</label><br>
+                            <input type="text" id="AdminPanelUserEmail" name="userEmailCP"><br><br>
                         </td>
                         <td>
-                            <label for="password">Password</label><br>
-                            <input type="text" id="password" name="userPassword"><br><br>
+                            <label for="AdminPanelUserPassword" th:text="#{adminPanelUserPassword}">Пароль</label><br>
+                            <input type="text" id="AdminPanelUserPassword" name="userPasswordCP"><br><br>
                         </td>
                         <td>
-                            <label for="email">Email</label><br>
-                            <input type="text" id="email" name="userEmail"><br><br>
+                            <label for="AdminPanelUserFirstName" th:text="#{adminPanelUserFirstName}">Имя</label><br>
+                            <input type="text" id="AdminPanelUserFirstName" name="userFirstNameCP"><br><br>
                         </td>
                         <td>
-                            <label for="roleSelect">Role</label><br>
+                            <label for="AdminPanelUserLastName" th:text="#{adminPanelUserLastName}">Фамилия</label><br>
+                            <input type="text" id="AdminPanelUserLastName" name="userLastNameCP"><br><br>
+                        </td>
+                        <td>
+                            <label for="roleSelect" th:text="#{adminPanelUserRoles}">Роли</label><br>
                             <select multiple="multiple" size="2" id="roleSelect" name="roleSet">
                                 <option value="ROLE_ADMIN">Role Admin</option>
                                 <option value="ROLE_USER">Role User</option>
