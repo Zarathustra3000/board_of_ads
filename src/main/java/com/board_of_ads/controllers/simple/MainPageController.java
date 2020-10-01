@@ -58,7 +58,7 @@ public class MainPageController {
 
     @GetMapping("/oauth")
     public String oAuth() {
-        User user = oAuth2Service.googleAuth();
+        User user = oAuth2Service.facebookAuth();
         return "redirect:/";
     }
 
