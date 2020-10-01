@@ -27,9 +27,8 @@ public class MainPageController {
     public String adminPage(@AuthenticationPrincipal User user, Model model) {
         System.out.println(user.getAuthorities());
         model.addAttribute(user);
-        return "admin_page";
+        return "admin/admin_page";
     }
-
 
     @GetMapping("/vk_auth")
     public String vkAuth(@RequestParam(value = "code") String code) {
