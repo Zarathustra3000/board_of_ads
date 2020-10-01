@@ -1,10 +1,127 @@
-2020-09-30 09:47:21.658  INFO 14640 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 14640 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
-2020-09-30 09:47:21.660  INFO 14640 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
-2020-09-30 09:47:23.053  WARN 14640 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-09-30 09:47:31.732  INFO 14640 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.425 seconds (JVM running for 10.943)
-2020-09-30 09:47:31.735  INFO 14640 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
-2020-09-30 09:53:43.516  INFO 17260 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 17260 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
-2020-09-30 09:53:43.519  INFO 17260 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
-2020-09-30 09:53:44.968  WARN 17260 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-09-30 09:53:53.169  INFO 17260 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.961 seconds (JVM running for 10.503)
-2020-09-30 09:53:53.171  INFO 17260 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 00:18:00.388  INFO 9820 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on LAPTOP-TBPH76C1 with PID 9820 (C:\Users\Asus\IdeaProjects\board_of_ads\target\classes started by Asus in C:\Users\Asus\IdeaProjects\board_of_ads)
+2020-10-01 00:18:00.535  INFO 9820 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 00:18:31.270  WARN 9820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 00:21:46.317  INFO 14220 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on LAPTOP-TBPH76C1 with PID 14220 (C:\Users\Asus\IdeaProjects\board_of_ads\target\classes started by Asus in C:\Users\Asus\IdeaProjects\board_of_ads)
+2020-10-01 00:21:46.348  INFO 14220 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 00:21:51.250  WARN 14220 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 00:21:54.689  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.689  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkaicb6e7sl98i1qgcisd5kjkbs" в таблице "category" не существует, пропускается
+2020-10-01 00:21:54.720  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.720  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkm6wj3ovehm3td059p77klpqjl" в таблице "category_posts" не существует, пропускается
+2020-10-01 00:21:54.720  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.720  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkgjtl6hhu4h103nu9ec8btedp9" в таблице "category_posts" не существует, пропускается
+2020-10-01 00:21:54.720  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.720  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk312nt0rik1hqh54qg34l4nsk3" в таблице "cities" не существует, пропускается
+2020-10-01 00:21:54.720  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.720  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkkrkvnnij97hxfp20f6qkrtrgu" в таблице "cities_posts" не существует, пропускается
+2020-10-01 00:21:54.736  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.736  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkaagky1ehbdtp60m4eftkink9i" в таблице "cities_posts" не существует, пропускается
+2020-10-01 00:21:54.736  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.736  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkqff7n2117h3rhv99rd33f11w1" в таблице "levels_languages" не существует, пропускается
+2020-10-01 00:21:54.736  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.736  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkoubn6hiyvalsuq8yfgrtc5p8u" в таблице "levels_languages" не существует, пропускается
+2020-10-01 00:21:54.751  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.751  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fke3kj11ixp14wd9fb8ex22pt5o" в таблице "posting" не существует, пропускается
+2020-10-01 00:21:54.758  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.758  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkqccpdjdmr2296tlmsbv1epyr6" в таблице "posting" не существует, пропускается
+2020-10-01 00:21:54.758  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.758  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk82agecxff2p9fhnfx9aeweqie" в таблице "posting" не существует, пропускается
+2020-10-01 00:21:54.758  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.758  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fksbmkuncox7jje00460tpa22d" в таблице "posting_auto_transport" не существует, пропускается
+2020-10-01 00:21:54.758  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.758  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkgj5w7ku3ekj5qw7gj7rgdx11p" в таблице "posting_caps" не существует, пропускается
+2020-10-01 00:21:54.773  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.773  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkpoxf79fx8qairgiqdrpwpu135" в таблице "posting_cars" не существует, пропускается
+2020-10-01 00:21:54.789  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.789  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkc2uuq1mym9rhi8qenucergutw" в таблице "posting_cars" не существует, пропускается
+2020-10-01 00:21:54.789  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.789  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk5jsiew7njgsn6b4b2bu4202a2" в таблице "posting_cars_additional_options" не существует, пропускается
+2020-10-01 00:21:54.789  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.789  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkp2xp19f1y7c53ks35lcfurpm0" в таблице "posting_cars_additional_options" не существует, пропускается
+2020-10-01 00:21:54.805  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.805  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk1u1nt3558lhgg63qj0rle2mky" в таблице "posting_disks" не существует, пропускается
+2020-10-01 00:21:54.805  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.805  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkj73nbkso8f8a8w0wrg1esl5g4" в таблице "posting_engine_parts" не существует, пропускается
+2020-10-01 00:21:54.805  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.805  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fktrsia3s336ng47hfu9cn2sdmn" в таблице "posting_estate" не существует, пропускается
+2020-10-01 00:21:54.820  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.820  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkdy0dkx2rnvv80sg2g7v2oxi6c" в таблице "posting_images" не существует, пропускается
+2020-10-01 00:21:54.820  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.820  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk30so815jk2x1m1vtvjyhrk3tg" в таблице "posting_images" не существует, пропускается
+2020-10-01 00:21:54.820  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.820  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk4wujr0bd3h3ml9t4a75ptfoma" в таблице "posting_job" не существует, пропускается
+2020-10-01 00:21:54.820  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.820  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkfmd8luseq7asfya1fplxxcv21" в таблице "posting_job_levels_languages" не существует, пропускается
+2020-10-01 00:21:54.836  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.836  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkte5731s2eon5evskanbjmcqgt" в таблице "posting_job_levels_languages" не существует, пропускается
+2020-10-01 00:21:54.836  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.836  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkanyje4exab3w1v2ramkysdgx1" в таблице "posting_job_levels_languages" не существует, пропускается
+2020-10-01 00:21:54.836  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.836  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkb90dbxdhuvgw8vvwchdlop98f" в таблице "posting_job_levels_languages" не существует, пропускается
+2020-10-01 00:21:54.852  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.852  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkmjrnf6x87g08i847joqkydk8o" в таблице "posting_job_resumes" не существует, пропускается
+2020-10-01 00:21:54.858  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.858  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkl63i5esgjcdmwnc84yjgo9evy" в таблице "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 00:21:54.858  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.858  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkn5rbdr0il49k02ccy09l70uuw" в таблице "posting_job_resumes_experiences" не существует, пропускается
+2020-10-01 00:21:54.858  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.858  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fka6y7xib4l6r0xngn3dbopputc" в таблице "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 00:21:54.858  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.858  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk9akbgxp3vpynecle1kfge6xgk" в таблице "posting_job_resumes_languages" не существует, пропускается
+2020-10-01 00:21:54.874  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.874  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkaj96ci8i4hrlc31m4y821yvty" в таблице "posting_job_vacancies" не существует, пропускается
+2020-10-01 00:21:54.874  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.874  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk77mg8nb9g0jm5o8fod3yjgd" в таблице "posting_moto_transport" не существует, пропускается
+2020-10-01 00:21:54.874  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.874  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkba7g9k648kn80xniik1wwhkf7" в таблице "posting_mototires" не существует, пропускается
+2020-10-01 00:21:54.874  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.874  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk2mbptiitp59s9yosaoqhm982n" в таблице "posting_part_and_accessories" не существует, пропускается
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkt8x9jx945e35sqvpaoj4h04ki" в таблице "posting_spare_parts" не существует, пропускается
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fksf1goik1aclfuasummgksxnrj" в таблице "posting_tires" не существует, пропускается
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkc1p87ylmsv8e8a8er0pk781v5" в таблице "posting_truck_transport" не существует, пропускается
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkp9v71co3p2nkwti71fnfdog69" в таблице "posting_used_cars" не существует, пропускается
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkmj690a2epfg3yjkogvgtcn98m" в таблице "posting_water_transport" не существует, пропускается
+2020-10-01 00:21:54.889  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.905  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fk6tnebqifgdijf4rjgl4pp0dkk" в таблице "posting_wheels" не существует, пропускается
+2020-10-01 00:21:54.905  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.905  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ограничение "fkgq8qwo8048otjlc4d8ris8p8s" в таблице "recovery_token" не существует, пропускается
+2020-10-01 00:21:54.905  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.905  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-01 00:21:54.905  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.905  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 00:21:54.921  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:54.921  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-01 00:21:55.222  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:55.222  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-01 00:21:55.237  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:55.237  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-01 00:21:55.237  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:55.237  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-01 00:21:55.237  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-01 00:21:55.237  WARN 14220 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-01 00:22:45.258  INFO 14220 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 60.312 seconds (JVM running for 65.519)
+2020-10-01 00:22:45.289  INFO 14220 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 00:24:29.790  WARN 14220 --- [http-nio-5556-exec-5] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [1,056] milliseconds.
+2020-10-01 08:55:26.693  INFO 7140 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on LAPTOP-TBPH76C1 with PID 7140 (C:\Users\Asus\IdeaProjects\board_of_ads\target\classes started by Asus in C:\Users\Asus\IdeaProjects\board_of_ads)
+2020-10-01 08:55:26.749  INFO 7140 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 08:55:44.346  WARN 7140 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 08:56:56.977  INFO 7140 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 92.067 seconds (JVM running for 107.132)
+2020-10-01 08:56:56.999  INFO 7140 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 08:58:34.676  WARN 7140 --- [http-nio-5556-exec-5] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [1,876] milliseconds.
+2020-10-01 21:27:00.075  INFO 1052 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on LAPTOP-TBPH76C1 with PID 1052 (C:\Users\Asus\IdeaProjects\board_of_ads\target\classes started by Asus in C:\Users\Asus\IdeaProjects\board_of_ads)
+2020-10-01 21:27:00.121  INFO 1052 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 21:27:16.268  WARN 1052 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 21:28:39.221  INFO 1052 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 102.871 seconds (JVM running for 108.412)
+2020-10-01 21:28:39.444  INFO 1052 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 21:29:41.952  WARN 1052 --- [http-nio-5556-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [3,925] milliseconds.
+2020-10-01 21:35:12.647  INFO 19032 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on LAPTOP-TBPH76C1 with PID 19032 (C:\Users\Asus\IdeaProjects\board_of_ads\target\classes started by Asus in C:\Users\Asus\IdeaProjects\board_of_ads)
+2020-10-01 21:35:12.663  INFO 19032 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-01 21:35:24.616  WARN 19032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-01 21:36:26.881  INFO 19032 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 75.806 seconds (JVM running for 80.539)
+2020-10-01 21:36:26.887  INFO 19032 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-01 21:39:34.953  WARN 19032 --- [http-nio-5556-exec-10] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2,444] milliseconds.

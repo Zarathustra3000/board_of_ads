@@ -67,7 +67,50 @@ async function onClickOpt(id) {
 
 $(document).ready(function() {
     viewCities();
+    $('#buttonAuth').on('click', function () {
+        authorization();
+    });
 });
+
+
+
+async function authorization() {
+    let formData = 'email='+ $("#tel-and-email").val()
+    +'&password='+$("#password").val();
+
+      console.log('user = ' + formData);
+    fetch('http://localhost:5556/login/process', {
+        method: "POST",
+        credentials: 'same-origin',
+        body: formData,
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+        .then(
+            function (response) {
+                if (response.status !== 200) {
+                    console.log('Looks like there was a problem. Status Code: ' +
+                        response.status);
+                    return;
+                }
+                location.reload();
+                console.log('Status Code: ' +
+                    response.status);
+                // Examine the text in the response
+                // response.json().then(function (data) {
+                //     console.log(data);
+                // });
+            }
+        )
+        .catch(function (err) {
+            console.log('Fetch Error :-S', err);
+        });
+    $('#registrationModalCenter').modal('hide');
+    $('#tel-and-email').val("");
+    $('#password').val("");
+}
+
 
 let cities;
 let posts;
