@@ -58,6 +58,10 @@ public class User implements UserDetails {
     @JoinColumn(name = "avatar_id")
     private Image avatar;
 
+    @OneToOne
+    @JoinColumn(name = "city_id")
+    private City city;
+
     @Column
     private LocalDateTime dataRegistration = LocalDateTime.now();
 
