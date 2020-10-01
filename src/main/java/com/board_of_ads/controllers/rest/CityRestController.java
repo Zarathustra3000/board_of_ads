@@ -2,8 +2,6 @@ package com.board_of_ads.controllers.rest;
 
 import com.board_of_ads.models.City;
 import com.board_of_ads.service.interfaces.CityService;
-import com.board_of_ads.util.Error;
-import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
@@ -21,12 +19,6 @@ public class CityRestController {
 
     @GetMapping()
     public Response<Set<City>> findAll() {
-        Set<City> cities;
-        try {
-            cities = cityService.getCitiesList();
-        } catch (Exception e) {
-            return new ErrorResponse<>(new Error(400, "No find users"));
-        }
-        return new SuccessResponse<>(cities);
+        return new SuccessResponse<>(cityService.getCitiesList());
     }
 }
