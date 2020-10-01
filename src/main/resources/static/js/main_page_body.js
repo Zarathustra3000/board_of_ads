@@ -13,20 +13,21 @@ function getPostingsTable() {
                     postingDTO.datePosting.substring(11,16);
 
                 document.getElementById('mainPageBody').innerHTML +=
-                    `<div class="col-md-3" style="height: 320px;width: 208px">
+                    `<div id="main_page_posting" class="col-md-3">
                         <div class="card">
-                            <a href="#"><img class="card-img-top" src="../images/logo.jpg" alt=""
-                            style="width: 100%;height: 200px; display: block"></a>
-                                <div class="card-body">
-                                    <a href="#">${postingDTO.title}</a>
-                                    <strong>
-                                        <div id="price">${postingDTO.price} ₽</div>
-                                    </strong>
-                                    <div class="card-text text-muted">
-                                        <div id="meetingPlace">Москва, Преображенская площадь</div>
-                                        <div id="timeOfPosting">${date}</div>
-                                    </div>
+                            <a  href="#">
+                            <img id="postingImageRef" class="card-img-top" src="../images/logo.jpg" alt="">
+                            </a>
+                            <div id="postingCardBody" class="card-body">
+                                <a id="postingTitle" class="text-primary" href="#">${postingDTO.title}</a>
+                                <strong>
+                                    <div id="price">${postingDTO.price} ₽</div>
+                                </strong>
+                                <div class="card-text text-muted">
+                                    <div id="meetingPlace">Москва, Преображенская площадь</div>
+                                    <div id="timeOfPosting">${date}</div>
                                 </div>
+                            </div>
                         </div>
                     </div>`
             }
