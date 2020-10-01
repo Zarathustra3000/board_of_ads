@@ -7,6 +7,8 @@ import java.util.Optional;
 import java.util.Set;
 
 public interface CityService {
+
     Set<City> getCitiesList();
+
     Optional<City> findCityByName(String name);
 }

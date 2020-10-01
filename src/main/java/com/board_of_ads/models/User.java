@@ -1,6 +1,7 @@
 package com.board_of_ads.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,7 +30,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
 @Table(name = "users")
 public class User implements UserDetails {
@@ -56,6 +57,10 @@ public class User implements UserDetails {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "avatar_id")
     private Image avatar;
+
+    @OneToOne
+    @JoinColumn(name = "city_id")
+    private City city;
 
     @Column
     private LocalDateTime dataRegistration = LocalDateTime.now();
