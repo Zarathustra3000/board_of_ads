@@ -48,7 +48,7 @@ async function onClickOpt(id) {
     $('#countPostButton').empty();
     let sizeArray = 0;
     posts.then(posts => {
-        posts.forEach(() => {
+        posts.data.forEach(() => {
             sizeArray++;
         })
     }).then(() => {
@@ -82,7 +82,7 @@ async function viewCities() {
     let sizeArray = 0;
     console.log(posts);
     posts.then(posts => {
-        posts.forEach(() => {
+        posts.data.forEach(() => {
             sizeArray++;
         })
     }).then(() => {
@@ -110,7 +110,7 @@ function addOptions() {
     $('.citiesOptions').append(select);
     let addForm = $(".typeahead").val().toLowerCase();
     cities.then(cities => {
-        cities.forEach(city => {
+        cities.data.forEach(city => {
             if (city.name.toLowerCase().includes(addForm)) {
                 let userRow = `<option onmouseover="onOptionHover()" 
                                        onclick="onClickOpt(this.id)"
