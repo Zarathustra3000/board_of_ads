@@ -1,0 +1,7 @@
+2020-10-02 00:00:04.818  WARN 11644 --- [http-nio-5556-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2,550] milliseconds.
+2020-10-02 00:13:12.498  INFO 19908 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on LAPTOP-TBPH76C1 with PID 19908 (C:\Users\Asus\IdeaProjects\board_of_ads\target\classes started by Asus in C:\Users\Asus\IdeaProjects\board_of_ads)
+2020-10-02 00:13:12.517  INFO 19908 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-02 00:13:21.844  WARN 19908 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-02 00:14:25.824  INFO 19908 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 75.838 seconds (JVM running for 87.571)
+2020-10-02 00:14:25.834  INFO 19908 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-02 00:16:26.315  WARN 19908 --- [http-nio-5556-exec-9] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [652] milliseconds.

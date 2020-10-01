@@ -1,10 +1,11 @@
 let buttonAdd = $('#searchCityDiv');
 
-$("#region, #category-select-city").click(function() {
+$("#region, #category-select-city").click(function () {
     $('#searchModel').modal('show');
 });
 
 let changedCityName;
+
 function clickCountButton() {
     $('#category-select-city').empty();
     $('#cityInput').empty();
@@ -13,17 +14,17 @@ function clickCountButton() {
     $('#category-select-city').append(row);
 }
 
-$('select#cities').on('change', function() {
+$('select#cities').on('change', function () {
     $('input[name="cityInput"]').val(this.value);
 });
 
 function onOptionHover() {
     $(".opt").mouseover(
-        function() {
+        function () {
             $(this).css('background', '#99ccff')
         });
     $(".opt").mouseleave(
-        function() {
+        function () {
             $(this).css('background', '#fff')
         });
 }
@@ -52,7 +53,7 @@ async function onClickOpt(id) {
             sizeArray++;
         })
     }).then(() => {
-        $('#countPostButton').remove();
+            $('#countPostButton').remove();
             let button = `<button
                                 type="button"
                                 class="btn btn-primary button-count-post"
@@ -64,7 +65,7 @@ async function onClickOpt(id) {
     );
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     viewCities();
     $('#buttonAuth').on('click', function () {
         authorization();
@@ -72,18 +73,20 @@ $(document).ready(function() {
 });
 
 
-
 async function authorization() {
-    let formData = 'email='+ $("#tel-and-email").val()
-    +'&password='+$("#password").val();
+    // let formData = 'email='+ $("#tel-and-email").val()
+    // +'&password='+$("#password").val();
 
-      console.log('user = ' + formData);
+    let formData = new FormData();
+    formData.append('email', $("#tel-and-email").val());
+    formData.append('password', $("#password").val());
+
     fetch('http://localhost:5556/login/process', {
         method: "POST",
         credentials: 'same-origin',
         body: formData,
         headers: {
-            'content-type': 'application/json'
+            'content-type': 'application/x-www-form-urlencoded'
         }
     })
         .then(
@@ -93,7 +96,7 @@ async function authorization() {
                         response.status);
                     return;
                 }
-                location.reload();
+                // location.reload();
                 console.log('Status Code: ' +
                     response.status);
                 // Examine the text in the response
@@ -138,7 +141,7 @@ async function viewCities() {
     );
 }
 
-$('.typeahead').on('keyup', function() {
+$('.typeahead').on('keyup', function () {
     addOptions();
     $('#countPostButton').attr("disabled", true);
 });
@@ -146,7 +149,7 @@ $('.typeahead').on('keyup', function() {
 function addOptions() {
     $('#citiesSelect').remove();
     $('#citiesSelect').empty();
-    let select=`<select id="citiesSelect" size="7" class="form-control"></select>`;
+    let select = `<select id="citiesSelect" size="7" class="form-control"></select>`;
     $('.citiesOptions').append(select);
     let addForm = $(".typeahead").val().toLowerCase();
     cities.then(cities => {
@@ -167,7 +170,7 @@ function addOptions() {
 }
 
 const http = {
-    fetch: async function(url, options = {}) {
+    fetch: async function (url, options = {}) {
         const response = await fetch(url, {
             headers: {
                 'Accept': 'application/json',
@@ -194,7 +197,7 @@ const userService = {
     }
 }
 
-$.get("/user", function(data) {
+$.get("/user", function (data) {
     $("#user").html(data.userAuthentication.details.name);
     $(".unauthenticated").hide()
     $(".authenticated").show()
