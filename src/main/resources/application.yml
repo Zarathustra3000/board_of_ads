@@ -6,7 +6,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/board_of_ads
-    username: postgres
+    username: root
     password: root
     initialization-mode: always
 
@@ -78,7 +78,7 @@ security:
 
 logging:
   file:
-    name: src//main//resources//logFiles//board_of_ads.log
+    name: log/board_of_ads.log
     max-size: 1024KB
     max-history: 5
   level:
