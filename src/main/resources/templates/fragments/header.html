@@ -21,15 +21,15 @@
                     </svg>
                 </a>
             </div>
-            <div  class="header-menu-right">
+            <div class="header-menu-right">
                 <ul class="list-inline" style="display: flex;">
                     <li style="padding-top: 5px" >
                         <a th:text="#{reg}" class="header-link-item header-button-sign unauthenticated"
                            data-toggle="modal" data-target="#registrationModalCenter"
                            href="#">Вход и регистрация</a>
                     </li>
-<!--                    sec:authorize="isAuthenticated()"-->
-                    <li class="dropdown">
+
+                    <li sec:authorize="isAuthenticated()" class="dropdown">
                         <a class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"
                            data-target="#dropdownUserInfo" id="dropdownButton" style="padding: 1px" href="#">
                             <div class="user-info-avatar" id="avatar"></div>
