@@ -32,3 +32,9 @@ build/
 ### VS Code ###
 .vscode/
 /logFiles/
+
+### Log ###
+log
+/log/
+board_of_ads/log/
+board_of_ads.log
