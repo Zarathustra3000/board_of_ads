@@ -4,14 +4,15 @@ function getPostingsTable() {
         url: '/api/posting',
         dataType: 'json',
         async: true,
-        success: function (data) {
-            for (let step = 0; step < data.length; step++) {
-                let postingDTO = data[step]
+        success: function (result) {
+            let array = result.data
+            for(let step = 0; step < array.length; step++) {
+
+                let postingDTO = array[step]
                 let date = postingDTO.datePosting.substring(8,10) + "-" +
                     postingDTO.datePosting.substring(5,7) + "-" +
                     postingDTO.datePosting.substring(0,4) + " " +
                     postingDTO.datePosting.substring(11,16);
-
                 document.getElementById('mainPageBody').innerHTML +=
                     `<div id="main_page_posting" class="col-md-3">
                         <div id="cardPosting" class="card">
