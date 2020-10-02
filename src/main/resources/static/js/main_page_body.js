@@ -16,7 +16,7 @@ function getPostingsTable() {
                 document.getElementById('mainPageBody').innerHTML +=
                     `<div id="main_page_posting" class="col-md-3">
                         <div id="cardPosting" class="card">
-                            <div id="ImageSlider${step}" class="carousel slide">
+                            <div id="ImageSlider${step}" class="carousel slide" data-interval="false">
                                 <ol class="carousel-indicators">
                                     <li style="border: 1px solid black;" data-target="#ImageSlider${step}" data-slide-to="0" class="active"></li>
                                     <li style="border: 1px solid black;" data-target="#ImageSlider${step}" data-slide-to="1"></li>
