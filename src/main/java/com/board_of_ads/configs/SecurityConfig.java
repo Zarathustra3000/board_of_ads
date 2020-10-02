@@ -43,17 +43,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/google_auth", "/facebook_auth", "/vk_auth", "/yandex_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
+                .antMatchers("/", "/social/**", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
                 .antMatchers("/admin_page").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
                 .and()
-                    .logout().permitAll()
+                    .logout().logoutSuccessUrl("/").permitAll()
                 .and()
                     .exceptionHandling(e -> e
                         .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
-                ).oauth2Login();
+                ).oauth2Login().defaultSuccessUrl("/social/auth");
     }
     //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
 

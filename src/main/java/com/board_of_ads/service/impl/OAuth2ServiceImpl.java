@@ -3,10 +3,9 @@ package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.interfaces.AuthService;
+import com.board_of_ads.service.interfaces.OAuth2Service;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
@@ -17,12 +16,12 @@ import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
-public class AuthServiceImpl implements AuthService {
+public class OAuth2ServiceImpl implements OAuth2Service {
 
     private final UserService userService;
 
     @Override
-    public void auth() {
+    public String auth() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication instanceof OAuth2AuthenticationToken) {
             OAuth2AuthenticationToken token = (OAuth2AuthenticationToken) authentication;
@@ -30,7 +29,7 @@ public class AuthServiceImpl implements AuthService {
             Map<String, Object> attributes = oAuth2User.getAttributes();
             User user = userService.getUserByEmail((String) attributes.get("email"));
             if (user != null) {
-                return;
+                return "redirect:/";
             }
             if (token.getAuthorizedClientRegistrationId().equals("google")) {
                 user = new User();
@@ -53,5 +52,6 @@ public class AuthServiceImpl implements AuthService {
                 userService.saveUser(user);
             }
         }
+        return "redirect:/";
     }
 }
