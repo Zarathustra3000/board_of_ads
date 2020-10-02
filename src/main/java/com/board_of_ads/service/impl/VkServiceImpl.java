@@ -2,8 +2,8 @@ package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.interfaces.VkService;
 import com.board_of_ads.service.interfaces.UserService;
+import com.board_of_ads.service.interfaces.VkService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -28,7 +28,7 @@ import java.util.Map;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@ConfigurationProperties(prefix="security.auth-vk")
+@ConfigurationProperties(prefix="spring.security.auth-vk")
 public class VkServiceImpl implements VkService {
 
     private final UserService userService;
