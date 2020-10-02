@@ -1,40 +1,57 @@
+
 package com.board_of_ads.service.impl;
 
-import com.board_of_ads.configs.auth.Auth;
-import com.board_of_ads.configs.auth.AuthVK;
-import com.board_of_ads.configs.auth.AuthYandex;
+import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.AuthService;
-import lombok.AllArgsConstructor;
+import com.board_of_ads.service.interfaces.UserService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
 
-    private final AuthVK authVK;
-    private final AuthYandex authYandex;
-    private final Auth auth;
+    private final UserService userService;
 
     @Override
-    public String vkAuth(String code) {
-        String response = authVK.getAuthResponseURL(code);
-        Map<String, String> userData = authVK.getUserData(response);
-        userData = authVK.getUserData(userData);
-        User user = auth.init(userData);
-        auth.login(user);
-        return "redirect:/";
-    }
-
-    @Override
-    public String yandexAuth(String code) {
-        String requestBody = authYandex.getRequestBody(code);
-        String token = authYandex.getToken(requestBody);
-        Map<String, String> userData = authYandex.getUserData(token);
-        User user = auth.init(userData);
-        auth.login(user);
-        return "redirect:/";
+    public void auth() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication instanceof OAuth2AuthenticationToken) {
+            OAuth2AuthenticationToken token = (OAuth2AuthenticationToken) authentication;
+            OAuth2User oAuth2User = token.getPrincipal();
+            Map<String, Object> attributes = oAuth2User.getAttributes();
+            User user = userService.getUserByEmail((String) attributes.get("email"));
+            if (user != null) {
+                return;
+            }
+            if (token.getAuthorizedClientRegistrationId().equals("google")) {
+                user = new User();
+                user.setAvatar(new Image(null, (String) attributes.get("picture")));
+                user.setEmail((String) attributes.get("email"));
+                user.setFirsName((String) attributes.get("given_name"));
+                user.setLastName((String) attributes.get("family_name"));
+                user.setEnable(true);
+                user.setPassword((String) attributes.get("email"));
+                userService.saveUser(user);
+            } else if (token.getAuthorizedClientRegistrationId().equals("facebook")) {
+                user = new User();
+                user.setEmail((String) attributes.get("email"));
+                user.setPassword((String) attributes.get("email"));
+                String name = (String) attributes.get("name");
+                String[] userData = name.split(" ");
+                user.setFirsName(userData[0]);
+                user.setLastName(userData[1]);
+                user.setEnable(true);
+                userService.saveUser(user);
+            }
+        }
     }
 }
