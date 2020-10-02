@@ -18,9 +18,9 @@ function getPostingsTable() {
                         <div id="cardPosting" class="card">
                             <div id="ImageSlider${step}" class="carousel slide" data-interval="false">
                                 <ol class="carousel-indicators">
-                                    <li style="border: 1px solid black;" data-target="#ImageSlider${step}" data-slide-to="0" class="active"></li>
-                                    <li style="border: 1px solid black;" data-target="#ImageSlider${step}" data-slide-to="1"></li>
-                                    <li style="border: 1px solid black;" data-target="#ImageSlider${step}" data-slide-to="2"></li>
+                                    <li data-target="#ImageSlider${step}" data-slide-to="0" class="active"></li>
+                                    <li data-target="#ImageSlider${step}" data-slide-to="1"></li>
+                                    <li data-target="#ImageSlider${step}" data-slide-to="2"></li>
                                 </ol>
                                 <div id="carouselInner" class="carousel-inner">
                                     <div class="carousel-item active">
@@ -39,16 +39,6 @@ function getPostingsTable() {
                                         </a>
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#ImageSlider${step}" role="button"
-                                   data-slide="prev">
-                                    <span style="background-color: gray;" class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#ImageSlider${step}" role="button"
-                                   data-slide="next">
-                                    <span style="background-color: gray;" class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
                             </div>
                             <div id="postingCardBody" class="card-body">
                                 <a id="postingTitle" class="text-primary" href="#">${postingDTO.title}</a>

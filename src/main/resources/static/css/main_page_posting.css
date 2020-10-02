@@ -43,3 +43,14 @@
     min-width: 800px;
     max-width: 1230px;
 }
+.carousel-indicators {
+    margin: 0;
+}
+.carousel-indicators li {
+    background-color: gray;
+    width: 70px;
+    margin: 0px;
+}
+.carousel-indicators li:hover {
+    background-color: #00aaff;
+}
