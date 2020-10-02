@@ -74,43 +74,32 @@ $(document).ready(function () {
 
 
 async function authorization() {
-    // let formData = 'email='+ $("#tel-and-email").val()
-    // +'&password='+$("#password").val();
+    let user = {
+        email: $("#tel-and-email").val(),
+        password: $("#password").val()
+    };
 
-    let formData = new FormData();
-    formData.append('email', $("#tel-and-email").val());
-    formData.append('password', $("#password").val());
-
-    fetch('http://localhost:5556/login/process', {
-        method: "POST",
-        credentials: 'same-origin',
-        body: formData,
-        headers: {
-            'content-type': 'application/x-www-form-urlencoded'
-        }
-    })
-        .then(
-            function (response) {
-                if (response.status !== 200) {
-                    console.log('Looks like there was a problem. Status Code: ' +
-                        response.status);
-                    return;
-                }
-                // location.reload();
-                console.log('Status Code: ' +
-                    response.status);
-                // Examine the text in the response
-                // response.json().then(function (data) {
-                //     console.log(data);
-                // });
+    try {
+        const response = await fetch('http://localhost:5556/auth', {
+            method: "POST",
+            credentials: 'same-origin',
+            body: JSON.stringify(user),
+            headers: {
+                'content-type': 'application/json'
             }
-        )
-        .catch(function (err) {
-            console.log('Fetch Error :-S', err);
-        });
-    $('#registrationModalCenter').modal('hide');
-    $('#tel-and-email').val("");
-    $('#password').val("");
+        })
+        if (response.status === 200) {
+            $('#registrationModalCenter').modal('hide');
+            $('#tel-and-email').val("");
+            $('#password').val("");
+            location.reload();
+        } else {
+            $('#tel-and-email').css('border-color', 'red');
+            $('#password').css('border-color', 'red');
+        }
+    } catch (error) {
+        console.log('Возникла проблема с вашим fetch запросом: ', error.message);
+    }
 }
 
 

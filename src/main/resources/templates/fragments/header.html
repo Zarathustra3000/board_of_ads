@@ -25,10 +25,10 @@
                 <ul class="list-inline">
                     <li>
                         <a th:text="#{reg}" class="header-link-item header-button-sign unauthenticated"
-                           data-toggle="modal" data-target="#registrationModalCenter"
+                           data-toggle="modal" data-target="#registrationModalCenter" id="registrationModalHref"
                            href="#">Вход и регистрация</a>
                     </li>
-                    <li sec:authorize="isAuthenticated()" class="dropdown">
+                    <li sec:authorize="isAuthenticated()" class="dropdown" id="authorizeMenu">
                         <a class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"
                            data-target="#dropdownUserInfo" id="dropdownButton" style="padding: 1px" href="#">
                             <div class="user-info-avatar" id="avatar"></div>
