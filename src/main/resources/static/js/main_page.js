@@ -95,7 +95,7 @@ async function authorization() {
             location.reload();
         } else {
             $('#emailAuth').css('border-color', 'red');
-            $('#password').css('border-color', 'red');
+            $('#passwordAuth').css('border-color', 'red');
         }
     } catch (error) {
         console.log('Возникла проблема с вашим fetch запросом: ', error.message);
