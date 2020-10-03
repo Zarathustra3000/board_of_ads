@@ -64,9 +64,44 @@ async function onClickOpt(id) {
     );
 }
 
-$(document).ready(function() {
+
+$(document).ready(function () {
     viewCities();
+    $('#buttonAuth').on('click', function () {
+        authorization();
+    });
 });
+
+
+async function authorization() {
+    let user = {
+        email: $("#emailAuth").val(),
+        password: $("#passwordAuth").val()
+    };
+
+    try {
+        const response = await fetch('http://localhost:5556/auth', {
+            method: "POST",
+            credentials: 'same-origin',
+            body: JSON.stringify(user),
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        if (response.status === 200) {
+            $('#registrationModalCenter').modal('hide');
+            $('#emailAuth').val("");
+            $('#passwordAuth').val("");
+            location.reload();
+        } else {
+            $('#emailAuth').css('border-color', 'red');
+            $('#password').css('border-color', 'red');
+        }
+    } catch (error) {
+        console.log('Возникла проблема с вашим fetch запросом: ', error.message);
+    }
+}
+
 
 let cities;
 let posts;
