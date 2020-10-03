@@ -43,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/google_auth", "/facebook_auth", "/vk_auth", "/yandex_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
+                .antMatchers("/", "/auth", "/google_auth", "/facebook_auth", "/vk_auth", "/yandex_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
                 .antMatchers("/admin_page").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
