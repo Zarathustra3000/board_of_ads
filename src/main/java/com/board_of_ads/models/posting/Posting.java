@@ -78,6 +78,9 @@ public class Posting {
     private String contact;
 
     @Column
+    private String meetingPoint;
+
+    @Column
     private Boolean isActive;
 
     @Column
