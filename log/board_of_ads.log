@@ -1478,3 +1478,226 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2020-10-03 03:21:42.280  WARN 7248 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-10-03 03:22:02.841  INFO 7248 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 24.583 seconds (JVM running for 26.208)
 2020-10-03 03:22:02.844  INFO 7248 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 00:59:42.409  INFO 1424 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 1424 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 00:59:42.417  INFO 1424 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 00:59:46.858  WARN 1424 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 01:00:05.628  INFO 1424 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 24.846 seconds (JVM running for 27.921)
+2020-10-05 01:00:05.631  INFO 1424 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 01:08:09.647  INFO 7428 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 7428 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 01:08:09.652  INFO 7428 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 01:08:12.788  WARN 7428 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataInitializer' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\configs\DataInitializer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\configs\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'OAuth2ServiceImpl' defined in file [D:\board_of_ads\target\classes\com\board_of_ads\service\impl\OAuth2ServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'userServiceImpl': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2020-10-05 01:08:16.233 ERROR 7428 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   dataInitializer defined in file [D:\board_of_ads\target\classes\com\board_of_ads\configs\DataInitializer.class]
+┌─────┐
+|  userServiceImpl defined in file [D:\board_of_ads\target\classes\com\board_of_ads\service\impl\UserServiceImpl.class]
+↑     ↓
+|  securityConfig defined in file [D:\board_of_ads\target\classes\com\board_of_ads\configs\SecurityConfig.class]
+↑     ↓
+|  OAuth2ServiceImpl defined in file [D:\board_of_ads\target\classes\com\board_of_ads\service\impl\OAuth2ServiceImpl.class]
+└─────┘
+
+
+2020-10-05 01:14:01.281  INFO 3576 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 3576 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 01:14:01.286  INFO 3576 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 01:14:04.886  WARN 3576 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 01:14:06.930  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.933  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-05 01:14:06.934  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.934  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-05 01:14:06.935  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.936  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-05 01:14:06.937  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.937  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-05 01:14:06.938  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.939  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-05 01:14:06.940  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.940  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-05 01:14:06.941  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.942  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-05 01:14:06.943  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.943  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-05 01:14:06.944  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.944  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-05 01:14:06.945  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.946  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-05 01:14:06.947  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.947  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-05 01:14:06.948  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.948  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-05 01:14:06.949  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.949  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-05 01:14:06.950  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.950  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-05 01:14:06.952  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.952  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-05 01:14:06.953  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.954  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-05 01:14:06.955  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.955  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-05 01:14:06.956  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.957  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-05 01:14:06.958  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.958  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-05 01:14:06.959  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.959  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 01:14:06.960  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.960  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 01:14:06.961  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.961  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 01:14:06.962  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.963  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 01:14:06.964  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.964  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-05 01:14:06.965  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.966  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 01:14:06.967  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.967  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 01:14:06.969  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.969  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 01:14:06.971  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.972  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 01:14:06.973  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.973  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-05 01:14:06.974  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.974  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-05 01:14:06.975  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.976  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-05 01:14:06.977  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.977  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-05 01:14:06.978  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.978  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-05 01:14:06.979  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.980  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-05 01:14:06.981  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.981  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-05 01:14:06.982  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.982  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-05 01:14:06.983  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.983  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-05 01:14:06.984  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.984  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-05 01:14:06.986  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.986  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 01:14:06.987  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.988  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 01:14:06.989  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.989  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 01:14:06.990  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.990  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-05 01:14:06.991  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.991  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-05 01:14:06.992  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.992  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-05 01:14:06.993  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.993  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-05 01:14:06.994  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.994  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-05 01:14:06.995  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.995  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-05 01:14:06.996  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.996  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-05 01:14:06.998  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.998  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-05 01:14:06.999  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:06.999  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-05 01:14:07.000  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.000  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-05 01:14:07.001  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.002  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-05 01:14:07.003  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.003  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-05 01:14:07.004  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.004  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-05 01:14:07.005  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.005  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-05 01:14:07.006  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.006  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-05 01:14:07.007  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.007  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-05 01:14:07.008  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.008  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-05 01:14:07.009  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.009  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-05 01:14:07.010  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.010  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-05 01:14:07.011  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.011  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-05 01:14:07.012  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.012  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-05 01:14:07.013  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.013  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-05 01:14:07.014  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.014  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-05 01:14:07.015  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.015  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-05 01:14:07.016  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.016  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-05 01:14:07.017  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.017  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-05 01:14:07.018  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.018  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-05 01:14:07.019  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.019  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-05 01:14:07.020  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.020  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 01:14:07.021  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.021  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 01:14:07.022  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.022  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-05 01:14:07.022  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.023  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-05 01:14:07.023  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.023  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-05 01:14:07.024  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.024  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-05 01:14:07.025  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.025  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-05 01:14:07.026  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.026  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-05 01:14:07.027  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.027  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-05 01:14:07.028  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.028  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-05 01:14:07.028  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.029  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-05 01:14:07.030  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.030  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-05 01:14:07.031  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.031  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings" не существует, пропускается
+2020-10-05 01:14:07.032  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.032  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings_images" не существует, пропускается
+2020-10-05 01:14:07.032  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.033  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-05 01:14:07.033  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.034  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-05 01:14:07.034  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.034  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-05 01:14:07.035  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.036  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-05 01:14:07.037  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.037  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-05 01:14:07.037  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.038  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-05 01:14:07.040  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 01:14:07.040  WARN 3576 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-05 01:14:23.158  INFO 3576 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 22.97 seconds (JVM running for 25.61)
+2020-10-05 01:14:23.165  INFO 3576 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 01:16:55.638  INFO 2152 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 2152 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 01:16:55.642  INFO 2152 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 01:16:59.817  WARN 2152 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 01:17:20.791  INFO 2152 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 26.31 seconds (JVM running for 28.391)
+2020-10-05 01:17:20.794  INFO 2152 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 01:21:57.468  INFO 7964 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 7964 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 01:21:57.473  INFO 7964 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 01:22:02.853  WARN 7964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 01:22:21.683  INFO 7964 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 25.285 seconds (JVM running for 27.549)
+2020-10-05 01:22:21.686  INFO 7964 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
