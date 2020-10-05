@@ -5,6 +5,7 @@ import com.board_of_ads.models.Image;
 import com.board_of_ads.models.Role;
 import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.OAuth2Service;
+import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -29,7 +30,7 @@ import java.util.Set;
 public class OAuth2ServiceImpl implements OAuth2Service {
 
     private final UserService userService;
-    private final UserDetailsService userDetailsService;
+    private final RoleService roleService;
 
     @Override
     public String auth() {
@@ -42,8 +43,11 @@ public class OAuth2ServiceImpl implements OAuth2Service {
             if (user != null) {
                 return "redirect:/";
             }
+            user = new User();
+            Set<Role> roles = new HashSet<>();
+            roles.add(roleService.getRoleByName("USER"));
+            user.setRoles(roles);
             if (token.getAuthorizedClientRegistrationId().equals("google")) {
-                user = new User();
                 user.setAvatar(new Image(null, (String) attributes.get("picture")));
                 user.setEmail((String) attributes.get("email"));
                 user.setFirsName((String) attributes.get("given_name"));
@@ -52,7 +56,6 @@ public class OAuth2ServiceImpl implements OAuth2Service {
                 user.setPassword((String) attributes.get("email"));
                 userService.saveUser(user);
             } else if (token.getAuthorizedClientRegistrationId().equals("facebook")) {
-                user = new User();
                 user.setEmail((String) attributes.get("email"));
                 user.setPassword((String) attributes.get("email"));
                 String name = (String) attributes.get("name");
@@ -62,60 +65,48 @@ public class OAuth2ServiceImpl implements OAuth2Service {
                 user.setEnable(true);
                 userService.saveUser(user);
             }
-            User finalUser = user;
-            SecurityContextHolder.getContext().setAuthentication(new Authentication() {
-                @Override
-                public Collection<? extends GrantedAuthority> getAuthorities() {
-                    HashSet<Role> role = new HashSet<>();
-                    role.add(new Role("ROLE_LOH"));
-                    finalUser.setRoles(role);
-                    return finalUser.getAuthorities();
-                }
-
-                @Override
-                public Object getCredentials() {
-                    return null;
-                }
-
-                @Override
-                public Object getDetails() {
-                    return null;
-                }
-
-                @Override
-                public Object getPrincipal() {
-                    return finalUser;
-                }
-
-                @Override
-                public boolean isAuthenticated() {
-                    return true;
-                }
-
-                @Override
-                public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
-
-                }
-
-                @Override
-                public String getName() {
-                    return "name";
-                }
-            });
+            setAuthenticated(user);
         }
-        Authentication authentication1 = SecurityContextHolder.getContext().getAuthentication();
         return "redirect:/";
     }
 
-    public String auth2(Principal principal) {
-        if (principal instanceof OAuth2Authentication) {
-            OAuth2Authentication oauth = (OAuth2Authentication) principal;
-            Map<String, String> details = (Map<String, String>) oauth.getUserAuthentication().getDetails();
+    public void setAuthenticated(User user) {
+        SecurityContextHolder.getContext().setAuthentication(new Authentication() {
+            @Override
+            public Collection<? extends GrantedAuthority> getAuthorities() {
+                return user.getAuthorities();
+            }
 
-            return null;
+            @Override
+            public Object getCredentials() {
+                return null;
+            }
 
-        }
-        return null;
+            @Override
+            public Object getDetails() {
+                return null;
+            }
+
+            @Override
+            public Object getPrincipal() {
+                return user;
+            }
+
+            @Override
+            public boolean isAuthenticated() {
+                return true;
+            }
+
+            @Override
+            public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
+
+            }
+
+            @Override
+            public String getName() {
+                return "CustomOAuth2Authentication";
+            }
+        });
     }
 
 

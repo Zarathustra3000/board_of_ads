@@ -22,12 +22,6 @@ public class MainPageController {
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal() User user, Model model) {
-        oAuth2Service.auth();
-        if (user != null) {
-            System.out.println(user.getEmail());
-            System.out.println(user.getFirsName());
-            System.out.println(user.getLastName());
-        }
         model.addAttribute("user", user != null ? user : new User());
         return "main-page";
     }
