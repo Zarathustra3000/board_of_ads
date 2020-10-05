@@ -71,6 +71,15 @@ spring:
       fields: photo_100
       version: 5.124
 
+    auth-mail:
+      clientId: 782202
+      clientSecret: b9eb215e5bfb9c8d6d7baaf8fc5309ad
+      responseType: code
+      redirectURL: http://localhost:5556/mail_auth
+      auth: https://connect.mail.ru/oauth/authorize
+      tokenUrl: https://connect.mail.ru/oauth/token
+      userInfoUrl: http://www.appsmail.ru/platform/api
+
   jhipster:
     mail: # specific JHipster mail property, for standard properties see MailProperties
     from: kunaev993@gmail.com

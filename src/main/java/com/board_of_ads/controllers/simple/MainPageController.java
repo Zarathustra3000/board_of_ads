@@ -1,6 +1,7 @@
 package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.models.User;
+import com.board_of_ads.service.interfaces.MailService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final MailService mailService;
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal() User user, Model model) {
@@ -29,6 +31,11 @@ public class MainPageController {
     @GetMapping("/confirm/")
     public String confirmPassword() {
         return "main-page";
+    }
+    @GetMapping("/mail_auth")
+    public String mailAuth(@RequestParam(value = "code") String code) {
+        mailService.auth(code);
+        return "redirect:/";
     }
 
     /**
