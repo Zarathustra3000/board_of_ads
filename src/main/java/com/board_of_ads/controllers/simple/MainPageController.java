@@ -45,7 +45,7 @@ public class MainPageController {
         return "redirect:/";
     }
     @GetMapping("/mail_auth")
-    public String mailAuth(@RequestParam(value = "code") String code, Model model) {
+    public String mailAuth(@RequestParam(value = "code") String code) {
         mailService.auth(code);
         return "redirect:/";
     }

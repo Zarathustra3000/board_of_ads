@@ -6,7 +6,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/board_of_ads
-    username: postgres
+    username: root
     password: root
     initialization-mode: always
 
@@ -75,12 +75,12 @@ security:
     fields: photo_100
     version: 5.124
 
-  auth_mail:
-    clientId: 782185
-    clientSecret: d8521e78bf8588c86a4143584304915c
+  auth-mail:
+    clientId: 782202
+    clientSecret: b9eb215e5bfb9c8d6d7baaf8fc5309ad
     responseType: code
     redirectURL: http://localhost:5556/mail_auth
-    authUrl: https://connect.mail.ru/oauth/authorize
+    auth: https://connect.mail.ru/oauth/authorize
     tokenUrl: https://connect.mail.ru/oauth/token
     userInfoUrl: http://www.appsmail.ru/platform/api
 

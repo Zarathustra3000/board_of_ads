@@ -15,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
-/*@EnableOAuth2Sso*/
+@EnableOAuth2Sso
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
