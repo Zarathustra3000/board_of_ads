@@ -4,6 +4,6 @@ import com.board_of_ads.models.User;
 
 public interface OAuth2Service {
 
-    String auth();
+    void auth();
     void setAuthenticated(User user);
 }
