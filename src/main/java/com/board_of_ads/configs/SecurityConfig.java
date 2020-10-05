@@ -1,7 +1,6 @@
 package com.board_of_ads.configs;
 
 
-import com.board_of_ads.service.impl.OAuth2Service;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,11 +20,9 @@ import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
-    private final OAuth2Service oAuth2Service;
 
-    public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService, OAuth2Service oAuth2Service) {
+    public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
-        this.oAuth2Service = oAuth2Service;
     }
 
     @Override
@@ -33,7 +30,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().antMatchers(
                 "/css/*.css",
                 "/js/*.js",
-                "/images/*.jpg"
+                "/images/*.jpg",
+                "/images/*.png"
         );
     }
 
@@ -43,17 +41,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/google_auth", "/facebook_auth", "/vk_auth", "/yandex_auth", "/login**", "/webjars/**", "/error**", "/api/**").permitAll()
+                .antMatchers("/", "/social/**", "/login**", "/webjars/**", "/error**", "/api/**", "/confirm/*").permitAll()
                 .antMatchers("/admin_page").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
                 .and()
-                    .logout().permitAll()
+                    .logout().logoutSuccessUrl("/").permitAll()
                 .and()
                     .exceptionHandling(e -> e
                         .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
-                ).oauth2Login();
+                ).oauth2Login().defaultSuccessUrl("/social/auth");
     }
     //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
 
