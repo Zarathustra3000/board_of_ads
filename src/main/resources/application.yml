@@ -38,7 +38,7 @@ spring:
             authenticationScheme: query
             clientAuthenticationScheme: form
           resource:
-            userInfoUri: https://graph.facebook.com/me
+            userInfoUri: https://graph.facebook.com/me?fields=id,first_name,last_name,email
 
     auth_yandex:
       client_id: 2561bd17ecc1441d9c2461d780690cae

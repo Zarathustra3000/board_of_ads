@@ -16,7 +16,7 @@ public class MainPageController {
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal() User user, Model model) {
-        model.addAttribute(user != null ? user : new User());
+        model.addAttribute("user", user != null ? user : new User());
         return "main-page";
     }
 
