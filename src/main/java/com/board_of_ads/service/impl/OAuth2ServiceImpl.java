@@ -2,23 +2,34 @@
 package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
+import com.board_of_ads.models.Role;
 import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.OAuth2Service;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Service;
 
+import java.security.Principal;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
 public class OAuth2ServiceImpl implements OAuth2Service {
 
     private final UserService userService;
+    private final UserDetailsService userDetailsService;
 
     @Override
     public String auth() {
@@ -51,7 +62,61 @@ public class OAuth2ServiceImpl implements OAuth2Service {
                 user.setEnable(true);
                 userService.saveUser(user);
             }
+            User finalUser = user;
+            SecurityContextHolder.getContext().setAuthentication(new Authentication() {
+                @Override
+                public Collection<? extends GrantedAuthority> getAuthorities() {
+                    HashSet<Role> role = new HashSet<>();
+                    role.add(new Role("ROLE_LOH"));
+                    finalUser.setRoles(role);
+                    return finalUser.getAuthorities();
+                }
+
+                @Override
+                public Object getCredentials() {
+                    return null;
+                }
+
+                @Override
+                public Object getDetails() {
+                    return null;
+                }
+
+                @Override
+                public Object getPrincipal() {
+                    return finalUser;
+                }
+
+                @Override
+                public boolean isAuthenticated() {
+                    return true;
+                }
+
+                @Override
+                public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
+
+                }
+
+                @Override
+                public String getName() {
+                    return "name";
+                }
+            });
         }
+        Authentication authentication1 = SecurityContextHolder.getContext().getAuthentication();
         return "redirect:/";
     }
+
+    public String auth2(Principal principal) {
+        if (principal instanceof OAuth2Authentication) {
+            OAuth2Authentication oauth = (OAuth2Authentication) principal;
+            Map<String, String> details = (Map<String, String>) oauth.getUserAuthentication().getDetails();
+
+            return null;
+
+        }
+        return null;
+    }
+
+
 }
