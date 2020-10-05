@@ -59,8 +59,6 @@ public class PostingServiceImpl implements PostingService {
         List<PostingDto> postingDtos = postingRepository.findAllPostings();
         for(PostingDto dto : postingDtos) {
            dto.setImages(getPostingById(dto.getId()).getImages());
-            System.out.println(dto.getId());
-            System.out.println(dto.getImages());
         }
         return postingDtos;
     }
