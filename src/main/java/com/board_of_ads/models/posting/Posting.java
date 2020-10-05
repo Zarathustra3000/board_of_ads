@@ -49,7 +49,7 @@ public class Posting {
     }
 
     public Posting(User user, Category category, String title, String description, Long price, String contact, City city) {
-        this(user, category, title, description,  price, contact);
+        this(user, category, title, description, price, contact);
         this.city = city;
     }
 
@@ -78,7 +78,7 @@ public class Posting {
     private String contact;
 
     @Column
-    private String meetingPoint;
+    private String meetingAddress;
 
     @Column
     private Boolean isActive;
