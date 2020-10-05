@@ -32,11 +32,7 @@ public class MainPageController {
     public String confirmPassword() {
         return "main-page";
     }
-    @GetMapping("/mail_auth")
-    public String mailAuth(@RequestParam(value = "code") String code) {
-        mailService.auth(code);
-        return "redirect:/";
-    }
+
 
     /**
      * todo delete

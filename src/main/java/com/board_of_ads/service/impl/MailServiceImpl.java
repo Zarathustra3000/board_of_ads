@@ -30,7 +30,7 @@ import java.util.Map;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@ConfigurationProperties(prefix = "security.auth-mail")
+@ConfigurationProperties(prefix = "spring.security.auth-mail")
 
 public class MailServiceImpl implements MailService {
 
