@@ -38,14 +38,14 @@ spring:
             authenticationScheme: query
             clientAuthenticationScheme: form
           resource:
-            userInfoUri: https://graph.facebook.com/me
+            userInfoUri: https://graph.facebook.com/me?fields=id,first_name,last_name,email
 
     auth_yandex:
       client_id: 2561bd17ecc1441d9c2461d780690cae
       client_secret: cc96fba5ab674d159b7d191215e1697b
       response_type: code
       display: popup
-      redirect_url: http://localhost:5556/yandex_auth
+      redirect_url: http://localhost:5556/social/auth_yandex
       auth_url: https://oauth.yandex.ru/authorize
       token_url: https://oauth.yandex.ru/token
       user_info_url: https://login.yandex.ru/info
@@ -54,7 +54,7 @@ spring:
       client_id: 7604924
       client_secret: acpHC7p5T746jYx17yz1
       response_type: code
-      redirect_url: http://localhost:5556/vk_auth
+      redirect_url: http://localhost:5556/social/auth_vk
       auth_url: http://oauth.vk.com/authorize
       token_url: https://oauth.vk.com/access_token
       users_get_url: https://api.vk.com/method/users.get
