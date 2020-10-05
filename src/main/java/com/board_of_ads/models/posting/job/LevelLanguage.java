@@ -20,7 +20,7 @@ import javax.persistence.Table;
 public class LevelLanguage {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @ManyToOne
