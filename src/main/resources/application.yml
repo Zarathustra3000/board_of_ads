@@ -22,6 +22,14 @@ spring:
         jdbc:
           timezone: UTC
 
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: echopride@yandex.ru
+    password: terror333
+    protocol: smtps
+    debug : true
+
   security:
     oauth2:
       client:
@@ -63,18 +71,6 @@ spring:
       fields: photo_100
       version: 5.124
 
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: kunaev993@gmail.com
-    password: nikola9393
-    protocol: smtp
-    tls: true
-    properties.mail.smtp:
-      auth: true
-      starttls.enable: true
-      ssl.trust: smtp.gmail.com
-
   jhipster:
     mail: # specific JHipster mail property, for standard properties see MailProperties
     from: kunaev993@gmail.com
@@ -91,4 +87,6 @@ logging:
     org.hibernate: WARN
     com.board_of_ads: INFO
 
+jwt:
+  secret: boardofads
 
