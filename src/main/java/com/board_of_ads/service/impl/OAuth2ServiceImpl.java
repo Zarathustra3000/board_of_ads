@@ -21,7 +21,7 @@ public class OAuth2ServiceImpl implements OAuth2Service {
     private final UserService userService;
 
     @Override
-    public String auth() {
+    public void auth() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication instanceof OAuth2AuthenticationToken) {
             OAuth2AuthenticationToken token = (OAuth2AuthenticationToken) authentication;
@@ -29,7 +29,7 @@ public class OAuth2ServiceImpl implements OAuth2Service {
             Map<String, Object> attributes = oAuth2User.getAttributes();
             User user = userService.getUserByEmail((String) attributes.get("email"));
             if (user != null) {
-                return "redirect:/";
+                return;
             }
             if (token.getAuthorizedClientRegistrationId().equals("google")) {
                 user = new User();
@@ -52,6 +52,5 @@ public class OAuth2ServiceImpl implements OAuth2Service {
                 userService.saveUser(user);
             }
         }
-        return "redirect:/";
     }
 }
