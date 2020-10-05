@@ -36,6 +36,7 @@ public class OAuth2ServiceImpl implements OAuth2Service {
             Map<String, Object> attributes = oAuth2User.getAttributes();
             User user = userService.getUserByEmail((String) attributes.get("email"));
             if (user != null) {
+                setAuthenticated(user);
                 return;
             }
             user = new User();
