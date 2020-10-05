@@ -71,17 +71,12 @@ function getPostingsTable() {
                     }
 
                 } else {
-                    document.getElementById("carouselIndicators" + step).innerHTML +=
-                        `<li id="indicator0" data-target="#ImageSlider${step}" data-slide-to="0" class="active"></li>`
                     document.getElementById("carouselInner" + step).innerHTML +=
                         `<div class="carousel-item active">
                                     <a href="#">
                                         <img id="postingImageRef" src="../images/empty_image.jpg" class="card-img-top" alt="">
                                     </a>
                                 </div>`
-                    $("#indicator0").on("mouseover", function () {
-                        $("#indicator0").click();
-                    });
                 }
             }
         }
