@@ -130,3 +130,922 @@
 2020-10-05 04:49:06.342  WARN 8956 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-10-05 04:49:23.152  INFO 8956 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 20.607 seconds (JVM running for 22.377)
 2020-10-05 04:49:23.155  INFO 8956 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 04:59:28.349  INFO 7760 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 7760 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 04:59:28.357  INFO 7760 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 04:59:31.085  WARN 7760 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 04:59:47.042  INFO 7760 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 19.479 seconds (JVM running for 21.245)
+2020-10-05 04:59:47.046  INFO 7760 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:02:59.779  INFO 6516 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 6516 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:02:59.783  INFO 6516 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:03:02.547  WARN 6516 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:03:19.073  INFO 6516 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 20.112 seconds (JVM running for 21.78)
+2020-10-05 05:03:19.077  INFO 6516 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:03:57.691  INFO 7668 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 7668 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:03:57.696  INFO 7668 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:04:01.098  WARN 7668 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:04:18.430  INFO 7668 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 21.534 seconds (JVM running for 23.157)
+2020-10-05 05:04:18.433  INFO 7668 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:05:26.228 ERROR 7668 --- [http-nio-5556-exec-10] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-5556-exec-10] Exception processing template "main-page": An error happened during template parsing (template: "templates/main-page.html")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "templates/main-page.html")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:64) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:160) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "user.getAvatar().getPathURL()" (template: "fragments/header" - line 34, col 71)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 89 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.getAvatar().getPathURL()" (template: "fragments/header" - line 34, col 71)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 91 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method getPathURL() on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:154) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:83) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:70) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 113 common frames omitted
+
+2020-10-05 05:05:26.236 ERROR 7668 --- [http-nio-5556-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "templates/main-page.html")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method getPathURL() on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:154) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:83) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:70) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:64) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:160) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2020-10-05 05:06:56.304  INFO 2428 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 2428 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:06:56.310  INFO 2428 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:06:58.965  WARN 2428 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:07:14.924  INFO 2428 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 19.569 seconds (JVM running for 21.864)
+2020-10-05 05:07:14.927  INFO 2428 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:08:14.931  INFO 10836 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 10836 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:08:14.935  INFO 10836 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:08:17.773  WARN 10836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:08:35.041  INFO 10836 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 20.897 seconds (JVM running for 22.633)
+2020-10-05 05:08:35.046  INFO 10836 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:10:22.135  INFO 9796 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 9796 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:10:22.139  INFO 9796 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:10:25.684  WARN 9796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:10:43.414  INFO 9796 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 22.096 seconds (JVM running for 24.049)
+2020-10-05 05:10:43.418  INFO 9796 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:11:57.856  INFO 3628 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 3628 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:11:57.861  INFO 3628 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:12:00.846  WARN 3628 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:12:17.349  INFO 3628 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 20.365 seconds (JVM running for 24.331)
+2020-10-05 05:12:17.352  INFO 3628 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:13:28.537  INFO 5644 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 5644 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:13:28.541  INFO 5644 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:13:31.273 ERROR 5644 --- [restartedMain] o.a.catalina.session.StandardManager     : Exception loading sessions from persistent storage
+
+java.io.InvalidClassException: com.board_of_ads.service.impl.OAuth2ServiceImpl$1; local class incompatible: stream classdesc serialVersionUID = 1815351222758823423, local class serialVersionUID = -510036529212054076
+	at java.base/java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:715) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1999) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1868) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2161) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1685) ~[na:na]
+	at java.base/java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2498) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2392) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2193) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1685) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:499) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:457) ~[na:na]
+	at org.apache.catalina.session.StandardSession.doReadObject(StandardSession.java:1587) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:1040) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:218) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:162) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:354) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5156) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at com.board_of_ads.BoardOfAdsApplication.main(BoardOfAdsApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+
+2020-10-05 05:13:31.778  WARN 5644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:13:51.498  INFO 5644 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 24.031 seconds (JVM running for 26.124)
+2020-10-05 05:13:51.503  INFO 5644 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:14:08.068  INFO 3508 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 3508 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:14:08.073  INFO 3508 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:14:11.150  WARN 3508 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:14:13.403  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.405  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-05 05:14:13.406  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.407  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-05 05:14:13.408  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.408  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-05 05:14:13.409  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.409  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-05 05:14:13.410  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.410  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-05 05:14:13.411  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.411  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-05 05:14:13.412  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.412  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-05 05:14:13.413  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.413  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-05 05:14:13.414  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.414  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-05 05:14:13.415  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.416  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-05 05:14:13.416  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.417  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-05 05:14:13.417  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.418  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-05 05:14:13.418  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.419  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-05 05:14:13.419  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.419  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:14:13.420  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.421  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:14:13.422  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.422  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-05 05:14:13.423  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.423  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-05 05:14:13.424  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.424  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-05 05:14:13.425  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.425  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-05 05:14:13.426  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.426  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:14:13.428  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.429  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:14:13.430  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.430  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:14:13.430  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.431  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:14:13.431  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.432  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-05 05:14:13.432  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.433  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:14:13.433  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.434  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:14:13.434  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.435  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:14:13.435  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.435  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:14:13.436  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.436  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-05 05:14:13.437  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.437  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-05 05:14:13.438  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.438  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-05 05:14:13.439  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.439  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-05 05:14:13.440  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.441  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-05 05:14:13.441  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.442  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-05 05:14:13.442  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.443  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-05 05:14:13.443  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.443  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-05 05:14:13.444  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.444  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-05 05:14:13.445  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.445  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-05 05:14:13.446  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.446  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:14:13.447  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.447  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:14:13.447  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.447  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:14:13.448  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.448  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-05 05:14:13.449  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.449  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-05 05:14:13.450  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.450  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-05 05:14:13.451  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.451  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-05 05:14:13.452  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.452  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-05 05:14:13.452  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.453  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-05 05:14:13.454  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.454  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-05 05:14:13.455  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.455  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-05 05:14:13.456  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.456  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-05 05:14:13.457  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.457  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-05 05:14:13.458  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.458  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-05 05:14:13.459  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.459  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-05 05:14:13.460  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.460  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-05 05:14:13.461  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.461  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-05 05:14:13.461  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.462  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-05 05:14:13.462  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.462  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-05 05:14:13.463  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.463  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-05 05:14:13.464  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.464  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-05 05:14:13.465  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.465  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:14:13.465  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.466  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-05 05:14:13.466  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.466  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-05 05:14:13.467  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.467  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-05 05:14:13.468  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.468  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-05 05:14:13.469  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.469  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-05 05:14:13.470  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.470  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-05 05:14:13.471  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.471  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-05 05:14:13.472  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.472  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:14:13.472  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.472  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-05 05:14:13.473  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.473  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:14:13.473  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.473  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:14:13.474  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.474  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-05 05:14:13.475  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.475  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-05 05:14:13.475  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.475  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-05 05:14:13.476  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.476  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-05 05:14:13.477  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.477  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-05 05:14:13.477  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.477  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-05 05:14:13.478  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.478  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-05 05:14:13.479  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.479  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-05 05:14:13.479  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.479  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-05 05:14:13.480  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.481  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-05 05:14:13.481  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.481  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings" не существует, пропускается
+2020-10-05 05:14:13.482  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.482  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings_images" не существует, пропускается
+2020-10-05 05:14:13.483  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.483  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-05 05:14:13.483  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.483  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-05 05:14:13.484  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.484  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-05 05:14:13.485  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.485  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-05 05:14:13.485  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.485  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-05 05:14:13.486  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.486  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-05 05:14:13.488  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:14:13.488  WARN 3508 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-05 05:14:28.479  INFO 3508 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 21.352 seconds (JVM running for 23.802)
+2020-10-05 05:14:28.483  INFO 3508 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:16:37.878  INFO 7616 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 7616 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:16:37.900  INFO 7616 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:16:40.628  WARN 7616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [FE0487CF10E0D76F892C817009648BAA]
+2020-10-05 05:16:41.013  WARN 7616 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:16:43.185  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.188  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-05 05:16:43.189  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.189  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-05 05:16:43.190  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.190  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-05 05:16:43.191  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.191  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-05 05:16:43.192  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.192  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-05 05:16:43.193  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.193  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-05 05:16:43.194  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.195  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-05 05:16:43.195  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.196  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-05 05:16:43.196  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.197  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-05 05:16:43.198  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.198  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-05 05:16:43.199  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.199  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-05 05:16:43.200  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.200  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-05 05:16:43.200  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.201  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-05 05:16:43.201  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.202  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:16:43.203  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.203  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:16:43.204  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.205  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-05 05:16:43.206  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.207  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-05 05:16:43.208  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.209  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-05 05:16:43.210  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.210  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-05 05:16:43.211  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.213  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:16:43.214  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.214  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:16:43.215  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.215  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:16:43.216  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.216  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:16:43.217  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.217  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-05 05:16:43.218  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.218  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:16:43.219  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.219  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:16:43.220  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.220  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:16:43.221  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.221  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:16:43.222  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.222  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-05 05:16:43.223  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.223  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-05 05:16:43.224  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.224  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-05 05:16:43.225  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.225  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-05 05:16:43.225  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.226  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-05 05:16:43.226  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.227  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-05 05:16:43.228  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.228  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-05 05:16:43.229  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.229  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-05 05:16:43.229  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.229  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-05 05:16:43.230  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.230  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-05 05:16:43.231  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.232  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:16:43.232  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.232  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:16:43.233  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.233  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:16:43.234  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.234  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-05 05:16:43.235  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.235  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-05 05:16:43.236  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.236  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-05 05:16:43.237  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.237  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-05 05:16:43.238  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.238  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-05 05:16:43.239  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.239  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-05 05:16:43.252  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.252  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-05 05:16:43.253  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.254  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-05 05:16:43.254  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.254  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-05 05:16:43.255  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.255  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-05 05:16:43.256  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.256  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-05 05:16:43.257  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.257  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-05 05:16:43.257  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.257  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-05 05:16:43.258  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.258  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-05 05:16:43.259  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.259  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-05 05:16:43.260  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.260  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-05 05:16:43.260  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.261  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-05 05:16:43.261  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.261  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-05 05:16:43.262  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.262  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:16:43.263  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.263  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-05 05:16:43.264  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.264  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-05 05:16:43.264  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.265  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-05 05:16:43.265  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.265  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-05 05:16:43.266  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.266  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-05 05:16:43.267  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.267  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-05 05:16:43.268  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.268  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-05 05:16:43.268  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.268  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:16:43.269  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.269  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-05 05:16:43.270  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.270  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:16:43.271  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.271  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:16:43.272  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.272  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-05 05:16:43.272  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.272  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-05 05:16:43.273  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.273  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-05 05:16:43.274  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.274  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-05 05:16:43.274  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.274  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-05 05:16:43.275  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.275  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-05 05:16:43.276  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.276  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-05 05:16:43.276  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.276  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-05 05:16:43.277  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.277  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-05 05:16:43.277  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.277  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-05 05:16:43.278  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.278  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings" не существует, пропускается
+2020-10-05 05:16:43.279  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.279  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings_images" не существует, пропускается
+2020-10-05 05:16:43.280  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.280  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-05 05:16:43.280  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.281  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-05 05:16:43.281  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.281  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-05 05:16:43.282  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.282  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-05 05:16:43.283  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.283  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-05 05:16:43.283  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.283  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-05 05:16:43.285  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:16:43.285  WARN 7616 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-05 05:16:58.383  INFO 7616 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 21.601 seconds (JVM running for 24.482)
+2020-10-05 05:16:58.388  INFO 7616 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-05 05:20:06.659  INFO 8352 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on SD with PID 8352 (D:\board_of_ads\target\classes started by SD in D:\board_of_ads)
+2020-10-05 05:20:06.681  INFO 8352 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-05 05:20:10.791  WARN 8352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-05 05:20:12.755  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.757  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-05 05:20:12.758  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.758  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-05 05:20:12.758  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.759  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-05 05:20:12.761  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.761  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-05 05:20:12.762  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.762  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-05 05:20:12.763  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.764  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-05 05:20:12.766  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.766  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-05 05:20:12.768  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.768  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-05 05:20:12.769  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.769  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-05 05:20:12.770  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.770  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-05 05:20:12.771  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.771  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-05 05:20:12.772  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.772  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-05 05:20:12.773  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.773  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-05 05:20:12.774  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.774  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:20:12.775  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.776  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:20:12.777  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.778  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-05 05:20:12.779  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.779  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-05 05:20:12.781  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.781  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-05 05:20:12.782  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.782  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-05 05:20:12.783  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.784  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:20:12.785  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.785  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:20:12.786  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.787  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:20:12.788  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.788  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:20:12.789  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.790  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-05 05:20:12.791  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.791  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:20:12.792  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.794  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:20:12.795  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.796  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:20:12.797  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.797  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:20:12.798  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.799  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-05 05:20:12.800  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.800  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-05 05:20:12.801  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.801  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-05 05:20:12.802  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.802  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-05 05:20:12.803  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.803  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-05 05:20:12.804  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.805  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-05 05:20:12.806  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.806  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-05 05:20:12.807  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.807  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-05 05:20:12.808  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.808  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-05 05:20:12.811  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.811  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-05 05:20:12.812  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.812  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:20:12.813  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.813  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:20:12.814  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.814  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-05 05:20:12.815  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.815  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-05 05:20:12.816  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.817  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-05 05:20:12.817  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.818  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-05 05:20:12.818  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.819  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-05 05:20:12.820  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.820  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-05 05:20:12.821  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.821  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-05 05:20:12.822  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.823  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-05 05:20:12.825  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.825  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-05 05:20:12.827  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.827  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-05 05:20:12.828  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.828  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-05 05:20:12.829  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.830  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-05 05:20:12.830  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.831  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-05 05:20:12.832  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.832  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-05 05:20:12.833  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.833  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-05 05:20:12.834  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.834  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-05 05:20:12.835  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.835  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-05 05:20:12.836  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.836  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-05 05:20:12.837  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.837  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-05 05:20:12.838  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.838  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-05 05:20:12.839  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.840  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-05 05:20:12.840  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.841  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-05 05:20:12.842  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.844  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-05 05:20:12.845  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.845  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-05 05:20:12.846  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.846  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-05 05:20:12.847  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.847  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-05 05:20:12.848  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.848  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-05 05:20:12.849  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.849  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-05 05:20:12.850  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.850  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-05 05:20:12.851  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.852  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-05 05:20:12.853  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.853  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-05 05:20:12.854  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.854  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-05 05:20:12.855  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.855  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-05 05:20:12.856  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.856  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-05 05:20:12.857  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.857  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-05 05:20:12.858  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.859  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-05 05:20:12.861  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.861  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-05 05:20:12.862  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.862  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-05 05:20:12.863  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.864  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-05 05:20:12.865  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.865  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-05 05:20:12.866  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.866  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-05 05:20:12.867  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.868  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings" не существует, пропускается
+2020-10-05 05:20:12.869  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.869  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings_images" не существует, пропускается
+2020-10-05 05:20:12.870  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.870  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-05 05:20:12.872  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.872  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-05 05:20:12.873  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.873  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-05 05:20:12.874  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.875  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-05 05:20:12.876  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.877  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-05 05:20:12.878  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.878  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-05 05:20:12.880  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-05 05:20:12.880  WARN 8352 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-05 05:20:32.199  INFO 8352 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 26.66 seconds (JVM running for 28.874)
+2020-10-05 05:20:32.202  INFO 8352 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
