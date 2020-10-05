@@ -43,6 +43,11 @@ public class MainPageController {
         return "redirect:/";
     }
 
+    @GetMapping("/confirm/")
+    public String confirmPassword() {
+        return "main-page";
+    }
+
     /** todo delete
      * Тестовый контроллер для проверки авторизации.
      * Если при переходе на /test вас перенаправило на главную страницу ВК, то вы авторизованы

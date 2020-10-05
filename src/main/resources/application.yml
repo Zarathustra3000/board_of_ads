@@ -22,17 +22,16 @@ spring:
         jdbc:
           timezone: UTC
 
-  mail: # gmail блокирует приложени. Для проверки можете написать данные яндекса.
-    host: smtp.gmail.com
-    port: 587
-    username: kunaev993@gmail.com #email вставляйте свой
-    password: nikola9393 #password вставляйте свой так как он фейковый
-    protocol: smtp
-    tls: true
-    properties.mail.smtp:
-      auth: true
-      starttls.enable: true
-      ssl.trust: smtp.gmail.com
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: echopride@yandex.ru
+    password: terror333
+    protocol: smtps
+    debug : true
+
+jwt:
+  secret: boardofads
 
 jhipster:
   mail: # specific JHipster mail property, for standard properties see MailProperties
