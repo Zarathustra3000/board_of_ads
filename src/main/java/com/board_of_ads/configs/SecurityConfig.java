@@ -1,10 +1,11 @@
 package com.board_of_ads.configs;
 
 
+import com.board_of_ads.service.impl.OAuth2Service;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -13,16 +14,18 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 
 @Configuration
-/*@EnableOAuth2Sso*/
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
+    private final OAuth2Service oAuth2Service;
 
-    public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService) {
+    public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService, OAuth2Service oAuth2Service) {
         this.userDetailsService = userDetailsService;
+        this.oAuth2Service = oAuth2Service;
     }
 
     @Override
@@ -40,15 +43,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/vk_auth", "/login**", "/webjars/**", "/error**", "/api/**" ,"/confirm/*").permitAll()
+                .antMatchers("/", "/google_auth", "/facebook_auth", "/yandex_auth", "/vk_auth", "/login**", "/webjars/**", "/error**", "/api/**" ,"/confirm/*").permitAll()
                 .antMatchers("/admin_page").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
                 .and()
-                    .logout().permitAll();
+                    .logout().permitAll()
+                .and()
+                    .exceptionHandling(e -> e
+                        .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
+                ).oauth2Login();
     }
-
     //при проверки для внесения в БД зашифрованного пароля используйте: https://bcrypt-generator.com/
 
     @Override
@@ -60,5 +66,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(12);
     }
-
 }
