@@ -82,4 +82,7 @@ function getPostingsTable() {
         }
     })
 }
-getPostingsTable()
+$(document).ready(function() {
+    getPostingsTable();
+});
+
