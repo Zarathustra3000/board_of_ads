@@ -47,10 +47,16 @@
     margin: 0;
 }
 .carousel-indicators li {
-    background-color: gray;
+    background-color: transparent;
     width: 70px;
-    margin: 0px;
+    height: 130px;
+    margin: 1px;
+    border-bottom: 5px solid gray;
 }
 .carousel-indicators li:hover {
-    background-color: #00aaff;
+    background-color: transparent;
+    border-bottom-color: blue;
+}
+.carousel-indicators li:active {
+    border-bottom-color: blue;
 }
