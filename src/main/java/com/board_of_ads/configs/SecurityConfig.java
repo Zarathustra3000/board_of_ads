@@ -1,7 +1,6 @@
 package com.board_of_ads.configs;
 
 
-import com.board_of_ads.service.interfaces.OAuth2Service;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,11 +20,9 @@ import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
-//    private final OAuth2Service oAuth2Service;
 
     public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
-//        this.oAuth2Service = oAuth2Service;
     }
 
     @Override

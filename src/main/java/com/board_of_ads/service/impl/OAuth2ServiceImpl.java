@@ -8,18 +8,13 @@ import com.board_of_ads.service.interfaces.OAuth2Service;
 import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
-import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Service;
 
-import java.security.Principal;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
@@ -70,6 +65,7 @@ public class OAuth2ServiceImpl implements OAuth2Service {
         return "redirect:/";
     }
 
+    @Override
     public void setAuthenticated(User user) {
         SecurityContextHolder.getContext().setAuthentication(new Authentication() {
             @Override
@@ -108,6 +104,4 @@ public class OAuth2ServiceImpl implements OAuth2Service {
             }
         });
     }
-
-
 }

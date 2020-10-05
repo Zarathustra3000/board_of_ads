@@ -1,8 +1,6 @@
 package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.impl.OAuth2ServiceImpl;
-import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,14 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.security.Principal;
-
 @Controller
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-    private final UserService userService;
-    private final OAuth2ServiceImpl oAuth2Service;
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal() User user, Model model) {

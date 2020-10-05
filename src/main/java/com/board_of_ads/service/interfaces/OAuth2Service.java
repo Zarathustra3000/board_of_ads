@@ -1,8 +1,9 @@
 package com.board_of_ads.service.interfaces;
 
-import java.security.Principal;
+import com.board_of_ads.models.User;
 
 public interface OAuth2Service {
 
     String auth();
+    void setAuthenticated(User user);
 }
