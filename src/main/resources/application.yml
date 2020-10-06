@@ -64,7 +64,7 @@ spring:
       response_type: code
       scope: GET_EMAIL;VALUABLE_ACCESS;LONG_ACCESS_TOKEN;PHOTO_CONTENT;
       grant_type: authorization_code
-      redirect_url: http://localhost:5556/social/ok_auth
+      redirect_url: http://localhost:5556/social/auth_ok
       auth_url: https://connect.ok.ru/oauth/authorize
       token_url: https://api.ok.ru/oauth/token.do
       user_info_url: http://api.ok.ru/fb.do
