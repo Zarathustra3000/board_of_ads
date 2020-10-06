@@ -39,7 +39,6 @@ public class AuthController {
         return "redirect:/oauth2/authorization/google";
     }
 
-
     @GetMapping("/auth_vk")
     public String vkAuth(@RequestParam(value = "code", required = false) String code, Model model) {
         if (code == null) {

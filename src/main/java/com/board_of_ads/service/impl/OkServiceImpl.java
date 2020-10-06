@@ -52,7 +52,6 @@ public class OkServiceImpl implements OkService {
     private String clientPublic;
     private String format;
 
-
     @Override
     public void auth(String code) {
         String token = getToken(getRequestBody(code));
@@ -149,6 +148,7 @@ public class OkServiceImpl implements OkService {
         Map<String, String> userData = new HashMap<>();
         userData.put("first_name", (String) jsonObject.get("first_name"));
         userData.put("last_name", (String) jsonObject.get("last_name"));
+        userData.put("email", (String) jsonObject.get("email"));
         userData.put("avatar_link", "https://ok.ru/profile/"
                 + jsonObject.get("uid") + "/pphotos/" + jsonObject.get("photo_id"));
         return userData;
@@ -169,10 +169,11 @@ public class OkServiceImpl implements OkService {
         user = new User();
         user.setEnable(true);
         user.setDataRegistration(LocalDateTime.now());
+        user.setEmail(userData.get("email"));
         user.setFirsName(userData.get("first_name"));
         user.setLastName(userData.get("last_name"));
         user.setAvatar(new Image(null, userData.get("avatar_link")));
-        user.setPassword(userData.get("first_name") + userData.get("last_name")); //todo create set password page (and phone)
+        user.setPassword(userData.get("email")); //todo create set password page (and phone)
         userService.saveUser(user);
         return user;
     }
