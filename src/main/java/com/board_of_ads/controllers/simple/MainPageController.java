@@ -1,6 +1,7 @@
 package com.board_of_ads.controllers.simple;
 
 import com.board_of_ads.models.User;
+import com.board_of_ads.service.interfaces.MailService;
 import com.board_of_ads.service.interfaces.AuthorizationService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @AllArgsConstructor
 public class MainPageController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final MailService mailService;
     private final AuthorizationService authorizationService;
     private final UserService userService;
 
@@ -52,6 +54,7 @@ public class MainPageController {
     public String confirmPassword() {
         return "main-page";
     }
+
 
     /**
      * todo delete
