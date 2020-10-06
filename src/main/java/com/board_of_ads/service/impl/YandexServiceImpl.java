@@ -1,7 +1,9 @@
 package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
+import com.board_of_ads.models.Role;
 import com.board_of_ads.models.User;
+import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.service.interfaces.YandexService;
 import lombok.Getter;
@@ -24,7 +26,9 @@ import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 @Service
 @Getter
@@ -34,6 +38,7 @@ import java.util.Map;
 public class YandexServiceImpl implements YandexService {
 
     private final UserService userService;
+    private final RoleService roleService;
 
     private String clientId;
     private String clientSecret;
@@ -148,6 +153,9 @@ public class YandexServiceImpl implements YandexService {
             return user;
         }
         user = new User();
+        Set<Role> roles = new HashSet<>();
+        roles.add(roleService.getRoleByName("USER"));
+        user.setRoles(roles);
         user.setEnable(true);
         user.setDataRegistration(LocalDateTime.now());
         user.setEmail(userData.get("email"));
