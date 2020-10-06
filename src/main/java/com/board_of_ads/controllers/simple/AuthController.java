@@ -57,7 +57,7 @@ public class AuthController {
         return "redirect:/";
     }
 
-    @GetMapping("/auth_ok")
+    @GetMapping("/ok_auth")
     public String okAuth(@RequestParam(value = "code", required = false) String code, Model model) {
         if (code == null) {
             return "redirect:" + okService.getAuthURL();
