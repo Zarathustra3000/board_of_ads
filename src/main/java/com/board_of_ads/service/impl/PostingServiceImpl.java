@@ -56,6 +56,10 @@ public class PostingServiceImpl implements PostingService {
 
     @Override
     public List<PostingDto> getAllPostings() {
-        return postingRepository.findAllPostings();
+        List<PostingDto> postingDtos = postingRepository.findAllPostings();
+        for(PostingDto dto : postingDtos) {
+           dto.setImages(getPostingById(dto.getId()).getImages());
+        }
+        return postingDtos;
     }
 }
