@@ -33,7 +33,6 @@
                     <tr>
                         <th scope="col" th:text="#{adminPanelUserID}">ИД</th>
                         <th scope="col" th:text="#{adminPanelUserMail}">Почта</th>
-                        <th scope="col" th:text="#{adminPanelUserPassword}">Пароль</th>
                         <th scope="col" th:text="#{adminPanelUserFirstName}">Имя</th>
                         <th scope="col" th:text="#{adminPanelUserLastName}">Фамилия</th>
                         <th scope="col" th:text="#{adminPanelUserPhone}">Телефон</th>
@@ -110,6 +109,11 @@
                             <label for="updUserName" th:text="#{adminPanelUserFirstName}">Имя</label>
                             <input type="text" class="form-control" id="updUserName"
                                    name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="updUserPassword" th:text="#{adminPanelUserPassword}">Пароль</label>
+                            <input type="text" class="form-control" id="updUserPassword"
+                                   name="password">
                         </div>
                         <div class="form-group">
                             <label for="updUserEmail" th:text="#{adminPanelUserMail}">Почта</label>

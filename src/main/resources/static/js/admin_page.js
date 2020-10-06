@@ -1,8 +1,8 @@
-let viewAllUsersUrl = 'http://localhost:5556/api/admin/getAllUsers';
-let getUserById = 'http://localhost:5556/api/admin/getUserById';
-let deleteUserById = 'http://localhost:5556/api/admin/deleteUser';
-let createNewUser = 'http://localhost:5556/api/admin/addNewUser';
-let updateUser = 'http://localhost:5556/api/admin/updateUser';
+let viewAllUsersUrl = 'http://localhost:5556/api/admin/allUsers';
+let getUserById = 'http://localhost:5556/api/admin/user';
+let deleteUserById = 'http://localhost:5556/api/admin/user';
+let createNewUser = 'http://localhost:5556/api/admin/newUser';
+let updateUser = 'http://localhost:5556/api/admin/newUserData';
 
 let adminUsersTable = $('#userTableJs tbody');
 let deleteButtonInModalForm = $('#deleteButtonInModal div');
@@ -35,7 +35,6 @@ function showAllUsersTable() {
             return response.json();
         })
         .then((data) => {
-            console.log(data);
             if (data.success) {
                 data.data.map(user => {
 
@@ -54,16 +53,18 @@ function showAllUsersTable() {
 
                     for (let o in user) {
                         let td = document.createElement('td');
+                        let text = document.createTextNode(user[o]);
+
+                        if (user[o] === null) {
+                            text = document.createTextNode("No Data");
+                        }
+
                         if (counter === 0) {
                             userIdForDelete = "fillingModalFormDelete" + "(" + user[o] + ")";
                             userIdForUpdate = "fillingModalFormUpdate" + "(" + user[o] + ")";
                         }
-                        if (counter === 2) {
-                            td.appendChild(document.createTextNode(user[o].substring(1,27)));
-                            tr.appendChild(td);
-                        }
                         if (counter !== 6 && counter !== 9 && counter !== 2) {
-                            td.appendChild(document.createTextNode(user[o]));
+                            td.appendChild(text);
                             tr.appendChild(td);
                         }
                         if (counter === 9) {
@@ -147,10 +148,10 @@ async function updateUsers(value) {
 
     let data = {
 
+        id: $('#updUserID').val(),
         email: $('#updUserEmail').val(),
-        password: $('#AdminPanelUserPassword').val(),
-        firsName: $('#updUserEmail').val(),
-        lastName: $('#AdminPanelUserLastName').val(),
+        password: $('#updUserPassword').val(),
+        firsName: $('#updUserName').val(),
 
         roles: roleArray
 
@@ -249,6 +250,7 @@ function fillingModalFormUpdate(id) {
             $('#updUserID').val(id);
             $('#updUserName').val(data.data.firsName);
             $('#updUserEmail').val(data.data.email);
+            $('#updUserPassword').val(data.data.password);
             $('#updUserDataReg').val(data.data.dataRegistration);
 
         });

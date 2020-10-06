@@ -2709,3 +2709,840 @@ org.postgresql.util.PSQLException: ОШИБКА: повторяющееся зн
 2020-10-01 23:28:12.557  WARN 11620 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-10-01 23:28:22.240  INFO 11620 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 12.113 seconds (JVM running for 13.017)
 2020-10-01 23:28:22.242  INFO 11620 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 10:39:31.333  INFO 8248 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 8248 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 10:39:31.336  INFO 8248 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 10:39:33.535  WARN 8248 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 10:39:43.083  INFO 8248 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 12.138 seconds (JVM running for 13.232)
+2020-10-06 10:39:43.085  INFO 8248 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:11:08.808  INFO 1256 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 1256 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:11:08.811  INFO 1256 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:11:10.150  WARN 1256 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:11:18.775  INFO 1256 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.279 seconds (JVM running for 10.866)
+2020-10-06 11:11:18.778  INFO 1256 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:13:22.034  INFO 4704 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 4704 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:13:22.036  INFO 4704 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:13:23.447  WARN 4704 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:13:31.855  INFO 4704 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.098 seconds (JVM running for 10.651)
+2020-10-06 11:13:31.857  INFO 4704 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:13:55.429  INFO 8884 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 8884 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:13:55.431  INFO 8884 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:13:56.765  WARN 8884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:14:05.319  INFO 8884 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.161 seconds (JVM running for 10.676)
+2020-10-06 11:14:05.321  INFO 8884 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:14:28.981  INFO 6652 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 6652 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:14:28.983  INFO 6652 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:14:30.323  WARN 6652 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:14:38.879  INFO 6652 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.187 seconds (JVM running for 10.73)
+2020-10-06 11:14:38.881  INFO 6652 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:15:58.960  INFO 10500 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 10500 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:15:58.962  INFO 10500 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:16:00.260  WARN 10500 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:16:08.524  INFO 10500 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.867 seconds (JVM running for 10.404)
+2020-10-06 11:16:08.526  INFO 10500 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:17:06.624  INFO 3964 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 3964 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:17:06.626  INFO 3964 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:17:07.928  WARN 3964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:17:15.994  INFO 3964 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.658 seconds (JVM running for 10.19)
+2020-10-06 11:17:15.996  INFO 3964 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:17:36.759  INFO 10360 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 10360 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:17:36.761  INFO 10360 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:17:38.112  WARN 10360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:17:46.209  INFO 10360 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.732 seconds (JVM running for 10.278)
+2020-10-06 11:17:46.212  INFO 10360 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:18:36.585  INFO 10036 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 10036 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:18:36.588  INFO 10036 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:18:38.094  WARN 10036 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:18:46.424  INFO 10036 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.139 seconds (JVM running for 10.665)
+2020-10-06 11:18:46.427  INFO 10036 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:20:59.123  INFO 10304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 10304 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:20:59.125  INFO 10304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:21:00.495  WARN 10304 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:21:08.800  INFO 10304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.968 seconds (JVM running for 10.514)
+2020-10-06 11:21:08.802  INFO 10304 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:22:03.005  INFO 6912 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 6912 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:22:03.007  INFO 6912 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:22:04.382  WARN 6912 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:22:12.584  INFO 6912 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.879 seconds (JVM running for 10.475)
+2020-10-06 11:22:12.586  INFO 6912 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:23:24.541  INFO 11064 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 11064 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:23:24.544  INFO 11064 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:23:25.906  WARN 11064 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:23:34.232  INFO 11064 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.992 seconds (JVM running for 10.585)
+2020-10-06 11:23:34.234  INFO 11064 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:23:58.326  INFO 9084 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 9084 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:23:58.328  INFO 9084 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:23:59.656  WARN 9084 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:24:07.856  INFO 9084 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.813 seconds (JVM running for 10.393)
+2020-10-06 11:24:07.858  INFO 9084 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:24:23.584  INFO 7624 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 7624 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:24:23.586  INFO 7624 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:24:24.973  WARN 7624 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:24:33.183  INFO 7624 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.9 seconds (JVM running for 10.453)
+2020-10-06 11:24:33.185  INFO 7624 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:25:27.496  INFO 4552 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 4552 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:25:27.498  INFO 4552 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:25:28.832  WARN 4552 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:25:37.162  INFO 4552 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.981 seconds (JVM running for 10.504)
+2020-10-06 11:25:37.164  INFO 4552 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:26:00.080  INFO 6652 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 6652 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:26:00.082  INFO 6652 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:26:01.443  WARN 6652 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:26:09.626  INFO 6652 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.83 seconds (JVM running for 10.399)
+2020-10-06 11:26:09.628  INFO 6652 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:27:06.652  INFO 8940 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 8940 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:27:06.654  INFO 8940 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:27:07.975  WARN 8940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:27:16.351  INFO 8940 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.987 seconds (JVM running for 10.502)
+2020-10-06 11:27:16.353  INFO 8940 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:27:30.945  INFO 8384 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 8384 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:27:30.947  INFO 8384 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:27:32.280  WARN 8384 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:27:40.399  INFO 8384 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.744 seconds (JVM running for 10.287)
+2020-10-06 11:27:40.402  INFO 8384 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:28:09.660  INFO 8020 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 8020 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:28:09.662  INFO 8020 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:28:10.966  WARN 8020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:28:20.083  INFO 8020 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.709 seconds (JVM running for 11.217)
+2020-10-06 11:28:20.085  INFO 8020 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:29:08.282  INFO 5900 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 5900 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:29:08.284  INFO 5900 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:29:09.597  WARN 5900 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:29:18.077  INFO 5900 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.076 seconds (JVM running for 10.607)
+2020-10-06 11:29:18.079  INFO 5900 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:30:42.091  INFO 10228 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 10228 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:30:42.094  INFO 10228 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:30:43.433  WARN 10228 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:30:51.865  INFO 10228 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.05 seconds (JVM running for 10.532)
+2020-10-06 11:30:51.867  INFO 10228 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:38:15.397  INFO 9052 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 9052 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:38:15.399  INFO 9052 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:38:16.744  WARN 9052 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:38:25.153  INFO 9052 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.062 seconds (JVM running for 10.601)
+2020-10-06 11:38:25.155  INFO 9052 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:45:58.791  WARN 9052 --- [http-nio-5556-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2020-10-06 11:45:58.792 ERROR 9052 --- [http-nio-5556-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Ключ "(email)=(1)" уже существует.
+2020-10-06 11:45:58.826 ERROR 9052 --- [http-nio-5556-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Ключ "(email)=(1)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:119) ~[postgresql-42.2.14.jar:42.2.14]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3153) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3759) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:721) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:707) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at jdk.internal.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:366) ~[spring-orm-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy89.persist(Unknown Source) ~[na:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:314) ~[spring-orm-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy89.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:554) ~[spring-data-jpa-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at jdk.internal.reflect.GeneratedMethodAccessor57.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.ImplementationInvocationMetadata.invoke(ImplementationInvocationMetadata.java:72) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:382) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:205) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:549) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:155) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178) ~[spring-data-jpa-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy116.save(Unknown Source) ~[na:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor54.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy74.save(Unknown Source) ~[na:na]
+	at com.board_of_ads.service.impl.UserServiceImpl.saveUser(UserServiceImpl.java:35) ~[classes/:na]
+	at com.board_of_ads.controllers.rest.AdminRestController.createNewUser(AdminRestController.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:64) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:52) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2020-10-06 11:47:45.469  INFO 9508 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 9508 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:47:45.471  INFO 9508 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:47:46.795  WARN 9508 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:47:55.081  INFO 9508 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.902 seconds (JVM running for 10.45)
+2020-10-06 11:47:55.083  INFO 9508 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:51:34.671  INFO 8724 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 8724 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 11:51:34.673  INFO 8724 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 11:51:36.214  WARN 8724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 11:51:45.035  INFO 8724 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.626 seconds (JVM running for 11.646)
+2020-10-06 11:51:45.037  INFO 8724 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 11:56:53.163  WARN 8724 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m16s593ms320µs462ns).
+2020-10-06 12:00:08.296  WARN 8724 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m15s143ms438µs94ns).
+2020-10-06 12:01:29.243  WARN 8724 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s950ms969µs737ns).
+2020-10-06 12:01:32.639  INFO 7192 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 7192 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 12:01:32.641  INFO 7192 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 12:01:34.010  WARN 7192 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 12:01:35.013  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.014  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category" не существует, пропускается
+2020-10-06 12:01:35.015  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.015  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-06 12:01:35.015  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.015  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "category_posts" не существует, пропускается
+2020-10-06 12:01:35.015  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.016  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities" не существует, пропускается
+2020-10-06 12:01:35.016  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.016  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-06 12:01:35.016  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.016  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "cities_posts" не существует, пропускается
+2020-10-06 12:01:35.017  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.017  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-06 12:01:35.017  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.017  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "levels_languages" не существует, пропускается
+2020-10-06 12:01:35.018  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.018  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_auto_transport" не существует, пропускается
+2020-10-06 12:01:35.018  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.018  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_caps" не существует, пропускается
+2020-10-06 12:01:35.019  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.019  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-06 12:01:35.019  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.019  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars" не существует, пропускается
+2020-10-06 12:01:35.019  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.019  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-06 12:01:35.020  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.020  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_cars_additional_options" не существует, пропускается
+2020-10-06 12:01:35.020  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.020  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_disks" не существует, пропускается
+2020-10-06 12:01:35.020  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.021  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_engine_parts" не существует, пропускается
+2020-10-06 12:01:35.021  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.021  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_estate" не существует, пропускается
+2020-10-06 12:01:35.021  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.021  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job" не существует, пропускается
+2020-10-06 12:01:35.022  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.022  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-06 12:01:35.022  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.022  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-06 12:01:35.022  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.022  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-06 12:01:35.023  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.023  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_levels_languages" не существует, пропускается
+2020-10-06 12:01:35.023  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.023  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes" не существует, пропускается
+2020-10-06 12:01:35.023  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.023  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-06 12:01:35.024  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.024  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_experiences" не существует, пропускается
+2020-10-06 12:01:35.024  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.024  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-06 12:01:35.024  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.025  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_resumes_languages" не существует, пропускается
+2020-10-06 12:01:35.025  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.025  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_job_vacancies" не существует, пропускается
+2020-10-06 12:01:35.025  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.025  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_moto_transport" не существует, пропускается
+2020-10-06 12:01:35.026  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.026  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_mototires" не существует, пропускается
+2020-10-06 12:01:35.026  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.026  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_part_and_accessories" не существует, пропускается
+2020-10-06 12:01:35.026  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.026  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_spare_parts" не существует, пропускается
+2020-10-06 12:01:35.027  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.027  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_tires" не существует, пропускается
+2020-10-06 12:01:35.027  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.027  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_truck_transport" не существует, пропускается
+2020-10-06 12:01:35.027  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.027  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_used_cars" не существует, пропускается
+2020-10-06 12:01:35.028  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.028  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_water_transport" не существует, пропускается
+2020-10-06 12:01:35.028  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.028  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "posting_wheels" не существует, пропускается
+2020-10-06 12:01:35.028  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.029  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-06 12:01:35.029  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.029  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-06 12:01:35.029  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.029  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings" не существует, пропускается
+2020-10-06 12:01:35.030  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.030  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-06 12:01:35.030  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.030  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "postings_images" не существует, пропускается
+2020-10-06 12:01:35.030  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.030  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "recovery_token" не существует, пропускается
+2020-10-06 12:01:35.031  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.031  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users" не существует, пропускается
+2020-10-06 12:01:35.031  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.031  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-06 12:01:35.031  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.031  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : отношение "users_roles" не существует, пропускается
+2020-10-06 12:01:35.032  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.032  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "car_options" не существует, пропускается
+2020-10-06 12:01:35.032  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.032  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category" не существует, пропускается
+2020-10-06 12:01:35.033  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.033  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "category_posts" не существует, пропускается
+2020-10-06 12:01:35.033  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.033  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities" не существует, пропускается
+2020-10-06 12:01:35.033  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.033  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "cities_posts" не существует, пропускается
+2020-10-06 12:01:35.034  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.034  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "hibernate_sequences" не существует, пропускается
+2020-10-06 12:01:35.034  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.034  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "images_link_db" не существует, пропускается
+2020-10-06 12:01:35.034  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.034  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "levels_languages" не существует, пропускается
+2020-10-06 12:01:35.034  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.034  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_auto_transport" не существует, пропускается
+2020-10-06 12:01:35.035  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.035  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_caps" не существует, пропускается
+2020-10-06 12:01:35.035  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.035  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars" не существует, пропускается
+2020-10-06 12:01:35.035  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.035  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_cars_additional_options" не существует, пропускается
+2020-10-06 12:01:35.036  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.036  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_disks" не существует, пропускается
+2020-10-06 12:01:35.036  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.036  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_engine_parts" не существует, пропускается
+2020-10-06 12:01:35.036  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.036  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_estate" не существует, пропускается
+2020-10-06 12:01:35.037  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.037  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job" не существует, пропускается
+2020-10-06 12:01:35.037  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.037  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_experiences" не существует, пропускается
+2020-10-06 12:01:35.037  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.037  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_lang_levels" не существует, пропускается
+2020-10-06 12:01:35.037  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.038  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_languages" не существует, пропускается
+2020-10-06 12:01:35.038  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.038  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_levels_languages" не существует, пропускается
+2020-10-06 12:01:35.038  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.038  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes" не существует, пропускается
+2020-10-06 12:01:35.038  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.038  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_experiences" не существует, пропускается
+2020-10-06 12:01:35.039  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.039  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_resumes_languages" не существует, пропускается
+2020-10-06 12:01:35.039  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.039  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_job_vacancies" не существует, пропускается
+2020-10-06 12:01:35.039  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.039  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_moto_transport" не существует, пропускается
+2020-10-06 12:01:35.040  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.040  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_mototires" не существует, пропускается
+2020-10-06 12:01:35.040  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.040  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_part_and_accessories" не существует, пропускается
+2020-10-06 12:01:35.040  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.040  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_spare_parts" не существует, пропускается
+2020-10-06 12:01:35.041  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.041  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_tires" не существует, пропускается
+2020-10-06 12:01:35.041  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.041  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_truck_transport" не существует, пропускается
+2020-10-06 12:01:35.041  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.041  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_used_cars" не существует, пропускается
+2020-10-06 12:01:35.042  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.042  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_water_transport" не существует, пропускается
+2020-10-06 12:01:35.042  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.042  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "posting_wheels" не существует, пропускается
+2020-10-06 12:01:35.042  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.042  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings" не существует, пропускается
+2020-10-06 12:01:35.042  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.042  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "postings_images" не существует, пропускается
+2020-10-06 12:01:35.043  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.043  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "recovery_token" не существует, пропускается
+2020-10-06 12:01:35.043  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.043  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "regions" не существует, пропускается
+2020-10-06 12:01:35.043  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.043  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "roles" не существует, пропускается
+2020-10-06 12:01:35.044  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.044  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "technical_info" не существует, пропускается
+2020-10-06 12:01:35.044  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.044  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users" не существует, пропускается
+2020-10-06 12:01:35.044  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.044  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "users_roles" не существует, пропускается
+2020-10-06 12:01:35.045  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-10-06 12:01:35.045  WARN 7192 --- [task-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : последовательность "hibernate_sequence" не существует, пропускается
+2020-10-06 12:01:42.317  INFO 7192 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.963 seconds (JVM running for 10.466)
+2020-10-06 12:01:42.319  INFO 7192 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 12:05:58.800  INFO 7452 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 7452 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 12:05:58.802  INFO 7452 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 12:06:00.215  WARN 7452 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 12:06:08.550  INFO 7452 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 10.104 seconds (JVM running for 10.626)
+2020-10-06 12:06:08.552  INFO 7452 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 12:07:23.610  WARN 7452 --- [http-nio-5556-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2020-10-06 12:07:23.612 ERROR 7452 --- [http-nio-5556-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Ключ "(email)=(1)" уже существует.
+2020-10-06 12:07:23.626 ERROR 7452 --- [http-nio-5556-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Ключ "(email)=(1)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:119) ~[postgresql-42.2.14.jar:42.2.14]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3153) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3759) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:721) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:707) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at jdk.internal.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:366) ~[spring-orm-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy89.persist(Unknown Source) ~[na:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:314) ~[spring-orm-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy89.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:554) ~[spring-data-jpa-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at jdk.internal.reflect.GeneratedMethodAccessor57.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.ImplementationInvocationMetadata.invoke(ImplementationInvocationMetadata.java:72) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:382) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:205) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:549) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:155) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178) ~[spring-data-jpa-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy116.save(Unknown Source) ~[na:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor54.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy74.save(Unknown Source) ~[na:na]
+	at com.board_of_ads.service.impl.UserServiceImpl.saveUser(UserServiceImpl.java:34) ~[classes/:na]
+	at com.board_of_ads.controllers.rest.AdminRestController.updateUser(AdminRestController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:64) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:52) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2020-10-06 12:12:57.744  WARN 7452 --- [http-nio-5556-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2020-10-06 12:12:57.744 ERROR 7452 --- [http-nio-5556-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Ключ "(email)=(1)" уже существует.
+2020-10-06 12:12:57.747 ERROR 7452 --- [http-nio-5556-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Ключ "(email)=(1)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153) ~[postgresql-42.2.14.jar:42.2.14]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:119) ~[postgresql-42.2.14.jar:42.2.14]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3153) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3759) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:721) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:707) ~[hibernate-core-5.4.20.Final.jar:5.4.20.Final]
+	at jdk.internal.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:366) ~[spring-orm-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy89.persist(Unknown Source) ~[na:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:314) ~[spring-orm-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy89.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:554) ~[spring-data-jpa-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at jdk.internal.reflect.GeneratedMethodAccessor57.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.ImplementationInvocationMetadata.invoke(ImplementationInvocationMetadata.java:72) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:382) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:205) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:549) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:155) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178) ~[spring-data-jpa-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy116.save(Unknown Source) ~[na:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor54.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy74.save(Unknown Source) ~[na:na]
+	at com.board_of_ads.service.impl.UserServiceImpl.saveUser(UserServiceImpl.java:34) ~[classes/:na]
+	at com.board_of_ads.controllers.rest.AdminRestController.updateUser(AdminRestController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:64) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:52) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2020-10-06 12:13:59.590  INFO 4564 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 4564 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 12:13:59.593  INFO 4564 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 12:14:00.998  WARN 4564 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 12:14:09.270  INFO 4564 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.983 seconds (JVM running for 10.493)
+2020-10-06 12:14:09.272  INFO 4564 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 12:16:20.547  INFO 4032 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 4032 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 12:16:20.549  INFO 4032 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 12:16:21.875  WARN 4032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 12:16:30.033  INFO 4032 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.782 seconds (JVM running for 10.29)
+2020-10-06 12:16:30.035  INFO 4032 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
+2020-10-06 12:18:05.397  INFO 1736 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Starting BoardOfAdsApplication on OIT-KARPOVVD with PID 1736 (G:\Изучение JAVA\PROJECT\board_of_ads\target\classes started by karpovvd in G:\Изучение JAVA\PROJECT\board_of_ads)
+2020-10-06 12:18:05.399  INFO 1736 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : No active profile set, falling back to default profiles: default
+2020-10-06 12:18:06.757  WARN 1736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-06 12:18:14.855  INFO 1736 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Started BoardOfAdsApplication in 9.755 seconds (JVM running for 10.264)
+2020-10-06 12:18:14.857  INFO 1736 --- [restartedMain] com.board_of_ads.BoardOfAdsApplication   : Successful application launch
