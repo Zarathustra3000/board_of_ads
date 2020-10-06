@@ -15,6 +15,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ import java.util.Objects;
 public class City {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(name = "name")
@@ -44,6 +45,9 @@ public class City {
 
     @OneToMany(fetch = FetchType.LAZY)
     private List<Posting> posts;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private User user;
 
     public City(String name, Region region, String regionFormSubject) {
         this.regionFormSubject = regionFormSubject;

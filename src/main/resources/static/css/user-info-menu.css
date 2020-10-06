@@ -2,9 +2,14 @@
     display: block;
     transition-delay: 0.30s;
 }
+#dropdownButton {
+    transition: none;
+}
 
 .dropdown a:hover {
     color: #FF0000;
+    background-color: transparent;
+    border: none;
 }
 
 .dropdown-menu > li > a {
@@ -15,6 +20,7 @@
 .dropdown-menu > li > a:hover {
     color: #FF0000;
     background-color: transparent;
+    text-decoration: none;
 }
 
 .rating-mini {

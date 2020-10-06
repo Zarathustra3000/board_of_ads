@@ -4,7 +4,26 @@ $("#region, #category-select-city").click(function() {
     $('#searchModel').modal('show');
 });
 
+async function addCategories() {
+    let categoriesResponse = await userService.findAllCategories();
+    let categories = categoriesResponse.json();
+    let categorySelect = $('.categoriesSelect');
+    categorySelect.append('<option th:text="Любая категория">Любая категория</option>');
+    categories.then(categories => {
+        categories.data.forEach((cat) => {
+            if (cat.parent == true) {
+                let option = `<option class="category-parent" th:text="` + cat.name + `">` + cat.name + `</option>`;
+                categorySelect.append(option);
+            } else {
+                let option = `<option th:text="` + cat.name + `">` + cat.name + `</option>`;
+                categorySelect.append(option);
+            }
+        })
+    });
+}
+
 let changedCityName;
+
 function clickCountButton() {
     $('#category-select-city').empty();
     $('#cityInput').empty();
@@ -48,7 +67,7 @@ async function onClickOpt(id) {
     $('#countPostButton').empty();
     let sizeArray = 0;
     posts.then(posts => {
-        posts.forEach(() => {
+        posts.data.forEach(() => {
             sizeArray++;
         })
     }).then(() => {
@@ -66,6 +85,7 @@ async function onClickOpt(id) {
 
 $(document).ready(function() {
     viewCities();
+    addCategories();
 });
 
 let cities;
@@ -81,7 +101,7 @@ async function viewCities() {
     let sizeArray = 0;
     console.log(posts);
     posts.then(posts => {
-        posts.forEach(() => {
+        posts.data.forEach(() => {
             sizeArray++;
         })
     }).then(() => {
@@ -107,7 +127,7 @@ function addOptions() {
     $('.citiesOptions').append(select);
     let addForm = $(".typeahead").val().toLowerCase();
     cities.then(cities => {
-        cities.forEach(city => {
+        cities.data.forEach(city => {
             if (city.name.toLowerCase().includes(addForm)) {
                 let userRow = `<option onmouseover="onOptionHover()" 
                                        onclick="onClickOpt(this.id)"
@@ -148,6 +168,9 @@ const userService = {
     },
     findAllPostings: async () => {
         return await http.fetch('api/posting/');
+    },
+    findAllCategories: async () => {
+        return await http.fetch("api/category")
     }
 }
 

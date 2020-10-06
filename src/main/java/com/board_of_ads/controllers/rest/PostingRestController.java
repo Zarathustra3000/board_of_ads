@@ -3,9 +3,10 @@ package com.board_of_ads.controllers.rest;
 import com.board_of_ads.models.dto.PostingDto;
 import com.board_of_ads.service.interfaces.CityService;
 import com.board_of_ads.service.interfaces.PostingService;
+import com.board_of_ads.util.Error;
+import com.board_of_ads.util.ErrorResponse;
+import com.board_of_ads.util.Response;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,17 +23,26 @@ public class PostingRestController {
     private final PostingService postingService;
 
     @GetMapping
-    public ResponseEntity<List<PostingDto>> findAllPosts() {
-        return new ResponseEntity<>(postingService.getAllPostings(), HttpStatus.OK);
+    public Response<List<PostingDto>> findAllPosts() {
+        var postings = postingService.getAllPostings();
+        return (postings.size() > 0)
+                ? Response.ok(postings)
+                : new ErrorResponse<>(new Error(204, "No found postings"));
     }
 
     @GetMapping("/city/{name}")
-    public ResponseEntity<List<PostingDto>> findPostingsByCityName(@PathVariable String name) {
-        return new ResponseEntity<>(postingService.getPostingByCity(cityService.findCityByName(name).get()), HttpStatus.OK);
+    public Response<List<PostingDto>> findPostingsByCityName(@PathVariable String name) {
+        var postings = postingService.getPostingByCity(cityService.findCityByName(name).get());
+        return (postings.size() > 0)
+                ? Response.ok(postings)
+                : new ErrorResponse<>(new Error(204, "No found postings"));
     }
 
     @GetMapping("/region/{name}")
-    public ResponseEntity<List<PostingDto>> findPostingsByRegionName(@PathVariable String name) {
-        return new ResponseEntity<>(postingService.getPostingByFullRegionName(name), HttpStatus.OK);
+    public Response<List<PostingDto>> findPostingsByRegionName(@PathVariable String name) {
+        var postings = postingService.getPostingByFullRegionName(name);
+        return (postings.size() > 0)
+                ? Response.ok(postings)
+                : new ErrorResponse<>(new Error(204, "No found postings"));
     }
 }

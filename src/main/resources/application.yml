@@ -22,39 +22,72 @@ spring:
         jdbc:
           timezone: UTC
 
-  mail: # gmail блокирует приложени. Для проверки можете написать данные яндекса.
-    host: smtp.gmail.com
-    port: 587
-    username: kunaev993@gmail.com #email вставляйте свой
-    password: nikola9393 #password вставляйте свой так как он фейковый
-    protocol: smtp
-    tls: true
-    properties.mail.smtp:
-      auth: true
-      starttls.enable: true
-      ssl.trust: smtp.gmail.com
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: echopride@yandex.ru
+    password: terror333
+    protocol: smtps
+    debug : true
 
-jhipster:
-  mail: # specific JHipster mail property, for standard properties see MailProperties
-  from: kunaev993@gmail.com
-  base-url: http://127.0.0.1:5556
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 214656904193-mpsfq89h2c8101ubel635dsjpvtah5gp.apps.googleusercontent.com
+            client-secret: o7AD6q5zqftfLiVBbU2bI3d9
+          facebook:
+            clientId: 3623063611061740
+            clientSecret: e9bd600c53c31c81447ab85e7de650e5
+            accessTokenUri: https://graph.facebook.com/oauth/access_token
+            userAuthorizationUri: https://www.facebook.com/dialog/oauth
+            tokenName: oauth_token
+            authenticationScheme: query
+            clientAuthenticationScheme: form
+          resource:
+            userInfoUri: https://graph.facebook.com/me?fields=id,first_name,last_name,email
 
-security:
-  oauth2:
-    client:
-      clientId: 670394210267367
-      clientSecret: 031df2213df96eb1bc72d87fad3cdbd3
-      accessTokenUri: https://graph.facebook.com/oauth/access_token
-      userAuthorizationUri: https://www.facebook.com/dialog/oauth
-      tokenName: oauth_token
-      authenticationScheme: query
-      clientAuthenticationScheme: form
-    resource:
-      userInfoUri: https://graph.facebook.com/me
+    auth_yandex:
+      client_id: 2561bd17ecc1441d9c2461d780690cae
+      client_secret: cc96fba5ab674d159b7d191215e1697b
+      response_type: code
+      display: popup
+      redirect_url: http://localhost:5556/social/auth_yandex
+      auth_url: https://oauth.yandex.ru/authorize
+      token_url: https://oauth.yandex.ru/token
+      user_info_url: https://login.yandex.ru/info
+
+    auth-vk:
+      client_id: 7604924
+      client_secret: acpHC7p5T746jYx17yz1
+      response_type: code
+      redirect_url: http://localhost:5556/social/auth_vk
+      auth_url: http://oauth.vk.com/authorize
+      token_url: https://oauth.vk.com/access_token
+      users_get_url: https://api.vk.com/method/users.get
+      scope: email
+      display: popup
+      fields: photo_100
+      version: 5.124
+
+    auth-mail:
+      clientId: 782202
+      clientSecret: b9eb215e5bfb9c8d6d7baaf8fc5309ad
+      responseType: code
+      redirectURL: http://localhost:5556/social/mail_auth
+      auth: https://connect.mail.ru/oauth/authorize
+      tokenUrl: https://connect.mail.ru/oauth/token
+      userInfoUrl: http://www.appsmail.ru/platform/api
+
+  jhipster:
+    mail: # specific JHipster mail property, for standard properties see MailProperties
+    from: kunaev993@gmail.com
+    base-url: http://127.0.0.1:5556
 
 logging:
   file:
-    name: src//main//resources//logFiles//board_of_ads.log
+    name: log/board_of_ads.log
     max-size: 1024KB
     max-history: 5
   level:
@@ -63,4 +96,6 @@ logging:
     org.hibernate: WARN
     com.board_of_ads: INFO
 
+jwt:
+  secret: boardofads
 

@@ -1,6 +1,8 @@
 package com.board_of_ads.util;
 
 import com.board_of_ads.models.User;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +19,8 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity
+@Data
+@NoArgsConstructor
 @Table(name = "recovery_token")
 public class PasswordRecoveryToken {
 
@@ -39,53 +43,10 @@ public class PasswordRecoveryToken {
     @Column
     private Date startTime;
 
-    public PasswordRecoveryToken() {
-    }
-
     public PasswordRecoveryToken(User user, String hash, String hashEmailToken, Date startTime) {
         this.user = user;
         this.hash = hash;
         this.hashEmail = hashEmailToken;
-        this.startTime = startTime;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public String getHash() {
-        return hash;
-    }
-
-    public void setHash(String hash) {
-        this.hash = hash;
-    }
-
-    public String getHashEmail() {
-        return hashEmail;
-    }
-
-    public void setHashEmail(String hashEmail) {
-        this.hashEmail = hashEmail;
-    }
-
-    public Date getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
 
@@ -103,7 +64,6 @@ public class PasswordRecoveryToken {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(id, user, hash, hashEmail, startTime);
     }
 }

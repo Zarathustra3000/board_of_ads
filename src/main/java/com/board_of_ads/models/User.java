@@ -36,7 +36,7 @@ import java.util.Set;
 public class User implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column
@@ -57,6 +57,10 @@ public class User implements UserDetails {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "avatar_id")
     private Image avatar;
+
+    @OneToOne
+    @JoinColumn(name = "city_id")
+    private City city;
 
     @Column
     private LocalDateTime dataRegistration = LocalDateTime.now();
