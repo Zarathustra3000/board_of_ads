@@ -149,9 +149,11 @@ async function updateUsers(value) {
     let data = {
 
         id: $('#updUserID').val(),
+        firsName: $('#updUserName').val(),
+        lastName: $('#updUserLastName').val(),
         email: $('#updUserEmail').val(),
         password: $('#updUserPassword').val(),
-        firsName: $('#updUserName').val(),
+
 
         roles: roleArray
 
@@ -249,6 +251,7 @@ function fillingModalFormUpdate(id) {
 
             $('#updUserID').val(id);
             $('#updUserName').val(data.data.firsName);
+            $('#updUserLastName').val(data.data.lastName);
             $('#updUserEmail').val(data.data.email);
             $('#updUserPassword').val(data.data.password);
             $('#updUserDataReg').val(data.data.dataRegistration);
