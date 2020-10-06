@@ -1,14 +1,13 @@
 package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
-import com.board_of_ads.models.Role;
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.interfaces.RoleService;
+import com.board_of_ads.service.interfaces.OkService;
 import com.board_of_ads.service.interfaces.UserService;
-import com.board_of_ads.service.interfaces.YandexService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -24,73 +23,76 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 @Service
 @Getter
 @Setter
 @RequiredArgsConstructor
-@ConfigurationProperties(value = "spring.security.auth-yandex")
-public class YandexServiceImpl implements YandexService {
+@ConfigurationProperties(prefix = "spring.security.auth-ok")
+public class OkServiceImpl implements OkService {
 
     private final UserService userService;
-    private final RoleService roleService;
 
     private String clientId;
     private String clientSecret;
     private String responseType;
-    private String display;
     private String redirectURL;
     private String authURL;
     private String tokenURL;
     private String userInfoURL;
+    private String scope;
+    private String grantType;
+    private String method;
+    private String clientPublic;
+    private String format;
 
+    @Override
     public void auth(String code) {
-        String requestBody = getRequestBody(code);
-        String token = getToken(requestBody);
-        Map<String, String> userData = getUserData(token);
+        String token = getToken(getRequestBody(code));
+        String linkUserDataBody = getLinkUserDataBody(token, md5Custom(getAuthURLWithSign(md5Custom(token + clientSecret))));
+        Map<String, String> userData = getUserData(linkUserDataBody);
         User user = init(userData);
         login(user);
     }
-    /**
-     * Метод для кнопки авторизации
-     * @return ссылку для авторизации при переходе по которой, получим ссылку с
-     *          аргументом code необходимым для метода getAuthResponse(String code).
-     */
+
+    @Override
+    public String getAuthURLWithSign(String sign) {
+        return "application_key=" + clientPublic
+                + "format=" + format
+                + "method=" + method
+                + sign;
+    }
+
     @Override
     public String getAuthURL() {
         return authURL + "?"
                 + "client_id=" + clientId
-                + "&redirect_uri=" + redirectURL
-                + "&display=" + display
-                + "&response_type=" + responseType;
+                + "&scope=" + scope
+                + "&response_type=" + responseType
+                + "&redirect_uri=" + redirectURL;
     }
 
-    /**
-     * @param code получаем из ссылки возвращаемой методом getAuthURL()
-     * @return тело запроса, для получения access_token
-     */
     @Override
     public String getRequestBody(String code) {
-        return "grant_type=authorization_code"
+        return tokenURL + "?"
+                + "code=" + code
                 + "&client_id=" + clientId
                 + "&client_secret=" + clientSecret
-                + "&code=" + code;
+                + "&redirect_uri=" + redirectURL
+                + "&grant_type=" + grantType;
     }
 
-    /**
-     * @param body получаем из метода getRequestBody(String code)
-     * @return токен авторизации пользователя Yandex Passport
-     */
     @Override
     public String getToken(String body) {
         HttpEntity<String> httpEntity = new HttpEntity<>(body);
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> entity = restTemplate.exchange(tokenURL, HttpMethod.POST, httpEntity, String.class);
+        ResponseEntity<String> entity = restTemplate.exchange(body, HttpMethod.POST, httpEntity, String.class);
         Object obj = null;
         try {
             obj = new JSONParser().parse(entity.getBody());
@@ -102,21 +104,43 @@ public class YandexServiceImpl implements YandexService {
         return token;
     }
 
-    /**
-     * @param token получаем из метода getToken(String body)
-     * @return Map с именем, фамилией, почтой и ссылкой на аватар пользователя (100x100px).
-     */
+    public static String md5Custom(String st) {
+        MessageDigest messageDigest = null;
+        byte[] digest = new byte[0];
+        try {
+            messageDigest = MessageDigest.getInstance("MD5");
+            messageDigest.reset();
+            messageDigest.update(st.getBytes());
+            digest = messageDigest.digest();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        BigInteger bigInt = new BigInteger(1, digest);
+        String md5Hex = bigInt.toString(16);
+        while (md5Hex.length() < 32) {
+            md5Hex = "0" + md5Hex;
+        }
+        return md5Hex;
+    }
+
+    @Override
+    public String getLinkUserDataBody(String token, String sig) {
+        return userInfoURL + "?"
+                + "application_key=" + clientPublic
+                + "&format=" + format
+                + "&method=" + method
+                + "&sig=" + sig
+                + "&access_token=" + token;
+    }
+
     @Override
     public Map<String, String> getUserData(String token) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.add("Authorization", "OAuth " + token);
-        HttpEntity<String> httpEntity = new HttpEntity<>(headers);
+        HttpEntity<String> httpEntity = new HttpEntity<>(token);
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> responseEntity = restTemplate.exchange(userInfoURL, HttpMethod.GET, httpEntity, String.class);
+        ResponseEntity<String> entity = restTemplate.exchange(token, HttpMethod.GET, httpEntity, String.class);
         Object obj = null;
         try {
-            obj = new JSONParser().parse(responseEntity.getBody());
+            obj = new JSONParser().parse(entity.getBody());
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -124,28 +148,18 @@ public class YandexServiceImpl implements YandexService {
         Map<String, String> userData = new HashMap<>();
         userData.put("first_name", (String) jsonObject.get("first_name"));
         userData.put("last_name", (String) jsonObject.get("last_name"));
-        userData.put("email", (String) jsonObject.get("default_email"));
-        userData.put("avatar_link", "https://avatars.yandex.net/get-yapic/"
-                + jsonObject.get("default_avatar_id") + "/islands-retina-50");
+        userData.put("email", (String) jsonObject.get("email"));
+        userData.put("avatar_link", "https://ok.ru/profile/"
+                + jsonObject.get("uid") + "/pphotos/" + jsonObject.get("photo_id"));
         return userData;
     }
 
-    /**
-     * Метод для получения сессии пользователя
-     */
     @Override
     public void login(User user) {
         Authentication authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authentication);
     }
 
-    /**
-     * Метод инициализации пользователя.
-     * Если такой пользователь есть в базе данных, то он вернет его.
-     * Если пользователя не существует, то он его создаст, добавит в БД и вернет.
-     *
-     * @param userData возвращается методом getUserData
-     */
     @Override
     public User init(Map<String, String> userData) {
         User user = userService.getUserByEmail(userData.get("email"));
@@ -153,9 +167,6 @@ public class YandexServiceImpl implements YandexService {
             return user;
         }
         user = new User();
-        Set<Role> roles = new HashSet<>();
-        roles.add(roleService.getRoleByName("USER"));
-        user.setRoles(roles);
         user.setEnable(true);
         user.setDataRegistration(LocalDateTime.now());
         user.setEmail(userData.get("email"));
