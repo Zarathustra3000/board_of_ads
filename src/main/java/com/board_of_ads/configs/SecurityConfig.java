@@ -41,16 +41,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/","/auth","/social/**", "/login**", "/webjars/**", "/error**", "/api/**", "/confirm/*").permitAll()
-                .antMatchers("/", "/social/**", "/login**","/mail_auth", "/webjars/**", "/error**", "/api/**", "/confirm/*").permitAll()
+                .antMatchers("/", "/auth", "/social/**", "/login**", "/mail_auth", "/webjars/**", "/error**", "/api/**", "/confirm/*").permitAll()
                 .antMatchers("/admin_page").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
-                    .formLogin()
+                .formLogin()
                 .and()
-                    .logout().logoutSuccessUrl("/").permitAll()
+                .logout().logoutSuccessUrl("/").permitAll()
                 .and()
-                    .exceptionHandling(e -> e
+                .exceptionHandling(e -> e
                         .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
                 ).oauth2Login().defaultSuccessUrl("/social/auth");
     }

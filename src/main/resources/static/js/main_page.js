@@ -67,6 +67,7 @@ async function onClickOpt(id) {
 
 $(document).ready(function () {
     viewCities();
+    addCategories();
     $('#buttonAuth').on('click', function () {
         authorization();
     });
