@@ -28,6 +28,11 @@ public class MainPageController {
         return "admin/admin_page";
     }
 
+    @GetMapping("/new_post")
+    public String addNewPost() {
+        return "newpost-page";
+    }
+
     @GetMapping("/confirm/")
     public String confirmPassword() {
         return "main-page";
