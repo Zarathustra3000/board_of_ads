@@ -39,6 +39,7 @@ function getPostingsTable(categorySelect, posts) {
                             </div>
                         </div>
                     </div>`
+
             if (postingDTO.images.length > 0) {
                 for (let i = 0; i < postingDTO.images.length; i++) {
                     let indicator = step + "indicator" + i;
