@@ -15,21 +15,20 @@ import org.springframework.stereotype.Service;
 @Data
 public class AuthorizationServiceImpl implements AuthorizationService {
 
-
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
 
     @Override
-    public boolean isValid(User userAuth) {
-
+    public String isValid(User userAuth) {
         User user = userService.getUserByEmail(userAuth.getEmail());
         if (user == null) {
-            return false;
+            return "User not found!";
         }
         if (!passwordEncoder.matches(userAuth.getPassword(), user.getPassword())) {
-            return false;
+            return "Incorrect password!";
         }
-        return true;
+        login(user);
+        return "OK";
     }
 
     @Override

@@ -4,7 +4,7 @@ import com.board_of_ads.models.User;
 
 public interface AuthorizationService {
 
-    boolean isValid(User user);
+    String isValid(User user);
 
     void login(User user);
 }
