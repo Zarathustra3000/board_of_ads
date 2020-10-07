@@ -25,9 +25,6 @@ public class AutoTransport extends Posting {
     private String videoURL;
 
     @Column
-    private String meetingAddress;
-
-    @Column
     private String contactEmail;
 
 }
