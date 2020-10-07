@@ -51,7 +51,7 @@ public class DataInitializer {
         if (userService.getUserByEmail("admin@mail.ru") == null) {
             User admin = new User();
             admin.setEmail("admin@mail.ru");
-            admin.setPassword("admin");
+            admin.setPassword("1234567");
             admin.setAvatar(new Image(null, "https://example.com/admin.jpg"));
             Set<Role> roleAdmin = new HashSet<>();
             roleAdmin.add(roleService.getRoleByName("ADMIN"));
@@ -61,7 +61,7 @@ public class DataInitializer {
         if (userService.getUserByEmail("user@mail.ru") == null) {
             User user = new User();
             user.setEmail("user@mail.ru");
-            user.setPassword("user");
+            user.setPassword("1234567");
             user.setAvatar(new Image(null, "https://example.com/user.jpg"));
             Set<Role> roleAdmin = new HashSet<>();
             roleAdmin.add(roleService.getRoleByName("USER"));

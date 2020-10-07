@@ -7,6 +7,7 @@ import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -26,12 +28,15 @@ public class AdminRestController {
     private final UserService userService;
 
     @PostMapping("/newUser")
-    public Response<User> createNewUser(@RequestBody User user) {
+    public Response<User> createNewUser(@RequestBody @Valid User user, BindingResult bindingResult) {
+        if (!bindingResult.hasErrors()) {
             return new SuccessResponse<>(userService.saveUser(user));
+        }
+        return new ErrorResponse<>(new Error(204, bindingResult.toString()));
     }
 
     @PutMapping("/newUserData")
-    public Response<User> updateUser(@RequestBody User user) {
+    public Response<User> updateUser(@Valid @RequestBody User user) {
         return new SuccessResponse<>(userService.saveUser(user));
     }
 
