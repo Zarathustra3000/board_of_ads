@@ -100,16 +100,11 @@ textarea {
 
 .citiesOptions {
     margin-top: 10px;
+    height: 270px;
 }
 
 .modal-search-close {
     position: relative;
     left: 35px;
     bottom: 13px;
-}
-
-.button-count-post {
-    position:fixed;
-    bottom: 30px;
-    right: 15px;
 }

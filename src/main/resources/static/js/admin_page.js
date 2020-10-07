@@ -18,11 +18,56 @@ let elementCloseUpdateModal2 = document.getElementById('closeUpdateModal2');
 let elementUserTable = document.getElementById('userTableAtAdminPanel');
 let elementNewUser = document.getElementById('createNewUserAtAdminPanel');
 
+$('#categoryPanel').on('click', function() {
+    document.getElementById('hideTheUsersTable').hidden = true;
+    document.getElementById('hideTheCreateUserForm').hidden = true;
+    document.getElementById('hideCategory').hidden = false;
+    document.getElementById('nav-category').className = "tab-pane fade active show";
+    document.getElementById('nav-userlist').className = "tab-pane fade";
+    document.getElementById('nav-newuser').cclassName = "tab-pane fade";
+});
+
 $(document).ready(function () {
     showAllUsersTable();
+    showCategories();
 });
 
 //ОСНОВНЫЕ ФУНКЦИИ
+
+async function showCategories() {
+    let categoriesResponse = await categoryService.findAllCategories();
+    let categories = categoriesResponse.json();
+    let categoryList = $('#listCategory');
+    categories.then(categories => {
+        categories.data.forEach((cat) => {
+            if (cat.parent == true) {
+                let rowCategory = `<li class="list-group-item list-group-item-dark col-md-5" th:text="'${cat.name}'">
+                                    <i class="far fa-edit" onclick="showEditCategoryModal('${cat.name}')"/>
+                                    <i class="far fa-trash-alt mr-2" onclick="showDeleteCategoryModal('${cat.name}')">
+                                    </i>${cat.name}</li>`;
+                categoryList.append(rowCategory);
+            } else {
+                let rowCategory = `<li class="list-group-item list-group-item-light col-md-5" th:text="'${cat.name}'">
+                                    <i class="far fa-edit" onclick="showEditCategoryModal('${cat.name}')"/>
+                                    <i class="far fa-trash-alt mr-2" onclick="showDeleteCategoryModal('${cat.name}')">
+                                    </i>${cat.name}</li>`;
+                categoryList.append(rowCategory);
+            }
+        })
+    });
+}
+
+async function showEditCategoryModal(catName) {
+    let categoryResponse = await categoryService.findCategoryByName(catName);
+    let category = categoryResponse.json();
+    console.log(category);
+    $('#updateCategoryModal').modal('show');
+
+}
+
+function showDeleteCategoryModal(catName) {
+    $('#deleteCategoryModal').modal('show');
+}
 
 //Функция заполняющая таблицу пользователей
 function showAllUsersTable() {
@@ -269,12 +314,20 @@ elementUserTable.onclick = function () {
     showAllUsersTable();
     document.getElementById('hideTheCreateUserForm').hidden = true;
     document.getElementById('hideTheUsersTable').hidden = false;
+    document.getElementById('hideCategory').hidden = true;
+    document.getElementById('nav-userlist').className = "tab-pane fade active show";
+    document.getElementById('nav-newuser').className = "tab-pane fade";
+    document.getElementById('nav-category').className = "tab-pane fade";
 };
 
 //Сокрытие таблицы пользователей
 elementNewUser.onclick = function () {
     document.getElementById('hideTheUsersTable').hidden = true;
     document.getElementById('hideTheCreateUserForm').hidden = false;
+    document.getElementById('hideCategory').hidden = true;
+    document.getElementById('nav-newuser').className ="tab-pane fade active show";
+    document.getElementById('nav-userlist').className = "tab-pane fade";
+    document.getElementById('nav-category').className = "tab-pane fade";
 };
 
 /*создаем массив из значений полученных с селектора при создании нового пользователя*/
@@ -314,3 +367,25 @@ elementCloseUpdateModal1.onclick = function () {
 elementCloseUpdateModal2.onclick = function () {
     document.getElementById('updButtInModal').remove();
 };
+
+const http = {
+    fetch: async function(url, options = {}) {
+        const response = await fetch(url, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            ...options,
+        });
+        return response;
+    }
+};
+
+const categoryService = {
+    findAllCategories: async () => {
+        return await http.fetch('/api/category');
+    },
+    findCategoryByName: async (name) => {
+        return await http.fetch('/api/category/' + name);
+    }
+}

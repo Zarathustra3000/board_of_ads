@@ -51,4 +51,11 @@ public class CategoryServiceImpl implements CategoryService {
         });
         return categoryDto;
     }
+
+    @Override
+    public Optional<CategoryDto> getCategoryDtoById(Long id) {
+        var category = categoryRepository.findCategoryDtoById(id);
+        System.out.println("from service = " + category);
+        return Optional.of(category);
+    }
 }

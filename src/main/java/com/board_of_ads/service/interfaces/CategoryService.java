@@ -13,4 +13,6 @@ public interface CategoryService {
     void saveCategory(Category category);
 
     Set<CategoryDto> findAllCategory();
+
+    Optional<CategoryDto> getCategoryDtoById(Long id);
 }

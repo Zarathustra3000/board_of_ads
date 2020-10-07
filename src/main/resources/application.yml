@@ -11,14 +11,14 @@ spring:
     initialization-mode: always
 
   jpa:
-    show-sql: false
+    show-sql: true
     hibernate:
       ddl-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQL95Dialect
         current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
-        format_sql: false
+        format_sql: true
         jdbc:
           timezone: UTC
 

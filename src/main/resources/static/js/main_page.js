@@ -74,7 +74,7 @@ async function onClickOpt(id) {
         $('#countPostButton').remove();
             let button = `<button
                                 type="button"
-                                class="btn btn-primary button-count-post"
+                                class="btn btn-primary position-fixed"
                                 onclick="clickCountButton()"
                                 id="countPostButton">Показать ` + sizeArray + ` объявлений
                           </button>`;
@@ -107,7 +107,7 @@ async function viewCities() {
     }).then(() => {
             let button = `<button 
                                 type="button" 
-                                class="btn btn-primary button-count-post"   
+                                class="btn btn-primary position-fixed"   
                                 id="countPostButton">Показать ` + sizeArray + ` объявлений
                           </button>`;
             buttonAdd.append(button);
