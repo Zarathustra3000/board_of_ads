@@ -122,7 +122,7 @@ function searchPosts() {
                     || allPostings[step].images.length === null) {
                     searchPosts.push(allPostings[step]);
                 }
-            } else {
+            } else if(photoOption === "Все объявления") {
                 searchPosts.push(allPostings[step]);
             }
         }
