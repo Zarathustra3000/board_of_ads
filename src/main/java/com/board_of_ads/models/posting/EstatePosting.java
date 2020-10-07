@@ -20,9 +20,6 @@ import javax.persistence.Table;
 @Table(name = "posting_estate")
 public class EstatePosting extends Posting {
 
-    //Адресс
-    @Column
-    private String address;
     //Количество комнат
     @Column
     private Integer countRoom;

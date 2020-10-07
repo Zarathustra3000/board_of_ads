@@ -70,3 +70,20 @@
     display: flex;
     justify-content: center;
 }
+.modal-auth-close{
+    top: -10px;
+    right: -45px;
+    transform: translateX(0);
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    font-size: 0;
+    border: 0;
+    background: url(https://static.avito.ru/s/cc/resources/b31f0cbbfbae.svg);
+
+}
+button,
+button:active,
+button:focus {
+    outline: none;
+}
