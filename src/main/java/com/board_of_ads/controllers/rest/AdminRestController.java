@@ -31,16 +31,20 @@ public class AdminRestController {
 
     @PostMapping("/newUser")
     public Response<User> createNewUser(@RequestBody @Valid User user, Model model, BindingResult bindingResult) {
-        if (!bindingResult.hasErrors()) {
+            if (!bindingResult.hasErrors()) {
             return new SuccessResponse<>(userService.saveUser(user));
         }
-        model.addAttribute("data", user);
+        model.addAttribute("user", user);
         return new ErrorResponse<>(new Error(204, bindingResult.toString()));
     }
 
     @PutMapping("/newUserData")
-    public Response<User> updateUser(@Valid @RequestBody User user) {
-        return new SuccessResponse<>(userService.saveUser(user));
+    public Response<User> updateUser(@Valid @RequestBody User user,Model model, BindingResult bindingResult) {
+        if (!bindingResult.hasErrors()) {
+            return new SuccessResponse<>(userService.saveUser(user));
+        }
+        model.addAttribute("user", user);
+        return new ErrorResponse<>(new Error(204, bindingResult.toString()));
     }
 
     @GetMapping("/allUsers")
