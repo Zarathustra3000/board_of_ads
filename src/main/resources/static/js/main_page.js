@@ -99,7 +99,7 @@ async function authorization() {
     };
 
     try {
-        const response = await fetch('http://localhost:5556/auth', {
+        const response = await fetch('http://localhost:5556/api/auth', {
             method: "POST",
             credentials: 'same-origin',
             body: JSON.stringify(user),
