@@ -43,10 +43,10 @@ public class CategoryServiceImpl implements CategoryService {
             }
         });
         maps.forEach((key, value) -> {
-            categoryDto.add(new CategoryDto(key, true));
+            categoryDto.add(new CategoryDto(key, true, value));
             if (value != null) {
                 Arrays.stream(value.split("/"))
-                        .forEach(str -> categoryDto.add(new CategoryDto(str, false)));
+                        .forEach(str -> categoryDto.add(new CategoryDto(str, false, key)));
             }
         });
         return categoryDto;

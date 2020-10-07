@@ -8,4 +8,5 @@ import lombok.Data;
 public class CategoryDto {
     private String name;
     private boolean parent;
+    private String parentName;
 }
