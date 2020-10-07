@@ -53,12 +53,17 @@
 
 .category-table-button {
     padding: 4px 10px;
-    color: #555;
     font-size: 14px;
     line-height: 20px;
     cursor: pointer;
 }
 
-.category-table-button:hover {
-    background-color: #a5eaf8;
+.unactive-category-table-button {
+    color: #555;
+    background-color: #fff;
+}
+
+.active-category-table-button {
+    color: #fff;
+    background-color: #0af;
 }

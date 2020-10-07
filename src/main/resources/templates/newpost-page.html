@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Add new post</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/header-fragment-style.css" th:href="@{/css/header-fragment-style.css}"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/add-new-post-style.css" th:href="@{/css/add-new-post-style.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/header-fragment-style.css"
+          th:href="@{/css/header-fragment-style.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/add-new-post-style.css"
+          th:href="@{/css/add-new-post-style.css}"/>
+
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
@@ -20,39 +23,9 @@
         <div class="category-head-text">Категория</div>
     </div>
     <div class="cascade-table-container">
-        <div class="cascade-table-column">
+        <div class="cascade-table-column" id="cascade-table">
             <div class="category-table-title">
                 Категория
-            </div>
-            <div class="category-table-button">
-                Example1
-            </div>
-            <div class="category-table-button">
-                Example2
-            </div>
-            <div class="category-table-button">
-                Example3
-            </div>
-            <div class="category-table-button">
-                Example4
-            </div>
-            <div class="category-table-button">
-                Example5
-            </div>
-            <div class="category-table-button">
-                Example6
-            </div>
-            <div class="category-table-button">
-                Example7
-            </div>
-            <div class="category-table-button">
-                Example8
-            </div>
-            <div class="category-table-button">
-                Example9
-            </div>
-            <div class="category-table-button">
-                Example10
             </div>
         </div>
         <div class="cascade-table-column">
@@ -66,42 +39,9 @@
                 Транспорт
             </div>
         </div>
-        <div class="cascade-table-column">
-            <div class="category-table-title">
-                Категория3
-            </div>
-            <div class="category-table-button">
-                Транспорт
-            </div>
-            <div class="category-table-button">
-                Транспорт
-            </div>
-        </div>
-        <div class="cascade-table-column">
-            <div class="category-table-title">
-                Категория4
-            </div>
-            <div class="category-table-button">
-                Транспорт
-            </div>
-            <div class="category-table-button">
-                Транспорт
-            </div>
-        </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
+<script src="../static/js/newpost.js" th:src="@{/js/newpost.js}"></script>
 </body>
 </html>
