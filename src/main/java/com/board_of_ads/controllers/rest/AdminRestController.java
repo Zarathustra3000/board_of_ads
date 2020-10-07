@@ -7,9 +7,11 @@ import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -28,10 +30,11 @@ public class AdminRestController {
     private final UserService userService;
 
     @PostMapping("/newUser")
-    public Response<User> createNewUser(@RequestBody @Valid User user, BindingResult bindingResult) {
+    public Response<User> createNewUser(@RequestBody @Valid User user, Model model, BindingResult bindingResult) {
         if (!bindingResult.hasErrors()) {
             return new SuccessResponse<>(userService.saveUser(user));
         }
+        model.addAttribute("data", user);
         return new ErrorResponse<>(new Error(204, bindingResult.toString()));
     }
 

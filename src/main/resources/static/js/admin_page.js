@@ -254,7 +254,6 @@ function fillingModalFormUpdate(id) {
     updateButtonInModal.setAttribute('type', "button");
     updateButtonInModal.setAttribute('id', "updButtInModal");
     updateButtonInModal.setAttribute('class', "btn btn-success");
-    updateButtonInModal.setAttribute('data-dismiss', "modal");
     updateButtonInModal.setAttribute('onclick', `${userIdForUpdateButton}`);
     updateButtonInModal.appendChild(document.createTextNode("Save"));
 

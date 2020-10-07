@@ -65,10 +65,11 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" align="center" id="newUserCR">
+                            <form method="post" align="center" id="newUserCR" th:object="${data}">
                                 <td>
                                     <label for="AdminPanelUserEmail" th:text="#{adminPanelUserMail}">User E-Mail</label><br>
-                                    <input type="text" id="AdminPanelUserEmail" name="userEmailCP"><br><br>
+                                    <input type="text" id="AdminPanelUserEmail" name="userEmailCP"/>
+                                    <br><br>
                                 </td>
                                 <td>
                                     <label for="AdminPanelUserPassword"
@@ -93,7 +94,7 @@
                                     </select><br><br>
                                 </td>
                                 <a class="btn btn-success mb-2" role="button" id="createUser"
-                                   data-dismiss="modal" th:text="#{adminPanelUserAddButton}">Создать пользователя</a>
+                                   th:text="#{adminPanelUserAddButton}">Создать пользователя</a>
                             </form>
                         </div>
                     </div>
