@@ -17,35 +17,38 @@
                 <div class="modal-header">
                     <div class="col order-1">
                         <h3 class="modal-title " id="authModalLongTitle">Вход</h3>
+                        <button type="button" title="Закрыть" class="modal-auth-close"
+                                data-dismiss="modal"
+                                data-marker="close-button">Закрыть</button>
                     </div>
                 </div>
 
                 <!--BODY-->
 
-            <div class="modal-body auth-app-login-form-2_SQa" id="center-ids">
-                <div class="form-group c123123">
-                    <input type="email" class="form-control " id="tel-and-email"
-                           placeholder="Телефон или электронная почта">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="password" placeholder="Пароль">
-                </div>
-                <div style="width: auto" class="container">
-                    <div class="row">
-                        <div class="form-check el-2020">
-                            <label class="checkbox"
-                                   data-marker="login-form/remember"
-                                   style="vertical-align: middle;"><input
-                                    name="remember"
-                                    type="checkbox">
-                                <span class="checkbox-label-3AzRS text-text-1PdBw text-size-s-1PUdo                                                                                                         text-color-default-1QVMz"
-                                >Запомнить пароль</span>
-                            </label>
-                        </div>
-                        <div class="col-2"></div>
-                        <div class="forget-pass-element col-5" style="left: 60px">
-                            <a id="password-recovery" class="card-link">Забыли пароль?</a>
-                        </div>
+                <div class="modal-body auth-app-login-form-2_SQa" id="center-ids">
+                    <div class="form-group c123123">
+                        <input type="email" class="form-control " id="tel-and-email"
+                               placeholder="Телефон или электронная почта">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="password" placeholder="Пароль">
+                    </div>
+                    <div style="width: auto" class="container">
+                        <div class="row">
+                            <div class="form-check el-2020">
+                                <label class="checkbox"
+                                       data-marker="login-form/remember"
+                                       style="vertical-align: middle;"><input
+                                        name="remember"
+                                        type="checkbox">
+                                    <span class="checkbox-label-3AzRS text-text-1PdBw text-size-s-1PUdo                                                                                                         text-color-default-1QVMz"
+                                    >Запомнить пароль</span>
+                                </label>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="forget-pass-element col-5" style="left: 60px">
+                                <a id="password-recovery" class="card-link">Забыли пароль?</a>
+                            </div>
                         </div>
                     </div>
                     <div class="action-root_align-center-mUlAP">
@@ -69,7 +72,7 @@
                                 <img src="https://static.avito.ru/s/cc/resources/4f393a914308.svg">
                             </span></a>
                             <a href="/social/auth_yandex"><span class="social-network-item-icon-1tXjO"
-                                             data-marker="social-network-item(apple)">
+                                                                data-marker="social-network-item(apple)">
                                 <img th:src="@{images/yandex-logo.png}" th:height="44px" th:width="44px">
                             </span></a>
                             <a href="/social/auth_facebook">
