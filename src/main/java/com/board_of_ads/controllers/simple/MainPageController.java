@@ -23,8 +23,7 @@ public class MainPageController {
     }
 
     @GetMapping("/admin_page")
-    public String adminPage(/*@AuthenticationPrincipal User user,*/ Model model, User userForCreate) {
-        model.addAttribute("data", userForCreate);
+    public String adminPage(/*@AuthenticationPrincipal User user,*/User user) {
         return "admin/admin_page";
     }
 
