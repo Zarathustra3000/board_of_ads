@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -49,7 +51,7 @@ public class Posting {
     }
 
     public Posting(User user, Category category, String title, String description, Long price, String contact, City city) {
-        this(user, category, title, description,  price, contact);
+        this(user, category, title, description, price, contact);
         this.city = city;
     }
 
@@ -58,6 +60,7 @@ public class Posting {
     private Long id;
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -76,6 +79,9 @@ public class Posting {
 
     @Column
     private String contact;
+
+    @Column
+    private String meetingAddress;
 
     @Column
     private Boolean isActive;
