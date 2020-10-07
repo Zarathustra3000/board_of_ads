@@ -23,13 +23,15 @@ public class PostingDto {
     private List<Image> images;
     private String category;
     private String city;
+    private String meetingAddress;
 
-    public PostingDto(Long id, String title, String description, Long price, String contact, LocalDateTime datePosting) {
+    public PostingDto(Long id, String title, String description, Long price, String contact, LocalDateTime datePosting,String meetingAddress) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.contact = contact;
         this.datePosting = datePosting;
+        this.meetingAddress = meetingAddress;
     }
 }

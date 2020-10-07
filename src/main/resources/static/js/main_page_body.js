@@ -33,7 +33,7 @@ function getPostingsTable(categorySelect, posts) {
                                     <div id="price">${postingDTO.price} ₽</div>
                                 </strong>
                                 <div class="card-text text-muted">
-                                    <div id="meetingPlace">Москва, Преображенская площадь</div>
+                                    <div id="meetingPlace">${postingDTO.meetingAddress}</div>
                                     <div id="timeOfPosting">${date}</div>
                                 </div>
                             </div>
