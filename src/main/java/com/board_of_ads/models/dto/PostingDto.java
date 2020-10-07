@@ -1,7 +1,5 @@
 package com.board_of_ads.models.dto;
 
-import com.board_of_ads.models.Category;
-import com.board_of_ads.models.City;
 import com.board_of_ads.models.Image;
 import com.board_of_ads.service.interfaces.PostingService;
 import lombok.AllArgsConstructor;
