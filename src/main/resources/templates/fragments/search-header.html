@@ -3,13 +3,13 @@
 <ul id="menu-search">
 
     <li id="category">
-        <select id="category-select" class="categoriesSelect">
+        <select id="category-select" class="categoriesSelect" onchange="getCategoryOption(this)">
         </select>
     </li>
 
     <li id="search-main"> <!--todo: search -->
         <form>
-            <input id="category-select"
+            <input id="search-main-text"
                    type="text"
                    name="search-form"
                    th:placeholder="#{search}">
@@ -28,13 +28,13 @@
     <li id="region"
         data-toggle="modal"
         data-target="#searchModal">
-        <select id="category-select-city" disabled>
+        <select id="category-select-city" disabled >
         </select>
     </li>
 
     <li id="search-left"> <!--todo: link to action -->
-        <button th:text="#{justsearch}" id="category-select"
-                name="search-button">
+        <button th:text="#{justsearch}" id="search-left-btn"
+                name="search-button" onclick="searchPosts()">
             Найти
         </button>
     </li>
