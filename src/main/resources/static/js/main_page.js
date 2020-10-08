@@ -11,7 +11,7 @@ async function addCategories() {
     categorySelect.append('<option th:text="Любая категория">Любая категория</option>');
     categories.then(categories => {
         categories.data.forEach((cat) => {
-            if (cat.parent == true) {
+            if (cat.parentName == null) {
                 let option = `<option class="category-parent" th:text="` + cat.name + `">` + cat.name + `</option>`;
                 categorySelect.append(option);
             } else {
@@ -63,7 +63,6 @@ async function onClickOpt(id) {
         usersResponse = await userService.findPostingByCityName(id);
     }
     posts = usersResponse.json();
-    console.log(posts);
     $('#countPostButton').empty();
     let sizeArray = 0;
     posts.then(posts => {
@@ -99,7 +98,6 @@ async function viewCities() {
     const postsResponse = await userService.findAllPostings();
     posts = postsResponse.json();
     let sizeArray = 0;
-    console.log(posts);
     posts.then(posts => {
         posts.data.forEach(() => {
             sizeArray++;

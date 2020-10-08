@@ -99,6 +99,7 @@
                             </div>
                             <div class="row text-primary p-2">
                                 <a th:text="#{adminAddCategory}"
+                                   id="addCategory"
                                    href="#add"
                                    class="text-primary ml-2 text-capitalize">
                                 </a>
@@ -106,7 +107,7 @@
                         </div>
                         <div class="col-md-10 bg-light vh-100">
                             <div class="container">
-                                <h2>Category list</h2>
+                                <h2 th:text="#{categoryList}"></h2>
                                 <ul class="list-group" id="listCategory">
                                 </ul>
                             </div>
@@ -232,71 +233,7 @@
     </div>
     <!--Модальное окно на удаление-->
 
-    <div id="updateCategoryModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content  col-md-8">
-                <div class="modal-header">
-                    <h4 class="modal-title">Update Category</h4>
-                    <button id="closeUpdat456eModal2" type="button" class="close" data-dismiss="modal"
-                            aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form class="center-block  text-center">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="categoryID" th:text="#{adminPanelCategoryID}">Id</label>
-                            <input type="text" class="form-control" id="categoryID"
-                                   name="id" readonly/>
-                            <label for="categoryName" th:text="#{adminPanelCategoryName}">Name</label>
-                            <input type="text" class="form-control" id="categoryName"
-                                   name="name"/>
-                            <li id="category">
-                                <select id="category-select" class="categoriesSelect">
-                                </select>
-                            </li>
-                        </div>
-                    </div>
-                    <div class="modal-footer" id="updateButto5nInModal">
-                        <div>
-                        </div>
-                        <button id="closeUpd5ateModal" type="button" class="btn btn-secondary"
-                                data-dismiss="modal">Close
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div id="deleteCategoryModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content  col-md-8">
-                <div class="modal-header">
-                    <h4 class="modal-title">Update User</h4>
-                    <button id="closeUpdat456keModal2" type="button" class="close" data-dismiss="modal"
-                            aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form class="center-block  text-center">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="updUserID" th:text="#{adminPanelUserID}">ИД</label>
-                            <input type="text" class="form-control" id="updUjsekrID"
-                                   name="id" readonly/>
-                        </div>
-                    </div>
-                    <div class="modal-footer" id="updateButto5knInModal">
-                        <div>
-                        </div>
-                        <button id="closeUpd5akteModal" type="button" class="btn btn-secondary"
-                                data-dismiss="modal">Close
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
+    <div th:insert="fragments/category-modal-update::update-category"></div>
+    <div th:insert="fragments/category-modal-delete::delete-category"></div>
+    <div th:insert="fragments/category-modal-add::add-category"></div>
 </header>

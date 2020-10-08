@@ -7,15 +7,14 @@ import com.board_of_ads.service.interfaces.CategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.LinkedHashMap;
+import javax.transaction.Transactional;
 import java.util.LinkedHashSet;
-import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
 @Service
 @AllArgsConstructor
+@Transactional
 public class CategoryServiceImpl implements CategoryService {
 
     private CategoryRepository categoryRepository;
@@ -26,36 +25,65 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void saveCategory(Category category) {
-        categoryRepository.save(category);
+    public Category saveCategory(Category category) {
+        return categoryRepository.save(category);
     }
 
     @Override
     public Set<CategoryDto> findAllCategory() {
-        Set<CategoryDto> categoryDto = new LinkedHashSet<>();
-        Map<String, String> maps = new LinkedHashMap<>();
-        var categories = categoryRepository.findAll();
-        categories.forEach(cat -> {
+        Set<CategoryDto> category = new LinkedHashSet<>();
+        var categoriesFromDB = categoryRepository.findAll();
+        for (var cat : categoriesFromDB) {
             if (cat.getCategory() == null) {
-                maps.put(cat.getName(), null);
-            } else {
-                maps.merge(cat.getCategory().getName(), cat.getName(), (o, n) -> o + "/" +n);
+                category.add(new CategoryDto(cat.getId(), cat.getName(), null));
+                collectChild(cat, category);
             }
-        });
-        maps.forEach((key, value) -> {
-            categoryDto.add(new CategoryDto(key, true));
-            if (value != null) {
-                Arrays.stream(value.split("/"))
-                        .forEach(str -> categoryDto.add(new CategoryDto(str, false)));
-            }
-        });
-        return categoryDto;
+        }
+        return category;
+    }
+
+    private void collectChild(Category categoryWithChildren, Set<CategoryDto> collect) {
+        var children = categoryRepository.findCategoriesByCategory(categoryWithChildren.getId());
+        for (var cat : children) {
+            collect.add(new CategoryDto(cat.getId(), cat.getName(), cat.getCategory().getName()));
+            collectChild(cat, collect);
+        }
     }
 
     @Override
     public Optional<CategoryDto> getCategoryDtoById(Long id) {
-        var category = categoryRepository.findCategoryDtoById(id);
-        System.out.println("from service = " + category);
-        return Optional.of(category);
+        var category = categoryRepository.findCategoryById(id);
+        var categoryDto = new CategoryDto(
+                category.getId(),
+                category.getName(),
+                category.getCategory() == null ? null : category.getCategory().getName());
+        return Optional.of(categoryDto);
+    }
+
+    @Override
+    public Category updateCategory(CategoryDto categoryDto) {
+        if (categoryDto.getParentName().equals("")) {
+            return saveCategory(new Category(categoryDto.getId(), categoryDto.getName(), null));
+        }
+        var category = getCategoryByName(categoryDto.getParentName());
+        return saveCategory(new Category(categoryDto.getId(), categoryDto.getName(), category.get()));
+    }
+
+    @Override
+    public void deleteCategory(Long id) {
+        var children = categoryRepository.findCategoriesByCategory(id);
+        children.forEach(child -> {
+            child.setCategory(null);
+        });
+        categoryRepository.deleteById(id);
+    }
+
+    @Override
+    public Category createCategory(CategoryDto category) {
+        if (category.getParentName().equals("")) {
+            return categoryRepository.save(new Category(category.getName(), null));
+        }
+        var categoryParentFromDB = categoryRepository.findCategoryByName(category.getParentName());
+        return categoryRepository.save(new Category(category.getName(), categoryParentFromDB));
     }
 }
