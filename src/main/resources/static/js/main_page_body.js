@@ -1,5 +1,8 @@
 let selectedCategoryOption = "Любая категория";
 let allPostings = [];
+let selectedCity = $("#category-select-city option:selected").val();
+let textInput = $("#search-main-text").val();
+let photoOption = $("#image-select option:selected").val();
 
 function getPostingsTable(posts) {
     if(posts === "undefined") {
@@ -82,14 +85,14 @@ function getPostingsTable(posts) {
 
 function getList() {
 
-    let selectedCity = $("#category-select-city option:selected").val();
-    let textInput = $("#search-main-text").val();
-    let photoOption = $("#image-select option:selected").val();
+    selectedCity = $("#category-select-city option:selected").val();
+    textInput = $("#search-main-text").val();
+    photoOption = $("#image-select option:selected").val();
 
-    reinstallTable(selectedCategoryOption,selectedCity,textInput,photoOption);
+    reinstallTable(selectedCategoryOption, selectedCity, textInput, photoOption);
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     getList();
 });
 
@@ -100,29 +103,33 @@ function getCategoryOption(categoryOption) {
             selectedCategoryOption = (categoryOption.options[i].text);
         }
     }
-    let selectedCity = $("#category-select-city option:selected").val()
-    let textInput = $("#search-main-text").val();
-    let photoOption = $("#image-select option:selected").val()
 
-    reinstallTable(selectedCategoryOption,selectedCity,textInput,photoOption);
+    selectedCity = $("#category-select-city option:selected").val()
+    textInput = $("#search-main-text").val();
+    photoOption = $("#image-select option:selected").val()
+
+    reinstallTable(selectedCategoryOption, selectedCity, textInput, photoOption);
 }
+
 function searchPosts() {
 
-    let selectedCity = $("#category-select-city option:selected").val()
-    let textInput = $("#search-main-text").val();
-    let photoOption = $("#image-select option:selected").val()
+    selectedCity = $("#category-select-city option:selected").val()
+    textInput = $("#search-main-text").val();
+    photoOption = $("#image-select option:selected").val()
 
-    reinstallTable(selectedCategoryOption,selectedCity,textInput,photoOption);
+    reinstallTable(selectedCategoryOption, selectedCity, textInput, photoOption);
 }
 
 async function reinstallTable(categoryOption, cityOption, searchTextOption, photoOption) {
+
     document.querySelectorAll('#main_page_posting').forEach(block => block.remove())
 
     allPostings = await getData(categoryOption, cityOption, searchTextOption, photoOption);
 
     getPostingsTable(allPostings);
 }
-async function getData(categoryOption, cityOption, searchTextOption, photoOption){
+
+async function getData(categoryOption, cityOption, searchTextOption, photoOption) {
     let response = await fetch("/api/search" + "?catSel=" + categoryOption
         + "&citSel=" + cityOption
         + "&searchT=" + searchTextOption
