@@ -311,9 +311,9 @@ public class DataInitializer {
         secondSubCategory.add(new Category(null, "Товары для купания", categoryService.getCategoryByName("Товары для детей и игрушки").get(), null));
         secondSubCategory.add(new Category(null, "Товары для школы", categoryService.getCategoryByName("Товары для детей и игрушки").get(), null));
 
-        secondSubCategory.add(new Category(null, "Бижутерия", categoryService.getCategoryByName("Чашы и украшения").get(), null));
-        secondSubCategory.add(new Category(null, "Часы", categoryService.getCategoryByName("Чашы и украшения").get(), null));
-        secondSubCategory.add(new Category(null, "Ювелирные изделия", categoryService.getCategoryByName("Чашы и украшения").get(), null));
+        secondSubCategory.add(new Category(null, "Бижутерия", categoryService.getCategoryByName("Часы и украшения").get(), null));
+        secondSubCategory.add(new Category(null, "Часы", categoryService.getCategoryByName("Часы и украшения").get(), null));
+        secondSubCategory.add(new Category(null, "Ювелирные изделия", categoryService.getCategoryByName("Часы и украшения").get(), null));
 
         secondSubCategory.add(new Category(null, "Косметика", categoryService.getCategoryByName("Красота и здоровье").get(), null));
         secondSubCategory.add(new Category(null, "Парфюмерия", categoryService.getCategoryByName("Красота и здоровье").get(), null));
@@ -488,6 +488,12 @@ public class DataInitializer {
         secondSubCategory.add(new Category(null, "Для салона красоты", categoryService.getCategoryByName("Оборудование для бизнеса").get(), null));
         secondSubCategory.add(new Category(null, "Промышленное", categoryService.getCategoryByName("Оборудование для бизнеса").get(), null));
         secondSubCategory.add(new Category(null, "Другое", categoryService.getCategoryByName("Оборудование для бизнеса").get(), null));
+
+        for (Category category : secondSubCategory) {
+            if (categoryService.getCategoryByName(category.getName()).isEmpty()) {
+                categoryService.saveCategory(category);
+            }
+        }
     }
 
     private void initKladr() throws IOException {
