@@ -22,7 +22,6 @@ public class SearchPostingServiceImpl implements SearchPostingSevice {
     public List<PostingDto> searchPostings(String categorySelect, String citySelect, String searchText, String photoOption) {
 
         List<PostingDto> postingDtos;
-        System.out.println(categorySelect + "|" + citySelect + "|" + searchText + "|" + photoOption);
         if(citySelect != null && !(citySelect.equals("undefined"))) {
             if (citySelect.matches("(.*)" +"Область" + "(.*)")
                     || citySelect.matches("(.*)" + "Край" + "(.*)")
@@ -75,7 +74,7 @@ public class SearchPostingServiceImpl implements SearchPostingSevice {
             } else {
                 textFlag = true;
             }
-            System.out.println("" + categoryFlag + photoFlag + textFlag);
+
             if(categoryFlag && photoFlag && textFlag) {
                 resultList.add(postingDto);
             }
