@@ -16,10 +16,20 @@ let elementCloseUpdateModal1 = document.getElementById('closeUpdateModal');
 let elementCloseUpdateModal2 = document.getElementById('closeUpdateModal2');
 
 let elementUserTable = document.getElementById('userTableAtAdminPanel');
-let elementNewUser = document.getElementById('createNewUserAtAdminPanel');
 
 $(document).ready(function () {
     showAllUsersTable();
+});
+
+$(document).mouseup( function (e) {
+    let modalUpd = $('#updateModal');
+    let modalDel = $('#deleteModal');
+    if (modalUpd.is(e.target)){
+        document.getElementById('updButtInModal').remove();
+    }
+    if (modalDel.is(e.target)){
+        document.getElementById('delButtInModal').remove();
+    }
 });
 
 //ОСНОВНЫЕ ФУНКЦИИ
@@ -52,6 +62,7 @@ function showAllUsersTable() {
                     }).join(", ");
 
                     for (let o in user) {
+
                         let td = document.createElement('td');
                         let text = document.createTextNode(user[o]);
 
@@ -63,11 +74,11 @@ function showAllUsersTable() {
                             userIdForDelete = "fillingModalFormDelete" + "(" + user[o] + ")";
                             userIdForUpdate = "fillingModalFormUpdate" + "(" + user[o] + ")";
                         }
-                        if (counter !== 6 && counter !== 9 && counter !== 2) {
+                        if (counter !== 6 && counter !== 7 && counter !== 2 && counter !== 10) {
                             td.appendChild(text);
                             tr.appendChild(td);
                         }
-                        if (counter === 9) {
+                        if (counter === 10) {
                             td.appendChild(document.createTextNode(userRoles));
                             tr.appendChild(td);
                             break;
@@ -137,6 +148,9 @@ async function newUser() {
             console.log(error);
         });
 
+    clearTable();
+    showAllUsersTable();
+
 }
 
 async function updateUsers(value) {
@@ -149,9 +163,11 @@ async function updateUsers(value) {
     let data = {
 
         id: $('#updUserID').val(),
+        firsName: $('#updUserName').val(),
+        lastName: $('#updUserLastName').val(),
         email: $('#updUserEmail').val(),
         password: $('#updUserPassword').val(),
-        firsName: $('#updUserName').val(),
+
 
         roles: roleArray
 
@@ -249,8 +265,8 @@ function fillingModalFormUpdate(id) {
 
             $('#updUserID').val(id);
             $('#updUserName').val(data.data.firsName);
+            $('#updUserLastName').val(data.data.lastName);
             $('#updUserEmail').val(data.data.email);
-            $('#updUserPassword').val(data.data.password);
             $('#updUserDataReg').val(data.data.dataRegistration);
 
         });
@@ -259,7 +275,7 @@ function fillingModalFormUpdate(id) {
 
 // ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ НА ON.CLICK
 
-elementCreateUser.onclick = function(){
+elementCreateUser.onclick = function () {
     newUser();
 };
 
@@ -267,22 +283,6 @@ elementCreateUser.onclick = function(){
 elementUserTable.onclick = function () {
     clearTable();
     showAllUsersTable();
-    document.getElementById('hideTheCreateUserForm').hidden = true;
-    document.getElementById('hideTheUsersTable').hidden = false;
-    document.getElementById('hideCategory').hidden = true;
-    document.getElementById('nav-userlist').className = "tab-pane fade active show";
-    document.getElementById('nav-newuser').className = "tab-pane fade";
-    document.getElementById('nav-category').className = "tab-pane fade";
-};
-
-//Сокрытие таблицы пользователей
-elementNewUser.onclick = function () {
-    document.getElementById('hideTheUsersTable').hidden = true;
-    document.getElementById('hideTheCreateUserForm').hidden = false;
-    document.getElementById('hideCategory').hidden = true;
-    document.getElementById('nav-newuser').className ="tab-pane fade active show";
-    document.getElementById('nav-userlist').className = "tab-pane fade";
-    document.getElementById('nav-category').className = "tab-pane fade";
 };
 
 /*создаем массив из значений полученных с селектора при создании нового пользователя*/
@@ -297,6 +297,7 @@ function convertToRoleSet(Array) {
     }
     return roleArray;
 }
+
 
 //Очистка таблиц при закрытии модального окна
 function clearTable() {
