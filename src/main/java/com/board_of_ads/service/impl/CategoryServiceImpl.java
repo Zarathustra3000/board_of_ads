@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.Optional;
 import java.util.Set;
@@ -32,22 +33,23 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Set<CategoryDto> findAllCategory() {
         Set<CategoryDto> category = new LinkedHashSet<>();
-        var categoriesFromDB = categoryRepository.findAll();
-        for (var cat : categoriesFromDB) {
-            if (cat.getCategory() == null) {
-                category.add(new CategoryDto(cat.getId(), cat.getName(), null));
-                collectChild(cat, category);
-            }
-        }
+        categoryRepository.findAll().stream()
+                .sorted(Comparator.comparing(Category::getId))
+                .forEach(cat -> {
+                    if (cat.getCategory() == null) {
+                        category.add(new CategoryDto(cat.getId(), cat.getName(), null));
+                        collectChild(cat, category);
+                    }
+        });
         return category;
     }
 
     private void collectChild(Category categoryWithChildren, Set<CategoryDto> collect) {
-        var children = categoryRepository.findCategoriesByCategory(categoryWithChildren.getId());
-        for (var cat : children) {
-            collect.add(new CategoryDto(cat.getId(), cat.getName(), cat.getCategory().getName()));
-            collectChild(cat, collect);
-        }
+        categoryRepository.findCategoriesByCategory(categoryWithChildren.getId())
+                .forEach(cat -> {
+                    collect.add(new CategoryDto(cat.getId(), cat.getName(), cat.getCategory().getName()));
+                    collectChild(cat, collect);
+                });
     }
 
     @Override
