@@ -1,6 +1,5 @@
 package com.board_of_ads.controllers.rest;
 
-
 import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.AuthorizationService;
 import com.board_of_ads.util.Error;
