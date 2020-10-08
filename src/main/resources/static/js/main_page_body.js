@@ -1,21 +1,18 @@
 let selectedCategoryOption = "Любая категория";
-let allPostings;
+let allPostings = [];
 
-function getPostingsTable(categorySelect, posts) {
-    for (let step = 0; step < posts.length; step++) {
-        let categorySelectTemp = categorySelect;
-        let postingDTO = posts[step];
+function getPostingsTable(posts) {
+    if(posts === "undefined") {
 
-        let date = postingDTO.datePosting.substring(8, 10) + "-" +
-            postingDTO.datePosting.substring(5, 7) + "-" +
-            postingDTO.datePosting.substring(0, 4) + " " +
-            postingDTO.datePosting.substring(11, 16);
+    } else {
+        for (let step = 0; step < posts.length; step++) {
+            let postingDTO = posts[step];
 
-        if (categorySelectTemp === "Любая категория") {
-            categorySelectTemp = postingDTO.category;
-        }
+            let date = postingDTO.datePosting.substring(8, 10) + "-" +
+                postingDTO.datePosting.substring(5, 7) + "-" +
+                postingDTO.datePosting.substring(0, 4) + " " +
+                postingDTO.datePosting.substring(11, 16);
 
-        if (postingDTO.category === categorySelectTemp) {
             document.getElementById('mainPageBody').innerHTML +=
                 `<div id="main_page_posting" class="col-md-3">
                         <div id="cardPosting" class="card">
@@ -83,10 +80,13 @@ function getPostingsTable(categorySelect, posts) {
     }
 }
 
-async function getList() {
-    let response = await userService.findAllPostings()
-    allPostings = (await response.json()).data;
-    getPostingsTable(selectedCategoryOption, allPostings)
+function getList() {
+
+    let selectedCity = $("#category-select-city option:selected").val();
+    let textInput = $("#search-main-text").val();
+    let photoOption = $("#image-select option:selected").val();
+
+    reinstallTable(selectedCategoryOption,selectedCity,textInput,photoOption);
 }
 
 $(document).ready(function() {
@@ -94,47 +94,44 @@ $(document).ready(function() {
 });
 
 function getCategoryOption(categoryOption) {
-    if($("#category-select-city option:selected").val() != null) {
-        allPostings = regionPosts;
-    }
+
     for (let i = 0; i < categoryOption.options.length; i++) {
         if (categoryOption.options[i].selected) {
             selectedCategoryOption = (categoryOption.options[i].text);
         }
     }
-    reinstallTable(selectedCategoryOption,allPostings);
+    let selectedCity = $("#category-select-city option:selected").val()
+    let textInput = $("#search-main-text").val();
+    let photoOption = $("#image-select option:selected").val()
+
+    reinstallTable(selectedCategoryOption,selectedCity,textInput,photoOption);
 }
 function searchPosts() {
-    let searchPosts =[];
-    if($("#category-select-city option:selected").val() != null) {
-        allPostings = regionPosts;
-    }
+
+    let selectedCity = $("#category-select-city option:selected").val()
     let textInput = $("#search-main-text").val();
-    let photoOption = $("#image-select option:selected").text()
-    for (let step = 0; step < allPostings.length; step++) {
-        if(allPostings[step].title.toLowerCase().match(textInput.toLowerCase())) {
-            if(photoOption === "С фото") {
-                if(allPostings[step].images.length > 0) {
-                    searchPosts.push(allPostings[step]);
-                }
-            } else if(photoOption === "Без фото") {
-                if(allPostings[step].images.length === 0
-                    || allPostings[step].images.length === null) {
-                    searchPosts.push(allPostings[step]);
-                }
-            } else if(photoOption === "Все объявления") {
-                searchPosts.push(allPostings[step]);
-            }
-        }
-    }
-    reinstallTable(selectedCategoryOption,searchPosts)
+    let photoOption = $("#image-select option:selected").val()
+
+    reinstallTable(selectedCategoryOption,selectedCity,textInput,photoOption);
 }
 
-function reinstallTable(categoryOption,citiesArrayOption) {
+async function reinstallTable(categoryOption, cityOption, searchTextOption, photoOption) {
     document.querySelectorAll('#main_page_posting').forEach(block => block.remove())
 
-    getPostingsTable(categoryOption,citiesArrayOption);
+    allPostings = await getData(categoryOption, cityOption, searchTextOption, photoOption);
+
+    getPostingsTable(allPostings);
 }
-
-
-
+async function getData(categoryOption, cityOption, searchTextOption, photoOption){
+    let response = await fetch("/api/search" + "?catSel=" + categoryOption
+        + "&citSel=" + cityOption
+        + "&searchT=" + searchTextOption
+        + "&phOpt=" + photoOption, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    });
+    return (await response.json()).data;
+}

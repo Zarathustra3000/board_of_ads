@@ -31,7 +31,7 @@ function clickCountButton() {
     $('#searchModel').modal('hide');
     let row = `<option>` + changedCityName + `</option>`;
     $('#category-select-city').append(row);
-    reinstallTable(selectedCategoryOption,regionPosts)
+    reinstallTable(selectedCategoryOption, changedCityName, $("#search-main-text").val(), $("#image-select option:selected").val())
 }
 
 $('select#cities').on('change', function() {
