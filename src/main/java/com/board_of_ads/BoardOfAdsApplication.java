@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 
+import java.io.IOException;
+import java.util.logging.LogManager;
+
 @SpringBootApplication
 public class BoardOfAdsApplication {
 
@@ -18,6 +21,13 @@ public class BoardOfAdsApplication {
 
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
+//        try {
+//            LogManager.getLogManager().readConfiguration(
+//                    BoardOfAdsApplication.class.getResourceAsStream("/logging.properties"));
+//        } catch (IOException e) {
+//            System.err.println("Could not setup logger configuration: " + e.toString());
+//        }
+
         logger.info("Successful application launch");
     }
 

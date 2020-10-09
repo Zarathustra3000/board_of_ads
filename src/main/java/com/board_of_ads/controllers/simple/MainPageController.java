@@ -13,11 +13,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 @AllArgsConstructor
 public class MainPageController {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private static Logger LOG = LoggerFactory.getLogger(MainPageController.class.getName());
     private final MailService mailService;
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal() User user, Model model) {
+
+        LOG.info("ClassName " + LOG);
+        String myGoalToString= LOG.toString();
+        String shortGoal = myGoalToString.substring((myGoalToString.indexOf("controllers")));
+        LOG.info("my goal = " + myGoalToString);
+        LOG.info("my sortGoal = " + shortGoal);
+        LOG.info("Package " + this.getClass().getPackageName());
+        LOG.info("Module " + this.getClass().getCanonicalName());
+        LOG.info("GET request '/' with user {} ", user);
         model.addAttribute("user", user != null ? user : new User());
         return "main-page";
     }
@@ -30,6 +39,7 @@ public class MainPageController {
 
     @GetMapping("/confirm/")
     public String confirmPassword() {
+        LOG.info("GET request '/confirm' method");
         return "main-page";
     }
 

@@ -7,6 +7,7 @@ import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,15 +19,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+
 @RestController
 @RequestMapping("/api/admin/")
 @AllArgsConstructor
 public class AdminRestController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(AdminRestController.class);
     private final UserService userService;
 
     @PostMapping("/newUser")
     public Response<User> createNewUser(@RequestBody User user) {
+        LOGGER.info("ClassName");
+        LOGGER.info("POST request '/api/admin/newUser' with user {} ", user);
+
             return new SuccessResponse<>(userService.saveUser(user));
     }
 
