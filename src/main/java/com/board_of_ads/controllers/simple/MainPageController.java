@@ -30,6 +30,7 @@ public class MainPageController {
         return "admin/admin_page";
     }
 
+
     @GetMapping("/confirm/")
     public String confirmPassword() {
         return "main-page";

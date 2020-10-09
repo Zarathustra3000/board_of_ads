@@ -1,12 +1,18 @@
 package com.board_of_ads.controllers.rest;
 
+import com.board_of_ads.BoardOfAdsApplication;
 import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.UserService;
+import com.board_of_ads.util.BindingResultLogs;
 import com.board_of_ads.util.Error;
 import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,23 +22,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/admin/")
+@RequestMapping(value = "/api/admin/")
 @AllArgsConstructor
 public class AdminRestController {
 
     private final UserService userService;
+    private final BindingResultLogs bindingResultLogs;
+    private static final Logger logger = LoggerFactory.getLogger(AdminRestController.class);
 
-    @PostMapping("/newUser")
-    public Response<User> createNewUser(@RequestBody User user) {
+
+    @PostMapping(value = "/newUser")
+    public Response<User> createUser(@RequestBody @Valid User user, BindingResult bindingResult) {
+        if (bindingResultLogs.checkUserFields(bindingResult, logger)) {
             return new SuccessResponse<>(userService.saveUser(user));
+        }
+        return new ErrorResponse<>(new Error(204, "Incorrect Data"));
     }
 
     @PutMapping("/newUserData")
-    public Response<User> updateUser(@RequestBody User user) {
-        return new SuccessResponse<>(userService.saveUser(user));
+    public Response<User> updateUser(@RequestBody @Valid  User user, BindingResult bindingResult) {
+        if (bindingResultLogs.checkUserFields(bindingResult, logger)) {
+            return new SuccessResponse<>(userService.saveUser(user));
+        }
+        return new ErrorResponse<>(new Error(204, "Incorrect Data"));
     }
 
     @GetMapping("/allUsers")

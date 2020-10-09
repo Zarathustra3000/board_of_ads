@@ -67,35 +67,42 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" align="center" id="newUserCR">
+                            <form name="userCreationFormCP" align="center" id="newUserCR">
                                 <td>
                                     <label for="AdminPanelUserEmail" th:text="#{adminPanelUserMail}">User E-Mail</label><br>
-                                    <input type="text" id="AdminPanelUserEmail" name="userEmailCP"><br><br>
+                                    <input type="text" placeholder="Введите почту" id="AdminPanelUserEmail" name="userEmailCP"/>
+                                    <p id="emailErrorsNU"></p>
                                 </td>
                                 <td>
                                     <label for="AdminPanelUserPassword"
                                            th:text="#{adminPanelUserPassword}">Пароль</label><br>
-                                    <input type="text" id="AdminPanelUserPassword" name="userPasswordCP"><br><br>
+                                    <input type="text" placeholder="Введите пароль" id="AdminPanelUserPassword" name="userPasswordCP"/>
+                                    <p id="passwordErrorsNU"></p>
+                                    <p id="passwordSpaceNotAllow"></p>
                                 </td>
                                 <td>
                                     <label for="AdminPanelUserFirstName"
                                            th:text="#{adminPanelUserFirstName}">Имя</label><br>
-                                    <input type="text" id="AdminPanelUserFirstName" name="userFirstNameCP"><br><br>
+                                    <input type="text" placeholder="Введите имя" id="AdminPanelUserFirstName" name="userFirstNameCP"/>
+                                    <p id="firstnameErrorsNU"></p>
                                 </td>
                                 <td>
                                     <label for="AdminPanelUserLastName"
                                            th:text="#{adminPanelUserLastName}">Фамилия</label><br>
-                                    <input type="text" id="AdminPanelUserLastName" name="userLastNameCP"><br><br>
+                                    <input type="text" placeholder="Введите фамилию" id="AdminPanelUserLastName" name="userLastNameCP"/>
+                                    <p id="lastnameErrorsNU"></p>
                                 </td>
                                 <td>
                                     <label for="roleSelect" th:text="#{adminPanelUserRoles}">Роли</label><br>
                                     <select multiple="multiple" size="2" id="roleSelect" name="roleSet">
                                         <option value="ADMIN">Role Admin</option>
                                         <option value="USER">Role User</option>
-                                    </select><br><br>
+                                    </select>
+                                    <p id="rolesErrorsNU"></p>
                                 </td>
                                 <a class="btn btn-success mb-2" role="button" id="createUser"
-                                   data-dismiss="modal" th:text="#{adminPanelUserAddButton}">Создать пользователя</a>
+                                   th:text="#{adminPanelUserAddButton}">Создать пользователя</a>
+                                <p id="createUserResult"></p>
                             </form>
                         </div>
                     </div>
@@ -116,7 +123,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="center-block  text-center">
+                <form name="userUpdateFormCP" class="center-block  text-center">
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="updUserID" th:text="#{adminPanelUserID}">ИД</label>
@@ -127,21 +134,26 @@
                             <label for="updUserName" th:text="#{adminPanelUserFirstName}">Имя</label>
                             <input type="text" class="form-control" id="updUserName"
                                    name="name">
+                            <p id="firstnameErrorsUS"></p>
                         </div>
                         <div class="form-group">
                             <label for="updUserLastName" th:text="#{adminPanelUserLastName}">Фамилия</label>
                             <input type="text" class="form-control" id="updUserLastName"
                                    name="surname">
+                            <p id="lastnameErrorsUS"></p>
                         </div>
                         <div class="form-group">
                             <label for="updUserPassword" th:text="#{adminPanelUserPassword}">Пароль</label>
                             <input type="text" class="form-control" id="updUserPassword"
                                    name="password">
+                            <p id="passwordErrorsUS"></p>
+                            <p id="passwordSpaceNotAllowUS"></p>
                         </div>
                         <div class="form-group">
                             <label for="updUserEmail" th:text="#{adminPanelUserMail}">Почта</label>
                             <input type="text" class="form-control" id="updUserEmail"
                                    name="email">
+                            <p id="emailErrorsUS"></p>
                         </div>
                         <div class="form-group">
                             <label for="updUserDataReg" th:text="#{adminPanelUserDataReg}">Дата регистрации</label>
@@ -156,6 +168,7 @@
                                 <option value="ADMIN">Role Admin</option>
                                 <option value="USER">Role User</option>
                             </select>
+                            <p id="rolesErrorsUS"></p>
                         </div>
                     </div>
                     <div class="modal-footer" id="updateButtonInModal">
@@ -163,7 +176,8 @@
                         </div>
                         <button id="closeUpdateModal" type="button" class="btn btn-secondary"
                                 data-dismiss="modal">Close
-                        </button>
+                        </button><br>
+                        <p id="updateUserResult"></p>
                     </div>
                 </form>
             </div>
@@ -223,8 +237,10 @@
         </div>
     </div>
     <!--Модальное окно на удаление-->
+    <div id="hideTheCat">
     <div th:insert="fragments/category-nav-panel::nav-panel"></div>
     <div th:insert="fragments/category-modal-update::update-category"></div>
     <div th:insert="fragments/category-modal-delete::delete-category"></div>
     <div th:insert="fragments/category-modal-add::add-category"></div>
+    </div>
 </header>
