@@ -19,7 +19,8 @@
                         <h3 class="modal-title " id="authModalLongTitle">Вход</h3>
                         <button type="button" title="Закрыть" class="modal-auth-close"
                                 data-dismiss="modal"
-                                data-marker="close-button">Закрыть</button>
+                                data-marker="close-button">Закрыть
+                        </button>
                     </div>
                 </div>
 
@@ -27,11 +28,11 @@
 
                 <div class="modal-body auth-app-login-form-2_SQa" id="center-ids">
                     <div class="form-group c123123">
-                        <input type="email" class="form-control " id="tel-and-email"
-                               placeholder="Телефон или электронная почта">
+                        <input type="email" class="form-control " id="emailAuth"
+                               placeholder="Электронная почта" required autofocus>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="password" placeholder="Пароль">
+                        <input type="password" class="form-control" id="passwordAuth" placeholder="Пароль" required>
                     </div>
                     <div style="width: auto" class="container">
                         <div class="row">
@@ -52,7 +53,7 @@
                         </div>
                     </div>
                     <div class="action-root_align-center-mUlAP">
-                        <a href="#"
+                        <a id="buttonAuth"
                            class="btn btn-md auth-form-auth-form__submit-rSWaC"
                            style="background: #0af"
                            role="button">Войти</a>
