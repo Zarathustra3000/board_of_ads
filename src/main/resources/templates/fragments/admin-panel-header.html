@@ -65,36 +65,42 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" align="center" id="newUserCR" th:object="${data}">
+                            <form name="userCreationFormCP" align="center" id="newUserCR">
                                 <td>
                                     <label for="AdminPanelUserEmail" th:text="#{adminPanelUserMail}">User E-Mail</label><br>
-                                    <input type="text" id="AdminPanelUserEmail" name="userEmailCP"/>
-                                    <br><br>
+                                    <input type="text" placeholder="Введите почту" id="AdminPanelUserEmail" name="userEmailCP"/>
+                                    <p id="emailErrorsNU"></p>
                                 </td>
                                 <td>
                                     <label for="AdminPanelUserPassword"
                                            th:text="#{adminPanelUserPassword}">Пароль</label><br>
-                                    <input type="text" id="AdminPanelUserPassword" name="userPasswordCP"><br><br>
+                                    <input type="text" placeholder="Введите пароль" id="AdminPanelUserPassword" name="userPasswordCP"/>
+                                    <p id="passwordErrorsNU"></p>
+                                    <p id="passwordSpaceNotAllow"></p>
                                 </td>
                                 <td>
                                     <label for="AdminPanelUserFirstName"
                                            th:text="#{adminPanelUserFirstName}">Имя</label><br>
-                                    <input type="text" id="AdminPanelUserFirstName" name="userFirstNameCP"><br><br>
+                                    <input type="text" placeholder="Введите имя" id="AdminPanelUserFirstName" name="userFirstNameCP"/>
+                                    <p id="firstnameErrorsNU"></p>
                                 </td>
                                 <td>
                                     <label for="AdminPanelUserLastName"
                                            th:text="#{adminPanelUserLastName}">Фамилия</label><br>
-                                    <input type="text" id="AdminPanelUserLastName" name="userLastNameCP"><br><br>
+                                    <input type="text" placeholder="Введите фамилию" id="AdminPanelUserLastName" name="userLastNameCP"/>
+                                    <p id="lastnameErrorsNU"></p>
                                 </td>
                                 <td>
                                     <label for="roleSelect" th:text="#{adminPanelUserRoles}">Роли</label><br>
                                     <select multiple="multiple" size="2" id="roleSelect" name="roleSet">
                                         <option value="ADMIN">Role Admin</option>
                                         <option value="USER">Role User</option>
-                                    </select><br><br>
+                                    </select>
+                                    <p id="rolesErrorsNU"></p>
                                 </td>
                                 <a class="btn btn-success mb-2" role="button" id="createUser"
                                    th:text="#{adminPanelUserAddButton}">Создать пользователя</a>
+                                <p id="createUserResult"></p>
                             </form>
                         </div>
                     </div>
