@@ -34,6 +34,7 @@ public class AdminRestController {
     private final BindingResultLogs bindingResultLogs;
     private static final Logger logger = LoggerFactory.getLogger(AdminRestController.class);
 
+
     @PostMapping(value = "/newUser")
     public Response<User> createUser(@RequestBody @Valid User user, BindingResult bindingResult) {
         if (bindingResultLogs.checkUserFields(bindingResult, logger)) {
