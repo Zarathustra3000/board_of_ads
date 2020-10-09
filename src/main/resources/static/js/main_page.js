@@ -11,7 +11,7 @@ async function addCategories() {
     categorySelect.append('<option th:text="Любая категория">Любая категория</option>');
     categories.then(categories => {
         categories.data.forEach((cat) => {
-            if (cat.parent == true) {
+            if (cat.parentName == null) {
                 let option = `<option class="category-parent" th:text="` + cat.name + `">` + cat.name + `</option>`;
                 categorySelect.append(option);
             } else {
@@ -81,7 +81,7 @@ async function onClickOpt(id) {
         $('#countPostButton').remove();
             let button = `<button
                                 type="button"
-                                class="btn btn-primary button-count-post"
+                                class="btn btn-primary position-fixed"
                                 onclick="clickCountButton()"
                                 id="countPostButton">Показать ` + sizeArray + ` объявлений
                           </button>`;
@@ -119,7 +119,7 @@ async function viewCities() {
     }).then(() => {
             let button = `<button 
                                 type="button" 
-                                class="btn btn-primary button-count-post"   
+                                class="btn btn-primary position-fixed"   
                                 id="countPostButton">Показать ` + sizeArray + ` объявлений
                           </button>`;
             buttonAdd.append(button);

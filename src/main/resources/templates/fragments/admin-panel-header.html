@@ -9,7 +9,8 @@
                 <ul>
                     <li><a th:text="#{ads}" class="header-link-item" href="/">Объявления</a></li>
                     <li><a th:text="#{analytic}" class="header-link-item" href="#">Аналитика</a></li>
-                    <li><a th:text="#{adminCategory}" class="header-link-item" href="#">Категории</a></li>
+                    <li><a id="categoryPanel" th:text="#{adminCategory}" class="header-link-item" data-toggle="tab" href="#nav-category"
+                           role="tab" aria-controls="nav-category" aria-selected="false">Категории</a></li>
                     <li><a id="createNewUserAtAdminPanel" th:text="#{newUser}" class="header-link-item"
                            data-toggle="modal" data-target="#newUserModal">Создать нового пользователя</a>
                     </li>
@@ -51,6 +52,7 @@
                     </tbody>
                 </table>
             </div>
+        </div>
             <!--центральная таблица с пользователями-->
 
             <!--Модальное окно на создание нового пользователя-->
@@ -221,5 +223,8 @@
         </div>
     </div>
     <!--Модальное окно на удаление-->
-
+    <div th:insert="fragments/category-nav-panel::nav-panel"></div>
+    <div th:insert="fragments/category-modal-update::update-category"></div>
+    <div th:insert="fragments/category-modal-delete::delete-category"></div>
+    <div th:insert="fragments/category-modal-add::add-category"></div>
 </header>
