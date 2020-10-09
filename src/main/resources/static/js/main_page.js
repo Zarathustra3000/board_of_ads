@@ -11,7 +11,7 @@ async function addCategories() {
     categorySelect.append('<option th:text="Любая категория">Любая категория</option>');
     categories.then(categories => {
         categories.data.forEach((cat) => {
-            if (cat.parent == true) {
+            if (cat.parentName == null) {
                 let option = `<option class="category-parent" th:text="` + cat.name + `">` + cat.name + `</option>`;
                 categorySelect.append(option);
             } else {
@@ -23,6 +23,7 @@ async function addCategories() {
 }
 
 let changedCityName;
+let regionPosts;
 
 function clickCountButton() {
     $('#category-select-city').empty();
@@ -30,6 +31,7 @@ function clickCountButton() {
     $('#searchModel').modal('hide');
     let row = `<option>` + changedCityName + `</option>`;
     $('#category-select-city').append(row);
+    reinstallTable(selectedCategoryOption, changedCityName, $("#search-main-text").val(), $("#image-select option:selected").val())
 }
 
 $('select#cities').on('change', function() {
@@ -63,24 +65,30 @@ async function onClickOpt(id) {
         usersResponse = await userService.findPostingByCityName(id);
     }
     posts = usersResponse.json();
-    console.log(posts);
     $('#countPostButton').empty();
     let sizeArray = 0;
     posts.then(posts => {
-        posts.data.forEach(() => {
-            sizeArray++;
+        posts.data.forEach((posting) => {
+            let temp = selectedCategoryOption;
+            if(temp === "Любая категория") {
+                temp = posting.category;
+            }
+            if(posting.category === temp) {
+                sizeArray++;
+            }
         })
     }).then(() => {
         $('#countPostButton').remove();
             let button = `<button
                                 type="button"
-                                class="btn btn-primary button-count-post"
+                                class="btn btn-primary position-fixed"
                                 onclick="clickCountButton()"
                                 id="countPostButton">Показать ` + sizeArray + ` объявлений
                           </button>`;
             buttonAdd.append(button);
         }
     );
+    regionPosts = (await posts).data;
 }
 
 $(document).ready(function() {
@@ -91,7 +99,6 @@ $(document).ready(function() {
 let cities;
 let posts;
 
-
 async function viewCities() {
     $('#category-select-city').empty();
     const usersResponse = await userService.findAllCity();
@@ -99,15 +106,20 @@ async function viewCities() {
     const postsResponse = await userService.findAllPostings();
     posts = postsResponse.json();
     let sizeArray = 0;
-    console.log(posts);
     posts.then(posts => {
-        posts.data.forEach(() => {
-            sizeArray++;
+        posts.data.forEach((posting) => {
+            let temp = selectedCategoryOption;
+            if(temp === "Любая категория") {
+               temp = posting.category;
+            }
+            if(posting.category === temp) {
+                sizeArray++;
+            }
         })
     }).then(() => {
             let button = `<button 
                                 type="button" 
-                                class="btn btn-primary button-count-post"   
+                                class="btn btn-primary position-fixed"   
                                 id="countPostButton">Показать ` + sizeArray + ` объявлений
                           </button>`;
             buttonAdd.append(button);
