@@ -40,7 +40,6 @@ function getCategoryTable() {
         async: true,
         success: function (result) {
             let array = result.data;
-
             for (let i = 0; i < array.length; i++) {
                 let x = array[i];
                 if (x.layer == 1) {
@@ -99,7 +98,6 @@ function clickOnCategoryButton2(o, category, simpleName) {
         .addClass("unactive-category-table-button-2").css("background-color", "#fff");
     $(o).removeClass("unactive-category-table-button-2")
         .addClass("active-category-table-button-2").css("background-color", "#0af", "color", "#fff");
-    console.log("click2b " + category)
     getCategoryTable3(category, simpleName)
 }
 
@@ -134,7 +132,6 @@ function clickOnCategoryButton3(o) {
         .addClass("unactive-category-table-button-3").css("background-color", "#fff");
     $(o).removeClass("unactive-category-table-button-3")
         .addClass("active-category-table-button-3").css("background-color", "#0af", "color", "#fff");
-
     // todo add action
 }
 
