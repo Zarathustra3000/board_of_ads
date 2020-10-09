@@ -15,11 +15,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.swing.text.Position;
 import java.util.List;
 
 @Data
 @Entity
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "category")
 public class Category {
@@ -40,4 +41,14 @@ public class Category {
 
     @Column
     private int layer;
+
+    public Category(String name, Category category, int layer) {
+        if (category == null) {
+            this.name = name;
+        } else {
+            this.name = category.getName() + ":" + name;
+        }
+        this.category = category;
+        this.layer = layer;
+    }
 }
