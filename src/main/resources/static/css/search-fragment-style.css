@@ -22,7 +22,7 @@
     border-left: 3px solid silver;
     border-right: 1px solid silver;
 }
-#category-select, #category-select-city, #image-select {
+#category-select, #category-select-city, #image-select, #search-left-btn,#search-main-text {
     width: 100%;
     border: 0px;
     background: #f7f7f7;
@@ -109,7 +109,7 @@ textarea {
 }
 
 .button-count-post {
-    position:fixed;
+    position:absolute;
     bottom: 30px;
     right: 15px;
 }

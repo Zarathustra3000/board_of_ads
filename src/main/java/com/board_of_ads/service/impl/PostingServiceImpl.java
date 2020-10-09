@@ -42,7 +42,8 @@ public class PostingServiceImpl implements PostingService {
 
     @Override
     public List<PostingDto> getPostingByCity(City city) {
-        return postingRepository.findPostingByCity(city);
+        List<PostingDto> result = postingRepository.findPostingByCity(city);
+        return getPostingDtos(result);
     }
 
     @Override
@@ -51,14 +52,22 @@ public class PostingServiceImpl implements PostingService {
         var cities = cityRepository.findCitiesByRegion(
                 regionService.findRegionByNameAndFormSubject(name).get());
         cities.forEach(city -> result.addAll(postingRepository.findPostingByCity(city)));
-        return result;
+        return getPostingDtos(result);
     }
 
     @Override
     public List<PostingDto> getAllPostings() {
         List<PostingDto> postingDtos = postingRepository.findAllPostings();
+        return getPostingDtos(postingDtos);
+    }
+
+    private List<PostingDto> getPostingDtos(List<PostingDto> postingDtos) {
         for(PostingDto dto : postingDtos) {
            dto.setImages(getPostingById(dto.getId()).getImages());
+           dto.setCategory(getPostingById(dto.getId()).getCategory().getName());
+           if(getPostingById(dto.getId()).getCity() != null) {
+               dto.setCity(getPostingById(dto.getId()).getCity().getName());
+           }
         }
         return postingDtos;
     }
