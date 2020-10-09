@@ -41,15 +41,13 @@ public class SearchPostingServiceImpl implements SearchPostingSevice {
 
         for (PostingDto postingDto : postingDtos) {
 
-            String categorySelectTemp = categorySelect;
             boolean categoryFlag = false;
             boolean photoFlag = false;
             boolean textFlag = false;
 
-            if (categorySelectTemp.equals("Любая категория")) {
-                categorySelectTemp = postingDto.getCategory();
-            }
-            if (postingDto.getCategory().equals(categorySelectTemp)) {
+            if (categorySelect.equals("Любая категория")) {
+                categoryFlag = true;
+            } else if (postingDto.getCategory().equals(categorySelect)) {
                 categoryFlag = true;
             }
             if(photoOption != null) {
