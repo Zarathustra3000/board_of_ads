@@ -67,7 +67,7 @@ public class AuthController {
     }
 
     @GetMapping("/mail_auth")
-    public String mailAuth(@RequestParam(value = "code") String code) {
+    public String mailAuth(@RequestParam(value = "code", required = false) String code) {
         if (code == null) {
             return "redirect:" + mailService.getAuthURL();
         }
