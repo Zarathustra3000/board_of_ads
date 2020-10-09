@@ -37,4 +37,7 @@ public class Category {
 
     @OneToMany
     private List<Posting> posts;
+
+    @Column
+    private int layer;
 }
