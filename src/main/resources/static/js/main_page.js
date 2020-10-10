@@ -1,6 +1,6 @@
 let buttonAdd = $('#searchCityDiv');
 
-$("#region, #category-select-city").click(function() {
+$("#region, #category-select-city").click(function () {
     $('#searchModel').modal('show');
 });
 
@@ -11,7 +11,7 @@ async function addCategories() {
     categorySelect.append('<option th:text="Любая категория">Любая категория</option>');
     categories.then(categories => {
         categories.data.forEach((cat) => {
-            if (cat.parent == true) {
+            if (cat.parentName == null) {
                 let option = `<option class="category-parent" th:text="` + cat.name + `">` + cat.name + `</option>`;
                 categorySelect.append(option);
             } else {
@@ -23,6 +23,7 @@ async function addCategories() {
 }
 
 let changedCityName;
+let regionPosts;
 
 function clickCountButton() {
     $('#category-select-city').empty();
@@ -30,19 +31,20 @@ function clickCountButton() {
     $('#searchModel').modal('hide');
     let row = `<option>` + changedCityName + `</option>`;
     $('#category-select-city').append(row);
+    reinstallTable(selectedCategoryOption, changedCityName, $("#search-main-text").val(), $("#image-select option:selected").val())
 }
 
-$('select#cities').on('change', function() {
+$('select#cities').on('change', function () {
     $('input[name="cityInput"]').val(this.value);
 });
 
 function onOptionHover() {
     $(".opt").mouseover(
-        function() {
+        function () {
             $(this).css('background', '#99ccff')
         });
     $(".opt").mouseleave(
-        function() {
+        function () {
             $(this).css('background', '#fff')
         });
 }
@@ -63,34 +65,82 @@ async function onClickOpt(id) {
         usersResponse = await userService.findPostingByCityName(id);
     }
     posts = usersResponse.json();
-    console.log(posts);
     $('#countPostButton').empty();
     let sizeArray = 0;
     posts.then(posts => {
-        posts.data.forEach(() => {
-            sizeArray++;
+        posts.data.forEach((posting) => {
+            let temp = selectedCategoryOption;
+            if(temp === "Любая категория") {
+                temp = posting.category;
+            }
+            if(posting.category === temp) {
+                sizeArray++;
+            }
         })
     }).then(() => {
-        $('#countPostButton').remove();
+            $('#countPostButton').remove();
             let button = `<button
                                 type="button"
-                                class="btn btn-primary button-count-post"
+                                class="btn btn-primary position-fixed"
                                 onclick="clickCountButton()"
                                 id="countPostButton">Показать ` + sizeArray + ` объявлений
                           </button>`;
             buttonAdd.append(button);
         }
     );
+    regionPosts = (await posts).data;
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     viewCities();
     addCategories();
+    $('#buttonAuth').on('click', function () {
+        $('#emailAuth').addClass("redborder");
+        authorization();
+    });
 });
+
+
+async function authorization() {
+    $('#emailAuth').removeClass("redborder");
+    $('#passwordAuth').removeClass("redborder");
+    let userAuth = {
+        email: $("#emailAuth").val(),
+        password: $("#passwordAuth").val()
+    };
+    try {
+        const authResponse = await fetch('http://localhost:5556/api/auth', {
+            method: "POST",
+            credentials: 'same-origin',
+            body: JSON.stringify(userAuth),
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        let authMessage = authResponse.json();
+        authMessage.then(authMessage => {
+            if (authMessage.success === true) {
+                $('#registrationModalCenter').modal('hide');
+                $('#emailAuth').val("");
+                $('#passwordAuth').val("");
+                location.reload();
+            } else {
+                let errorMessage = authMessage.error;
+                if (errorMessage.text === "User not found!") {
+                    $('#emailAuth').addClass("redborder");
+                }
+                if (errorMessage.text === "Incorrect password!") {
+                    $('#passwordAuth').addClass("redborder");
+                }
+            }
+        });
+    } catch (error) {
+        console.log('Возникла проблема с вашим fetch запросом: ', error.message);
+    }
+}
 
 let cities;
 let posts;
-
 
 async function viewCities() {
     $('#category-select-city').empty();
@@ -99,15 +149,20 @@ async function viewCities() {
     const postsResponse = await userService.findAllPostings();
     posts = postsResponse.json();
     let sizeArray = 0;
-    console.log(posts);
     posts.then(posts => {
-        posts.data.forEach(() => {
-            sizeArray++;
+        posts.data.forEach((posting) => {
+            let temp = selectedCategoryOption;
+            if(temp === "Любая категория") {
+               temp = posting.category;
+            }
+            if(posting.category === temp) {
+                sizeArray++;
+            }
         })
     }).then(() => {
             let button = `<button 
                                 type="button" 
-                                class="btn btn-primary button-count-post"   
+                                class="btn btn-primary position-fixed"   
                                 id="countPostButton">Показать ` + sizeArray + ` объявлений
                           </button>`;
             buttonAdd.append(button);
@@ -115,7 +170,7 @@ async function viewCities() {
     );
 }
 
-$('.typeahead').on('keyup', function() {
+$('.typeahead').on('keyup', function () {
     addOptions();
     $('#countPostButton').attr("disabled", true);
 });
@@ -123,7 +178,7 @@ $('.typeahead').on('keyup', function() {
 function addOptions() {
     $('#citiesSelect').remove();
     $('#citiesSelect').empty();
-    let select=`<select id="citiesSelect" size="7" class="form-control"></select>`;
+    let select = `<select id="citiesSelect" size="7" class="form-control"></select>`;
     $('.citiesOptions').append(select);
     let addForm = $(".typeahead").val().toLowerCase();
     cities.then(cities => {
@@ -144,7 +199,7 @@ function addOptions() {
 }
 
 const http = {
-    fetch: async function(url, options = {}) {
+    fetch: async function (url, options = {}) {
         const response = await fetch(url, {
             headers: {
                 'Accept': 'application/json',
@@ -174,7 +229,7 @@ const userService = {
     }
 }
 
-$.get("/user", function(data) {
+$.get("/user", function (data) {
     $("#user").html(data.userAuthentication.details.name);
     $(".unauthenticated").hide()
     $(".authenticated").show()

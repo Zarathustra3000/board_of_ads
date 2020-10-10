@@ -10,11 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 @Controller
 @AllArgsConstructor
 public class MainPageController {
     private static Logger LOG = LoggerFactory.getLogger(MainPageController.class.getName());
     private final MailService mailService;
+
 
     @GetMapping("/")
     public String getMainPage(@AuthenticationPrincipal() User user, Model model) {
@@ -36,6 +38,7 @@ public class MainPageController {
         model.addAttribute(user);
         return "admin/admin_page";
     }
+
 
     @GetMapping("/confirm/")
     public String confirmPassword() {

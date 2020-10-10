@@ -21,6 +21,9 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Set;
@@ -40,9 +43,12 @@ public class User implements UserDetails {
     private Long id;
 
     @Column
+    @NotBlank
     private String email;
 
     @Column
+    @Size(min = 6, max = 60, message = "Пароль должен содержать минимум 6 и максимум 60 символов")
+    @Pattern(regexp = "(?=^.{6,60}$)([^\\s]).*$", message = "Пароль не должен содержать пробелов")
     private String password;
 
     @Column
