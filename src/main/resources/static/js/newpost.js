@@ -40,7 +40,6 @@ function getCategoryTable() {
         async: true,
         success: function (result) {
             let array = result.data;
-            console.log(array);
             for (let i = 0; i < array.length; i++) {
                 let x = array[i];
                 if (x.layer === 1) {
