@@ -1,4 +1,4 @@
-<header th:fragment="main-header" xmlns:th="https://www.thymeleaf.org"  xmlns:sec="http://www.springframework.org/security/tags">
+<header th:fragment="main-header" xmlns:th="https://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <div class="header-line">
         <div class="header-container">
             <div class="header-menu-left">
@@ -75,7 +75,10 @@
                             <li class="dropdown-item"><a th:text="#{exit}" style="color: gray;" href="/logout">Выйти</a></li>
                         </ul>
                     </li>
-                    <li style="padding-top: 5px"><a th:text="#{add}" class="header-button-new-ads" href="#">Подать объявление</a></li>
+                    <li style="padding-top: 5px">
+                        <a sec:authorize="!isAuthenticated()" th:text="#{add}" class="header-button-new-ads" data-target="#registrationModalCenter" data-toggle="modal" href="#">Подать объявление</a>
+                        <a sec:authorize="isAuthenticated()" id="newPost" th:text="#{add}" class="header-button-new-ads" href="/new_post">Подать объявление</a>
+                    </li>
                     <li style="padding-top: 5px">
                         <a class="header-link-item header-button-sign" th:href="@{'?locale=ru'}">Ru</a>
                         <a class="header-link-item header-button-sign" th:href="@{'?locale=en'}">En</a>

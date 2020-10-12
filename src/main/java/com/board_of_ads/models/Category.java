@@ -38,6 +38,9 @@ public class Category {
     @OneToMany
     private List<Posting> posts;
 
+    @Column
+    private int layer;
+
     public Category(String name, Category category) {
         this.name = name;
         this.category = category;
@@ -47,5 +50,15 @@ public class Category {
         this.id = id;
         this.name = name;
         this.category = category;
+    }
+
+    public Category(String name, Category category, int layer) {
+        if (category == null) {
+            this.name = name;
+        } else {
+            this.name = category.getName() + ":" + name;
+        }
+        this.category = category;
+        this.layer = layer;
     }
 }
