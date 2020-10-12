@@ -1,246 +1,82 @@
 <header th:fragment="main-adm" xmlns:th="https://www.thymeleaf.org">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 
-    <!--навигационная панель-->
-    <div class="header-line">
-        <div class="header-container">
-            <div class="header-menu-left">
-                <ul>
-                    <li><a th:text="#{ads}" class="header-link-item" href="/">Объявления</a></li>
-                    <li><a th:text="#{analytic}" class="header-link-item" href="#">Аналитика</a></li>
-                    <li><a id="categoryPanel" th:text="#{adminCategory}" class="header-link-item" data-toggle="tab" href="#nav-category"
-                           role="tab" aria-controls="nav-category" aria-selected="false">Категории</a></li>
-                    <li><a id="createNewUserAtAdminPanel" th:text="#{newUser}" class="header-link-item"
-                           data-toggle="modal" data-target="#newUserModal">Создать нового пользователя</a>
-                    </li>
-                    <li><a id="userTableAtAdminPanel" th:text="#{userList}" class="header-link-item" data-toggle="tab"
-                           href="#nav-userlist"
-                           role="tab" aria-controls="nav-userlist" aria-selected="false">Список пользователей</a></li>
-                </ul>
-            </div>
-            <div class="header-favorite-button">
-                <a class="header-link-item header-button-sign" th:href="@{'?locale=ru'}">Ru</a>
-                <a class="header-link-item header-button-sign" th:href="@{'?locale=en'}">En</a>
-            </div>
-        </div>
-    </div>
-    <!--навигационная панель-->
-
-    <!--центральная таблица с пользователями-->
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-userlist" role="tabpanel" aria-labelledby="nav-list-tab">
-            <div id="hideTheUsersTable">
-                <p class="lead" th:align="center" th:text="#{adminPanelUserListName}"><strong>Таблица
-                    пользователей</strong></p>
-                <table class="table table-striped table-bordered" id="userTableJs">
-                    <thead>
-                    <tr>
-                        <th scope="col" th:text="#{adminPanelUserID}">ИД</th>
-                        <th scope="col" th:text="#{adminPanelUserMail}">Почта</th>
-                        <th scope="col" th:text="#{adminPanelUserFirstName}">Имя</th>
-                        <th scope="col" th:text="#{adminPanelUserLastName}">Фамилия</th>
-                        <th scope="col" th:text="#{adminPanelUserPhone}">Телефон</th>
-                        <th scope="col" th:text="#{adminPanelUserDataReg}">Дата регистрации</th>
-                        <th scope="col" th:text="#{adminPanelUserActivation}">Статус активации</th>
-                        <th scope="col" th:text="#{adminPanelUserRoles}">Роли</th>
-                        <th scope="col" th:text="#{adminPanelUserEdit}">Редактирование</th>
-                        <th scope="col" th:text="#{adminPanelUserDelete}">Удаление</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-            <!--центральная таблица с пользователями-->
-
-            <!--Модальное окно на создание нового пользователя-->
-            <div id="newUserModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content  col-md-8">
-                        <div class="modal-header">
-                            <h4 class="modal-title" th:text="#{newUser}">Создать нового пользователя</h4>
-                            <button id="closeNewUserModal" type="button" class="close" data-dismiss="modal"
-                                    aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form name="userCreationFormCP" align="center" id="newUserCR">
-                                <td>
-                                    <label for="AdminPanelUserEmail" th:text="#{adminPanelUserMail}">User E-Mail</label><br>
-                                    <input type="text" placeholder="Введите почту" id="AdminPanelUserEmail" name="userEmailCP"/>
-                                    <p id="emailErrorsNU"></p>
-                                </td>
-                                <td>
-                                    <label for="AdminPanelUserPassword"
-                                           th:text="#{adminPanelUserPassword}">Пароль</label><br>
-                                    <input type="text" placeholder="Введите пароль" id="AdminPanelUserPassword" name="userPasswordCP"/>
-                                    <p id="passwordErrorsNU"></p>
-                                    <p id="passwordSpaceNotAllow"></p>
-                                </td>
-                                <td>
-                                    <label for="AdminPanelUserFirstName"
-                                           th:text="#{adminPanelUserFirstName}">Имя</label><br>
-                                    <input type="text" placeholder="Введите имя" id="AdminPanelUserFirstName" name="userFirstNameCP"/>
-                                    <p id="firstnameErrorsNU"></p>
-                                </td>
-                                <td>
-                                    <label for="AdminPanelUserLastName"
-                                           th:text="#{adminPanelUserLastName}">Фамилия</label><br>
-                                    <input type="text" placeholder="Введите фамилию" id="AdminPanelUserLastName" name="userLastNameCP"/>
-                                    <p id="lastnameErrorsNU"></p>
-                                </td>
-                                <td>
-                                    <label for="roleSelect" th:text="#{adminPanelUserRoles}">Роли</label><br>
-                                    <select multiple="multiple" size="2" id="roleSelect" name="roleSet">
-                                        <option value="ADMIN">Role Admin</option>
-                                        <option value="USER">Role User</option>
-                                    </select>
-                                    <p id="rolesErrorsNU"></p>
-                                </td>
-                                <a class="btn btn-success mb-2" role="button" id="createUser"
-                                   th:text="#{adminPanelUserAddButton}">Создать пользователя</a>
-                                <p id="createUserResult"></p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Модальное окно на создание нового пользователя-->
-
-    <!--Модальное окно на редактирование-->
-    <div id="updateModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content  col-md-8">
-                <div class="modal-header">
-                    <h4 class="modal-title">Update User</h4>
-                    <button id="closeUpdateModal2" type="button" class="close" data-dismiss="modal"
-                            aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form name="userUpdateFormCP" class="center-block  text-center">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="updUserID" th:text="#{adminPanelUserID}">ИД</label>
-                            <input type="text" class="form-control" id="updUserID"
-                                   name="id" readonly/>
-                        </div>
-                        <div class="form-group">
-                            <label for="updUserName" th:text="#{adminPanelUserFirstName}">Имя</label>
-                            <input type="text" class="form-control" id="updUserName"
-                                   name="name">
-                            <p id="firstnameErrorsUS"></p>
-                        </div>
-                        <div class="form-group">
-                            <label for="updUserLastName" th:text="#{adminPanelUserLastName}">Фамилия</label>
-                            <input type="text" class="form-control" id="updUserLastName"
-                                   name="surname">
-                            <p id="lastnameErrorsUS"></p>
-                        </div>
-                        <div class="form-group">
-                            <label for="updUserPassword" th:text="#{adminPanelUserPassword}">Пароль</label>
-                            <input type="text" class="form-control" id="updUserPassword"
-                                   name="password">
-                            <p id="passwordErrorsUS"></p>
-                            <p id="passwordSpaceNotAllowUS"></p>
-                        </div>
-                        <div class="form-group">
-                            <label for="updUserEmail" th:text="#{adminPanelUserMail}">Почта</label>
-                            <input type="text" class="form-control" id="updUserEmail"
-                                   name="email">
-                            <p id="emailErrorsUS"></p>
-                        </div>
-                        <div class="form-group">
-                            <label for="updUserDataReg" th:text="#{adminPanelUserDataReg}">Дата регистрации</label>
-                            <input type="text" class="form-control"
-                                   id="updUserDataReg" name="datareg"
-                                   readonly/>
-                        </div>
-                        <div class="form-group">
-                            <label for="userUpdRoles">Role</label>
-                            <select multiple size="2" id="userUpdRoles" name="roles"
-                                    class="form-control">
-                                <option value="ADMIN">Role Admin</option>
-                                <option value="USER">Role User</option>
-                            </select>
-                            <p id="rolesErrorsUS"></p>
-                        </div>
-                    </div>
-                    <div class="modal-footer" id="updateButtonInModal">
-                        <div>
-                        </div>
-                        <button id="closeUpdateModal" type="button" class="btn btn-secondary"
-                                data-dismiss="modal">Close
-                        </button><br>
-                        <p id="updateUserResult"></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!--Модальное окно на редактирование-->
-
-    <!--Модальное окно на удаление-->
-    <div id="deleteModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content  col-md-8">
-                <div class="modal-header">
-                    <h4 class="modal-title">Delete User</h4>
-                    <button id="closeDeleteModal2" type="button" class="close" data-dismiss="modal"
-                            aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form class="center-block  text-center">
-                        <div class="form-group">
-                            <label for="delUserID" th:text="#{adminPanelUserID}">ИД</label>
-                            <input type="text" class="form-control" id="delUserID"
-                                   name="id" readonly/>
-                        </div>
-                        <div class="form-group">
-                            <label for="delUserName" th:text="#{adminPanelUserFirstName}">Имя</label>
-                            <input type="text" class="form-control" id="delUserName"
-                                   name="name" readonly/>
-                        </div>
-                        <div class="form-group">
-                            <label for="delUserEmail" th:text="#{adminPanelUserMail}">Почта</label>
-                            <input type="text" class="form-control" id="delUserEmail"
-                                   name="email" readonly/>
-                        </div>
-                        <div class="form-group">
-                            <label for="delUserDataReg" th:text="#{adminPanelUserDataReg}">Дата регистрации</label>
-                            <input type="text" class="form-control"
-                                   id="delUserDataReg" name="datareg"
-                                   readonly/>
-                        </div>
-                        <div class="form-group">
-                            <label for="delUserRoles" th:text="#{adminPanelUserRoles}">Роли</label>
-                            <input type="text" class="form-control" id="delUserRoles"
-                                   name="roles" readonly/>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer" id="deleteButtonInModal">
+    <div role="tabpanel">
+            <main class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 vh-100 my-3">
                     <div>
+                        <div><a id="statisticPanel"
+                               class="header-link-item"
+                               href="#nav-analytics">
+                                <i class="fa fa-area-chart"></i>
+                                <span th:text="#{analytic}"></span>
+                            </a>
+                        </div>
+                        <div><a id="categoryPanel"
+                               class="header-link-item"
+                               href="#nav-category">
+                                <i class="fa fa-sitemap"></i>
+                                <span th:text="#{adminCategory}"></span>
+                            </a>
+                        </div>
+                        <div><a id="userTableAtAdminPanel"
+                               class="header-link-item"
+                               href="#nav-userlist">
+                                <i class="fa fa-user"></i>
+                                <span th:text="#{adminPanelUsers}"></span>
+                            </a>
+                        </div>
                     </div>
-                    <button id="closeDeleteModal" type="button" class="btn btn-secondary"
-                            data-dismiss="modal" th:text="#{adminPanelCloseButton}">Закрыть
-                    </button>
+                </div>
+                <div class="col-md-10 bg-light vh-100">
+                    <div class="container" id="panel-content">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div id="hideTheUsersTable">
+                                <div class="tab-pane fade" id="nav-userlist">
+                                    <div class="row text-primary p-2">
+                                        <button type="button"
+                                                class="btn btn-primary text-capitalize"
+                                                th:text="#{adminPanelUserAddButton}"
+                                                id="addUser">
+                                        </button>
+                                    </div>
+                                    <p class="lead" th:align="center" th:text="#{adminPanelUserListName}"><strong></strong></p>
+                                    <table class="table table-striped table-bordered" id="userTableJs">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col" th:text="#{adminPanelUserID}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserMail}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserFirstName}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserLastName}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserPhone}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserDataReg}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserActivation}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserRoles}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserEdit}"></th>
+                                            <th scope="col" th:text="#{adminPanelUserDelete}"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div th:insert="fragments/category-nav-panel::nav-panel"></div>
+                            <div th:insert="fragments/category-modal-update::update-category"></div>
+                            <div th:insert="fragments/category-modal-delete::delete-category"></div>
+                            <div th:insert="fragments/category-modal-add::add-category"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
-    <!--Модальное окно на удаление-->
-    <div id="hideTheCat">
-    <div th:insert="fragments/category-nav-panel::nav-panel"></div>
-    <div th:insert="fragments/category-modal-update::update-category"></div>
-    <div th:insert="fragments/category-modal-delete::delete-category"></div>
-    <div th:insert="fragments/category-modal-add::add-category"></div>
-    </div>
+
+    <div th:insert="fragments/users-modal-add::add-user"></div>
+    <div th:insert="fragments/users-modal-edit::edit-user"></div>
+    <div th:insert="fragments/users-modal-delete::delete-user"></div>
+
 </header>
