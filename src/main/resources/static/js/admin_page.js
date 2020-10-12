@@ -15,7 +15,7 @@ let elementCreateUser = document.getElementById('createUser');
 let elementCloseUpdateModal1 = document.getElementById('closeUpdateModal');
 let elementCloseUpdateModal2 = document.getElementById('closeUpdateModal2');
 let elementCloseCreateNewUserModal = document.getElementById('closeNewUserModal');
-let elementCreateNewUserHref = document.getElementById('createNewUserAtAdminPanel');
+let elementCreateNewUserHref = document.getElementById('addUser');
 
 let elementUserTable = document.getElementById('userTableAtAdminPanel');
 
@@ -45,7 +45,7 @@ $(document).mouseup(function (e) {
 //Функция заполняющая таблицу пользователей
 function showAllUsersTable() {
 
-    document.getElementById('hideTheCat').hidden = true;
+    // document.getElementById('hideTheCat').hidden = true;
 
     let userIdForDelete = 0;
     let userIdForUpdate = 0;
@@ -376,6 +376,7 @@ elementCreateUser.onclick = function () {
 };
 
 elementCreateNewUserHref.onclick = function () {
+    $('#newUserModal').modal('show');
     document.getElementById('AdminPanelUserEmail').value = '';
     document.getElementById('AdminPanelUserPassword').value = '';
     document.getElementById('AdminPanelUserFirstName').value = '';
@@ -454,3 +455,18 @@ function clearTheValidateCreate() {
     document.getElementById("lastnameErrorsNU").innerText = "";
     document.getElementById("rolesErrorsNU").innerText = "";
 }
+
+$('#categoryPanel span').on('click', function() {
+    console.log("bla");
+    document.getElementById('nav-userlist').style.display = "none";
+    document.getElementById('nav-category').style.display = "block";
+    document.getElementById('nav-userlist').className = "tab-pane fade";
+    document.getElementById('nav-category').className = "tab-pane fade active show";
+})
+
+$('#userTableAtAdminPanel span').on('click', function() {
+    document.getElementById('nav-userlist').style.display = "block";
+    document.getElementById('nav-category').style.display = "none";
+    document.getElementById('nav-category').className = "tab-pane fade";
+    document.getElementById('nav-userlist').className = "tab-pane fade active show";
+})
