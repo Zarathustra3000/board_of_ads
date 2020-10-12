@@ -8,13 +8,17 @@ public class CategoryDto {
 
     private Long id;
     private String name;
+    private boolean parent;
+    private int layer;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String parentName;
 
-    public CategoryDto(Long id, String name, String parentName) {
+    public CategoryDto(Long id, String name, String parentName, int layer) {
         this.id = id;
         this.name = name;
         this.parentName = parentName;
+        this.layer = layer;
     }
+
 }

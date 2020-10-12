@@ -41,10 +41,10 @@ $("#newPswdButton").click(function() {
 
 const emailService = {
     sendEmail: async (email) => {
-        return await http.fetch('/api/mail/' + email);
+        return await httpHeaders.fetch('/api/mail/' + email);
     },
     recoveryPassword: async (token, data) => {
-        return await http.fetch('/api/mail/?token=' + token, {
+        return await httpHeaders.fetch('/api/mail/?token=' + token, {
             body: JSON.stringify(data),
             method: 'PUT'
         });

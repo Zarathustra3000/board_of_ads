@@ -4,21 +4,6 @@ $(document).ready(function () {
     showCategories();
 });
 
-$('#categoryPanel').on('click', function() {
-    document.getElementById('hideTheUsersTable').hidden = true;
-    document.getElementById('hideTheCat').hidden = false;
-    document.getElementById('hideCategory').hidden = false;
-    document.getElementById('nav-category').className = "tab-pane fade active show";
-    document.getElementById('nav-userlist').className = "tab-pane fade";
-});
-
-$('#userTableAtAdminPanel').on('click', function() {
-    document.getElementById('hideTheUsersTable').hidden = false;
-    document.getElementById('nav-category').className = "tab-pane fade";
-    document.getElementById('nav-userlist').className = "tab-pane fade active show";
-});
-
-
 $('#saveCategoryButton').on('click', function() {
     data = {
         id: $('#categoryID').val(),
