@@ -2,7 +2,6 @@ package com.board_of_ads.controllers.rest;
 
 import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.AuthorizationService;
-import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.util.BindingResultLogs;
 import com.board_of_ads.util.Error;
@@ -28,7 +27,6 @@ import java.security.Principal;
 public class UserRestController {
 
     private final UserService userService;
-    private final RoleService roleService;
     private final AuthorizationService authorizationService;
     private final BindingResultLogs bindingResultLogs;
     private static final Logger logger = LoggerFactory.getLogger(UserRestController.class);
@@ -45,7 +43,7 @@ public class UserRestController {
     public Response<User> Action(@RequestBody @Valid User user, BindingResult bindingResult) {
         if (authorizationService.isValid(user).equals("User not found!") &&
         bindingResultLogs.checkUserFields(bindingResult, logger)) {
-            userService.saveUser(user);
+            userService.regUser(user);
             authorizationService.login(user);
             return Response.ok(user);
         }

@@ -33,8 +33,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User saveUser(User user) {
-        user.setAvatar(new Image(null, "images/user.jpg"));
-        user.setRoles(roleService.defaultRolesSet());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
@@ -48,5 +46,14 @@ public class UserServiceImpl implements UserService {
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
+
+    @Override
+    public User regUser(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setAvatar(new Image(null, "images/user.jpg"));
+        user.setRoles(roleService.defaultRolesSet());
+        return userRepository.save(user);
+    }
+
 
 }
