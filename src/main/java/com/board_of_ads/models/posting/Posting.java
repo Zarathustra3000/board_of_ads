@@ -54,7 +54,7 @@ public class Posting {
     private Category category;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "message_id")
+    @JoinColumn(name = "message_id", referencedColumnName = "id")
     private Message message;
 
     @Column
