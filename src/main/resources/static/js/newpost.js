@@ -40,11 +40,12 @@ function getCategoryTable() {
         async: true,
         success: function (result) {
             let array = result.data;
+            console.log(array);
             for (let i = 0; i < array.length; i++) {
                 let x = array[i];
-                if (x.layer == 1) {
+                if (x.layer === 1) {
                     document.getElementById("cascade-table").innerHTML +=
-                        `<div class="category-table-button unactive-category-table-button" id="category-table-button" 
+                        `<div class="category-table-button inactive-category-table-button" id="category-table-button" 
                             onclick="clickOnCategoryButton(this,'${x.name}')" onmouseover="hoverOnCategoryButton()">
                         ${x.name}
                     </div>`
@@ -85,8 +86,8 @@ function getCategoryTable2(categoryName) {
 
 function clickOnCategoryButton(o, category) {
     $(".category-table-button").removeClass("active-category-table-button")
-        .addClass("unactive-category-table-button").css("background-color", "#fff");
-    $(o).removeClass("unactive-category-table-button")
+        .addClass("inactive-category-table-button").css("background-color", "#fff");
+    $(o).removeClass("inactive-category-table-button")
         .addClass("active-category-table-button").css("background-color", "#0af", "color", "#fff");
     $("#cascade-table-3").css("display", "none");
     getCategoryTable2(category);
@@ -95,8 +96,8 @@ function clickOnCategoryButton(o, category) {
 function clickOnCategoryButton2(o, category, simpleName) {
     console.log(category);
     $(".category-table-button-2").removeClass("active-category-table-button-2")
-        .addClass("unactive-category-table-button-2").css("background-color", "#fff");
-    $(o).removeClass("unactive-category-table-button-2")
+        .addClass("inactive-category-table-button-2").css("background-color", "#fff");
+    $(o).removeClass("inactive-category-table-button-2")
         .addClass("active-category-table-button-2").css("background-color", "#0af", "color", "#fff");
     getCategoryTable3(category, simpleName)
 }
@@ -129,8 +130,8 @@ function hoverOnCategoryButton2() {
 
 function clickOnCategoryButton3(o) {
     $(".category-table-button-3").removeClass("active-category-table-button-3")
-        .addClass("unactive-category-table-button-3").css("background-color", "#fff");
-    $(o).removeClass("unactive-category-table-button-3")
+        .addClass("inactive-category-table-button-3").css("background-color", "#fff");
+    $(o).removeClass("inactive-category-table-button-3")
         .addClass("active-category-table-button-3").css("background-color", "#0af", "color", "#fff");
     // todo add action
 }

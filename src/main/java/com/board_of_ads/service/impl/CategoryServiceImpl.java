@@ -37,7 +37,7 @@ public class CategoryServiceImpl implements CategoryService {
                 .sorted(Comparator.comparing(Category::getId))
                 .forEach(cat -> {
                     if (cat.getCategory() == null) {
-                        category.add(new CategoryDto(cat.getId(), cat.getName(), null));
+                        category.add(new CategoryDto(cat.getId(), cat.getName(), null,cat.getLayer()));
                         collectChild(cat, category);
                     }
         });
@@ -47,7 +47,7 @@ public class CategoryServiceImpl implements CategoryService {
     private void collectChild(Category categoryWithChildren, Set<CategoryDto> collect) {
         categoryRepository.findCategoriesByCategory(categoryWithChildren.getId())
                 .forEach(cat -> {
-                    collect.add(new CategoryDto(cat.getId(), cat.getName(), cat.getCategory().getName()));
+                    collect.add(new CategoryDto(cat.getId(), cat.getName(), cat.getCategory().getName(),cat.getLayer()));
                     collectChild(cat, collect);
                 });
     }
@@ -58,7 +58,8 @@ public class CategoryServiceImpl implements CategoryService {
         var categoryDto = new CategoryDto(
                 category.getId(),
                 category.getName(),
-                category.getCategory() == null ? null : category.getCategory().getName());
+                category.getCategory() == null ? null : category.getCategory().getName(),
+                category.getLayer() == 0 ? 0 : category.getLayer());
         return Optional.of(categoryDto);
     }
 

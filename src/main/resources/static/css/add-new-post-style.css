@@ -58,7 +58,7 @@
     cursor: pointer;
 }
 
-.unactive-category-table-button {
+.inactive-category-table-button {
     color: #555;
     background-color: #fff;
 }
@@ -83,7 +83,7 @@
     cursor: pointer;
 }
 
-.unactive-category-table-button-2 {
+.inactive-category-table-button-2 {
     color: #555;
     background-color: #fff;
 }
@@ -109,7 +109,7 @@
     cursor: pointer;
 }
 
-.unactive-category-table-button-3 {
+.inactive-category-table-button-3 {
     color: #555;
     background-color: #fff;
 }
