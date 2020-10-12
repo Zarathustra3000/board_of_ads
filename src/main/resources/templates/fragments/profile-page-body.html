@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div th:if="${user.getAvatar() == null}">
-                <div class="user-profile-avatar" id="avatar"></div>
+                <div class="user-profile-avatar" id="avatar"></div><br>
                 <div class="user-profile-name" id="name" th:text="${user.getFirsName() + ' ' + user.getLastName()}">
                     %username%
                 </div>
