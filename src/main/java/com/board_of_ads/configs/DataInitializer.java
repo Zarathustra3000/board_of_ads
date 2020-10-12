@@ -66,7 +66,7 @@ public class DataInitializer {
             user.setPassword("1234567");
             user.setFirsName("User");
             user.setLastName("User");
-            user.setAvatar(new Image(null, "https://example.com/user.jpg"));
+            user.setAvatar(new Image(null, "images/user.jpg"));
             Set<Role> roleAdmin = new HashSet<>();
             roleAdmin.add(roleService.getRoleByName("USER"));
             user.setRoles(roleAdmin);
