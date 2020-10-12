@@ -30,6 +30,12 @@ public class MainPageController {
         return "admin/admin_page";
     }
 
+    @GetMapping("/profile")
+    public String profilePage(@AuthenticationPrincipal User user, Model model) {
+        model.addAttribute(user);
+        return "profile";
+    }
+
 
     @GetMapping("/confirm/")
     public String confirmPassword() {

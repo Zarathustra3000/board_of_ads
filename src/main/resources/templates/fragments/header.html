@@ -31,6 +31,7 @@
                     <li sec:authorize="isAuthenticated()" class="dropdown">
                         <a class="btn btn-light " type="button" data-toggle="dropdown"
                            data-target="#dropdownUserInfo" id="dropdownButton" style="padding: 1px" href="#">
+                            <!--/*@thymesVar id="user" type="com.board_of_ads.models.User"*/-->
                             <div th:if="${user.getAvatar()}">
                                 <img class="user-info-avatar" id="avatar" th:src="${user.getAvatar().getPathURL()}">
                                 <div class="user-info-name" id="name" th:text="${user.getFirsName() + ' ' + user.getLastName()}">%username%</div>
@@ -55,21 +56,21 @@
                                 </a>
                             </li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item"><a th:text="#{myAds}" href="#">Мои объявления</a></li>
-                            <li class="dropdown-item "><a th:text="#{MyReviews}" href="#">Мои отзывы</a></li>
-                            <li class="dropdown-item "><a th:text="#{Favourites}" href="#">Избранное</a></li>
+                            <li class="dropdown-item"><a th:text="#{myAds}" href="/profile">Мои объявления</a></li>
+                            <li class="dropdown-item "><a th:text="#{MyReviews}" href="/profile">Мои отзывы</a></li>
+                            <li class="dropdown-item "><a th:text="#{Favourites}" href="/profile">Избранное</a></li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item "><a th:text="#{messages}" href="#">Сообщения</a></li>
-                            <li class="dropdown-item "><a th:text="#{Notifications}" class="text-primary" href="#">Уведомления</a></li>
+                            <li class="dropdown-item "><a th:text="#{messages}" href="/profile">Сообщения</a></li>
+                            <li class="dropdown-item "><a th:text="#{Notifications}" class="text-primary" href="/profile">Уведомления</a></li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item d-flex justify-content-between">
-                                <a th:text="#{Wallet}" style="padding-right: 110px" href="#">Кошелёк</a>
+                                <a th:text="#{Wallet}" style="padding-right: 110px" href="/profile">Кошелёк</a>
                                 <span class="text-secondary" style="color: gray;">0 ₽</span>
                             </li>
-                            <li class="dropdown-item "><a th:text="#{PaidService}" href="#">Платные услуги</a></li>
-                            <li class="dropdown-item "><a th:text="#{AvitoPro}" href="#">Авито Pro</a></li>
+                            <li class="dropdown-item "><a th:text="#{PaidService}" href="/profile">Платные услуги</a></li>
+                            <li class="dropdown-item "><a th:text="#{AvitoPro}" href="/profile">Авито Pro</a></li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item "><a th:text="#{settings}" href="#">Настройки</a></li>
+                            <li class="dropdown-item "><a th:text="#{settings}" href="/profile">Настройки</a></li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a th:text="#{exit}" style="color: gray;" href="/logout">Выйти</a></li>
                         </ul>
