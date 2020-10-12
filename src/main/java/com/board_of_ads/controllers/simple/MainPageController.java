@@ -28,6 +28,12 @@ public class MainPageController {
         return "admin_page";
     }
 
+    @GetMapping("/new_post")
+    public String addNewPost(@AuthenticationPrincipal User user, Model model) {
+        model.addAttribute("user", user != null ? user : new User());
+        return "newpost-page";
+    }
+
     @GetMapping("/profile")
     public String profilePage(@AuthenticationPrincipal User user, Model model) {
         model.addAttribute(user);
