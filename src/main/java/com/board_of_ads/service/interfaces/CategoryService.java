@@ -10,7 +10,15 @@ public interface CategoryService {
 
     Optional<Category> getCategoryByName(String name);
 
-    void saveCategory(Category category);
+    Category saveCategory(Category category);
 
     Set<CategoryDto> findAllCategory();
+
+    Optional<CategoryDto> getCategoryDtoById(Long id);
+
+    Category updateCategory(CategoryDto category);
+
+    void deleteCategory(Long id);
+
+    Category createCategory(CategoryDto category);
 }

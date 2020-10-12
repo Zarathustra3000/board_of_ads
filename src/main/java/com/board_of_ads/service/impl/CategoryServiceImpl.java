@@ -7,13 +7,15 @@ import com.board_of_ads.service.interfaces.CategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+import java.util.Comparator;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
 @Service
 @AllArgsConstructor
+@Transactional
 public class CategoryServiceImpl implements CategoryService {
 
     private CategoryRepository categoryRepository;
@@ -24,21 +26,66 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void saveCategory(Category category) {
-        categoryRepository.save(category);
+    public Category saveCategory(Category category) {
+        return categoryRepository.save(category);
     }
 
     @Override
     public Set<CategoryDto> findAllCategory() {
-        Set<CategoryDto> categoryDto = new LinkedHashSet<>();
-        List<Category> list = categoryRepository.findAll();
-        list.forEach(category -> {
-            if (category.getCategory() == null) {
-                categoryDto.add(new CategoryDto(category.getName(), false, null, category.getLayer()));
-            } else {
-                categoryDto.add(new CategoryDto(category.getName(), true, category.getCategory().getName(), category.getLayer()));
-            }
+        Set<CategoryDto> category = new LinkedHashSet<>();
+        categoryRepository.findAll().stream()
+                .sorted(Comparator.comparing(Category::getId))
+                .forEach(cat -> {
+                    if (cat.getCategory() == null) {
+                        category.add(new CategoryDto(cat.getId(), cat.getName(), null));
+                        collectChild(cat, category);
+                    }
         });
-        return categoryDto;
+        return category;
+    }
+
+    private void collectChild(Category categoryWithChildren, Set<CategoryDto> collect) {
+        categoryRepository.findCategoriesByCategory(categoryWithChildren.getId())
+                .forEach(cat -> {
+                    collect.add(new CategoryDto(cat.getId(), cat.getName(), cat.getCategory().getName()));
+                    collectChild(cat, collect);
+                });
+    }
+
+    @Override
+    public Optional<CategoryDto> getCategoryDtoById(Long id) {
+        var category = categoryRepository.findCategoryById(id);
+        var categoryDto = new CategoryDto(
+                category.getId(),
+                category.getName(),
+                category.getCategory() == null ? null : category.getCategory().getName());
+        return Optional.of(categoryDto);
+    }
+
+    @Override
+    public Category updateCategory(CategoryDto categoryDto) {
+        if (categoryDto.getParentName().equals("")) {
+            return saveCategory(new Category(categoryDto.getId(), categoryDto.getName(), null));
+        }
+        var category = getCategoryByName(categoryDto.getParentName());
+        return saveCategory(new Category(categoryDto.getId(), categoryDto.getName(), category.get()));
+    }
+
+    @Override
+    public void deleteCategory(Long id) {
+        var children = categoryRepository.findCategoriesByCategory(id);
+        children.forEach(child -> {
+            child.setCategory(null);
+        });
+        categoryRepository.deleteById(id);
+    }
+
+    @Override
+    public Category createCategory(CategoryDto category) {
+        if (category.getParentName().equals("")) {
+            return categoryRepository.save(new Category(category.getName(), null));
+        }
+        var categoryParentFromDB = categoryRepository.findCategoryByName(category.getParentName());
+        return categoryRepository.save(new Category(category.getName(), categoryParentFromDB));
     }
 }

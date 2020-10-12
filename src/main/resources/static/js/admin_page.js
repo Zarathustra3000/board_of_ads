@@ -14,18 +14,38 @@ let elementCreateUserRoles = document.getElementById('roleSelect');
 let elementCreateUser = document.getElementById('createUser');
 let elementCloseUpdateModal1 = document.getElementById('closeUpdateModal');
 let elementCloseUpdateModal2 = document.getElementById('closeUpdateModal2');
+let elementCloseCreateNewUserModal = document.getElementById('closeNewUserModal');
+let elementCreateNewUserHref = document.getElementById('createNewUserAtAdminPanel');
 
 let elementUserTable = document.getElementById('userTableAtAdminPanel');
-let elementNewUser = document.getElementById('createNewUserAtAdminPanel');
 
 $(document).ready(function () {
     showAllUsersTable();
+});
+
+$(document).mouseup(function (e) {
+    let modalUpd = $('#updateModal');
+    let modalDel = $('#deleteModal');
+    let modalNew = $('#newUserModal');
+
+    if (modalUpd.is(e.target)) {
+        document.getElementById('updButtInModal').remove();
+        clearTheValidateUpdate();
+    }
+    if (modalDel.is(e.target)) {
+        document.getElementById('delButtInModal').remove();
+    }
+    if (modalNew.is(e.target)) {
+        clearTheValidateCreate();
+    }
 });
 
 //ОСНОВНЫЕ ФУНКЦИИ
 
 //Функция заполняющая таблицу пользователей
 function showAllUsersTable() {
+
+    document.getElementById('hideTheCat').hidden = true;
 
     let userIdForDelete = 0;
     let userIdForUpdate = 0;
@@ -52,6 +72,7 @@ function showAllUsersTable() {
                     }).join(", ");
 
                     for (let o in user) {
+
                         let td = document.createElement('td');
                         let text = document.createTextNode(user[o]);
 
@@ -63,11 +84,11 @@ function showAllUsersTable() {
                             userIdForDelete = "fillingModalFormDelete" + "(" + user[o] + ")";
                             userIdForUpdate = "fillingModalFormUpdate" + "(" + user[o] + ")";
                         }
-                        if (counter !== 6 && counter !== 9 && counter !== 2) {
+                        if (counter !== 6 && counter !== 7 && counter !== 2 && counter !== 10) {
                             td.appendChild(text);
                             tr.appendChild(td);
                         }
-                        if (counter === 9) {
+                        if (counter === 10) {
                             td.appendChild(document.createTextNode(userRoles));
                             tr.appendChild(td);
                             break;
@@ -121,22 +142,67 @@ async function newUser() {
 
     };
 
-    const response = await fetch(createNewUser, {
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'same-origin',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer',
-        body: JSON.stringify(data)
-    })
-        .catch(error => {
-            console.log(error);
-        });
+    let userEmailFormData = document.forms["userCreationFormCP"]["userEmailCP"].value;
+    let userPasswordFormData = document.forms["userCreationFormCP"]["userPasswordCP"].value;
+    let userFirstNameFormData = document.forms["userCreationFormCP"]["userFirstNameCP"].value;
+    let userLastNameFormData = document.forms["userCreationFormCP"]["userLastNameCP"].value;
 
+    if (userEmailFormData !== "" &&
+        (userPasswordFormData.length >= 6 && userPasswordFormData.length <= 60 && userPasswordFormData.match(/\s/) === null)
+        && userFirstNameFormData !== "" && userLastNameFormData !== "" && roleArray.length !== 0) {
+        const response = await fetch(createNewUser, {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data)
+        })
+            .catch(error => {
+                console.log(error);
+            });
+
+        clearTheValidateCreate();
+        document.getElementById("createUserResult").innerText = "Successful Creation";
+        clearTable();
+        showAllUsersTable();
+    } else {
+        if (userEmailFormData === "") {
+            document.getElementById("emailErrorsNU").innerText = "Empty field";
+        } else {
+            document.getElementById("emailErrorsNU").innerText = "";
+        }
+        if (userPasswordFormData.length < 6 || userPasswordFormData.length > 60) {
+            document.getElementById("passwordErrorsNU").innerText = "Required between 6 and 60 symbols";
+        } else {
+            document.getElementById("passwordErrorsNU").innerText = "";
+        }
+        if (userPasswordFormData.match(/\s/) !== null) {
+            document.getElementById("passwordSpaceNotAllow").innerText = "Space not allowed";
+        } else {
+            document.getElementById("passwordSpaceNotAllow").innerText = "";
+        }
+        if (userFirstNameFormData === "") {
+            document.getElementById("firstnameErrorsNU").innerText = "Empty field";
+        } else {
+            document.getElementById("firstnameErrorsNU").innerText = "";
+        }
+        if (userLastNameFormData === "") {
+            document.getElementById("lastnameErrorsNU").innerText = "Empty field";
+        } else {
+            document.getElementById("lastnameErrorsNU").innerText = "";
+        }
+        if (roleArray.length === 0) {
+            document.getElementById("rolesErrorsNU").innerText = "Need to select role";
+        } else {
+            document.getElementById("rolesErrorsNU").innerText = "";
+        }
+        document.getElementById("createUserResult").innerText = "Creation failed";
+    }
 }
 
 async function updateUsers(value) {
@@ -149,30 +215,77 @@ async function updateUsers(value) {
     let data = {
 
         id: $('#updUserID').val(),
+        firsName: $('#updUserName').val(),
+        lastName: $('#updUserLastName').val(),
         email: $('#updUserEmail').val(),
         password: $('#updUserPassword').val(),
-        firsName: $('#updUserName').val(),
+
 
         roles: roleArray
 
     };
 
-    const response = await fetch(updateUser, {
-        method: 'PUT',
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'same-origin',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer',
-        body: JSON.stringify(data)
-    });
+    let userEmailFormData = document.forms["userUpdateFormCP"]["email"].value;
+    let userPasswordFormData = document.forms["userUpdateFormCP"]["password"].value;
+    let userFirstNameFormData = document.forms["userUpdateFormCP"]["name"].value;
+    let userLastNameFormData = document.forms["userUpdateFormCP"]["surname"].value;
 
-    document.getElementById('updButtInModal').remove();
-    clearTable();
-    showAllUsersTable();
+    if (userEmailFormData !== "" &&
+        (userPasswordFormData.length >= 6 && userPasswordFormData.length <= 60 && userPasswordFormData.match(/\s/) === null)
+        && userFirstNameFormData !== "" && userLastNameFormData !== "" && roleArray.length !== 0) {
+
+        const response = await fetch(updateUser, {
+            method: 'PUT',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data)
+        });
+
+        clearTheValidateUpdate();
+        document.getElementById("updateUserResult").innerText = "User updated";
+
+        clearTable();
+        showAllUsersTable();
+
+    } else {
+        if (userEmailFormData === "") {
+            document.getElementById("emailErrorsUS").innerText = "Empty field";
+        } else {
+            document.getElementById("emailErrorsUS").innerText = "";
+        }
+        if (userPasswordFormData.length < 6 || userPasswordFormData.length > 60) {
+            document.getElementById("passwordErrorsUS").innerText = "Required between 6 and 60 symbols";
+        } else {
+            document.getElementById("passwordErrorsUS").innerText = "";
+        }
+        if (userPasswordFormData.match(/\s/) !== null) {
+            document.getElementById("passwordSpaceNotAllowUS").innerText = "Space not allowed";
+        } else {
+            document.getElementById("passwordSpaceNotAllowUS").innerText = "";
+        }
+        if (userFirstNameFormData === "") {
+            document.getElementById("firstnameErrorsUS").innerText = "Empty field";
+        } else {
+            document.getElementById("firstnameErrorsUS").innerText = "";
+        }
+        if (userLastNameFormData === "") {
+            document.getElementById("lastnameErrorsUS").innerText = "Empty field";
+        } else {
+            document.getElementById("lastnameErrorsUS").innerText = "";
+        }
+        if (roleArray.length === 0) {
+            document.getElementById("rolesErrorsUS").innerText = "Need to select role";
+        } else {
+            document.getElementById("rolesErrorsUS").innerText = "";
+        }
+        document.getElementById("updateUserResult").innerText = "Update failed";
+    }
 
 }
 
@@ -238,7 +351,6 @@ function fillingModalFormUpdate(id) {
     updateButtonInModal.setAttribute('type', "button");
     updateButtonInModal.setAttribute('id', "updButtInModal");
     updateButtonInModal.setAttribute('class', "btn btn-success");
-    updateButtonInModal.setAttribute('data-dismiss', "modal");
     updateButtonInModal.setAttribute('onclick', `${userIdForUpdateButton}`);
     updateButtonInModal.appendChild(document.createTextNode("Save"));
 
@@ -249,8 +361,8 @@ function fillingModalFormUpdate(id) {
 
             $('#updUserID').val(id);
             $('#updUserName').val(data.data.firsName);
+            $('#updUserLastName').val(data.data.lastName);
             $('#updUserEmail').val(data.data.email);
-            $('#updUserPassword').val(data.data.password);
             $('#updUserDataReg').val(data.data.dataRegistration);
 
         });
@@ -259,22 +371,21 @@ function fillingModalFormUpdate(id) {
 
 // ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ НА ON.CLICK
 
-elementCreateUser.onclick = function(){
+elementCreateUser.onclick = function () {
     newUser();
+};
+
+elementCreateNewUserHref.onclick = function () {
+    document.getElementById('AdminPanelUserEmail').value = '';
+    document.getElementById('AdminPanelUserPassword').value = '';
+    document.getElementById('AdminPanelUserFirstName').value = '';
+    document.getElementById('AdminPanelUserLastName').value = '';
 };
 
 //Сокрытие информации о создании нового пользователя
 elementUserTable.onclick = function () {
     clearTable();
     showAllUsersTable();
-    document.getElementById('hideTheCreateUserForm').hidden = true;
-    document.getElementById('hideTheUsersTable').hidden = false;
-};
-
-//Сокрытие таблицы пользователей
-elementNewUser.onclick = function () {
-    document.getElementById('hideTheUsersTable').hidden = true;
-    document.getElementById('hideTheCreateUserForm').hidden = false;
 };
 
 /*создаем массив из значений полученных с селектора при создании нового пользователя*/
@@ -309,8 +420,37 @@ elementCloseDeleteModal2.onclick = function () {
 
 elementCloseUpdateModal1.onclick = function () {
     document.getElementById('updButtInModal').remove();
+    clearTheValidateUpdate();
 };
 
 elementCloseUpdateModal2.onclick = function () {
     document.getElementById('updButtInModal').remove();
+    clearTheValidateUpdate();
 };
+
+elementCloseCreateNewUserModal.onclick = function () {
+    clearTheValidateCreate();
+};
+
+function clearTheValidateUpdate() {
+
+    document.getElementById("emailErrorsUS").innerText = "";
+    document.getElementById("passwordErrorsUS").innerText = "";
+    document.getElementById("passwordSpaceNotAllowUS").innerText = "";
+    document.getElementById("firstnameErrorsUS").innerText = "";
+    document.getElementById("rolesErrorsUS").innerText = "";
+    document.getElementById("updateUserResult").innerText = "";
+    document.getElementById("lastnameErrorsUS").innerText = "";
+
+}
+
+function clearTheValidateCreate() {
+
+    document.getElementById("createUserResult").innerText = "";
+    document.getElementById("emailErrorsNU").innerText = "";
+    document.getElementById("passwordErrorsNU").innerText = "";
+    document.getElementById("passwordSpaceNotAllow").innerText = "";
+    document.getElementById("firstnameErrorsNU").innerText = "";
+    document.getElementById("lastnameErrorsNU").innerText = "";
+    document.getElementById("rolesErrorsNU").innerText = "";
+}

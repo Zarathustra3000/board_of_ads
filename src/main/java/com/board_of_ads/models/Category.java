@@ -15,12 +15,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.swing.text.Position;
 import java.util.List;
 
 @Data
 @Entity
-//@AllArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "category")
 public class Category {
@@ -32,12 +31,23 @@ public class Category {
     @Column
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_category", referencedColumnName = "id")
     private Category category;
 
     @OneToMany
     private List<Posting> posts;
+
+    public Category(String name, Category category) {
+        this.name = name;
+        this.category = category;
+    }
+
+    public Category(Long id, String name, Category category) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+    }
 
     @Column
     private int layer;

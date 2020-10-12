@@ -17,39 +17,43 @@
                 <div class="modal-header">
                     <div class="col order-1">
                         <h3 class="modal-title " id="authModalLongTitle">Вход</h3>
+                        <button type="button" title="Закрыть" class="modal-auth-close"
+                                data-dismiss="modal"
+                                data-marker="close-button">Закрыть
+                        </button>
                     </div>
                 </div>
 
                 <!--BODY-->
 
-            <div class="modal-body auth-app-login-form-2_SQa" id="center-ids">
-                <div class="form-group c123123">
-                    <input type="email" class="form-control " id="tel-and-email"
-                           placeholder="Телефон или электронная почта">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="password" placeholder="Пароль">
-                </div>
-                <div style="width: auto" class="container">
-                    <div class="row">
-                        <div class="form-check el-2020">
-                            <label class="checkbox"
-                                   data-marker="login-form/remember"
-                                   style="vertical-align: middle;"><input
-                                    name="remember"
-                                    type="checkbox">
-                                <span class="checkbox-label-3AzRS text-text-1PdBw text-size-s-1PUdo                                                                                                         text-color-default-1QVMz"
-                                >Запомнить пароль</span>
-                            </label>
-                        </div>
-                        <div class="col-2"></div>
-                        <div class="forget-pass-element col-5" style="left: 60px">
-                            <a id="password-recovery" class="card-link">Забыли пароль?</a>
-                        </div>
+                <div class="modal-body auth-app-login-form-2_SQa" id="center-ids">
+                    <div class="form-group c123123">
+                        <input type="email" class="form-control " id="emailAuth"
+                               placeholder="Электронная почта" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="passwordAuth" placeholder="Пароль" required>
+                    </div>
+                    <div style="width: auto" class="container">
+                        <div class="row">
+                            <div class="form-check el-2020">
+                                <label class="checkbox"
+                                       data-marker="login-form/remember"
+                                       style="vertical-align: middle;"><input
+                                        name="remember"
+                                        type="checkbox">
+                                    <span class="checkbox-label-3AzRS text-text-1PdBw text-size-s-1PUdo                                                                                                         text-color-default-1QVMz"
+                                    >Запомнить пароль</span>
+                                </label>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="forget-pass-element col-5" style="left: 60px">
+                                <a id="password-recovery" class="card-link">Забыли пароль?</a>
+                            </div>
                         </div>
                     </div>
                     <div class="action-root_align-center-mUlAP">
-                        <a href="#"
+                        <a id="buttonAuth"
                            class="btn btn-md auth-form-auth-form__submit-rSWaC"
                            style="background: #0af"
                            role="button">Войти</a>
@@ -69,13 +73,18 @@
                                 <img src="https://static.avito.ru/s/cc/resources/4f393a914308.svg">
                             </span></a>
                             <a href="/social/auth_yandex"><span class="social-network-item-icon-1tXjO"
-                                             data-marker="social-network-item(apple)">
+                                                                data-marker="social-network-item(apple)">
                                 <img th:src="@{images/yandex-logo.png}" th:height="44px" th:width="44px">
                             </span></a>
                             <a href="/social/auth_facebook">
                                 <span class="social-network-item-icon-1tXjO social-network-item-icon_fb-W7rS4"
                                       data-marker="social-network-item(fb)">
                                     <img src="https://static.avito.ru/s/cc/resources/89c7d93b23ae.svg">
+                                </span></a>
+                            <a href="/social/mail_auth">
+                                <span class="social-network-item-icon-1tXjO social-network-item-icon_fb-W7rS4"
+                                      data-marker="social-network-item(fb)">
+                                    <img th:src="@{images/mail-logo.png}" th:height="44px" th:width="44px">
                                 </span></a>
                             <a href="/social/auth_google"><span
                                     class="social-network-item-icon-1tXjO social-network-item-icon_gp-30vPn"
@@ -95,7 +104,7 @@
                             <div class="col-4">
                             </div>
                             <div class="col-4">
-                                <a href="#" class="stretched-link">Зарегистрироваться</a>
+                                <a href="#registrationModalSub" class="stretched-link" data-toggle="modal" data-dismiss="modal">Зарегистрироваться</a>
                             </div>
                             <div class="col-4">
                             </div>
@@ -114,4 +123,49 @@
             </div>
         </div>
     </div>
+
+<!-- POPUP SUM-MODAL -->
+
+<form enctype="multipart/form-data" action="../api/user/modal-reg" method="post">
+    <div class="modal"
+         id="registrationModalSub"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="registrationModalSubTitle"
+         aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-offset-2">
+                        <h3 class="modal-title" id="registrationModalSubLongTitle">Регистрация</h3>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&#10005;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" id="center">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="eemail" name="eemail" placeholder="Введите e-mail">
+                    </div>
+
+                    <div class="container text-center">
+                        <button type="submit" class="btn btn-info">Продолжить</button>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="container text-center">
+                        <h7>У вас есть учетная запись? <a href="...">Войти</a></h7>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+
 </div>
