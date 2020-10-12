@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <timestamp key="today" datePattern="yyyy-MM-dd"/>
+    <property name="LOG_HOME" value="log"/>
+    <property name="REST_CONTROLLER_HOME" value="log/controllers/rest"/>
+    <property name="SIMPLE_CONTROLLER_HOME" value="log/controllers/simple"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>
+                %black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}): %msg%n%throwable
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE-AUDIT"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/board_of_ads-${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level [%t] %c: %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${LOG_HOME}/archived/board_of_ads.%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="MainPageController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${SIMPLE_CONTROLLER_HOME}/MainPageController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${SIMPLE_CONTROLLER_HOME}/archived/MainPageController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="AuthController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${SIMPLE_CONTROLLER_HOME}/AuthController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${SIMPLE_CONTROLLER_HOME}/archived/AuthController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="AdminRestController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${REST_CONTROLLER_HOME}/AdminRestController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${REST_CONTROLLER_HOME}/archived/AdminRestController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="AuthRestController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${REST_CONTROLLER_HOME}/AuthRestController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${REST_CONTROLLER_HOME}/archived/AuthRestController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="CityRestController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${REST_CONTROLLER_HOME}/CityRestController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${REST_CONTROLLER_HOME}/archived/CityRestController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="MailRestController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${REST_CONTROLLER_HOME}/MailRestController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${REST_CONTROLLER_HOME}/archived/MailRestController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="CategoryRestController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${REST_CONTROLLER_HOME}/CategoryRestController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${REST_CONTROLLER_HOME}/archived/CategoryRestController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="PostingRestController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${REST_CONTROLLER_HOME}/PostingRestController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${REST_CONTROLLER_HOME}/archived/PostingRestController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="SearchPostingRestController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${REST_CONTROLLER_HOME}/SearchPostingRestController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${REST_CONTROLLER_HOME}/archived/SearchPostingRestController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="UserRestController-Audit"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${REST_CONTROLLER_HOME}/UserRestController-log_${today}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{DEFAULT} %level - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${REST_CONTROLLER_HOME}/archived/UserRestController-log_%d{yyyy-MM-dd}.%i.log.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="root" level="WARN" additivity="true">
+        <appender-ref ref="FILE-AUDIT" />
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="org.springframework.web" level="WARN" additivity="false">
+        <appender-ref ref="FILE-AUDIT" />
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="org.hibernate" level="WARN" additivity="false">
+        <appender-ref ref="FILE-AUDIT" />
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="com.board_of_ads" level="INFO" additivity="false">
+        <appender-ref ref="FILE-AUDIT" />
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <!--    Controllers loggers setup-->
+    <logger name="com.board_of_ads.controllers.simple.MainPageController" level="INFO" additivity="true">
+        <appender-ref ref="MainPageController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.simple.AuthController" level="INFO" additivity="true">
+        <appender-ref ref="AuthController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.rest.AdminRestController" level="INFO" additivity="true">
+        <appender-ref ref="AdminRestController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.rest.AuthRestController" level="INFO" additivity="true">
+        <appender-ref ref="AuthRestController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.rest.CityRestController" level="INFO" additivity="true">
+        <appender-ref ref="CityRestController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.rest.CategoryRestController" level="INFO" additivity="true">
+        <appender-ref ref="CategoryRestController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.rest.MailRestController" level="INFO" additivity="true">
+        <appender-ref ref="MailRestController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.rest.PostingRestController" level="INFO" additivity="true">
+        <appender-ref ref="PostingRestController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.rest.SearchPostingRestController" level="INFO" additivity="true">
+        <appender-ref ref="SearchPostingRestController-Audit" />
+    </logger>
+    <logger name="com.board_of_ads.controllers.rest.UserRestController" level="INFO" additivity="true">
+        <appender-ref ref="UserRestController-Audit" />
+    </logger>
+
+</configuration>

@@ -6,6 +6,7 @@ import com.board_of_ads.service.interfaces.OkService;
 import com.board_of_ads.service.interfaces.VkService;
 import com.board_of_ads.service.interfaces.YandexService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/social")
+@Slf4j
 public class AuthController {
 
     private final YandexService yandexService;
@@ -25,6 +27,7 @@ public class AuthController {
 
     @GetMapping("/auth")
     public String auth() {
+        log.info("Use this default logger");
         OAuth2Service.auth();
         return "redirect:/";
     }
