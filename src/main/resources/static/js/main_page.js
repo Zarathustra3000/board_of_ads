@@ -198,7 +198,7 @@ function addOptions() {
     });
 }
 
-const http = {
+const httpHeaders = {
     fetch: async function (url, options = {}) {
         const response = await fetch(url, {
             headers: {
@@ -213,24 +213,24 @@ const http = {
 
 const userService = {
     findAllCity: async () => {
-        return await http.fetch('/api/city');
+        return await httpHeaders.fetch('/api/city');
     },
     findPostingByCityName: async (name) => {
-        return await http.fetch('api/posting/city/' + name);
+        return await httpHeaders.fetch('api/posting/city/' + name);
     },
     findPostingByRegionName: async (name) => {
-        return await http.fetch('api/posting/region/' + name);
+        return await httpHeaders.fetch('api/posting/region/' + name);
     },
     findAllPostings: async () => {
-        return await http.fetch('api/posting/');
+        return await httpHeaders.fetch('api/posting/');
     },
     findAllCategories: async () => {
-        return await http.fetch("api/category")
+        return await httpHeaders.fetch("api/category")
     }
 }
 
-$.get("/user", function (data) {
-    $("#user").html(data.userAuthentication.details.name);
-    $(".unauthenticated").hide()
-    $(".authenticated").show()
-});
+// $.get("/user", function (data) {
+//     $("#user").html(data.userAuthentication.details.name);
+//     $(".unauthenticated").hide()
+//     $(".authenticated").show()
+// });
