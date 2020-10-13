@@ -1,8 +1,10 @@
 package com.board_of_ads.service.impl;
 
+import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
 import com.board_of_ads.repository.ImageRepository;
 import com.board_of_ads.repository.UserRepository;
+import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -17,6 +19,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final ImageRepository imageRepository;
     private final PasswordEncoder passwordEncoder;
+    private final RoleService roleService;
 
     @Override
     public User getUserById(Long id) {
@@ -42,6 +45,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
+    }
+
+    @Override
+    public User regUser(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setAvatar(new Image(null, "images/user.jpg"));
+        user.setRoles(roleService.defaultRolesSet());
+        return userRepository.save(user);
     }
 
 
