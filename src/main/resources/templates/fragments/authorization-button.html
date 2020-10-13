@@ -148,22 +148,27 @@
                     </div>
 
                     <div class="modal-body" id="center">
-                        <form method="post" align="center" id="newUserCR">
+                        <form name="newUserRegForm" method="post" align="center" id="newUserReg" >
                             <div class="container text-center">
                                 <td>
-                                    <label for="userName" th:text="#{adminPanelUserFirstName}">Имя</label><br>
-                                    <input type="text" id="userName" name="userName"><br><br>
+                                    <label for="userNameReg" th:text="#{adminPanelUserFirstName}">Имя</label><br>
+                                    <input type="text" id="userNameReg" name="userName"><br>
+                                    <p id="firstnameErrorsNU"></p><br>
                                 </td>
                                 <td>
-                                    <label for="email" th:text="#{adminPanelUserMail}">Почта</label><br>
-                                    <input type="text" id="email" name="userEmail"><br><br>
+                                    <label for="userEmailReg" th:text="#{adminPanelUserMail}">Почта</label><br>
+                                    <input type="text" id="userEmailReg" name="userEmail"><br>
+                                    <p id="emailErrorsNU"></p><br>
                                 </td>
                                 <td>
-                                    <label for="password" th:text="#{adminPanelUserPassword}">Пароль</label><br>
-                                    <input type="text" id="password" name="userPassword"><br><br>
+                                    <label for="userPasswordReg" th:text="#{adminPanelUserPassword}">Пароль</label><br>
+                                    <input type="text" id="userPasswordReg" name="userPassword"><br>
+                                    <p id="passwordErrorsNU"></p>
+                                    <p id="passwordSpaceNotAllow"></p><br>
                                 </td>
-                                <a class="btn btn-success mb-2" role="button" id="createUser" data-dismiss="modal"
-                                   th:text="#{adminPanelUserAddButton}">Создать пользователя</a>
+                                <a class="btn btn-success mb-2" role="button" id="createUser"
+                                   th:text="#{adminPanelUserAddButton}">Создать пользователя</a><br>
+                                <p id="createUserResult"></p>
                             </div>
                         </form>
                     </div>
