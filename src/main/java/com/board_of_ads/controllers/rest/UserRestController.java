@@ -1,9 +1,6 @@
 package com.board_of_ads.controllers.rest;
 
 import com.board_of_ads.models.User;
-import com.board_of_ads.service.interfaces.AuthorizationService;
-import com.board_of_ads.service.interfaces.UserService;
-import com.board_of_ads.util.BindingResultLogs;
 import com.board_of_ads.util.CheckTheUser;
 import com.board_of_ads.util.Error;
 import com.board_of_ads.util.ErrorResponse;
@@ -27,7 +24,6 @@ import java.security.Principal;
 @RequestMapping("/api/user/")
 public class UserRestController {
 
-    private final UserService userService;
     private final CheckTheUser checkTheUser;
     private static final Logger logger = LoggerFactory.getLogger(UserRestController.class);
 
