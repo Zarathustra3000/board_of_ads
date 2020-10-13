@@ -1,6 +1,8 @@
 package com.board_of_ads.service.interfaces;
 
 import com.board_of_ads.models.User;
+import org.slf4j.Logger;
+import org.springframework.validation.BindingResult;
 
 import java.util.List;
 
@@ -17,5 +19,7 @@ public interface UserService {
     void deleteUser(Long id);
 
     User regUser(User user);
+
+    boolean checkUserDataBeforeReg(User user, BindingResult bindingResult, Logger logger);
 
 }
