@@ -7,6 +7,9 @@ import com.board_of_ads.service.interfaces.RoleService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
+import java.util.Set;
+
 
 @Service
 @AllArgsConstructor
@@ -24,4 +27,13 @@ public class RoleServiceImpl implements RoleService {
     public Role getRoleByName(String name) {
         return roleRepository.findRoleByName(name);
     }
+
+    @Override
+    public Set<Role> defaultRolesSet() {
+        Set<Role> roles = new HashSet<>();
+        roles.add(getRoleByName("USER"));
+        return roles;
+    }
+
+
 }
