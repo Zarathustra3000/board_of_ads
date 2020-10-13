@@ -4,6 +4,7 @@ import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.AuthorizationService;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.util.BindingResultLogs;
+import com.board_of_ads.util.CheckTheUser;
 import com.board_of_ads.util.Error;
 import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
@@ -27,8 +28,7 @@ import java.security.Principal;
 public class UserRestController {
 
     private final UserService userService;
-    private final AuthorizationService authorizationService;
-    private final BindingResultLogs bindingResultLogs;
+    private final CheckTheUser checkTheUser;
     private static final Logger logger = LoggerFactory.getLogger(UserRestController.class);
 
 
@@ -41,10 +41,7 @@ public class UserRestController {
 
     @PostMapping ("/modal-reg")
     public Response<User> Action(@RequestBody @Valid User user, BindingResult bindingResult) {
-        if (authorizationService.isValid(user).equals("User not found!") &&
-        bindingResultLogs.checkUserFields(bindingResult, logger)) {
-            userService.regUser(user);
-            authorizationService.login(user);
+        if (checkTheUser.checkUserDataBeforeReg(user, bindingResult, logger)) {
             return Response.ok(user);
         }
         return new ErrorResponse<>(new Error(204, "Incorrect Data"));
