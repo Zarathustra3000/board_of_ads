@@ -1,0 +1,3 @@
+$('#profileSettings').on('click', function() {
+
+})

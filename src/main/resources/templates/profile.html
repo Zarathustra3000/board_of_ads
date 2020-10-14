@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="../static/css/profile-body.css" th:href="@{/css/profile-body.css}"/>
 </head>
 <body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
 <!--header-->
 <header th:insert="fragments/header::main-header"></header>
 <div class="second-header">
@@ -23,5 +25,7 @@
     <div th:insert="fragments/new-password-modal::new-password"></div>
 </div>
 <div th:insert="fragments/profile-page-body::profile-body"></div>
+
+<script src="../static/js/profile_settings.js" th:src="@{/js/profile_settings.js}"></script>
 </body>
 </html>
