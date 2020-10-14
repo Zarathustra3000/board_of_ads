@@ -126,46 +126,62 @@
 
 <!-- POPUP SUM-MODAL -->
 
-<form enctype="multipart/form-data" action="../api/user/modal-reg" method="post">
-    <div class="modal"
-         id="registrationModalSub"
-         tabindex="-1"
-         role="dialog"
-         aria-labelledby="registrationModalSubTitle"
-         aria-hidden="true">
+    <form enctype="multipart/form-data" action="../api/user/modal-reg" method="post">
+        <div class="modal"
+             id="registrationModalSub"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="registrationModalSubTitle"
+             aria-hidden="true">
 
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
 
-                <div class="modal-header">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-offset-2">
-                        <h3 class="modal-title" id="registrationModalSubLongTitle">Регистрация</h3>
+                    <div class="modal-header">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-offset-2">
+                            <h3 class="modal-title" id="registrationModalSubLongTitle">Регистрация</h3>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&#10005;</span>
+                        </button>
                     </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&#10005;</span>
-                    </button>
+
+                    <div class="modal-body" id="center">
+                        <form name="newUserRegForm" method="post" align="center" id="newUserReg" >
+                            <div class="container text-center">
+                                <td>
+                                    <label for="userNameReg" th:text="#{adminPanelUserFirstName}">Имя</label><br>
+                                    <input type="text" id="userNameReg" name="userName"><br>
+                                    <p id="firstnameErrorsNU"></p><br>
+                                </td>
+                                <td>
+                                    <label for="userEmailReg" th:text="#{adminPanelUserMail}">Почта</label><br>
+                                    <input type="text" id="userEmailReg" name="userEmail"><br>
+                                    <p id="emailErrorsNU"></p><br>
+                                </td>
+                                <td>
+                                    <label for="userPasswordReg" th:text="#{adminPanelUserPassword}">Пароль</label><br>
+                                    <input type="text" id="userPasswordReg" name="userPassword"><br>
+                                    <p id="passwordErrorsNU"></p>
+                                    <p id="passwordSpaceNotAllow"></p><br>
+                                </td>
+                                <a class="btn btn-success mb-2" role="button" id="createUser"
+                                   th:text="#{adminPanelUserAddButton}">Создать пользователя</a><br>
+                                <p id="createUserResult"></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="container text-center">
+                            <h7>У вас есть учетная запись? <a href="...">Войти</a></h7>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="modal-body" id="center">
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="eemail" name="eemail" placeholder="Введите e-mail">
-                    </div>
-
-                    <div class="container text-center">
-                        <button type="submit" class="btn btn-info">Продолжить</button>
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <div class="container text-center">
-                        <h7>У вас есть учетная запись? <a href="...">Войти</a></h7>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
-</form>
+    </form>
 
 </div>
