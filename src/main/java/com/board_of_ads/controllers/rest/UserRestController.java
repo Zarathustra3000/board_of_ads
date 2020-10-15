@@ -8,8 +8,7 @@ import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,15 +22,15 @@ import java.security.Principal;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/user/")
+@Slf4j
 public class UserRestController {
 
     private final UserService userService;
     private final AuthorizationService authorizationService;
-    private static final Logger logger = LoggerFactory.getLogger(UserRestController.class);
-
 
     @GetMapping
     public Response<Principal> getUser(Principal user) {
+        log.info("Use this default logger");
         return user != null
                 ? new SuccessResponse<>(user)
                 :  new ErrorResponse<>(new Error(401, "No auth user"));
@@ -39,7 +38,7 @@ public class UserRestController {
 
     @PostMapping ("/modal-reg")
     public Response<User> Action(@RequestBody @Valid User user, BindingResult bindingResult) {
-        if (userService.checkUserDataBeforeReg(user, bindingResult, logger)) {
+        if (userService.checkUserDataBeforeReg(user, bindingResult, log)) {
             authorizationService.login(user);
             return Response.ok(user);
         }
