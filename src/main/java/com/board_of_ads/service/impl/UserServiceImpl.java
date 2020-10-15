@@ -2,9 +2,7 @@ package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
-import com.board_of_ads.repository.ImageRepository;
 import com.board_of_ads.repository.UserRepository;
-import com.board_of_ads.service.interfaces.AuthorizationService;
 import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.util.BindingResultLogs;
