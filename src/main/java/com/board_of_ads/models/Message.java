@@ -1,6 +1,7 @@
 package com.board_of_ads.models;
 
 import com.board_of_ads.models.posting.Posting;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
