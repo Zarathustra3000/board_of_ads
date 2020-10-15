@@ -23,7 +23,6 @@ import java.util.Optional;
 @Transactional
 public class PostingServiceImpl implements PostingService {
 
-    private final CategoryRepository categoryRepository;
     private final PostingRepository postingRepository;
     private final CategoryService categoryService;
     private final RegionService regionService;
