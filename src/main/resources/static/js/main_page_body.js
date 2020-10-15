@@ -11,10 +11,10 @@ function getPostingsTable(posts) {
         for (let step = 0; step < posts.length; step++) {
             let postingDTO = posts[step];
 
-            let date = postingDTO.datePosting.substring(8, 10) + "-" +
-                postingDTO.datePosting.substring(5, 7) + "-" +
-                postingDTO.datePosting.substring(0, 4) + " " +
-                postingDTO.datePosting.substring(11, 16);
+            let date = postingDTO.datePosting.toString().substring(8, 10) + "-" +
+                postingDTO.datePosting.toString().substring(5, 7) + "-" +
+                postingDTO.datePosting.toString().substring(0, 4) + " " +
+                postingDTO.datePosting.toString().substring(11, 16);
 
             document.getElementById('mainPageBody').innerHTML +=
                 `<div id="main_page_posting" class="col-md-3">
