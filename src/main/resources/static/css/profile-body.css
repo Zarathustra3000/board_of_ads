@@ -46,3 +46,7 @@
 .rating-mini-profile > span.active {
     color: gold;
 }
+
+.userpostid {
+    display: none;
+}

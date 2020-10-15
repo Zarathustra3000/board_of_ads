@@ -48,4 +48,12 @@ public class PostingRestController {
                 ? Response.ok(postings)
                 : new ErrorResponse<>(new Error(204, "No found postings"));
     }
+
+    @GetMapping("/userpost/{id}")
+    public Response<List<PostingDto>> findPostingsByUserId(@PathVariable Long id) {
+        var postings = postingService.getAllUserPostings(id);
+        return (postings.size() > 0)
+                ? Response.ok(postings)
+                : new ErrorResponse<>(new Error(204, "No found postings"));
+    }
 }

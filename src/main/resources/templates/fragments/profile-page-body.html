@@ -1,4 +1,5 @@
 <div th:fragment="profile-body" xmlns:th="https://www.thymeleaf.org">
+    <script src="../static/js/profile_ads.js" th:src="@{/js/profile_ads.js}"></script>
     <div class="profile-body">
         <li class="dropdown-divider"></li>
         <div class="row">
@@ -17,6 +18,7 @@
                         %username%
                     </div>
                 </div>
+                <div id="userpostid" class="userpostid" th:text="${user.getId()}"></div>
                 <a href="#">
                     <span style="color: black"><strong>0,0</strong></span>
                     <div class="rating-mini-profile">
