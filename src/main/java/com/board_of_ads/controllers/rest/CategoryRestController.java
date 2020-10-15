@@ -7,6 +7,7 @@ import com.board_of_ads.util.Error;
 import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,12 +22,15 @@ import java.util.Set;
 @RestController
 @RequestMapping("/api/category")
 @AllArgsConstructor
+@Slf4j
 public class CategoryRestController {
 
     private final CategoryService categoryService;
 
     @GetMapping
     public Response<Set<CategoryDto>> findAll() {
+        log.info("Use this default logger");
+
         var categories = categoryService.findAllCategory();
         return (categories.size() > 0)
                 ? Response.ok(categories)
