@@ -8,8 +8,6 @@ import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +25,6 @@ import java.security.Principal;
 @Slf4j
 public class UserRestController {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserRestController.class);
     private final UserService userService;
     private final AuthorizationService authorizationService;
 
