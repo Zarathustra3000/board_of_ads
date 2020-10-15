@@ -7,6 +7,7 @@ import com.board_of_ads.util.Error;
 import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/posting")
 @AllArgsConstructor
+@Slf4j
 public class PostingRestController {
 
     private final CityService cityService;
@@ -24,6 +26,7 @@ public class PostingRestController {
 
     @GetMapping
     public Response<List<PostingDto>> findAllPosts() {
+        log.info("Use this default logger");
         var postings = postingService.getAllPostings();
         return (postings.size() > 0)
                 ? Response.ok(postings)
