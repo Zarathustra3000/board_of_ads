@@ -1,6 +1,7 @@
 package com.board_of_ads.models.posting;
 
 import com.board_of_ads.models.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"user", "category", "city"})
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "postings")
 public class Posting {
