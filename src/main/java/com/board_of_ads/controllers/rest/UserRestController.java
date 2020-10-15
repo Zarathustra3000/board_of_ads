@@ -9,6 +9,7 @@ import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,12 +28,11 @@ public class UserRestController {
     private final CheckTheUser checkTheUser;
     private static final Logger logger = LoggerFactory.getLogger(UserRestController.class);
 
-
     @GetMapping
-    public Response<Principal> getUser(Principal user) {
+    public Response<Principal> getUser(@AuthenticationPrincipal Principal user) {
         return user != null
-                ? new SuccessResponse<>(user)
-                :  new ErrorResponse<>(new Error(401, "No auth user"));
+                ?  Response.ok(user)
+                : new Response.ErrorBuilderImpl().code(401).text("No auth user").build();
     }
 
     @PostMapping ("/modal-reg")
