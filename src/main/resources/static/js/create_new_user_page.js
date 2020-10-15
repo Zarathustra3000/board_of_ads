@@ -70,4 +70,6 @@ async function regNewUser() {
         }
         document.getElementById("createUserResult").innerText = "Creation failed";
     }
+
+
 }
