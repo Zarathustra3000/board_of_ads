@@ -29,6 +29,13 @@ public class PostingRestController {
                 ? Response.ok(postings)
                 : new ErrorResponse<>(new Error(204, "No found postings"));
     }
+    @GetMapping("/{id}")
+    public Response<PostingDto> findPostingDto(@PathVariable Long id) {
+        var postingDto = postingService.getPostingDtoById(id);
+        return (postingDto != null)
+                ? Response.ok(postingDto)
+                : new ErrorResponse<>(new Error(204, "No found postings"));
+    }
 
     @GetMapping("/city/{name}")
     public Response<List<PostingDto>> findPostingsByCityName(@PathVariable String name) {
