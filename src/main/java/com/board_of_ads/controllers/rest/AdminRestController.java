@@ -1,6 +1,5 @@
 package com.board_of_ads.controllers.rest;
 
-import com.board_of_ads.BoardOfAdsApplication;
 import com.board_of_ads.models.User;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.util.BindingResultLogs;
@@ -9,9 +8,8 @@ import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.MediaType;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,16 +26,17 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api/admin/")
 @AllArgsConstructor
+@Slf4j
 public class AdminRestController {
 
     private final UserService userService;
     private final BindingResultLogs bindingResultLogs;
-    private static final Logger logger = LoggerFactory.getLogger(AdminRestController.class);
-
 
     @PostMapping(value = "/newUser")
     public Response<User> createUser(@RequestBody @Valid User user, BindingResult bindingResult) {
-        if (bindingResultLogs.checkUserFields(bindingResult, logger)) {
+        log.info("Use this default logger");
+
+        if (bindingResultLogs.checkUserFields(bindingResult, log)) {
             return new SuccessResponse<>(userService.saveUser(user));
         }
         return new ErrorResponse<>(new Error(204, "Incorrect Data"));
@@ -45,7 +44,7 @@ public class AdminRestController {
 
     @PutMapping("/newUserData")
     public Response<User> updateUser(@RequestBody @Valid  User user, BindingResult bindingResult) {
-        if (bindingResultLogs.checkUserFields(bindingResult, logger)) {
+        if (bindingResultLogs.checkUserFields(bindingResult, log)) {
             return new SuccessResponse<>(userService.saveUser(user));
         }
         return new ErrorResponse<>(new Error(204, "Incorrect Data"));
