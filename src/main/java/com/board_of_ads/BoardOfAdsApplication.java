@@ -1,16 +1,16 @@
 package com.board_of_ads;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 
-@SpringBootApplication
-public class BoardOfAdsApplication {
 
-    private static final Logger logger = LoggerFactory.getLogger(BoardOfAdsApplication.class);
+@SpringBootApplication
+@Slf4j
+public class BoardOfAdsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BoardOfAdsApplication.class, args);
@@ -18,7 +18,7 @@ public class BoardOfAdsApplication {
 
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
-        logger.info("Successful application launch");
+        log.info("Successful application launch");
     }
 
 }

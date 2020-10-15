@@ -1,12 +1,13 @@
 package com.board_of_ads.controllers.rest;
 
 import com.board_of_ads.models.User;
-import com.board_of_ads.util.CheckTheUser;
+import com.board_of_ads.service.interfaces.AuthorizationService;
+import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.util.Error;
 import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
-import com.board_of_ads.util.SuccessResponse;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -23,13 +24,16 @@ import java.security.Principal;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/user/")
+@Slf4j
 public class UserRestController {
 
-    private final CheckTheUser checkTheUser;
     private static final Logger logger = LoggerFactory.getLogger(UserRestController.class);
+    private final UserService userService;
+    private final AuthorizationService authorizationService;
 
     @GetMapping
     public Response<Principal> getUser(@AuthenticationPrincipal Principal user) {
+        log.info("Use this default logger");
         return user != null
                 ?  Response.ok(user)
                 : new Response.ErrorBuilderImpl().code(401).text("No auth user").build();
@@ -37,7 +41,8 @@ public class UserRestController {
 
     @PostMapping ("/modal-reg")
     public Response<User> Action(@RequestBody @Valid User user, BindingResult bindingResult) {
-        if (checkTheUser.checkUserDataBeforeReg(user, bindingResult, logger)) {
+        if (userService.checkUserDataBeforeReg(user, bindingResult, log)) {
+            authorizationService.login(user);
             return Response.ok(user);
         }
         return new ErrorResponse<>(new Error(204, "Incorrect Data"));
