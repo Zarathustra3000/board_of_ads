@@ -22,7 +22,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonIgnoreProperties({"user", "category", "city"})
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "postings")
 public class Posting {
@@ -46,7 +45,8 @@ public class Posting {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("postings")
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "user_id")
     private User user;
