@@ -44,8 +44,23 @@ $(document).mouseup(function (e) {
 
 //Функция заполняющая таблицу пользователей
 function showAllUsersTable() {
-
-    // document.getElementById('hideTheCat').hidden = true;
+    $.i18n().load( {
+        en: {
+            'button-edit': 'Edit',
+            'button-delete': 'Delete',
+            'button-save' : 'Save'
+        },
+        ru: {
+            'button-edit': 'Редактировать',
+            'button-delete': 'Удалить',
+            'button-save' : 'Сохранить'
+        }
+    } );
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('locale');
+    if (myParam === 'en') {
+        $.i18n().locale = 'en';
+    }
 
     let userIdForDelete = 0;
     let userIdForUpdate = 0;
@@ -102,7 +117,7 @@ function showAllUsersTable() {
                     buttonEdit.setAttribute('data-toggle', "modal");
                     buttonEdit.setAttribute('data-target', "#updateModal");
                     buttonEdit.setAttribute('onclick', `${userIdForUpdate}`);
-                    buttonEdit.appendChild(document.createTextNode("Update"));
+                    buttonEdit.appendChild(document.createTextNode($.i18n( 'button-edit')));
 
                     buttonDelete.setAttribute('id', "deleteButton");
                     buttonDelete.setAttribute('class', "btn btn-danger");
@@ -110,7 +125,7 @@ function showAllUsersTable() {
                     buttonDelete.setAttribute('data-toggle', "modal");
                     buttonDelete.setAttribute('data-target', "#deleteModal");
                     buttonDelete.setAttribute('onclick', `${userIdForDelete}`);
-                    buttonDelete.appendChild(document.createTextNode("Delete"));
+                    buttonDelete.appendChild(document.createTextNode($.i18n( 'button-delete')));
 
                     tdEdit.appendChild(buttonEdit);
                     tdDelete.appendChild(buttonDelete);
@@ -300,7 +315,7 @@ function fillingModalFormDelete(id) {
     deleteButtonInModal.setAttribute('class', "btn btn-danger");
     deleteButtonInModal.setAttribute('data-dismiss', "modal");
     deleteButtonInModal.setAttribute('onclick', `${userIdForDeleteButton}`);
-    deleteButtonInModal.appendChild(document.createTextNode("Delete"));
+    deleteButtonInModal.appendChild(document.createTextNode($.i18n( 'button-delete')));
 
     deleteButtonInModalForm.append(deleteButtonInModal);
 
@@ -352,7 +367,7 @@ function fillingModalFormUpdate(id) {
     updateButtonInModal.setAttribute('id', "updButtInModal");
     updateButtonInModal.setAttribute('class', "btn btn-success");
     updateButtonInModal.setAttribute('onclick', `${userIdForUpdateButton}`);
-    updateButtonInModal.appendChild(document.createTextNode("Save"));
+    updateButtonInModal.appendChild(document.createTextNode($.i18n( 'button-save')));
 
     saveButtonInModalForm.append(updateButtonInModal);
 
