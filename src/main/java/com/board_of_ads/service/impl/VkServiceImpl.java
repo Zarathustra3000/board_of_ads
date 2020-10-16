@@ -161,7 +161,7 @@ public class VkServiceImpl implements VkService {
         }
         user = new User();
         Set<Role> roles = new HashSet<>();
-        roles.add(roleService.getRoleByName("ADMIN"));
+        roles.add(roleService.getRoleByName("USER"));
         user.setRoles(roles);
         user.setEnable(true);
         user.setDataRegistration(LocalDateTime.now());

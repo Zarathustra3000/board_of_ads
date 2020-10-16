@@ -67,4 +67,12 @@ public class Category {
         this.category = category;
         this.layer = layer;
     }
+
+    public Category(Long id, String name, Category category, int layer) {
+        this.isActive = true;
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.layer = layer;
+    }
 }

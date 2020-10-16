@@ -5,17 +5,20 @@ import com.board_of_ads.models.dto.CategoryDto;
 import com.board_of_ads.repository.CategoryRepository;
 import com.board_of_ads.service.interfaces.CategoryService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
 @Service
 @AllArgsConstructor
 @Transactional
+@Slf4j
 public class CategoryServiceImpl implements CategoryService {
 
     private CategoryRepository categoryRepository;
@@ -38,7 +41,7 @@ public class CategoryServiceImpl implements CategoryService {
                 .sorted(Comparator.comparing(Category::getId))
                 .forEach(cat -> {
                     if (cat.getCategory() == null) {
-                        category.add(new CategoryDto(cat.getId(), cat.getName(), null,cat.getLayer()));
+                        category.add(new CategoryDto(cat.getId(), cat.getName(), null, cat.getLayer()));
                         collectChild(cat, category);
                     }
         });
@@ -49,6 +52,7 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.findCategoriesByCategory(categoryWithChildren.getId())
                 .stream()
                 .filter(Category::isActive)
+                .sorted(Comparator.comparing(Category::getId))
                 .forEach(cat -> {
                     collect.add(new CategoryDto(cat.getId(), cat.getName(), cat.getCategory().getName(),cat.getLayer()));
                     collectChild(cat, collect);
@@ -67,30 +71,45 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Category updateCategory(CategoryDto categoryDto) {
-        if (categoryDto.getParentName().equals("")) {
-            return saveCategory(new Category(categoryDto.getId(), categoryDto.getName(), null));
+    public Category updateCategory(String oldName, CategoryDto categoryDto) {
+        log.info("Get parameters oldName is: {}, categoryDto is: {}", oldName, categoryDto);
+        var children = categoryRepository.findCategoriesByCategory(categoryDto.getId());
+        var categoryOld = categoryRepository.findCategoryById(categoryDto.getId());
+        log.info("Get category from bd: {} by id {}", categoryOld, categoryDto.getId());
+        children.forEach(child -> {
+            categoryRepository.findCategoriesByCategory(child.getId()).forEach(c -> c.setName(c.getName().replace(oldName, categoryDto.getName())));
+            child.setName(child.getName().replace(oldName, categoryDto.getName()));
+        });
+        categoryOld.setName(categoryOld.getName().replace(oldName, categoryDto.getName()));
+        if ((categoryOld.getCategory() != null)
+                &&
+                (!categoryOld.getCategory().getName().endsWith(categoryDto.getParentName()))) {
+            var cat = findParentByName(categoryDto.getParentName()).stream().findFirst().get();
+            log.info("Get parent from bd: {} by name {}", cat, categoryDto.getParentName());
+            return categoryRepository.save(new Category(categoryDto.getId(), cat.getName() + ":" + categoryDto.getName(), cat, cat.getLayer() + 1));
         }
-        var category = getCategoryByName(categoryDto.getParentName());
-        return saveCategory(new Category(categoryDto.getId(), categoryDto.getName(), category.get()));
+        var parent = getCategoryByName(categoryDto.getParentName()).orElse(null);
+        return categoryRepository.save(
+                new Category(categoryDto.getId(), categoryDto.getName(), parent, parent != null ? parent.getLayer() + 1 : 1));
     }
 
     @Override
     public void deleteCategory(Long id) {
-        var children = categoryRepository.findCategoriesByCategory(id);
-        children.forEach(child -> {
-            child.setActive(false);
-        });
-        var cat =categoryRepository.findCategoryById(id);
-        cat.setActive(false);
+        categoryRepository.findCategoriesByCategory(id)
+                .forEach(child -> child.setActive(false));
+        categoryRepository.findCategoryById(id).setActive(false);
     }
 
     @Override
     public Category createCategory(CategoryDto category) {
         if (category.getParentName().equals("")) {
-            return categoryRepository.save(new Category(category.getName(), null));
+            return categoryRepository.save(new Category(category.getName(), null, 1));
         }
-        var categoryParentFromDB = categoryRepository.findCategoryByName(category.getParentName());
-        return categoryRepository.save(new Category(category.getName(), categoryParentFromDB));
+        var categoryParentFromDB = findParentByName(category.getParentName()).stream().findFirst().get();
+        return categoryRepository.save(new Category(category.getName(), categoryParentFromDB, categoryParentFromDB.getLayer() + 1));
+    }
+
+    private List<Category> findParentByName(String name) {
+        return categoryRepository.findParentLikeName("%" + name);
     }
 }
