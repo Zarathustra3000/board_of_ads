@@ -34,6 +34,7 @@ public class CategoryServiceImpl implements CategoryService {
     public Set<CategoryDto> findAllCategory() {
         Set<CategoryDto> category = new LinkedHashSet<>();
         categoryRepository.findAll().stream()
+                .filter(Category::isActive)
                 .sorted(Comparator.comparing(Category::getId))
                 .forEach(cat -> {
                     if (cat.getCategory() == null) {
@@ -46,6 +47,8 @@ public class CategoryServiceImpl implements CategoryService {
 
     private void collectChild(Category categoryWithChildren, Set<CategoryDto> collect) {
         categoryRepository.findCategoriesByCategory(categoryWithChildren.getId())
+                .stream()
+                .filter(Category::isActive)
                 .forEach(cat -> {
                     collect.add(new CategoryDto(cat.getId(), cat.getName(), cat.getCategory().getName(),cat.getLayer()));
                     collectChild(cat, collect);
@@ -76,9 +79,10 @@ public class CategoryServiceImpl implements CategoryService {
     public void deleteCategory(Long id) {
         var children = categoryRepository.findCategoriesByCategory(id);
         children.forEach(child -> {
-            child.setCategory(null);
+            child.setActive(false);
         });
-        categoryRepository.deleteById(id);
+        var cat =categoryRepository.findCategoryById(id);
+        cat.setActive(false);
     }
 
     @Override

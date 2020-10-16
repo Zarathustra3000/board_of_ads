@@ -457,7 +457,6 @@ function clearTheValidateCreate() {
 }
 
 $('#categoryPanel span').on('click', function() {
-    console.log("bla");
     document.getElementById('nav-userlist').style.display = "none";
     document.getElementById('nav-category').style.display = "block";
     document.getElementById('nav-userlist').className = "tab-pane fade";

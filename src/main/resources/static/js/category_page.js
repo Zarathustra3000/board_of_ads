@@ -71,19 +71,29 @@ async function showCategories() {
     categories.then(categories => {
         categories.data.forEach((cat) => {
             if (cat.parentName == null) {
-                let rowCategory = `<li class="list-group-item list-group-item-dark col-md-5" th:text="'${cat.name}'">
+                let rowCategory = `<li class="list-group-item list-group-item-dark col-md-5" th:text="${cat.name}">
                                     <div class="far fa-edit" onclick="showEditCategoryModal(${cat.id})"></div>
-                                    <div class="far fa-trash-alt mr-2" onclick="showDeleteCategoryModal(${cat.id})"></div>                                    
+                                    <div class="far fa-trash-alt mr-2" onclick="showDeleteCategoryModal(${cat.id})"></div>
                                     ${cat.name}
                                     </li>`;
                 categoryList.append(rowCategory);
             } else {
-                let rowCategory = `<li class="list-group-item list-group-item-light col-md-5" th:text="'${cat.name}'">
+                let rowWithLayerCategory;
+                if (cat.layer === 2) {
+                    rowWithLayerCategory= `<ul><li class="list-group-item list-group-item-light col-md-5">
                                     <div class="far fa-edit" onclick="showEditCategoryModal(${cat.id})"></div>
-                                    <div class="far fa-trash-alt mr-2" onclick="showDeleteCategoryModal(${cat.id})"></div>                                    
-                                    ${cat.name}
-                                    </li>`;
-                categoryList.append(rowCategory);
+                                    <div class="far fa-trash-alt mr-2" onclick="showDeleteCategoryModal(${cat.id})"></div>
+                                    ${cat.name.substring(cat.parentName.length + 1)}
+                                    </li></ul>`;
+                }
+                if (cat.layer === 3) {
+                    rowWithLayerCategory = `<ul><ul><li class="list-group-item list-group-item-light col-md-5">
+                                    <div class="far fa-edit" onclick="showEditCategoryModal(${cat.id})"></div>
+                                    <div class="far fa-trash-alt mr-2" onclick="showDeleteCategoryModal(${cat.id})"></div>
+                                    ${cat.name.substring(cat.parentName.length + 1)}
+                                    </li></ul></ul>`;
+                }
+                categoryList.append(rowWithLayerCategory);
             }
         })
     });
