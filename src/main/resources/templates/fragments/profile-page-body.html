@@ -1,5 +1,4 @@
 <div th:fragment="profile-body" xmlns:th="https://www.thymeleaf.org">
-    <script src="../static/js/profile_ads.js" th:src="@{/js/profile_ads.js}"></script>
     <div class="profile-body">
         <li class="dropdown-divider"></li>
         <div class="row">
@@ -49,7 +48,10 @@
             <div class="col-md-9">
                 <h1>Мои Объявления</h1>
                 <li class="dropdown-divider"></li>
-
+                <table class="table table-borderless" id="userPo">
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

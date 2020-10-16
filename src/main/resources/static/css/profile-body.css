@@ -50,3 +50,8 @@
 .userpostid {
     display: none;
 }
+
+.table td {
+    padding: 0;
+    margin: 0;
+}
