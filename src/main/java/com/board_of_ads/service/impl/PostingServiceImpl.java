@@ -70,10 +70,18 @@ public class PostingServiceImpl implements PostingService {
         return getPostingDtos(result);
     }
 
+
+
     @Override
     public List<PostingDto> getAllPostings() {
         List<PostingDto> postingDtos = postingRepository.findAllPostings();
         return getPostingDtos(postingDtos);
+    }
+
+    @Override
+    public List<PostingDto> getAllUserPostings(Long user_id) {
+        List<PostingDto> userPosts = postingRepository.findAllUserPostings(user_id);
+        return getPostingDtos(userPosts);
     }
 
     private List<PostingDto> getPostingDtos(List<PostingDto> postingDtos) {
