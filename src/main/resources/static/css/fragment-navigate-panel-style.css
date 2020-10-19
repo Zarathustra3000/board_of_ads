@@ -24,3 +24,9 @@
     height: 30px;
     margin-top: 0px;
 }
+
+.scroll-for-category {
+    overflow: auto;
+    max-width: 370px;
+    max-height: 750px;
+}

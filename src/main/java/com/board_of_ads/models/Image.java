@@ -1,5 +1,6 @@
 package com.board_of_ads.models;
 
+import com.board_of_ads.models.posting.Posting;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import java.util.List;
 
 /**
  * Класс-сущность всех изображений сайта
@@ -30,4 +35,15 @@ public class Image {
 
     @Column(length = 1024)
     private String pathURL;
+
+    @ManyToMany
+    @JoinTable(name="posting_images",
+            joinColumns=@JoinColumn (name="posting_id"),
+            inverseJoinColumns=@JoinColumn(name="image_id"))
+    private List<Posting> postings;
+
+    public Image(Long id, String pathURL) {
+        this.id = id;
+        this.pathURL = pathURL;
+    }
 }

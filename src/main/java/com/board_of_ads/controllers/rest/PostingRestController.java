@@ -33,6 +33,13 @@ public class PostingRestController {
                 ? Response.ok(postings)
                 : new ErrorResponse<>(new Error(204, "No found postings"));
     }
+    @GetMapping("/{id}")
+    public Response<PostingDto> findPostingDto(@PathVariable Long id) {
+        var postingDto = postingService.getPostingDtoById(id);
+        return (postingDto != null)
+                ? Response.ok(postingDto)
+                : new ErrorResponse<>(new Error(204, "No found postings"));
+    }
 
     @GetMapping("/city/{name}")
     public Response<List<PostingDto>> findPostingsByCityName(@PathVariable String name) {
@@ -45,6 +52,14 @@ public class PostingRestController {
     @GetMapping("/region/{name}")
     public Response<List<PostingDto>> findPostingsByRegionName(@PathVariable String name) {
         var postings = postingService.getPostingByFullRegionName(name);
+        return (postings.size() > 0)
+                ? Response.ok(postings)
+                : new ErrorResponse<>(new Error(204, "No found postings"));
+    }
+
+    @GetMapping("/userpost/{id}")
+    public Response<List<PostingDto>> findPostingsByUserId(@PathVariable Long id) {
+        var postings = postingService.getAllUserPostings(id);
         return (postings.size() > 0)
                 ? Response.ok(postings)
                 : new ErrorResponse<>(new Error(204, "No found postings"));
