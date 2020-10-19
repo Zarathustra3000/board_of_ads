@@ -1,6 +1,5 @@
 package com.board_of_ads.service.impl;
 
-
 import com.board_of_ads.models.City;
 import com.board_of_ads.models.dto.PostingDto;
 import com.board_of_ads.models.posting.Posting;
@@ -94,5 +93,68 @@ public class PostingServiceImpl implements PostingService {
            }
         }
         return postingDtos;
+    }
+
+    @Override
+    public List<PostingDto> searchPostings(String categorySelect, String citySelect, String searchText, String photoOption) {
+
+        List<PostingDto> postingDtos;
+        if(citySelect != null && !(citySelect.equals("undefined"))) {
+            if (citySelect.matches("(.*)" +"Область" + "(.*)")
+                    || citySelect.matches("(.*)" + "Край" + "(.*)")
+                    || citySelect.matches("(.*)" + "Республика" + "(.*)")
+                    || citySelect.matches("(.*)" + "Автономный округ" + "(.*)")
+                    || citySelect.matches("(.*)" + "Город" + "(.*)")
+            ) {
+                postingDtos = getPostingByFullRegionName(citySelect);
+            } else {
+                postingDtos = getPostingByCity(cityRepository.findCitiesByName(citySelect).get());
+            }
+        } else {
+            postingDtos = getAllPostings();
+        }
+
+        List<PostingDto> resultList = new ArrayList<>();
+
+        for (PostingDto postingDto : postingDtos) {
+
+            boolean categoryFlag = false;
+            boolean photoFlag = false;
+            boolean textFlag = false;
+
+            if (categorySelect.equals("Любая категория")) {
+                categoryFlag = true;
+            } else if (postingDto.getCategory().equals(categorySelect)) {
+                categoryFlag = true;
+            }
+            if(photoOption != null) {
+                if(photoOption.equals("пункт2")) {
+                    if(postingDto.getImages().size() > 0) {
+                        photoFlag = true;
+                    }
+                } else if(photoOption.equals("пункт3")) {
+                    if(postingDto.getImages().size() == 0) {
+                        photoFlag = true;
+                    }
+                } else if(photoOption.equals("пункт1")) {
+                    photoFlag = true;
+                }
+            } else {
+                photoFlag = true;
+            }
+            if(searchText != null && !(searchText.equals("")) && !(searchText.equals("undefined"))) {
+                if(postingDto.getTitle().toLowerCase().matches("(.*)" + searchText.toLowerCase() + "(.*)")) {
+                    textFlag = true;
+                }
+            } else {
+                textFlag = true;
+            }
+
+            if(categoryFlag && photoFlag && textFlag) {
+                resultList.add(postingDto);
+            }
+        }
+
+        return resultList;
     }
 }

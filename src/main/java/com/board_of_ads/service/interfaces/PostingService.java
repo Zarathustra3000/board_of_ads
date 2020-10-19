@@ -25,4 +25,6 @@ public interface PostingService {
     List<PostingDto> getAllPostings();
 
     List<PostingDto> getAllUserPostings(Long user_id);
+
+    List<PostingDto> searchPostings(String categorySelect, String citySelect, String searchText, String photoOption);
 }
