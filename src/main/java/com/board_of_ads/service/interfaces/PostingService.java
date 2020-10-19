@@ -20,4 +20,6 @@ public interface PostingService {
     List<PostingDto> getPostingByFullRegionName(String name);
 
     List<PostingDto> getAllPostings();
+
+    List<PostingDto> searchPostings(String categorySelect, String citySelect, String searchText, String photoOption);
 }

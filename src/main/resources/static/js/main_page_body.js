@@ -1,8 +1,8 @@
-let selectedCategoryOption = "Любая категория";
 let allPostings = [];
-let selectedCity = $("#category-select-city option:selected").val();
-let textInput = $("#search-main-text").val();
-let photoOption = $("#image-select option:selected").val();
+selectedCategoryOption = "Любая категория";
+selectedCity = $("#category-select-city option:selected").val();
+textInput = $("#search-main-text").val();
+photoOption = $("#image-select option:selected").val();
 
 function getPostingsTable(posts) {
     if(posts === "undefined") {
@@ -83,8 +83,9 @@ function getPostingsTable(posts) {
     }
 }
 
-function getList() {
+function getNewPostings() {
 
+    selectedCategoryOption = $("#category-select option:selected").text();
     selectedCity = $("#category-select-city option:selected").val();
     textInput = $("#search-main-text").val();
     photoOption = $("#image-select option:selected").val();
@@ -93,32 +94,8 @@ function getList() {
 }
 
 $(document).ready(function () {
-    getList();
-});
-
-function getCategoryOption(categoryOption) {
-
-    for (let i = 0; i < categoryOption.options.length; i++) {
-        if (categoryOption.options[i].selected) {
-            selectedCategoryOption = (categoryOption.options[i].text);
-        }
-    }
-
-    selectedCity = $("#category-select-city option:selected").val()
-    textInput = $("#search-main-text").val();
-    photoOption = $("#image-select option:selected").val()
-
     reinstallTable(selectedCategoryOption, selectedCity, textInput, photoOption);
-}
-
-function searchPosts() {
-
-    selectedCity = $("#category-select-city option:selected").val()
-    textInput = $("#search-main-text").val();
-    photoOption = $("#image-select option:selected").val()
-
-    reinstallTable(selectedCategoryOption, selectedCity, textInput, photoOption);
-}
+})
 
 async function reinstallTable(categoryOption, cityOption, searchTextOption, photoOption) {
 
@@ -130,7 +107,7 @@ async function reinstallTable(categoryOption, cityOption, searchTextOption, phot
 }
 
 async function getData(categoryOption, cityOption, searchTextOption, photoOption) {
-    let response = await fetch("/api/search" + "?catSel=" + categoryOption
+    let response = await fetch("/api/posting/search" + "?catSel=" + categoryOption
         + "&citSel=" + cityOption
         + "&searchT=" + searchTextOption
         + "&phOpt=" + photoOption, {

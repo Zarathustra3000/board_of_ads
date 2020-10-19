@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -45,6 +46,19 @@ public class PostingRestController {
     public Response<List<PostingDto>> findPostingsByRegionName(@PathVariable String name) {
         var postings = postingService.getPostingByFullRegionName(name);
         return (postings.size() > 0)
+                ? Response.ok(postings)
+                : new ErrorResponse<>(new Error(204, "No found postings"));
+    }
+
+    @GetMapping("/search")
+    public Response<List<PostingDto>> findAllPostings(@RequestParam(name="catSel") String categorySelect,
+                                                      @RequestParam(name="citSel",required = false)String citySelect,
+                                                      @RequestParam(name="searchT",required = false) String searchText,
+                                                      @RequestParam(name="phOpt",required = false) String photoOption) {
+        log.info("Use this default logger");
+        var postings = postingService
+                .searchPostings(categorySelect, citySelect, searchText, photoOption);
+        return (postings != null)
                 ? Response.ok(postings)
                 : new ErrorResponse<>(new Error(204, "No found postings"));
     }
