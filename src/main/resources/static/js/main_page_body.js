@@ -36,10 +36,53 @@ function getPostingsTable(posts) {
                                 <div class="card-text text-muted">
                                     <div id="meetingPlace">${postingDTO.meetingAddress}</div>
                                     <div id="timeOfPosting">${date}</div>
+                                    <div id="add${postingDTO.id}"><div data-id="${postingDTO.id}" class="addToWish">add wish</div></div>
+                                    <div id="delete${postingDTO.id}"><div data-id="${postingDTO.id}" class="deleteWish">delete wish</div></div>
                                 </div>
                             </div>
                         </div>
                     </div>`
+
+            $("#add" + postingDTO.id).show()
+            $("#delete" + postingDTO.id).hide()
+
+            $(".addToWish").on('click', function (event) {
+                event.preventDefault();
+
+                let userid = $("#clientid").val();
+
+                let postingId = this.dataset.id;
+
+                $("#add" + postingId).hide()
+                $("#delete" + postingId).show()
+
+                fetch(`/api/wish/add/`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        posting: postingId,
+                        userid: userid
+                    })
+                })
+            });
+
+
+            $('.deleteWish').on('click', function (event) {
+
+                event.preventDefault();
+
+                let postingId = this.dataset.id;
+
+                $("#delete" + postingId).hide()
+                $("#add" + postingId).show()
+
+                fetch(`/api/wish/delete/${postingId}`, {
+                    method: 'DELETE',
+                })
+            })
 
             if (postingDTO.images.length > 0) {
                 for (let i = 0; i < postingDTO.images.length; i++) {
