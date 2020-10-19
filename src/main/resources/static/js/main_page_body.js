@@ -45,7 +45,7 @@ function getPostingsTable(posts) {
                     let indicator = "indicator" + i;
                     if (i === 0) {
                         document.getElementById("carouselIndicators" + step).innerHTML +=
-                            `<li id="${indicator}" data-target="#ImageSlider${step}" data-slide-to="i" class="active"></li>`
+                            `<li id="${indicator}" data-target="#ImageSlider${step}" data-slide-to="${i}" class="active"></li>`
 
                         document.getElementById("carouselInner" + step).innerHTML +=
                             `<div class="carousel-item active">
@@ -53,12 +53,10 @@ function getPostingsTable(posts) {
                                         <img id="postingImageRef" src="${postingDTO.images[i].pathURL}" class="card-img-top" alt="">
                                     </a>
                                 </div>`
-                        $("#" + indicator).on("mouseover", function () {
-                            $("#" + indicator).click();
-                        });
+
                     } else {
                         document.getElementById("carouselIndicators" + step).innerHTML +=
-                            `<li id="${indicator}" data-target="#ImageSlider${step}" data-slide-to="i"></li>`
+                            `<li id="${indicator}" data-target="#ImageSlider${step}" data-slide-to="${i}"></li>`
 
                         document.getElementById("carouselInner" + step).innerHTML +=
                             `<div class="carousel-item">
@@ -66,9 +64,6 @@ function getPostingsTable(posts) {
                                         <img id="postingImageRef" src="${postingDTO.images[i].pathURL}" class="card-img-top" alt="">
                                     </a>
                                 </div>`
-                        $("#" + indicator).on("mouseover", function () {
-                            $("#" + indicator).click();
-                        });
                     }
                 }
             } else {
