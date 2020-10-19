@@ -1,4 +1,5 @@
 let usersProfilePostings = $('#userPo tbody');
+let usersProfileArchivePostings = $('#userPoArch tbody');
 
 $(document).ready(function () {
  getAllUserPosts();
@@ -8,7 +9,11 @@ function getAllUserPosts() {
     let user_id = document.getElementById('userpostid').textContent;
     profileService.findPostingByUserId(user_id).then((response => {
 
-        response.data.map(post =>{
+        let activeCounter = 0;
+        let archiveCounter = 0;
+        let soldAmountCounter = 0;
+
+        response.data.map(post => {
 
             let postingImage = document.createElement('img');
             postingImage.setAttribute('id', 'postingImg');
@@ -17,6 +22,7 @@ function getAllUserPosts() {
             postingImage.setAttribute('height', '150');
 
             for (let o in post) {
+                let li = document.createElement('li');
                 let tr = document.createElement('tr');
                 let trPrice = document.createElement('tr');
                 let trMeeting = document.createElement('tr');
@@ -27,9 +33,11 @@ function getAllUserPosts() {
                 let tdTitleHref = document.createElement('a');
 
                 let title = document.createTextNode(post.title);
-                let price = document.createTextNode(post.price + '₽');
+                let price = document.createTextNode(post.price + ' ₽');
                 let meeting = document.createTextNode(post.meetingAddress);
 
+                li.setAttribute('class', 'dropdown-divider');
+                li.setAttribute('width', '500');
                 tr.setAttribute('id', "userPosting");
                 td.setAttribute('rowspan', "3");
                 td.setAttribute('class', "first");
@@ -46,10 +54,22 @@ function getAllUserPosts() {
                 tr.appendChild(tdTitle);
                 trPrice.appendChild(tdPrice);
                 trMeeting.appendChild(tdMeeting);
-                usersProfilePostings.append(tr).append(trPrice).append(trMeeting);
+
+                if (post.isActive) {
+                    activeCounter = activeCounter + 1;
+                    usersProfilePostings.append(tr).append(trPrice).append(trMeeting).append(li);
+                } else {
+                    archiveCounter = archiveCounter + 1;
+                    soldAmountCounter = post.price + soldAmountCounter;
+                    console.log(soldAmountCounter);
+                    usersProfileArchivePostings.append(tr).append(trPrice).append(trMeeting).append(li);
+                }
                 break;
             }
         });
+        document.getElementById('active-ads-tab').innerText = 'Активные ' + ' - ' + activeCounter;
+        document.getElementById('archive-ads-tab').innerText = 'Архивные ' + ' - ' + archiveCounter;
+document.getElementById('amountOfSales').innerHTML = soldAmountCounter + ' ₽';
     }));
 }
 
