@@ -7,6 +7,7 @@ import com.board_of_ads.models.User;
 import com.board_of_ads.models.posting.Posting;
 import com.board_of_ads.service.interfaces.CategoryService;
 import com.board_of_ads.service.interfaces.CityService;
+import com.board_of_ads.service.interfaces.ImageService;
 import com.board_of_ads.service.interfaces.KladrService;
 import com.board_of_ads.service.interfaces.PostingService;
 import com.board_of_ads.service.interfaces.RoleService;
@@ -31,6 +32,7 @@ public class DataInitializer {
     private final CategoryService categoryService;
     private final PostingService postingService;
     private final CityService cityService;
+    private final ImageService imageService;
 
     @PostConstruct
     private void init() throws IOException {
@@ -566,8 +568,28 @@ public class DataInitializer {
         postingList.add(new Posting(userService.getUserByEmail("user@mail.ru"), categoryService.getCategoryByName("Услуги").get()
                 , "Сесть на пенёк", "...Почему тут так мало?", 1_000L, "+79896661488", true));
 
+        Image one = new Image(null,"/images/numbers/0.jpg");
+        Image two = new Image(null,"/images/numbers/1.jpg");
+        Image three = new Image(null,"/images/numbers/2.jpg");
+        Image four = new Image(null,"/images/numbers/3.jpg");
+        Image five = new Image(null,"/images/numbers/4.jpg");
+
+        imageService.save(one);
+        imageService.save(two);
+        imageService.save(three);
+        imageService.save(four);
+        imageService.save(five);
+
+        List<Image> imageList = new ArrayList<>();
+        imageList.add(imageService.getByPathURL("/images/numbers/0.jpg"));
+        imageList.add(imageService.getByPathURL("/images/numbers/1.jpg"));
+        imageList.add(imageService.getByPathURL("/images/numbers/2.jpg"));
+        imageList.add(imageService.getByPathURL("/images/numbers/3.jpg"));
+        imageList.add(imageService.getByPathURL("/images/numbers/4.jpg"));
+
         for (Posting posting : postingList) {
             if (postingService.getPostingByTitle(posting.getTitle()).isEmpty()) {
+                posting.setImages(imageList);
                 postingService.save(posting);
             }
         }

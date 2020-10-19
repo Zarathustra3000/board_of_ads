@@ -47,7 +47,7 @@ public class SearchPostingServiceImpl implements SearchPostingSevice {
 
             if (categorySelect.equals("Любая категория")) {
                 categoryFlag = true;
-            } else if (postingDto.getCategory().equals(categorySelect)) {
+            } else if (postingDto.getCategory().getName().equals(categorySelect)) {
                 categoryFlag = true;
             }
             if(photoOption != null) {

@@ -80,7 +80,10 @@ public class Posting {
     @Column
     private LocalDateTime datePosting = LocalDateTime.now();
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @JoinTable(name="posting_images",
+            joinColumns=@JoinColumn (name="posting_id"),
+            inverseJoinColumns=@JoinColumn(name="image_id"))
     private List<Image> images;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
