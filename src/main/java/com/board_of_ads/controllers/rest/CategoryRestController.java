@@ -39,7 +39,6 @@ public class CategoryRestController {
 
     @GetMapping("/{id}")
     public Response<CategoryDto> findById(@PathVariable Long id) {
-        System.out.println(id);
         var category = categoryService.getCategoryDtoById(id);
         return (category.isPresent())
                 ? Response.ok(category.get())
