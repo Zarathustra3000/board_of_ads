@@ -98,11 +98,12 @@ async function showCategories() {
     });
 }
 
-async function showEditCategoryModal(catName) {
-    let categoryResponse = await categoryService.findCategoryByName(catName);
+async function showEditCategoryModal(id) {
+    let categoryResponse = await categoryService.findCategoryById(id);
     let categoryJson = categoryResponse.json();
     $('#updateCategoryModal').modal('show');
     categoryJson.then(category => {
+        console.log(category);
         $('#categoryID').val(category.data.id);
         if (category.data.layer > 1) {
             $('#categoryName').val(category.data.name.substring(category.data.parentName.length + 1));
@@ -144,7 +145,7 @@ async function showEditCategoryModal(catName) {
 
 async function showDeleteCategoryModal(catName) {
     $('#deleteCategoryModal').modal('show');
-    let categoryResponse = await categoryService.findCategoryByName(catName);
+    let categoryResponse = await categoryService.findCategoryById(catName);
     let categoryJson = categoryResponse.json();
     categoryJson.then(category => {
         $('#categoryDeleteID').val(category.data.id);
@@ -180,7 +181,7 @@ const categoryService = {
             method: 'GET'
         });
     },
-    findCategoryByName: async (id) => {
+    findCategoryById: async (id) => {
         return await http.fetch('/api/category/' + id);
     },
     updateCategory: async (oldNameCategory, data) => {

@@ -39,15 +39,8 @@ public class CategoryRestController {
 
     @GetMapping("/{id}")
     public Response<CategoryDto> findById(@PathVariable Long id) {
+        System.out.println(id);
         var category = categoryService.getCategoryDtoById(id);
-        return (category.isPresent())
-                ? Response.ok(category.get())
-                : new ErrorResponse<>(new Error(204, "No found category"));
-    }
-
-    @GetMapping("/{name}")
-    public Response<CategoryDto> findByName(@PathVariable String name) {
-        var category = categoryService.getCategoryDtoByName(name);
         return (category.isPresent())
                 ? Response.ok(category.get())
                 : new ErrorResponse<>(new Error(204, "No found category"));
