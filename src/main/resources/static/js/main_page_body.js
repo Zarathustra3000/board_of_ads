@@ -9,6 +9,7 @@ function getPostingsTable(posts) {
 
     } else {
         for (let step = 0; step < posts.length; step++) {
+
             let postingDTO = posts[step];
 
             let date = postingDTO.datePosting.toString().substring(8, 10) + "-" +
