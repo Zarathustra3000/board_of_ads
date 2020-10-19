@@ -45,7 +45,15 @@ public class CategoryRestController {
                 : new ErrorResponse<>(new Error(204, "No found category"));
     }
 
-    @PutMapping("/{old}")
+    @GetMapping("/{name}")
+    public Response<CategoryDto> findByName(@PathVariable String name) {
+        var category = categoryService.getCategoryDtoByName(name);
+        return (category.isPresent())
+                ? Response.ok(category.get())
+                : new ErrorResponse<>(new Error(204, "No found category"));
+    }
+
+   @PutMapping("/{old}")
     public Response<Category> setCategory(@PathVariable(name = "old") String old, @RequestBody CategoryDto category) {
         var result = categoryService.updateCategory(old, category);
         log.info("Updated category is : {}", result);

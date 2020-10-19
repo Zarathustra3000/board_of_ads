@@ -71,6 +71,17 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
+    public Optional<CategoryDto> getCategoryDtoByName(String name) {
+        var category = categoryRepository.findCategoryByName(name);
+        var categoryDto = new CategoryDto(
+                category.getId(),
+                category.getName(),
+                category.getCategory() == null ? null : category.getCategory().getName(),
+                category.getLayer() == 0 ? 0 : category.getLayer());
+        return Optional.of(categoryDto);
+    }
+
+    @Override
     public Category updateCategory(String oldName, CategoryDto categoryDto) {
         log.info("Get parameters oldName is: {}, categoryDto is: {}", oldName, categoryDto);
         var children = categoryRepository.findCategoriesByCategory(categoryDto.getId());
