@@ -41,13 +41,14 @@
                     <a th:text="#{Wallet}" href="#">Кошелек</a><br>
                     <a th:text="#{PaidService}" href="#">Платные услуги</a><br>
                     <li class="dropdown-divider"></li>
-                    <a th:text="#{settings}" href="#">Настройки</a><br>
+                    <a id="profileSettings" th:text="#{settings}" href="#">Настройки</a><br>
                 </div>
             </div>
             <div class="col-md-9">
-                <h1>Мои Объявления</h1>
-                <li class="dropdown-divider"></li>
-                <span th:text="${user.getPostings().toString()}"></span>
+<!--                <h1>Мои Объявления</h1>-->
+<!--                <li class="dropdown-divider"></li>-->
+<!--                <span th:text="${user.getPostings().toString()}"></span>-->
+                <div th:insert="fragments/profile-settings::profile-settings"></div>
             </div>
         </div>
     </div>

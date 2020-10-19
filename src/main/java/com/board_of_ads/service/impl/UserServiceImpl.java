@@ -2,11 +2,13 @@ package com.board_of_ads.service.impl;
 
 import com.board_of_ads.models.Image;
 import com.board_of_ads.models.User;
+import com.board_of_ads.models.dto.UserDto;
 import com.board_of_ads.repository.UserRepository;
 import com.board_of_ads.service.interfaces.RoleService;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.util.BindingResultLogs;
 import lombok.AllArgsConstructor;
+import org.bouncycastle.openssl.PasswordException;
 import org.slf4j.Logger;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -67,5 +69,20 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
-
+    @Override
+    public User changeUserEmail(User principal, UserDto user) throws Exception {
+        var userFromDB = userRepository.findByEmail(principal.getEmail());
+        if (passwordEncoder.matches(user.getPassword(), userFromDB.getPassword())) {
+            userFromDB.setEmail(user.getEmail());
+            return userRepository.save(userFromDB);
+        } else {
+            throw new Exception("password invalid");
+        }
+    }
+    @Override
+    public User changeUserPassword(UserDto user) {
+        var userFromDB = userRepository.findByEmail(user.getEmail());
+        userFromDB.setPassword(user.getPassword());
+        return userRepository.save(userFromDB);
+    }
 }

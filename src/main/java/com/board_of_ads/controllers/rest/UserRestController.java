@@ -1,6 +1,8 @@
 package com.board_of_ads.controllers.rest;
 
 import com.board_of_ads.models.User;
+import com.board_of_ads.models.dto.CategoryDto;
+import com.board_of_ads.models.dto.UserDto;
 import com.board_of_ads.service.interfaces.AuthorizationService;
 import com.board_of_ads.service.interfaces.UserService;
 import com.board_of_ads.util.Error;
@@ -12,6 +14,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,4 +48,25 @@ public class UserRestController {
         return new ErrorResponse<>(new Error(204, "Incorrect Data"));
     }
 
+    @PutMapping("/email")
+    public Response<User> changeEmail(@AuthenticationPrincipal User principal, @RequestBody UserDto user) {
+        try {
+            log.info("In changeEmail get user: {}", user);
+            User result = userService.changeUserEmail(principal, user);
+            log.info("For the user with id: {} password has been successfully changed", principal.getId());
+            return Response.ok(result);
+        } catch (Exception e) {
+            log.error("Email not changed: user: {}", user);
+            return new Response.ErrorBuilderImpl().code(304).text("Email not changed").build();
+        }
+    }
+
+    @PutMapping("/password")
+    public Response<User> changePassword(@RequestBody UserDto user) {
+        log.info("In changePassword get user: {}", user);
+        User result = userService.changeUserPassword(user);
+        return result != null
+                ?  Response.ok(result)
+                : new Response.ErrorBuilderImpl().code(304).text("Password not changed").build();
+    }
 }

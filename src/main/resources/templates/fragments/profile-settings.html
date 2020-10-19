@@ -1,4 +1,6 @@
 <div th:fragment="profile-settings" xmlns:th="http://www.w3.org/1999/xhtml">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <div class="container" id="panel-content">
         <div class="tab-pane fade" id="nav-settings">
@@ -8,14 +10,14 @@
                     <div data-marker="change-email-block">
                         <div>
                             <span>
-                                <div id="editEmail">
+                                <span id="editEmail">
                                     <span class="h5" id="userEmail"></span>
                                     <i class="text-primary fa fa-pencil"></i>
-                                </div>
-                                <div class="float-right">
+                                </span>
+                                <span class="float-right">
                                     <i class="text-success fa fa-check ml-5" aria-hidden="true"></i>
                                     <span data-marker="status">Подтверждён</span>
-                                </div>
+                                </span>
                             </span>
                         </div>
                     </div>
@@ -26,7 +28,13 @@
                         <span class="ml-5">Частное лицо</span>
                         <a class="ml-2"
                            href="/profile/settings/business/profile">Настроить бизнес профиль</a>
-                        <i class="fa fa-question-circle-o text-muted"></i>
+                        <i class="fa fa-question-circle-o text-muted ml-0"
+                           id="tooltip"
+                           title="О бизнес профиле"
+                           data-toggle="popover"
+                           data-placement="bottom"
+                           data-content="Вы получите статус компании и профессиональный внешний вид профиля"
+                           style="margin:20px;"></i>
                     </div>
                     <div class="mt-3">
                         <span class="text-muted mr-5">Номер профиля</span>
@@ -35,9 +43,11 @@
                     <hr>
                     <div>
                         <span class="text-muted mr-5">Объявления</span>
-                        <span class="ml-5 col-1 pl-5" >23   (все объявления закрыты)
-                                            <a class="ml-2" href="/additem">подать объявление →</a>
-                                        </span>
+                        <span class="ml-5 col-1 pl-5" id="postCount">
+                        </span>
+                        <span class="ml-0">
+                            <a class="ml-2" href="/new_post">подать объявление →</a>
+                        </span>
                     </div>
                     <div class="mt-3">
                         <span class="text-muted mr-5" >Кошелёк</span>
@@ -58,16 +68,15 @@
                                                    class="form-control form-control-sm"
                                                    type="text"
                                                    name="name"
-                                                   value="Алексей"
                                                    maxlength="30">
                                         </div>
                                     </div>
                                     <div class="form-fieldset">
                                         <label class="mt-3 text-muted" style="font-size: 15px;">Город</label>
                                         <div class="form-group mt-2 float-right col-5" style="position: relative; left: 75px;">
-                                            <select class="form-control form-control-sm">
-                                                <option value="654070" selected="selected">Екатеринбург</option>
-                                                <option value="0">Выбрать другой...</option>
+                                            <select id="selectCity" class="form-control form-control-sm">
+                                                <option id="selectedCity"></option>
+                                                <option id="otherCities">Выбрать другой...</option>
                                             </select>
                                         </div>
                                     </div>
@@ -543,5 +552,6 @@
 
     <div th:insert="fragments/profile-settings-email-modal::email-edit"></div>
     <div th:insert="fragments/profile-settings-email-modal-confirm::email-edit-confirm"></div>
+    <div th:insert="fragments/profile-settings-choose-city-modal::choose-city"></div>
 
 </div>
