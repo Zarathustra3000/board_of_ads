@@ -28,6 +28,8 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
+    String name1;
+
     @Column
     private boolean isActive;
 
