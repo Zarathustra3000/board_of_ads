@@ -128,5 +128,5 @@ async function getCategories() {
             'Content-Type': 'application/json'
         },
     });
-    return await (await response.json()).data;
+    return (await response.json()).data;
 }
