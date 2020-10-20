@@ -11,7 +11,7 @@ $('#profileSettings, #profile-settings-from-header').on('click', async function(
                     $('#postCount').text(post.data != null ? post.data.length : 0);
                     if (principal.data.principal.phone != null) {
                         $('#phone-number').text(principal.data.principal.phone);
-                        $('#phoneCountPost').text(post.data != null ? post.data.length : 0 + ' объявлений');
+                        $('#phoneCountPost').text(post.data != null ? post.data.length + ' объявлений' : '0 объявлений');
                     } else {
                         $('#phoneTd').addClass("d-none");
                     }
