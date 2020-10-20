@@ -101,7 +101,8 @@ function showAllUsersTable() {
                             user[o] = "No Data";
                         }
                     }
-                    if (user.dataRegistration[4].length === 1) {
+
+                    if (user.dataRegistration[4].toString().length === 1) {
                         user.dataRegistration[4] = '0' + user.dataRegistration[4];
                     }
 
