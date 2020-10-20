@@ -23,7 +23,5 @@ public interface UserService {
 
     boolean checkUserDataBeforeReg(User user, BindingResult bindingResult, Logger logger);
 
-    User changeUserPassword(UserDto user);
-
-    User changeUserEmail(User principal, UserDto user) throws Exception;
+    User update(User principal, UserDto user) throws Exception;
 }

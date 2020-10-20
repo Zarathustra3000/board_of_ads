@@ -4,6 +4,7 @@
 
     <div class="container" id="panel-content">
         <div class="tab-pane fade" id="nav-settings">
+            <div class="d-none" id="SuccessMessage"></div>
             <div class="profile-settings">
                 <div class="h2 font-weight-bold mt-4">Настройки</div>
                 <div>
@@ -52,9 +53,9 @@
                     <div class="mt-3">
                         <span class="text-muted mr-5" >Кошелёк</span>
                         <span style="padding-left: 120px;">0
-                                            <span>₽</span>
-                                            <a class="ml-2" href="/account">пополнить кошелёк</a>
-                                        </span>
+                            <span>₽</span>
+                            <a class="ml-2" href="/account">пополнить кошелёк</a>
+                        </span>
                     </div>
                     <hr>
                     <div id="contact">
@@ -81,7 +82,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-1" style="position: relative; left: 200px;">
-                                        <input class="btn btn-outline-dark btn-sm" type="submit" value="Сохранить"/>
+                                        <input class="btn btn-outline-dark btn-sm" id="saveCityOrNameButton" type="submit" value="Сохранить"/>
                                     </div>
                                 </div>
                             </div>
@@ -93,38 +94,9 @@
                                 <div class="float-right">
                                     <div class="mt-2">
                                         <table>
-                                            <tbody>
-                                            <tr class="row ml-5 pl-5">
-                                                <td class="">
-                                                    <span class="js-phone-number">8 922 193-26-61</span>
-                                                    <i class="text-primary fa fa-pencil"></i>
-                                                    <i class="text-danger fa fa-times" aria-hidden="true"></i>
-                                                </td>
-                                                <td class="">
-                                                    <i class="text-success fa fa-check ml-5" aria-hidden="true"></i>
-                                                    Подтверждён
-                                                </td>
-                                                <td class="">
-                                                                    <span class="">
-                                                                        <span class="text-muted">21 объявление</span>
-                                                                    </span>
-                                                </td>
+                                            <tbody >
+                                            <tr class="row ml-5 pl-5" id="phoneUser">
                                             </tr>
-                                            <tr class="row ml-5 pl-5">
-                                                <td class="settings-phones-phone ym-hide-content">
-                                                    <span class="js-phone-number">8 982 713-00-62</span>
-                                                    <i class="text-primary fa fa-pencil"></i>
-                                                    <i class="text-danger fa fa-times" aria-hidden="true"></i>
-                                                </td>
-                                                <td>
-                                                    <i class="text-success fa fa-check ml-5" aria-hidden="true"></i>
-                                                    Подтверждён
-                                                </td>
-                                                <td>
-                                                                    <span class="">
-                                                                        <span class="text-muted">2 объявления</span>
-                                                                    </span>
-                                                </td>
                                             </tbody>
                                         </table>
                                     </div>
@@ -135,423 +107,46 @@
                     <hr>
                     <div id="social" class="">
                         <div class="h6 mt-4 mb-4" style="font-size: 17px;">Соцсети и сервисы</div>
-                        <input type="hidden" class="js-token" name="token[1592354195205]" value="6bc7fae605ed1a95">
-                        <div class="social-network js-social-auth" data-page-type="profile">
-                            <div class="social-network__item" data-provider-id="1">
-                                            <span class="social-network__image">
-                                                <span class="social-network__icon social-network__icon_vk js-social-icon" data-provider-id="1" data-is-connected="" data-has-esia-trusted-account="">
-                                                <i class="i-social i-social_vk"></i>
-                                                </span>
-                                            </span>
-                                <span class="social-network__name">ВКонтакте</span>
-                                <label class="form-switch">
-                                    <input class="form-switch__input js-social-switcher" type="checkbox">
-                                    <span class="form-switch__interface js-social-auth__btn" data-provider="1"></span>
-                                </label>
-                            </div>
-                            <div class="social-network__item" data-provider-id="3">
-                                                <span class="social-network__image">
-                                                    <span class="social-network__icon social-network__icon_ok js-social-icon" data-provider-id="3" data-is-connected="" data-has-esia-trusted-account="">
-                                                    <i class="i-social i-social_ok"></i>
-                                                    </span>
-                                                 </span>
-                                <span class="social-network__name">Одноклассники</span>
-                                <label class="form-switch">
-                                    <input class="form-switch__input js-social-switcher" type="checkbox">
-                                    <span class="form-switch__interface js-social-auth__btn" data-provider="3"></span>
-                                </label>
-                            </div>
-                            <div class="social-network__item" data-provider-id="2">
-                                    <span class="social-network__image">
-                                        <span class="social-network__icon social-network__icon_fb js-social-icon" data-provider-id="2" data-is-connected="" data-has-esia-trusted-account="">
-                                            <i class="i-social i-social_fb"></i>
-                                        </span>
-                                    </span>
-                                <span class="social-network__name">Facebook</span>
-                                <label class="form-switch">
-                                    <input class="form-switch__input js-social-switcher" type="checkbox">
-                                    <span class="form-switch__interface js-social-auth__btn" data-provider="2"></span>
-                                </label>
-                            </div>
-                            <div class="social-network__item" data-provider-id="5">
-                                    <span class="social-network__image">
-                                        <span class="social-network__icon social-network__icon_gp js-social-icon" data-provider-id="5" data-is-connected="" data-has-esia-trusted-account="">
-                                            <i class="i-social i-social_gp"></i>
-                                        </span>
-                                    </span>
-                                <span class="social-network__name">Google</span>
-                                <label class="form-switch">
-                                    <input class="form-switch__input js-social-switcher" type="checkbox">
-                                    <span class="form-switch__interface js-social-auth__btn" data-provider="5"></span>
-                                </label>
-                            </div>
-                            <div class="social-network__item" data-provider-id="8">
-                                    <span class="social-network__image">
-                                        <span class="social-network__icon social-network__icon_apple js-social-icon" data-provider-id="8" data-is-connected="" data-has-esia-trusted-account="">
-                                            <i class="i-social i-social_apple"></i>
-                                        </span>
-                                    </span>
-                                <span class="social-network__name">Apple</span>
-                                <label class="form-switch">
-                                    <input class="form-switch__input js-social-switcher" type="checkbox">
-                                    <span class="form-switch__interface js-social-auth__btn" data-provider="8"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="social-network__error js-social-auth-error is-hidden"></div>
+<!--                        TODO: Реализовать отображение раздела Соцсети и сервисы и другие переключатели-->
                     </div>
-                    <div class="js-settings-app" data-params="{&quot;userId&quot;:107795730,&quot;incomeIsEnabled&quot;:true,&quot;isB2CFlow&quot;:false,&quot;isMarketplace&quot;:false}">
-                        <div class="section-root_divided-2YFk8"><div class="section-body-1SI3r">
-                            <div class="fieldset-fieldset-3kbZz fieldset-size-s-2Ch_E fieldset-root_layout_medium-1TLOa">
-                                <div class="column-root-N_0Ue width-width-flex-4-33_J2 column-has_width-lyA4x">
-                                    <label class="fieldset-label-2gmFi" data-marker="label">
-                                            <span class="text-text-1PdBw text-size-s-1PUdo">
-                                                <span class="text-text-1PdBw text-size-m-4mxHN">Продано на Авито</span>
-                                            </span>
-                                    </label>
-                                </div>
-                                <div class="column-root-N_0Ue width-width-flex-8-1tS-3 column-has_width-lyA4x">
-                                    <div class="fieldset-field-25Lrl" data-marker="field">
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU">
-                                            <input type="checkbox" checked="">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="true" aria-invalid="false" aria-disabled="false">
-                                                    <span class="switcher-toggle-2-6Qh"></span>
-                                                </span>
-                                        </label>
-                                    </div>
-                                    <div class="fieldset-field-25Lrl" data-marker="field">
-                                        <div>
-                                            Для снятых с публикации объявлений, которые отвечают
-                                            <a href="https://support.avito.ru/articles/1413" target="_blank" rel="noopener" class="link-link-39EVK link-design-default-2sPEv link-novisited-1w4JY">требованиям</a>
-                                            .
-                                        </div>
-                                    </div>
+                    <hr>
+                    <div id="password" class="">
+                        <div class="h6 mt-4 mb-4" style="font-size: 17px;">Смена пароля</div>
+                            <div class="form-item--ppzC">
+                                <label class="mt-3 text-muted" for="current_password" style="font-size: 15px;">Текущий пароль</label>
+                                <div class="form-group mt-2 float-right col-5">
+                                    <input id="current_password"
+                                           class="form-control form-control-sm w-75"
+                                           type="password"
+                                           minlength="7">
+                                    <div class="text-danger" id="errorPassMessage"></div>
                                 </div>
                             </div>
-                        </div>
-                        </div>
-                        <div>
-                            <div class="section-root_divided-2YFk8">
-                                <div class="section-body-1SI3r">
-                                    <div class="fieldset-fieldset-3kbZz fieldset-size-s-2Ch_E fieldset-root_layout_medium-1TLOa" data-marker="delivery-profile">
-                                        <div class="column-root-N_0Ue width-width-flex-4-33_J2 column-has_width-lyA4x">
-                                            <label class="fieldset-label-2gmFi" data-marker="label">
-                                                <span class="text-text-1PdBw text-size-s-1PUdo">
-                                                    <span class="text-text-1PdBw text-size-m-4mxHN">Авито Доставка</span>
-                                                </span>
-                                            </label>
-                                        </div>
-                                        <div class="column-root-N_0Ue width-width-flex-8-1tS-3 column-has_width-lyA4x">
-                                            <div class="fieldset-field-25Lrl" data-marker="field">
-                                                <div class="c2c-delivery-switcher-row-8L8Gf">
-                                                    <div class="c2c-delivery-switcher-switcher-3v3R5">
-                                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="delivery-profile-enable">
-                                                            <input type="checkbox" data-marker="delivery-profile-enable/input" checked="">
-                                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="true" aria-invalid="false" aria-disabled="false">
-                                                                <span class="switcher-toggle-2-6Qh"></span>
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="text-text-1PdBw text-size-s-1PUdo">
-                                                    Для ваших существующих и&nbsp;новых объявлений, которые отвечают
-                                                    <a href="https://support.avito.ru/articles/115002227797" target="_blank" rel="noopener" class="link-link-39EVK link-design-default-2sPEv link-novisited-1w4JY">требованиям</a>
-                                                    .
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="form-item--ppzC">
+                                <label class="mt-3 text-muted" for="new_password" style="font-size: 15px;">Новый пароль</label>
+                                <div class="form-group mt-2 float-right col-5">
+                                    <input id="new_password"
+                                           class="form-control form-control-sm w-75"
+                                           type="password"
+                                           minlength="7">
                                 </div>
                             </div>
-                            <div>
-
+                            <div class="mt-1" style="position: relative; left: 200px;">
+                                <input class="btn btn-outline-dark btn-sm "
+                                       id="changePasswordButton"
+                                       type="submit"
+                                       th:value="Изменить"
+                                       disabled="disabled">
                             </div>
-                        </div>
-                    </div>
-                    <i class="form__linebreak"></i>
-                    <div class="form-section">
-                        <h2 class="form-section__title">Автопродление платных услуг</h2>
-                        <p class="js-prolongation-status-notification form-section-descr hidden">
-                            Чтобы скрыть возможность автопродления — зайдите на
-                            <a href="/profile/items/active" target="_blank">страницу объявлений</a>
-                            и отключите каждое автопродление.
-                        </p>
-                        <div class="form-fieldset is-readonly">
-                            <label class="form-fieldset__label" for="prolongationStatus">Показывать «Автопродление»</label>
-                            <label class="form-switch">
-                                <input type="checkbox" id="prolongationStatus" name="token[1592354195205]" value="6bc7fae605ed1a95" class="js-prolongation-status js-token form-switch__input" checked="">
-                                <span class="form-switch__interface"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div id="js-notifications-settings-container"><div><div data-marker="notification-settings/section">
-                        <i class="form__linebreak"></i>
-                        <div id="subs" class="form-section">
-                            <h2 class="form-section__title" data-marker="notification-settings/title">Настройка email уведомлений</h2>
-                            <div>
-                                <div class="subtitle-root-1HuWT">
-                                    <div class="text-text-1PdBw text-size-s-1PUdo text-italic-3oCoa">
-                                        Авито вправе присылать системные уведомления пользователю без возможности отписки от них.
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Платные услуги</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Изменения статусов подключённых услуг</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="notification" type="checkbox" data-marker="notification-settings/toggle/input" checked="">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="true" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Персональные подборки</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Подборки интересующих объявлений и категорий</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="recommendation" type="checkbox" data-marker="notification-settings/toggle/input" checked="">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="true" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Акции</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Индивидуальные скидки и специальные предложения</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="action" type="checkbox" data-marker="notification-settings/toggle/input" checked="">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="true" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Новости</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Информация о компании и новых функциях Авито</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="avito_news" type="checkbox" data-marker="notification-settings/toggle/input">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="false" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Советы от Авито</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Рекомендации по эффективной работе с сайтом</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="tips" type="checkbox" data-marker="notification-settings/toggle/input">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="false" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Сообщения</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Уведомления о новых сообщениях в мессенджере</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="messenger" type="checkbox" data-marker="notification-settings/toggle/input" checked="">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="true" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Участие в исследованиях</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">На основе ваших ответов мы сделаем Авито лучше</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="poll" type="checkbox" data-marker="notification-settings/toggle/input">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="false" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Избранные продавцы</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Уведомления о новых объявлениях избранных продавцов</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="fav_sellers" type="checkbox" data-marker="notification-settings/toggle/input" checked="">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="true" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="notifications-settings-item-root-1rFrw">
-                                    <div>
-                                        <p class="text-text-1PdBw text-size-s-1PUdo">Отзывы</p>
-                                        <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                            <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Новые отзывы и ответы, статусы публикации, предложения оценить продавца</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                            <input name="user_reviews" type="checkbox" data-marker="notification-settings/toggle/input">
-                                            <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="false" aria-invalid="false" aria-disabled="false">
-                                                <span class="switcher-toggle-2-6Qh"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <div data-marker="notification-settings/section">
-                            <i class="form__linebreak"></i>
-                            <div id="subs" class="form-section">
-                                <h2 class="form-section__title" data-marker="notification-settings/title">Уведомления в мессенджере</h2>
-                                <div>
-                                    <div class="notifications-settings-item-root-1rFrw">
-                                        <div>
-                                            <p class="text-text-1PdBw text-size-s-1PUdo">Акции</p>
-                                            <div class="notifications-settings-item-subtitle-container-2ZsEF">
-                                                <p class="text-text-1PdBw text-size-s-1PUdo text-color-noaccent-bzEdI">Индивидуальные скидки и специальные предложения</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <label class="toggle-layout-toggleRow-2ZzKY toggle-layout-row-height-s-1TcAY toggle-layout-label-end-2MLYU" data-marker="notification-settings/toggle">
-                                                <input name="action" type="checkbox" data-marker="notification-settings/toggle/input" checked="">
-                                                <span class="toggle-layout-toggle-2cZNN switcher-switch-3fbTA toggle-layout-size-s-dzGLy" aria-checked="true" aria-invalid="false" aria-disabled="false">
-                                                    <span class="switcher-toggle-2-6Qh"></span>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <i class="form__linebreak"></i>
-                    <h2 class="form-section__title" data-marker="user-sessions/title">Входы в профиль</h2>
-                    <div class="form-section" id="sessions">
-                        <div class="js-profile-settings-sessions"><div>
-                        </div>
-                        </div>
-                    </div>
-                    <i class="form__linebreak"></i>
-                    <div class="form-section" id="pass">
-                        <div class="js-profile-settings-password" data-params="{&quot;isChangePassword&quot;:true}">
-                            <h2 class="app-title-h7y1r">Смена пароля</h2>
-                            <form class="form-form-39v7R form-size-s-2FOz9 app-form-3fUfR" data-marker="change-password/form">
-                                <div class="form-description-1_9Dq"></div>
-                                <div class="form-item--ppzC">
-                                    <div class="app-row-1W00h">
-                                        <div class="app-label-3ZDRk">Текущий пароль</div>
-                                        <div class="form-item--ppzC form-fieldset-35PgH">
-                                            <div class="app-input-3Nnii fieldset-fieldset-3kbZz fieldset-size-s-2Ch_E fieldset-root_layout_narrow-2jcgf" data-marker="change-password/old-password">
-                                                <div class="column-root-N_0Ue column-no_width-2PTFn"><div class="fieldset-field-25Lrl" data-marker="field">
-                                                    <label class="input-layout-input-layout-eKhsI input-layout-size-m-1G8d4 input-layout-text-align-left-IDAPR width-width-12-2VZLz">
-                                                        <input data-marker="change-password/old-password-input" name="oldpass" autocomplete="off" type="password" class="input-input-25uCh" value="">
-                                                        <span class="input-layout-after-3ASeT"><svg data-marker="change-password/old-password-input/show-button" width="1em" height="1em" viewBox="0 0 28 28" class="icon-icon-2HGyI icon-variant-default-1eXXW" aria-hidden="false" role="button" tabindex="0" style="font-size: 1.4em;">
-                                            <path d="M17.2992949,10.6400449 L20.3050699,7.63426993 C20.3125451,7.62646302 20.320167,7.61884297 20.3279284,7.61141139 L23.7196699,4.21966991 C24.0125631,3.9267767 24.4874369,3.9267767 24.7803301,4.21966991 C25.0732233,4.51256313 25.0732233,4.98743687 24.7803301,5.28033009 L22.0301359,8.03052423 C24.0684711,9.46008544 25.7014498,11.4144796 26.7402913,13.6883382 C26.8307206,13.8862734 26.8307206,14.1137266 26.7402913,14.3116618 C24.4802863,19.2584526 19.5347767,22.5 14,22.5 C12.1321132,22.5 10.3148248,22.1335552 8.62840542,21.4322548 L5.28033009,24.7803301 C4.98743687,25.0732233 4.51256313,25.0732233 4.21966991,24.7803301 C3.9267767,24.4874369 3.9267767,24.0125631 4.21966991,23.7196699 L7.91746086,20.021879 C7.92549709,20.0134575 7.93371113,20.0052453 7.94209408,19.9972458 L10.6400449,17.2992949 C10.6457858,17.2933616 10.6516079,17.2875403 10.6575083,17.2818315 L17.2818297,10.6575102 C17.2875403,10.6516079 17.2933616,10.6457858 17.2992949,10.6400449 Z M18.7811002,11.27956 C19.2482151,12.0987757 19.5,13.0310185 19.5,14 C19.5,17.0375661 17.0375661,19.5 14,19.5 C13.0310185,19.5 12.0987757,19.2482151 11.27956,18.7811002 L9.78785307,20.2728071 C11.1251843,20.7513926 12.5445588,21 14,21 C18.8249936,21 23.1480074,18.2414757 25.2283182,14.0000591 C24.2582733,12.0236906 22.7780553,10.3340431 20.9512632,9.10939694 L18.7811002,11.27956 Z M17.6653905,12.3952696 L12.3952696,17.6653905 C12.8941237,17.8841246 13.4378886,18 14,18 C16.209139,18 18,16.209139 18,14 C18,13.4378886 17.8841246,12.8941237 17.6653905,12.3952696 Z M6.29032405,18.3399811 C6.61619332,18.5956804 6.67307739,19.0671348 6.41737817,19.3930041 C6.16167895,19.7188733 5.69022453,19.7757574 5.36435526,19.5200582 C3.60222801,18.1373732 2.19092698,16.3499503 1.25970865,14.3116618 C1.16927939,14.1137266 1.16927939,13.8862734 1.25970865,13.6883382 C3.51971371,8.74154743 8.46522327,5.5 14,5.5 C15.4188509,5.5 16.8101581,5.71133652 18.1399144,6.12240986 C18.5356503,6.24474542 18.757285,6.6647253 18.6349495,7.06046118 C18.5126139,7.45619706 18.092634,7.67783181 17.6968981,7.55549625 C16.510229,7.18865604 15.2682358,7 14,7 C9.17500636,7 4.8519925,9.75852433 2.77168176,13.9999411 C3.60142,15.6904541 4.80665218,17.1757912 6.29032405,18.3399811 Z M10.1566788,15.1129816 C10.2716737,15.5109125 10.0423087,15.9267211 9.64437775,16.041716 C9.24644679,16.1567109 8.83063823,15.9273459 8.71564333,15.5294149 C8.5730902,15.0361208 8.5,14.5225411 8.5,14 C8.5,10.9624339 10.9624339,8.5 14,8.5 C14.5225411,8.5 15.0361208,8.5730902 15.5294149,8.71564333 C15.9273459,8.83063823 16.1567109,9.24644679 16.041716,9.64437775 C15.9267211,10.0423087 15.5109125,10.2716737 15.1129816,10.1566788 C14.7546993,10.0531417 14.381291,10 14,10 C11.790861,10 10,11.790861 10,14 C10,14.381291 10.0531417,14.7546993 10.1566788,15.1129816 Z">
-
-                                            </path></svg>
-                                        </span>
-                                                    </label>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-item--ppzC">
-                                    <div class="app-row-1W00h">
-                                        <label class="app-label-3ZDRk">Новый пароль</label>
-                                        <div class="form-item--ppzC form-fieldset-35PgH">
-                                            <div class="app-input-3Nnii fieldset-fieldset-3kbZz fieldset-size-s-2Ch_E fieldset-root_layout_narrow-2jcgf" data-marker="change-password/new-password">
-                                                <div class="column-root-N_0Ue column-no_width-2PTFn"><div class="fieldset-field-25Lrl" data-marker="field">
-                                    <span class="tooltip-tooltip-box-2rApK">
-                                        <span class="tooltip-target-wrapper-XcPdv">
-                                            <label class="input-layout-input-layout-eKhsI input-layout-size-m-1G8d4 input-layout-text-align-left-IDAPR width-width-12-2VZLz">
-                                                <input data-marker="change-password/new-password-input" autocomplete="off" name="password" autocorrect="off" autocapitalize="off" maxlength="60" type="password" class="input-input-25uCh" value="">
-                                                <span class="input-layout-after-3ASeT">
-                                                    <svg data-marker="change-password/new-password-input/show-button" width="1em" height="1em" viewBox="0 0 28 28" class="icon-icon-2HGyI icon-variant-default-1eXXW" aria-hidden="false" role="button" tabindex="0" style="font-size: 1.4em;">
-                                                        <path d="M17.2992949,10.6400449 L20.3050699,7.63426993 C20.3125451,7.62646302 20.320167,7.61884297 20.3279284,7.61141139 L23.7196699,4.21966991 C24.0125631,3.9267767 24.4874369,3.9267767 24.7803301,4.21966991 C25.0732233,4.51256313 25.0732233,4.98743687 24.7803301,5.28033009 L22.0301359,8.03052423 C24.0684711,9.46008544 25.7014498,11.4144796 26.7402913,13.6883382 C26.8307206,13.8862734 26.8307206,14.1137266 26.7402913,14.3116618 C24.4802863,19.2584526 19.5347767,22.5 14,22.5 C12.1321132,22.5 10.3148248,22.1335552 8.62840542,21.4322548 L5.28033009,24.7803301 C4.98743687,25.0732233 4.51256313,25.0732233 4.21966991,24.7803301 C3.9267767,24.4874369 3.9267767,24.0125631 4.21966991,23.7196699 L7.91746086,20.021879 C7.92549709,20.0134575 7.93371113,20.0052453 7.94209408,19.9972458 L10.6400449,17.2992949 C10.6457858,17.2933616 10.6516079,17.2875403 10.6575083,17.2818315 L17.2818297,10.6575102 C17.2875403,10.6516079 17.2933616,10.6457858 17.2992949,10.6400449 Z M18.7811002,11.27956 C19.2482151,12.0987757 19.5,13.0310185 19.5,14 C19.5,17.0375661 17.0375661,19.5 14,19.5 C13.0310185,19.5 12.0987757,19.2482151 11.27956,18.7811002 L9.78785307,20.2728071 C11.1251843,20.7513926 12.5445588,21 14,21 C18.8249936,21 23.1480074,18.2414757 25.2283182,14.0000591 C24.2582733,12.0236906 22.7780553,10.3340431 20.9512632,9.10939694 L18.7811002,11.27956 Z M17.6653905,12.3952696 L12.3952696,17.6653905 C12.8941237,17.8841246 13.4378886,18 14,18 C16.209139,18 18,16.209139 18,14 C18,13.4378886 17.8841246,12.8941237 17.6653905,12.3952696 Z M6.29032405,18.3399811 C6.61619332,18.5956804 6.67307739,19.0671348 6.41737817,19.3930041 C6.16167895,19.7188733 5.69022453,19.7757574 5.36435526,19.5200582 C3.60222801,18.1373732 2.19092698,16.3499503 1.25970865,14.3116618 C1.16927939,14.1137266 1.16927939,13.8862734 1.25970865,13.6883382 C3.51971371,8.74154743 8.46522327,5.5 14,5.5 C15.4188509,5.5 16.8101581,5.71133652 18.1399144,6.12240986 C18.5356503,6.24474542 18.757285,6.6647253 18.6349495,7.06046118 C18.5126139,7.45619706 18.092634,7.67783181 17.6968981,7.55549625 C16.510229,7.18865604 15.2682358,7 14,7 C9.17500636,7 4.8519925,9.75852433 2.77168176,13.9999411 C3.60142,15.6904541 4.80665218,17.1757912 6.29032405,18.3399811 Z M10.1566788,15.1129816 C10.2716737,15.5109125 10.0423087,15.9267211 9.64437775,16.041716 C9.24644679,16.1567109 8.83063823,15.9273459 8.71564333,15.5294149 C8.5730902,15.0361208 8.5,14.5225411 8.5,14 C8.5,10.9624339 10.9624339,8.5 14,8.5 C14.5225411,8.5 15.0361208,8.5730902 15.5294149,8.71564333 C15.9273459,8.83063823 16.1567109,9.24644679 16.041716,9.64437775 C15.9267211,10.0423087 15.5109125,10.2716737 15.1129816,10.1566788 C14.7546993,10.0531417 14.381291,10 14,10 C11.790861,10 10,11.790861 10,14 C10,14.381291 10.0531417,14.7546993 10.1566788,15.1129816 Z">
-
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                            </label>
-                                        </span>
-                                    </span>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-item--ppzC">
-                                    <div class="app-row-1W00h">
-                                        <label class="app-label-3ZDRk"></label>
-                                        <div class="form-item--ppzC form-fieldset-35PgH">
-                                            <div class="app-button-3YJgF fieldset-fieldset-3kbZz fieldset-size-s-2Ch_E fieldset-root_layout_narrow-2jcgf">
-                                                <div class="column-root-N_0Ue column-no_width-2PTFn">
-                                                    <div class="fieldset-field-25Lrl" data-marker="field">
-                                                        <button disabled="" type="submit" name="submit" data-marker="change-password/submit" class="button-button-2Fo5k button-size-m-7jtw4 button-default-mSfac width-width-12-2VZLz" aria-busy="false">
-                                                            <span class="button-textBox-Row9K">Изменить</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div th:insert="fragments/profile-settings-email-modal::email-edit"></div>
+        <div th:insert="fragments/profile-settings-email-modal-confirm::email-edit-confirm"></div>
+        <div th:insert="fragments/profile-settings-choose-city-modal::choose-city"></div>
+
     </div>
-
-    <div th:insert="fragments/profile-settings-email-modal::email-edit"></div>
-    <div th:insert="fragments/profile-settings-email-modal-confirm::email-edit-confirm"></div>
-    <div th:insert="fragments/profile-settings-choose-city-modal::choose-city"></div>
-
 </div>

@@ -54,6 +54,7 @@ public class DataInitializer {
             admin.setPassword("1234567");
             admin.setFirsName("Admin");
             admin.setLastName("Admin");
+            admin.setPhone("8-922-0123456");
             admin.setAvatar(new Image(null, "images/admin.jpg"));
             Set<Role> roleAdmin = new HashSet<>();
             roleAdmin.add(roleService.getRoleByName("ADMIN"));
@@ -67,6 +68,7 @@ public class DataInitializer {
             user.setPassword("1234567");
             user.setFirsName("User");
             user.setLastName("User");
+            user.setPhone("8-922-1234567");
             user.setAvatar(new Image(null, "images/user.jpg"));
             Set<Role> roleAdmin = new HashSet<>();
             roleAdmin.add(roleService.getRoleByName("USER"));

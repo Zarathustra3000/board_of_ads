@@ -10,6 +10,8 @@ import com.board_of_ads.util.ErrorResponse;
 import com.board_of_ads.util.Response;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,8 +37,8 @@ public class UserRestController {
     public Response<Principal> getUser(@AuthenticationPrincipal Principal user) {
         log.info("Use this default logger");
         return user != null
-                ?  Response.ok(user)
-                : new Response.ErrorBuilderImpl().code(401).text("No auth user").build();
+                ? Response.ok(user)
+                : Response.error().code(HttpStatus.UNAUTHORIZED).text("No auth user").build();
     }
 
     @PostMapping ("/modal-reg")
@@ -45,28 +47,19 @@ public class UserRestController {
             authorizationService.login(user);
             return Response.ok(user);
         }
-        return new ErrorResponse<>(new Error(204, "Incorrect Data"));
+        return Response.error().code(HttpStatus.NO_CONTENT).text("Incorrect Data").build();
     }
 
-    @PutMapping("/email")
-    public Response<User> changeEmail(@AuthenticationPrincipal User principal, @RequestBody UserDto user) {
+    @PutMapping
+    public Response<User> changeUserData(@AuthenticationPrincipal User principal, @RequestBody UserDto user) {
         try {
-            log.info("In changeEmail get user: {}", user);
-            User result = userService.changeUserEmail(principal, user);
-            log.info("For the user with id: {} password has been successfully changed", principal.getId());
+            log.info("In changeUserData get user: {}", user);
+            var result = userService.update(principal, user);
+            log.info("For the user with id: {} parameters has been successfully changed", principal.getId());
             return Response.ok(result);
         } catch (Exception e) {
-            log.error("Email not changed: user: {}", user);
-            return new Response.ErrorBuilderImpl().code(304).text("Email not changed").build();
+            log.error("Parameters not changed: user: {}", user);
+            return Response.error().code(HttpStatus.NOT_MODIFIED).text(e.getMessage()).build();
         }
-    }
-
-    @PutMapping("/password")
-    public Response<User> changePassword(@RequestBody UserDto user) {
-        log.info("In changePassword get user: {}", user);
-        User result = userService.changeUserPassword(user);
-        return result != null
-                ?  Response.ok(result)
-                : new Response.ErrorBuilderImpl().code(304).text("Password not changed").build();
     }
 }

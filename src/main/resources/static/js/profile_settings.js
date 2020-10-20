@@ -8,15 +8,66 @@ $('#profileSettings, #profile-settings-from-header').on('click', async function(
             $('#userId').text(principal.data.principal.id);
             $('#postCount').text(principal.data.principal.postings != null ? principal.data.principal.postings.length : 0);
             $('#fld_name').val(principal.data.principal.firsName);
-            console.log(principal.data.principal.city.name);
-            $('#selectedCity').val(principal.data.principal.city.name);
-            $('#selectedCity').text(principal.data.principal.city.name);
+            $('#selectedCity').text(principal.data.principal.city != null ? principal.data.principal.city.name : '');
+            $('#selectedCity').val(principal.data.principal.city != null ? principal.data.principal.city.id : 0);
+            let phoneStr;
+            if (principal.data.principal.phone != null) {
+                phoneStr = `
+                    <td class="">
+                        <span class="js-phone-number">${principal.data.principal.phone}</span>
+                        <i class="text-primary fa fa-pencil"></i>
+                        <i class="text-danger fa fa-times" aria-hidden="true"></i>
+                    </td>
+                    <td class="">
+                        <i class="text-success fa fa-check ml-5" aria-hidden="true"></i>
+                        Подтверждён
+                    </td>
+                    <td class="">
+                        <span class="">
+                            <span class="text-muted">${principal.data.principal.postings != null ? principal.data.principal.postings.length : 0} объявлений</span>
+                        </span>
+                    </td>`;
+            } else {
+                phoneStr = `
+                    <td class="">
+                        <span class="js-phone-number">No phone</span>
+                        <i class="text-primary fa fa-pencil"></i>
+                    </td>`;
+            }
+            $('#phoneUser').append(phoneStr);
         }
     );
 })
 
+$('#new_password').on('keyup', function() {
+    if ($('#current_password').val() !== "" && $('#new_password').val() !== "") {
+        $('#changePasswordButton').removeAttr('disabled');
+    }
+})
+
+$('#changePasswordButton').on('click', function() {
+    let data = {
+        email: '',
+        password: $('#current_password').val(),
+        newPassword: $('#new_password').val(),
+        firstName: '',
+        cityId: ''
+    };
+    userService.changeUserData(data)
+        .then(userResponse => userResponse.json())
+        .then(userResponse => {
+            if (userResponse.success !== true) {
+                $('#errorPassMessage').append(userResponse.error.text);
+            } else {
+                $('#SuccessMessage').removeClass("d-none");
+                $('#SuccessMessage').addClass("bg-success text-dark py-2 d-block");
+                $('#SuccessMessage').text("");
+                $('#SuccessMessage').append('Пароль успешно изменен');
+            }
+        });
+})
+
 $('#selectCity').on('change', function() {
-    console.log('bla');
     $('#chooseCityModal').modal('show');
 })
 
@@ -52,13 +103,40 @@ function validateEmail(email) {
 $('#editConfirmEmailButton').on('click', function() {
     let data = {
         email: $("#emailInput").val(),
-        password: $("#passwordInput").val()
+        password: $("#passwordInput").val(),
+        newPassword: '',
+        firstName: '',
+        cityId: ''
     };
-    userService.changeEmail(data).then(userResponse => {
-        if (userResponse.status === 200) {
-            $('#emailEditConfirmModal').modal('hide');
-        }
+    userService.changeUserData(data)
+        .then(userResponse => userResponse.json())
+        .then(userResponse => {
+         if (userResponse.success !== true) {
+             $('#errorMessage').append(userResponse.error.text);
+         } else {
+             $('#emailEditConfirmModal').modal('hide');
+         }
     });
+})
+
+$("#saveCityOrNameButton").on('click', function() {
+    let data = {
+        email: '',
+        password: '',
+        newPassword: '',
+        firstName: $("#fld_name").val(),
+        cityId: $("#selectCity").val()
+    };
+    userService.changeUserData(data)
+        .then(userResponse => userResponse.json())
+        .then(userResponse => {
+            if (userResponse.success === true) {
+                $('#SuccessMessage').removeClass("d-none");
+                $('#SuccessMessage').addClass("bg-success text-dark py-2 d-block");
+                $('#SuccessMessage').text("");
+                $('#SuccessMessage').append('Контактная информация успешно сохранена');
+            }
+        });
 })
 
 const http = {
@@ -80,14 +158,8 @@ const userService = {
             method: 'GET'
         });
     },
-    changeEmail: async (data) => {
-        return await http.fetch('/api/user/email', {
-            body: JSON.stringify(data),
-            method: 'PUT'
-        });
-    },
-    changePassword: async (data) => {
-        return await http.fetch('/api/user/pswd', {
+    changeUserData: async (data) => {
+        return await http.fetch('/api/user/', {
             body: JSON.stringify(data),
             method: 'PUT'
         });

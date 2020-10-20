@@ -1,16 +1,17 @@
 package com.board_of_ads.models.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserDto {
+
     private String email;
     private String password;
-
-    public UserDto(String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
+    private String newPassword;
+    private String firstName;
+    private Long cityId;
 }
