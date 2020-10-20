@@ -47,7 +47,6 @@ public class Posting {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties("postings")
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "user_id")
     private User user;
 

@@ -44,18 +44,18 @@ $(document).mouseup(function (e) {
 
 //Функция заполняющая таблицу пользователей
 function showAllUsersTable() {
-    $.i18n().load( {
+    $.i18n().load({
         en: {
             'button-edit': 'Edit',
             'button-delete': 'Delete',
-            'button-save' : 'Save'
+            'button-save': 'Save'
         },
         ru: {
             'button-edit': 'Редактировать',
             'button-delete': 'Удалить',
-            'button-save' : 'Сохранить'
+            'button-save': 'Сохранить'
         }
-    } );
+    });
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('locale');
     if (myParam === 'en') {
@@ -85,31 +85,56 @@ function showAllUsersTable() {
                     const userRoles = user.roles.map(role => {
                         return role.name;
                     }).join(", ");
+                    console.log(user);
 
+                    //создаем поля таблицы
+                    let tdId = document.createElement('td');
+                    let tdEmail = document.createElement('td');
+                    let tdUserName = document.createElement('td');
+                    let tdLastName = document.createElement('td');
+                    let tdPhone = document.createElement('td');
+                    let tdDataReg = document.createElement('td');
+                    let tdEnabled = document.createElement('td');
+                    let tdRoles = document.createElement('td');
+
+                    // если есть null поля - то меняем на No Data
                     for (let o in user) {
-
-                        let td = document.createElement('td');
-                        let text = document.createTextNode(user[o]);
-
                         if (user[o] === null) {
-                            text = document.createTextNode("No Data");
+                            user[o] = "No Data";
                         }
-
-                        if (counter === 0) {
-                            userIdForDelete = "fillingModalFormDelete" + "(" + user[o] + ")";
-                            userIdForUpdate = "fillingModalFormUpdate" + "(" + user[o] + ")";
-                        }
-                        if (counter !== 6 && counter !== 7 && counter !== 2 && counter !== 10) {
-                            td.appendChild(text);
-                            tr.appendChild(td);
-                        }
-                        if (counter === 10) {
-                            td.appendChild(document.createTextNode(userRoles));
-                            tr.appendChild(td);
-                            break;
-                        }
-                        counter++;
                     }
+                    if (user.dataRegistration[4].length === 1) {
+                        user.dataRegistration[4] = '0' + user.dataRegistration[4];
+                    }
+
+                    let usrDataRegistration = user.dataRegistration[2]
+                        + '/' + user.dataRegistration[1]
+                        + '/' + user.dataRegistration[0]
+                        + ' ' + user.dataRegistration[3]
+                        + ':' + user.dataRegistration[4];
+
+                    //присоединяем к полям таблицы данными из JSON
+                    tdId.appendChild(document.createTextNode(user.id));
+                    tdEmail.appendChild(document.createTextNode(user.email));
+                    tdUserName.appendChild(document.createTextNode(user.firsName));
+                    tdLastName.appendChild(document.createTextNode(user.lastName));
+                    tdPhone.appendChild(document.createTextNode(user.phone));
+                    tdDataReg.appendChild(document.createTextNode(usrDataRegistration));
+                    tdEnabled.appendChild(document.createTextNode(user.enabled));
+                    tdRoles.appendChild(document.createTextNode(userRoles));
+
+                    // присоединяем поля к строчке
+                    tr.appendChild(tdId);
+                    tr.appendChild(tdEmail);
+                    tr.appendChild(tdUserName);
+                    tr.appendChild(tdLastName);
+                    tr.appendChild(tdPhone);
+                    tr.appendChild(tdDataReg);
+                    tr.appendChild(tdEnabled);
+                    tr.appendChild(tdRoles);
+
+                    userIdForDelete = "fillingModalFormDelete" + "(" + user.id + ")";
+                    userIdForUpdate = "fillingModalFormUpdate" + "(" + user.id + ")";
 
                     buttonEdit.setAttribute('id', "updateButton");
                     buttonEdit.setAttribute('class', "btn btn-info");
@@ -117,7 +142,7 @@ function showAllUsersTable() {
                     buttonEdit.setAttribute('data-toggle', "modal");
                     buttonEdit.setAttribute('data-target', "#updateModal");
                     buttonEdit.setAttribute('onclick', `${userIdForUpdate}`);
-                    buttonEdit.appendChild(document.createTextNode($.i18n( 'button-edit')));
+                    buttonEdit.appendChild(document.createTextNode($.i18n('button-edit')));
 
                     buttonDelete.setAttribute('id', "deleteButton");
                     buttonDelete.setAttribute('class', "btn btn-danger");
@@ -125,7 +150,7 @@ function showAllUsersTable() {
                     buttonDelete.setAttribute('data-toggle', "modal");
                     buttonDelete.setAttribute('data-target', "#deleteModal");
                     buttonDelete.setAttribute('onclick', `${userIdForDelete}`);
-                    buttonDelete.appendChild(document.createTextNode($.i18n( 'button-delete')));
+                    buttonDelete.appendChild(document.createTextNode($.i18n('button-delete')));
 
                     tdEdit.appendChild(buttonEdit);
                     tdDelete.appendChild(buttonDelete);
@@ -315,7 +340,7 @@ function fillingModalFormDelete(id) {
     deleteButtonInModal.setAttribute('class', "btn btn-danger");
     deleteButtonInModal.setAttribute('data-dismiss', "modal");
     deleteButtonInModal.setAttribute('onclick', `${userIdForDeleteButton}`);
-    deleteButtonInModal.appendChild(document.createTextNode($.i18n( 'button-delete')));
+    deleteButtonInModal.appendChild(document.createTextNode($.i18n('button-delete')));
 
     deleteButtonInModalForm.append(deleteButtonInModal);
 
@@ -367,7 +392,7 @@ function fillingModalFormUpdate(id) {
     updateButtonInModal.setAttribute('id', "updButtInModal");
     updateButtonInModal.setAttribute('class', "btn btn-success");
     updateButtonInModal.setAttribute('onclick', `${userIdForUpdateButton}`);
-    updateButtonInModal.appendChild(document.createTextNode($.i18n( 'button-save')));
+    updateButtonInModal.appendChild(document.createTextNode($.i18n('button-save')));
 
     saveButtonInModalForm.append(updateButtonInModal);
 
@@ -471,14 +496,14 @@ function clearTheValidateCreate() {
     document.getElementById("rolesErrorsNU").innerText = "";
 }
 
-$('#categoryPanel span').on('click', function() {
+$('#categoryPanel span').on('click', function () {
     document.getElementById('nav-userlist').style.display = "none";
     document.getElementById('nav-category').style.display = "block";
     document.getElementById('nav-userlist').className = "tab-pane fade";
     document.getElementById('nav-category').className = "tab-pane fade active show";
 })
 
-$('#userTableAtAdminPanel span').on('click', function() {
+$('#userTableAtAdminPanel span').on('click', function () {
     document.getElementById('nav-userlist').style.display = "block";
     document.getElementById('nav-category').style.display = "none";
     document.getElementById('nav-category').className = "tab-pane fade";
