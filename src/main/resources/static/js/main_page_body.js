@@ -22,7 +22,12 @@ function getPostingsTable(posts) {
                         <div id="cardPosting" class="card">
                             <div id="ImageSlider${step}" class="carousel slide" data-interval="false">
                                 <ol id="carouselIndicators${step}" class="carousel-indicators">
-                                    
+                                    <div id="add${postingDTO.id}">
+                                        <img data-id="${postingDTO.id}" class="addToWish" src="../images/heart.jpg" th:src="@{images/heart.jpg}">
+                                    </div>
+                                    <div id="delete${postingDTO.id}">
+                                        <img data-id="${postingDTO.id}" class="deleteWish" src="../images/heart2.jpg" th:src="@{images/heart2.jpg}">
+                                    </div>
                                 </ol>
                                 <div id="carouselInner${step}" class="carousel-inner">
                                     
@@ -36,8 +41,6 @@ function getPostingsTable(posts) {
                                 <div class="card-text text-muted">
                                     <div id="meetingPlace">${postingDTO.meetingAddress}</div>
                                     <div id="timeOfPosting">${date}</div>
-                                    <div id="add${postingDTO.id}"><div data-id="${postingDTO.id}" class="addToWish">add wish</div></div>
-                                    <div id="delete${postingDTO.id}"><div data-id="${postingDTO.id}" class="deleteWish">delete wish</div></div>
                                 </div>
                             </div>
                         </div>
