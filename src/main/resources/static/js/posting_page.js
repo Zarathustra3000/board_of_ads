@@ -55,7 +55,7 @@ async function getPostingInfo(id) {
             let indicator = "indicator" + i;
             if (i === 0) {
                 document.getElementById('carousel-indic').innerHTML +=
-                    `<li id="${indicator}" data-target="#ImageSlider" data-slide-to="i" class="active">
+                    `<li id="${indicator}" data-target="#ImageSlider" data-slide-to="${i}" class="active">
                         <img class="img-fluid" src="${postingDto.images[i].pathURL}" alt="">
                     </li>`
 
@@ -67,7 +67,7 @@ async function getPostingInfo(id) {
             } else {
 
                 document.getElementById('carousel-indic').innerHTML +=
-                    `<li id="${indicator}" data-target="#ImageSlider" data-slide-to="i">
+                    `<li id="${indicator}" data-target="#ImageSlider" data-slide-to="${i}">
                         <img class="img-fluid" src="${postingDto.images[i].pathURL}" alt="">
                     </li>`
 
