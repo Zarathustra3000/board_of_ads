@@ -15,8 +15,11 @@ async function addCategories() {
                 let option = `<option class="category-parent" th:text="` + cat.name + `">` + cat.name + `</option>`;
                 categorySelect.append(option);
             } else {
-                let option = `<option th:text="` + cat.name + `">` + cat.name + `</option>`;
-                categorySelect.append(option);
+                if(cat.layer === 2) {
+                    let option = `<option th:text="` + cat.name.substring(cat.parentName.length + 1) + `">`
+                        + cat.name.substring(cat.parentName.length + 1) + `</option>`;
+                    categorySelect.append(option);
+                }
             }
         })
     });

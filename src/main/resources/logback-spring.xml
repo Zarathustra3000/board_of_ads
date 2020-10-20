@@ -171,9 +171,6 @@
     <logger name="com.board_of_ads.controllers.rest.PostingRestController" level="INFO" additivity="true">
         <appender-ref ref="PostingRestController-Audit"/>
     </logger>
-    <logger name="com.board_of_ads.controllers.rest.SearchPostingRestController" level="INFO" additivity="true">
-        <appender-ref ref="SearchPostingRestController-Audit"/>
-    </logger>
     <logger name="com.board_of_ads.controllers.rest.UserRestController" level="INFO" additivity="true">
         <appender-ref ref="UserRestController-Audit"/>
     </logger>

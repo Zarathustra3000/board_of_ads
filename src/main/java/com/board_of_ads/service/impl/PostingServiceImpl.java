@@ -1,11 +1,12 @@
 package com.board_of_ads.service.impl;
 
-
 import com.board_of_ads.models.City;
 import com.board_of_ads.models.dto.PostingDto;
 import com.board_of_ads.models.posting.Posting;
+import com.board_of_ads.repository.CategoryRepository;
 import com.board_of_ads.repository.CityRepository;
 import com.board_of_ads.repository.PostingRepository;
+import com.board_of_ads.service.interfaces.CategoryService;
 import com.board_of_ads.service.interfaces.PostingService;
 import com.board_of_ads.service.interfaces.RegionService;
 import lombok.AllArgsConstructor;
@@ -22,6 +23,7 @@ import java.util.Optional;
 public class PostingServiceImpl implements PostingService {
 
     private final PostingRepository postingRepository;
+    private final CategoryService categoryService;
     private final RegionService regionService;
     private final CityRepository cityRepository;
 
@@ -41,6 +43,18 @@ public class PostingServiceImpl implements PostingService {
     }
 
     @Override
+    public PostingDto getPostingDtoById(Long id) {
+        PostingDto postingDto = postingRepository.getPostingDtoById(id);
+        postingDto.setImages(getPostingById(postingDto.getId()).getImages());
+        postingDto.setCategory(categoryService.getCategoryDtoById(
+                getPostingById(postingDto.getId()).getCategory().getId()).get());
+        if(getPostingById(postingDto.getId()).getCity() != null) {
+            postingDto.setCity(getPostingById(postingDto.getId()).getCity().getName());
+        }
+        return postingDto;
+    }
+
+    @Override
     public List<PostingDto> getPostingByCity(City city) {
         List<PostingDto> result = postingRepository.findPostingByCity(city);
         return getPostingDtos(result);
@@ -55,20 +69,92 @@ public class PostingServiceImpl implements PostingService {
         return getPostingDtos(result);
     }
 
+
+
     @Override
     public List<PostingDto> getAllPostings() {
         List<PostingDto> postingDtos = postingRepository.findAllPostings();
         return getPostingDtos(postingDtos);
     }
 
+    @Override
+    public List<PostingDto> getAllUserPostings(Long user_id) {
+        List<PostingDto> userPosts = postingRepository.findAllUserPostings(user_id);
+        return getPostingDtos(userPosts);
+    }
+
     private List<PostingDto> getPostingDtos(List<PostingDto> postingDtos) {
         for(PostingDto dto : postingDtos) {
            dto.setImages(getPostingById(dto.getId()).getImages());
-           dto.setCategory(getPostingById(dto.getId()).getCategory().getName());
+           dto.setCategory(categoryService.getCategoryDtoById(
+                   postingRepository.findPostingByTitle(dto.getTitle()).getCategory().getId()).get());
            if(getPostingById(dto.getId()).getCity() != null) {
                dto.setCity(getPostingById(dto.getId()).getCity().getName());
            }
         }
         return postingDtos;
+    }
+
+    @Override
+    public List<PostingDto> searchPostings(String categorySelect, String citySelect, String searchText, String photoOption) {
+
+        List<PostingDto> postingDtos;
+        if(citySelect != null && !(citySelect.equals("undefined"))) {
+            if (citySelect.matches("(.*)" +"Область" + "(.*)")
+                    || citySelect.matches("(.*)" + "Край" + "(.*)")
+                    || citySelect.matches("(.*)" + "Республика" + "(.*)")
+                    || citySelect.matches("(.*)" + "Автономный округ" + "(.*)")
+                    || citySelect.matches("(.*)" + "Город" + "(.*)")
+            ) {
+                postingDtos = getPostingByFullRegionName(citySelect);
+            } else {
+                postingDtos = getPostingByCity(cityRepository.findCitiesByName(citySelect).get());
+            }
+        } else {
+            postingDtos = getAllPostings();
+        }
+
+        List<PostingDto> resultList = new ArrayList<>();
+
+        for (PostingDto postingDto : postingDtos) {
+
+            boolean categoryFlag = false;
+            boolean photoFlag = false;
+            boolean textFlag = false;
+
+            if (categorySelect.equals("Любая категория")) {
+                categoryFlag = true;
+            } else if (postingDto.getCategory().equals(categorySelect)) {
+                categoryFlag = true;
+            }
+            if(photoOption != null) {
+                if(photoOption.equals("пункт2")) {
+                    if(postingDto.getImages().size() > 0) {
+                        photoFlag = true;
+                    }
+                } else if(photoOption.equals("пункт3")) {
+                    if(postingDto.getImages().size() == 0) {
+                        photoFlag = true;
+                    }
+                } else if(photoOption.equals("пункт1")) {
+                    photoFlag = true;
+                }
+            } else {
+                photoFlag = true;
+            }
+            if(searchText != null && !(searchText.equals("")) && !(searchText.equals("undefined"))) {
+                if(postingDto.getTitle().toLowerCase().matches("(.*)" + searchText.toLowerCase() + "(.*)")) {
+                    textFlag = true;
+                }
+            } else {
+                textFlag = true;
+            }
+
+            if(categoryFlag && photoFlag && textFlag) {
+                resultList.add(postingDto);
+            }
+        }
+
+        return resultList;
     }
 }

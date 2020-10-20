@@ -26,18 +26,18 @@ import java.util.List;
 @Table(name = "postings")
 public class Posting {
 
-    public Posting(User user, Category category, String title, String description, Long price, String contact) {
+    public Posting(User user, Category category, String title, String description, Long price, String contact, Boolean isActive) {
         this.user = user;
         this.category = category;
         this.title = title;
         this.description = description;
         this.price = price;
         this.contact = contact;
-        this.isActive = true;
+        this.isActive = isActive;
     }
 
-    public Posting(User user, Category category, String title, String description, Long price, String contact, City city) {
-        this(user, category, title, description, price, contact);
+    public Posting(User user, Category category, String title, String description, Long price, String contact, City city, Boolean isActive) {
+        this(user, category, title, description, price, contact, isActive);
         this.city = city;
     }
 
@@ -80,7 +80,10 @@ public class Posting {
     @Column
     private LocalDateTime datePosting = LocalDateTime.now();
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @JoinTable(name="posting_images",
+            joinColumns=@JoinColumn (name="posting_id"),
+            inverseJoinColumns=@JoinColumn(name="image_id"))
     private List<Image> images;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
