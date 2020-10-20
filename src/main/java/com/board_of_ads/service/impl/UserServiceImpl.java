@@ -81,9 +81,18 @@ public class UserServiceImpl implements UserService {
             return changeEmail(principal, user);
         } else if (!user.getFirstName().equals("")) {
             return changeFirstNameOrCity(principal, user);
+        } else  if (!user.getPhone().equals("")) {
+            return changePhoneNumber(principal, user);
         } else {
             return changePassword(principal, user);
         }
+    }
+
+    private User changePhoneNumber(User principal, UserDto user) {
+        log.info("change phoneNumber for user with id : {}", principal.getId());
+        var userFromDB = userRepository.findByEmail(principal.getEmail());
+        userFromDB.setPhone(user.getPhone());
+        return userRepository.save(userFromDB);
     }
 
     private User changeEmail(User principal, UserDto user) throws Exception {

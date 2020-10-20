@@ -1,4 +1,5 @@
 $('#profileSettings, #profile-settings-from-header').on('click', async function() {
+    $('#myPosts').addClass("d-none");
     document.getElementById('nav-settings').className = "tab-pane fade active show";
     let userResponse = await userService.getUserInfo();
     let user = userResponse.json();
@@ -10,33 +11,68 @@ $('#profileSettings, #profile-settings-from-header').on('click', async function(
             $('#fld_name').val(principal.data.principal.firsName);
             $('#selectedCity').text(principal.data.principal.city != null ? principal.data.principal.city.name : '');
             $('#selectedCity').val(principal.data.principal.city != null ? principal.data.principal.city.id : 0);
-            let phoneStr;
             if (principal.data.principal.phone != null) {
-                phoneStr = `
-                    <td class="">
-                        <span class="js-phone-number">${principal.data.principal.phone}</span>
-                        <i class="text-primary fa fa-pencil"></i>
-                        <i class="text-danger fa fa-times" aria-hidden="true"></i>
-                    </td>
-                    <td class="">
-                        <i class="text-success fa fa-check ml-5" aria-hidden="true"></i>
-                        Подтверждён
-                    </td>
-                    <td class="">
-                        <span class="">
-                            <span class="text-muted">${principal.data.principal.postings != null ? principal.data.principal.postings.length : 0} объявлений</span>
-                        </span>
-                    </td>`;
+                $('#phone-number').text(principal.data.principal.phone);
+                $('#phoneCountPost').text((principal.data.principal.postings != null ? principal.data.principal.postings.length : 0)  + ' объявлений');
             } else {
-                phoneStr = `
-                    <td class="">
-                        <span class="js-phone-number">No phone</span>
-                        <i class="text-primary fa fa-pencil"></i>
-                    </td>`;
+                $('#phoneTd').addClass("d-none");
             }
-            $('#phoneUser').append(phoneStr);
         }
     );
+})
+
+$('#cancelPhoneButton').on('click', function() {
+    $('#phoneEditModal').modal('hide');
+})
+
+$('#cancelPhoneDeleteButton').on('click', function() {
+    $('#phoneDeleteModal').modal('hide');
+})
+
+$('#savePhoneButton').on('click', function() {
+    let data = {
+        email: '',
+        password: '',
+        newPassword: '',
+        phone: $('#phoneDeleteInput').val(),
+        firstName: '',
+        cityId: ''
+    };
+    userService.changeUserData(data)
+        .then(userResponse => userResponse.json())
+        .then(userResponse => {
+            if (userResponse.success === true) {
+                $('#phoneDeleteModal').modal('hide');
+            }
+        });
+})
+
+$('#changePhoneButton').on('click', function() {
+    let data = {
+        email: '',
+        password: '',
+        newPassword: '',
+        phone: $('#phoneInput').val(),
+        firstName: '',
+        cityId: ''
+    };
+    userService.changeUserData(data)
+        .then(userResponse => userResponse.json())
+        .then(userResponse => {
+            if (userResponse.success === true) {
+                $('#phoneEditModal').modal('hide');
+            }
+        });
+})
+
+$("#editPhone").on('click', function() {
+    $('#phoneEditModal').modal('show');
+    $('#phoneModalTitle').text($('#phone-number').text());
+})
+
+$("#deletePhone").on('click', function() {
+    $('#phoneDeleteModal').modal('show');
+    $('#phoneDeleteModalTitle').text($('#phone-number').text());
 })
 
 $('#new_password').on('keyup', function() {
@@ -50,6 +86,7 @@ $('#changePasswordButton').on('click', function() {
         email: '',
         password: $('#current_password').val(),
         newPassword: $('#new_password').val(),
+        phone: '',
         firstName: '',
         cityId: ''
     };
@@ -104,6 +141,7 @@ $('#editConfirmEmailButton').on('click', function() {
     let data = {
         email: $("#emailInput").val(),
         password: $("#passwordInput").val(),
+        phone: '',
         newPassword: '',
         firstName: '',
         cityId: ''

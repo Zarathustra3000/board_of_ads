@@ -13,5 +13,6 @@ public class UserDto {
     private String password;
     private String newPassword;
     private String firstName;
+    private String phone;
     private Long cityId;
 }
