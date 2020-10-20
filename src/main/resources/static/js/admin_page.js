@@ -349,9 +349,15 @@ function fillingModalFormDelete(id) {
                 return role.name;
             }).join(", ");
 
+            let usrDataRegistration = data.data.dataRegistration[2]
+                + '/' + data.data.dataRegistration[1]
+                + '/' + data.data.dataRegistration[0]
+                + ' ' + data.data.dataRegistration[3]
+                + ':' + data.data.dataRegistration[4];
+
             $('#delUserID').val(id);
             $('#delUserName').val(data.data.firsName);
-            $('#delUserDataReg').val(data.data.dataRegistration);
+            $('#delUserDataReg').val(usrDataRegistration);
             $('#delUserEmail').val(data.data.email);
             $('#delUserRoles').val(userRoles);
         });
@@ -397,11 +403,17 @@ function fillingModalFormUpdate(id) {
     fetch(getUserById + "/" + id).then(function (response) {
         response.json().then(function (data) {
 
+            let usrDataRegistration = data.data.dataRegistration[2]
+                + '/' + data.data.dataRegistration[1]
+                + '/' + data.data.dataRegistration[0]
+                + ' ' + data.data.dataRegistration[3]
+                + ':' + data.data.dataRegistration[4];
+
             $('#updUserID').val(id);
             $('#updUserName').val(data.data.firsName);
             $('#updUserLastName').val(data.data.lastName);
             $('#updUserEmail').val(data.data.email);
-            $('#updUserDataReg').val(data.data.dataRegistration);
+            $('#updUserDataReg').val(usrDataRegistration);
 
         });
     });
