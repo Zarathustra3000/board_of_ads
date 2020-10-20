@@ -78,14 +78,12 @@ function showAllUsersTable() {
                     let tdEdit = document.createElement('td');
                     let tdDelete = document.createElement('td');
                     let tr = document.createElement('tr');
-                    let counter = 0;
 
                     tr.setAttribute('id', "userDataTable");
 
                     const userRoles = user.roles.map(role => {
                         return role.name;
                     }).join(", ");
-                    console.log(user);
 
                     //создаем поля таблицы
                     let tdId = document.createElement('td');
