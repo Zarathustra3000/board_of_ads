@@ -5,18 +5,22 @@ $('#profileSettings, #profile-settings-from-header').on('click', async function(
     let user = userResponse.json();
     user.then(
         principal => {
+            userService.getPostingCount(principal.data.principal.id)
+                .then( posting => posting.json())
+                .then(post => {
+                    $('#postCount').text(post.data != null ? post.data.length : 0);
+                    if (principal.data.principal.phone != null) {
+                        $('#phone-number').text(principal.data.principal.phone);
+                        $('#phoneCountPost').text(post.data != null ? post.data.length : 0 + ' объявлений');
+                    } else {
+                        $('#phoneTd').addClass("d-none");
+                    }
+            })
             $('#userEmail').text(principal.data.principal.email);
             $('#userId').text(principal.data.principal.id);
-            $('#postCount').text(principal.data.principal.postings != null ? principal.data.principal.postings.length : 0);
             $('#fld_name').val(principal.data.principal.firsName);
             $('#selectedCity').text(principal.data.principal.city != null ? principal.data.principal.city.name : '');
             $('#selectedCity').val(principal.data.principal.city != null ? principal.data.principal.city.id : 0);
-            if (principal.data.principal.phone != null) {
-                $('#phone-number').text(principal.data.principal.phone);
-                $('#phoneCountPost').text((principal.data.principal.postings != null ? principal.data.principal.postings.length : 0)  + ' объявлений');
-            } else {
-                $('#phoneTd').addClass("d-none");
-            }
         }
     );
 })
@@ -200,6 +204,11 @@ const userService = {
         return await http.fetch('/api/user/', {
             body: JSON.stringify(data),
             method: 'PUT'
+        });
+    },
+    getPostingCount: async (id) => {
+        return await http.fetch('/api/posting/userpost/' + id, {
+            method: 'GET'
         });
     }
  }
